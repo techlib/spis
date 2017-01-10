@@ -1,0 +1,235 @@
+= Správní informační systém: Technická specifikace
+:numbered:
+:icons: font
+:lang: cs
+:note-caption: Poznámka
+:warning-caption: Pozor
+:toc-title: Obsah
+:toc: left
+
+== Úvod
+
+Správní informační systém, zkráceně _SpIS_ je otevřený nástroj pro vedení elektronických evidencí. Měl by zpřehlednit správu věcí a to zejména těch veřejných. V praxi bude tedy evidovat doklady a další dokumenty.
+
+Výběr z funkcí, které očekáváme v prvních verzích:
+
+Hierarchické pracovní struktury::
+Rozklad předmětu plnění na jednotlivé dodávané výsledky (což jsou pro nás dokumenty) v předepsané hierarchii (dle typu projektu). Tento postup se jinde označuje pojmem link:https://cs.wikipedia.org/wiki/Work_breakdown_structure[WBS].
+
+Editor dokumentů::
+Nástroj pro vytváření a úpravy dokumentů, představující uživatelské rozhraní uzpůsobené jejich konkrétním typům. Využívá zásuvné moduly, které realizují dílčí komponenty rozhraní. Každý typ dokumentu popisuje, jaké komponenty se mají pro jeho pole využít.
+
+Přehledy::
+Vhodně zvolené přehledy čerpající z projektů a dalších evidencí. Pro jejich zobrazení se využívají komponenty realizované jako zásuvné moduly. Tyto komponenty se provazují s konkrétními daty, čímž vznikají pohledy, které se dále seskupují do témat.
+
+Oprávnění::
+Pružný systém oprávnění založený na uživatelských rolích a organizačních jednotkách umožňuje pracovat pouze s těmi dokumenty a na těch projektech, které se uživatelů týkají.
+
+SpIS bude napojen na vybrané další informační systémy, ze kterých bude čerpat podklady a do kterých bude předávat výstupy nebo dílčí dokumenty. Napojení bude realizováno prostřednictvím datové vrstvy, tedy v databázi.
+
+<<<
+
+== Hierarchické pracovní struktury
+
+Hierarchické pracovní struktury jsou formou vedení *projektu*. Tato forma spočívá v postupném vytváření a schvalování dokumentů, které dokládají provedené úkony. dokumenty mohou být v různých stavech, ale zejména bývají *Rozpracované*, časem *Dokončené* a výjimečně *Provizorní*.
+
+Rozpracované::
+Dokumenty, které ještě nejsou hotové a nelze se na ně spoléhat.
+
+Dokončené::
+Dokumenty, které jsou hotové a schválené zodpovědnou osobou. Tato osoba ručí za jejich správnost a platnost. Ostatní se na ně mohou obvykle bez obav spolehnout.
+
+Provizorní::
+Dokumenty, které jsou hotové, ale nejsou schválené zodpovědnou osobou. Pokud se na ně pracovníci spoléhají, přebírají tím na sebe riziko, které jinak leží na zodpovědné osobě.
+
+Dokumenty ve struktuře na sobě vzájemně závisí. Některé dokumenty tvoří kořeny, na kterých již žádné další dokumenty nezávisí. Na jiných dokumentech závisí jeden i více dokumentů. V podstatě se jedná o acyklický orientovaný graf.
+
+V praxi může hierarchická struktura vypadat například takto (šipky značí závislost):
+
+[plantuml,align="center"]
+....
+@startuml
+rectangle " " as faktura <<Faktura>> #dddddd
+rectangle "protokol1" <<AkceptacniProtokol>> #99ff99
+rectangle "protokol2" <<AkceptacniProtokol>> #ffff99
+rectangle "nabidka" <<Nabídka>> #99ff99
+rectangle "poptavka" <<Poptávka>> #99ff99
+rectangle "specifikace" <<Specifikace>> #99ff99
+
+poptavka -d-> specifikace
+faktura -d-> nabidka
+faktura -d-> protokol1
+faktura -d-> protokol2
+protokol1 -d-> specifikace
+protokol1 -d-> nabidka
+protokol2 -d-> specifikace
+protokol2 -d-> nabidka
+nabidka -d-> poptavka
+@enduml
+....
+
+V příkladu je `protokol2` nedokončený, ale pracovník zodpovědný za schválení faktury ho označil za provizorní. To proto, aby mohl provizorně dokončit a fakturu a mohla proběhnout platba. Pokud se zmýlil a pracovník zodpovědný za `protokol2` tento nedokončí, mohou být vyvozeny důsledky.
+
+Z důvodu průkaznosti nelze dokončené dokumenty měnit. Pokud by se tak mělo stát, je vytvořen dokument nový, který ten původní nahradí v jeho roli. Pokud se na předchozí dokument jiný dokument spoléhá, je považován za neplatný. Uveďme si příklad:
+
+[plantuml,align="center"]
+....
+@startuml
+rectangle "faktura (verze 1)" as faktura <<Faktura>> #ff9999
+rectangle "protokol (verze 2)" as protokol <<AkceptacniProtokol>> #9999ff
+rectangle "specifikace (verze 1)" as specifikace <<Specifikace>> #99ff99
+
+faktura -d-> protokol
+protokol -d-> specifikace
+@enduml
+....
+
+V příkladu došlo k tomu, že byla v důsledku aktualizace dokumentu `protokol` zneplatněna aktuální verze dokumentu `faktura`. V této situaci jsou v podstatě jen dvě možnosti, jak postupovat správně:
+
+1. Vrátit se k předchozí verzi dokumentu `protokol`, kterou systém uchovává.
+2. Schválit novou verzi dokumentu `protokol` a následně vytvořit novou verzi dokumentu `faktura`.
+
+=== Typy projektů
+
+Každý projekt je opatřen popisem své hierarchické struktury. Protože si jsou některé projekty ve své struktuře velmi podobné, definujeme pojmenované typy projektů. Tyto typy reprezentují strukturu, ze které je možné v případě potřeby rychle vyjít. Jsou to tedy určité šablony.
+
+V případě potřeby je možné strukturu aktivního projektu změnit a dokumenty přeuspořádat do nových rolí. Stejně tak je možné do struktury vložit již existující dokumenty, pokud tak nedojde k porušení jejich vazeb na závislosti.
+
+=== Sekce a Témata
+
+Za účelem snazší orientace uživatelů v systému jsou projekty a jejich typy rozčleněny do sekcí a témat. Ve stejném členění jsou zařazeny také přehledy, což usnadňuje nalezení nástrojů pro zásahy do dat, která přehledy představují. Zároveň toto členění usnadňuje kontrolu výsledků aktivních projektů -- po dokončení práce na projektu se uživatel snadno vrací na přehledy daného tématu.
+
+<<<
+
+== Editor dokumentů
+
+Pod pojmem dokument rozumíme strukturovaná, strojová data, se kterými uživatel nakládá přímo v systému. Tyto dokumenty často mívají přílohy, což jsou nestrukturovaná data (často různé formátované texty, tabulky či obrázky), které vznikají mimo systém a jsou do něj pouze vkládány.
+
+Dokumenty mají kromě vnitřní struktury také takzvané závislosti. Pomocí těch pak tvoří určité vnější struktury. Dokumenty mohou záviset pouze na jiných dokumentech, a to vždy v určitých rolích. Pro ilustraci:
+
+[plantuml,align="center"]
+....
+@startuml
+rectangle "zapujcka" <<Zapujcka>> #9999ff
+rectangle "predani1" <<PredavaciProtokol>> #99ff99
+rectangle " " as predani2 <<PredavaciProtokol>> #dddddd
+
+zapujcka -d-> predani1 : vstupní
+zapujcka -d-> predani2 : výstupní
+@enduml
+....
+
+V příkladu je předávací protokol použit nejprve pro dokumentaci zahájení zápůjčky věci a následně bude použit pro dokumentaci jejího navrácení. Pro vyložení závislého dokumentu `zapujcka` je podstatné tyto dva protokoly od sebe odlišit.
+
+WARNING: Popíšeme, co je to dokument a z čeho se skládá (vlastní data a závislosti v daných rolích). Závislosti mohou být kvantifikovány {n, m} a opatřeny buď typem, nebo několika typovými třídami. To, které podstromy dokumentu jsou aktivní může být ovlivněno dalšími logickými výrazy, tentokrát pracujícími s dosavadními daty dokumentu a jeho závislostí.
+
+=== Komponenty
+
+Jsou opakovaně použitelné a je možné je aplikovat s dodatečnými parametry, které změní jejich chování. Mají stránku datovou a reprezentační.
+
+WARNING: Rozepsat komponenty...
+
+=== Typy
+
+Typy dokumentů shrnují strukturu, závislosti, použité komponenty uživatelského rozhraní a další vlastnosti dokumentů, které daného typu jsou.
+
+WARNING: Rozepsat...
+
+=== Typové třídy
+
+Typové třídy popisují dílčí strukturu dokumentů tak, aby mohlo dojít k použití více typů dokumentů ve stejné roli závislosti. Dále také upravují jak strukturu dokumentů dané třídy, tak i jejich závislosti. Umožňují tak i vytvářet podobné typy.
+
+WARNING: Uvést příklady...
+
+<<<
+
+== Přehledy
+
+=== Pohledy
+
+Pohled může být využit ve více tématech. Každý pohled je určitého typu, což určuje to, jaká data dokáže prezentovat a zároveň způsob, jakým tak činí.
+
+Pokud autor daného typu pohledu vytvořil nástroj pro zobrazení mapových vrstev s vyznačenými body, je možné s jeho pomocí zobrazovat prostorová data. Pokud se jedná o nástroj pro zobrazení tabulky, je možné s jeho pomocí zobrazovat data relační a tak dále.
+
+Obsah pohledu je dán popisem tématu, ve kterém je použit. Součástí tohoto popisu je i soubor dotazů do databáze, prostřednictvím kterých dojde k získání zobrazovaných dat. Tyto dotazy jsou parametrizovány hodnotami, které zvídavý uživatel mění při prohlížení.
+
+=== Témata
+
+WARNING: Uskupení pohledů, součást sekce. Obsahuje i seznam šablon k zahájení projektů.
+
+=== Sekce
+
+WARNING: Základní organizační členění.
+
+<<<
+
+== Oprávnění
+
+WARNING: Systém identifikuje uživatele a poskytuje informace o něm editoru dokumentů a pohledům. Dále obsahuje systém pro kontrolu přístupu k pohledům a projektům, díky kterému je možné nastavit práva uživatelů pro úkony nad dokumenty daných typů, spadajících do daných Jednotek...
+
+=== Omezené úkony
+
+=== Organizační jednotky
+
+WARNING: Organizační jednotka sdružuje dokumenty, se kterými manipulují určité okruhy osob, tedy role. Organizační jednotka může mít nadřazenou organizační jednotku, které je součástí.
+
+=== Uživatelské role
+
+WARNING: Uživatelské role představují oprávnění k provádění množiny úkonů nad množinou typů dokumentů v rámci množiny organizačních jednotek. Libovolný uživatel může vystupovat v řadě rolí. Jisté role mohou implikovat další role.
+
+<<<
+
+== Implementační detaily
+
+=== Architektura
+
+[plantuml,align="center"]
+....
+@startuml
+left to right direction
+
+package "SpIS" {
+  () HTTP
+  HTTP -u- [Aplikace]
+
+  database "DB"
+  () SQL
+  [Aplikace] -l-> SQL
+  [DB] - SQL
+
+  database "Politiky"
+  Politiky -u-> [Aplikace]
+}
+
+node "PC" {
+  [Prohlížeč] -> HTTP
+  [Prohlížeč] .l.> [Pečetidlo]
+  [Pečetidlo] -> HTTP
+}
+
+actor :Uživatel:
+
+:Uživatel: - [Prohlížeč]
+:Uživatel: - [Pečetidlo]
+
+cloud "Externí systémy" {
+  [ ] <<ERP a další...>> as Ext1
+  [Ext1] -> SQL
+}
+@enduml
+....
+
+Uživatelé budou se SpISem komunikovat pomocí webového rozhraní, spuštěném v běžném webovém prohlížeči. Pro účely elektronického podepisování bude na jejich zařízeních nasazena další aplikace, ve schématu označená jako _Pečetidlo_.
+
+Jak naznačuje schéma výše, _Aplikace_ samotná je běhovým prostředím pro jakési _Politiky_. Ty vytváří programátoři a popisují jimi nejen strukturu dokumentů, které se ve _SpISu_ vyskytují, ale také jejich vzájemné vazby v projektech, použité prvky uživatelského rozhraní a další rysy systému vlastní organizaci, které systém využívá.
+
+=== Datová vrstva
+
+WARNING: PostgreSQL, FDW a Multicorn...
+
+=== Uživatelské rozhraní
+
+WARNING: REST API, webové rozhraní...
+
+
+// vim:set spelllang=cs:
