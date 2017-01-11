@@ -84,7 +84,6 @@ protokol -d-> specifikace
 
 note right of faktura: verze 1
 note right of protokol: verze 2
-note right of specifikace: verze 1
 @enduml
 ....
 
@@ -142,11 +141,28 @@ end note
 
 V příkladu je předávací protokol použit nejprve pro dokumentaci zahájení zápůjčky věci a následně bude použit pro dokumentaci jejího navrácení. Pro vyložení závislého dokumentu `zápůjčka` je podstatné tyto dva protokoly od sebe odlišit.
 
-Oproti skutečným dokumentům mohou typy záviset pouze na dalších typech (nebo typových třídách, což je vysvětleno dále).
+Oproti instancím (dokumentům) mohou typy záviset pouze na dalších typech (nebo typových třídách, které jsou vysvětleny níže). Typy pro příklad výše budou vypadat například následovně:
+
+[plantuml,align="center"]
+....
+@startuml
+skinparam monochrome true
+skinparam padding 3
+
+rectangle "zápůjčka" <<Zápůjčka>>
+rectangle "předání 1" as předání_1 <<Předávací protokol>>
+rectangle "předání 2" as předání_2 <<Předávací protokol>>
+
+zápůjčka -d-> "{1,1}" předání_1 : vstupní
+zápůjčka -d-> "{1,1}" předání_2 : výstupní
+@enduml
+....
+
+Za povšimnutí stojí uvedení dokumentů, které by měly být přítomny, ale v příkladu výše zatím schází. Také jsou zde u rolí uvedeny kvantifikátory.
 
 ==== Kvantifikace
 
-Závislosti je možné kvantifikovat. Lze tedy říci, že v některé roli může vystupovat konkrétní počet dokumentů. Uveďme si příklad struktury dokumentů:
+Závislosti je nutné kvantifikovat. V určité roli může vystupovat konkrétní počet dokumentů. Uveďme si příklad struktury dokumentů:
 
 [plantuml,align="center"]
 ....
@@ -168,6 +184,7 @@ Ve struktuře se vyskytuje trojice dokumentů se shodným typem ve shodné roli.
 ....
 @startuml
 skinparam monochrome true
+skinparam padding 3
 
 rectangle "rozpočet" <<Rozpočet>>
 rectangle "návrh" <<Dílčí návrh rozpočtu>>
@@ -176,22 +193,42 @@ rozpočet -d-> "{1,}" návrh : dle návrhu
 @enduml
 ....
 
-Kvantifikátor `{1,}` zde značí přítomnost alespoň jednoho dokumentu daného typu v dané roli. Je však možné specifikovat libovolný rozsah, tedy například:
-
-`{,}` nebo `{0,}`::
-Libovolný počet dokumentů.
-
-`{1,3}`::
-Jeden až tři dokumenty.
-
-`{,5}` nebo `{0,5}`::
-Až pět dokumentů.
+Kvantifikátor `{1,}` zde značí přítomnost alespoň jednoho dokumentu daného typu v dané roli. Je však možné specifikovat libovolný rozsah, tedy například `{,}` nebo `{0,}` pro libovolný počet dokumentů, `{1,3}` pro jeden až tři dokumenty a `{,5}` nebo `{0,5}` pro až pět dokumentů.
 
 ==== Typové třídy
 
-Typové třídy popisují dílčí strukturu dokumentů tak, aby mohlo dojít k použití více typů dokumentů ve stejné roli závislosti. Dále také upravují jak strukturu dokumentů dané třídy, tak i jejich závislosti. Umožňují tak i vytvářet podobné typy.
+Typové třídy popisují dílčí strukturu dokumentů tak, aby mohlo dojít k použití více typů dokumentů ve stejné roli. Upravují jak strukturu typů dané třídy, tak i jejich závislosti.
 
-WARNING: Uvést příklady...
+Můžeme si například zavést typové třídy `Mající výši plnění (x)` a `Mající termín realizace (x)`, které popisují části schématu dokumentu, ve kterém předepisují přítomnost finanční částky s určitým významem a dále termínu, kdy dojde k nějaké realizaci. S pomocí těchto typových tříd pak můžeme popsat některé závislosti obecněji. Například:
+
+[plantuml,align="center"]
+....
+@startuml
+skinparam monochrome true
+skinparam padding 3
+
+rectangle "plán" <<Plán výdajů>>
+rectangle "výdaj" <<Pro d, pokud platí\n Mající výši plnění (d),\n Mající termín realizace (d),\n pak libovolné d.>>
+
+plán -d-> "{,}" výdaj : zahrnuje
+@enduml
+....
+
+Pokud typy dokumentů `Plánovaná investice` a `Plánovaný provozní výdaj` implementují obě tyto typové třídy, pak je možné typy z předešlého případu splnit například následující strukturou:
+
+[plantuml,align="center"]
+....
+@startuml
+rectangle "plán" <<Plán výdajů>> #99ff99
+rectangle "výdaj 1" as výdaj_1 <<Plánovaná investice>> #99ff99
+rectangle "výdaj 2" as výdaj_2 <<Plánovaný provozní výdaj>> #99ff99
+
+plán -d-> výdaj_1 : zahrnuje
+plán -d-> výdaj_2 : zahrnuje
+@enduml
+....
+
+Termín typová třída se hojně vyskytuje v kontextu programovacího jazyka Haskell. Typové třídy v Haskellu ale neposkytují stejný polymorfismus jako typové třídy popsané výše. V Haskellu by musely být oba výdaje v příkladu zcela stejného typu.
 
 ==== Schéma
 
