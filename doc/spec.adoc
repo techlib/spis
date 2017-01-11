@@ -11,6 +11,8 @@
 
 Správní informační systém, zkráceně _SpIS_ je otevřený nástroj pro vedení elektronických evidencí. Měl by zpřehlednit správu věcí a to zejména těch veřejných. V praxi bude tedy evidovat doklady a další dokumenty.
 
+WARNING: Správa věcí veřejných... Spíše by měl zpřehlednit správní agendy společné pro všechny organizace, zvláště ty pro ty veřejné.
+
 Výběr z funkcí, které očekáváme v prvních verzích:
 
 Hierarchické pracovní struktury::
@@ -26,6 +28,8 @@ Oprávnění::
 Pružný systém oprávnění založený na uživatelských rolích a organizačních jednotkách umožňuje pracovat pouze s těmi dokumenty a na těch projektech, které se uživatelů týkají.
 
 SpIS bude napojen na vybrané další informační systémy, ze kterých bude čerpat podklady a do kterých bude předávat výstupy nebo dílčí dokumenty. Napojení bude realizováno prostřednictvím datové vrstvy, tedy v databázi.
+
+WARNING: Nejen v databázi. Potenciálně bude potřeba volat nějaké služby, což se jaksi pomalu, ale jistě dostáváme k ESB.
 
 <<<
 
@@ -103,6 +107,7 @@ V případě potřeby je možné strukturu aktivního projektu změnit a dokumen
 
 Za účelem snazší orientace uživatelů v systému jsou projekty a jejich typy rozčleněny do sekcí a témat. Ve stejném členění jsou zařazeny také přehledy, což usnadňuje nalezení nástrojů pro zásahy do dat, která přehledy představují. Zároveň toto členění usnadňuje kontrolu výsledků aktivních projektů -- po dokončení práce na projektu se uživatel snadno vrací na přehledy daného tématu.
 
+WARNING: Pokud čtu sekvenčně, v tuto chvíli nevím, co je téma a sekce. Je vhodné odkázat.
 <<<
 
 == Dokumenty
@@ -221,19 +226,29 @@ WARNING: Základní organizační členění.
 
 <<<
 
-== Oprávnění
+== Model oprávnění
+Model oprvánění je v systému navržen ve dvou rovinách a to v rovině oprávnění k typům dokumentů a způsobům, jak s ním nakládat (oprávnění), a v rovině původu dokumentu (obor působnosti). Kompozice množin oprávnění a oborů působnosti se nazývá role. Uživatel může vystupovat ve více rolích, přičemž platí, že cokoliv mu jedna role povolí, nemůže mu jiná zakázat a to z důvodu, že oprávnění jsou přiřazována explicitně (tj. implicitně je jakákoliv interakce zakázana).
 
-WARNING: Systém identifikuje uživatele a poskytuje informace o něm editoru dokumentů a pohledům. Dále obsahuje systém pro kontrolu přístupu k pohledům a projektům, díky kterému je možné nastavit práva uživatelů pro úkony nad dokumenty daných typů, spadajících do daných Jednotek...
+=== Oprávnění
 
-=== Omezené úkony
+Každý dokument má v rámci projektu definovány stavy, v nichž se může nacházet. Oprávnění v tomto případě znamená, že daná role může s danými typy dokumentů operovat do nějaké úrovně a může je tak např. rozpracovat a učinit provizorními, nikoliv však dokončit.
+Speciálním typem oprávnění je pak možnost určité typy dokumentů podepsat. Při podepisování není možné dokument již nijak měnit, podpisem lze pouze vyjádřit svůj úplný souhlas s obsahem daného dokumentu.
 
-=== Organizační jednotky
+=== Obory působnosti
 
-WARNING: Organizační jednotka sdružuje dokumenty, se kterými manipulují určité okruhy osob, tedy role. Organizační jednotka může mít nadřazenou organizační jednotku, které je součástí.
+Obor působnosti sdružuje dokumenty, se kterými manipulují určité okruhy osob a to zpravidla takové, které jsou zařazeny v jedné organizační jednotce. Implicitně je každý uživatel zařazen do alespoň jedné organizační jednotky. Z takovéhoto zařazení vyplývají obory působnosti pro všechna oprávnění, tedy nikoliv jen pro ta, která jsou explicitně definovaná v roli.
+
+Uveďme si příklad. Nechť existuje role "Majetkář", která definuje oprávnění k dokumentům typu "Zařazovací list" a "Předávací protokol pracovních pomůcek". Nechť je definováno, že existuje více "Majetkářů", z nichž někteří evidují o kancelářských potřebách, židlích, stolech, stolních větrácích apod. a jiní evidují o kancelářské výpočetní technice.
+První i druhá skupina má přiřazenu stejnou roli, ale každý z nich je zařazen v jiné organizační jednotce. Za majetek každého z nich odpovídá jiný organizační celek. Není však třeba definovat role specifické pro každý z těchto celků, postačí implicitní přiřazení osoby do oboru působnosti.
 
 === Uživatelské role
 
-WARNING: Uživatelské role představují oprávnění k provádění množiny úkonů nad množinou typů dokumentů v rámci množiny organizačních jednotek. Libovolný uživatel může vystupovat v řadě rolí. Jisté role mohou implikovat další role.
+Uživatelské role představují oprávnění k provádění množiny úkonů nad množinou typů dokumentů v rámci množiny organizačních jednotek. Libovolný uživatel může vystupovat v řadě rolí.
+
+=== Zvaní do projektů
+
+Po vytvoření projektu lze na základě typu projektu resp. dokumentů nutných k jeho dokončení sestavit seznam rolí, které na projektu musejí spolupracovat, aby jej bylo možné dokončit. Autor projektu může v jakékoliv chvíli povolit přístup daným rolím v tomto seznamu, čímž dojde k vyrozumění patřičných uživatelů v dané roli.
+Současně je možné pozvat k projektu explicitně definované role či konkrétní uživatele. Tito uživatelé, nebudou-li příslušní k některé z rolí, které se projektu účastní, budou moci operovat pouze s dokumenty, které budou zpravidla přílohou dokumentů nutných k dopracování projektu. Typickým příkladem je doplnění funkční specifikace od odborného útvaru, kde předmětem nákupu je komodita jíž bude účelně využivat jiný útvar, a který tedy bude řešit proces nákupu.
 
 <<<
 
