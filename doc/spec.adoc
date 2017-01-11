@@ -6,6 +6,7 @@
 :warning-caption: Pozor
 :toc-title: Obsah
 :toc: left
+:sectnumlevels: 6
 
 == Úvod
 
@@ -98,9 +99,9 @@ V příkladu došlo k tomu, že byla v důsledku aktualizace dokumentu `protokol
 
 === Typy projektů
 
-Každý projekt je opatřen popisem své hierarchické struktury. Protože si jsou některé projekty ve své struktuře velmi podobné, definujeme pojmenované typy projektů. Tyto typy reprezentují strukturu, ze které je možné v případě potřeby rychle vyjít. Jsou to tedy určité šablony.
+Každý projekt je opatřen popisem své hierarchické struktury. Protože si jsou některé projekty ve své struktuře velmi podobné, definujeme pojmenované typy projektů. Tyto typy reprezentují strukturu, které se dokumenty v projektu přizpůsobují.
 
-V případě potřeby je možné strukturu aktivního projektu změnit a dokumenty přeuspořádat do nových rolí. Stejně tak je možné do struktury vložit již existující dokumenty, pokud tak nedojde k porušení jejich vazeb na závislosti.
+V případě potřeby je možné typ aktivního projektu změnit a dokumenty přeuspořádat do nových rolí. Stejně tak je možné do struktury vložit již existující dokumenty, pokud tak nedojde k porušení jejich vazeb na závislosti.
 
 === Sekce a Témata
 
@@ -146,7 +147,7 @@ end note
 
 V příkladu je předávací protokol použit nejprve pro dokumentaci zahájení zápůjčky věci a následně bude použit pro dokumentaci jejího navrácení. Pro vyložení závislého dokumentu `zápůjčka` je podstatné tyto dva protokoly od sebe odlišit.
 
-Oproti instancím (dokumentům) mohou typy záviset pouze na dalších typech (nebo typových třídách, které jsou vysvětleny níže). Typy pro příklad výše budou vypadat například následovně:
+Oproti instancím (dokumentům) mohou typy záviset pouze na dalších typech (nebo typových třídách, které jsou vysvětleny níže). Pro některé situace může být užitečné, aby dokument závisel na určitém počtu zcela libovolných dokumentů, bez ohledu na jejich typ. To ale odbíháme. Typy pro příklad výše budou vypadat například následovně:
 
 [plantuml,align="center"]
 ....
@@ -237,7 +238,17 @@ Termín typová třída se hojně vyskytuje v kontextu programovacího jazyka Ha
 
 ==== Schéma
 
+Dokument je ve své podstatě stromovou strukturou kompatibilní s formáty JSON, CBOR a YAML.
+
+Každý typ nebo typová třída dokumentu popisuje část schématu. Skutečné schéma získáme sjednocením typu dokumentu se všemi typovými třídami, které typ dokumentu implementuje. Schéma popisuje vnitřní strukturu dokumentu, tedy především názvy a typy jeho polí.
+
+Jazyk schématu vychází z normy link:http://json-schema.org/[JSON Schema], kterou však rozšiřuje o další prvky. Jedná se například o popis uživatelského rozhraní pro editaci stromu, spustitelný kód v řadě významů a také o schopnost přejímat hodnoty ze závislostí.
+
+WARNING: Popsat hlouběji jazyk pro vytváření schémat dokumentů.
+
 === Komponenty
+
+Komponenty úzce souvisí se schématem dokumentu. Právě z nich si programátor vybírá, jak realizovat uživatelské rozhraní pro úpravy jednotlivých částí dokumentu.
 
 WARNING: Komponenty...
 
@@ -255,7 +266,7 @@ Obsah pohledu je dán popisem tématu, ve kterém je použit. Součástí tohoto
 
 === Témata
 
-WARNING: Uskupení pohledů, součást sekce. Obsahuje i seznam šablon k zahájení projektů.
+WARNING: Uskupení pohledů, součást sekce. Obsahuje i seznam typů projektů k zahájení.
 
 === Sekce
 
