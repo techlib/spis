@@ -49,38 +49,42 @@ V praxi může hierarchická struktura vypadat například takto (šipky značí
 [plantuml,align="center"]
 ....
 @startuml
-rectangle " " as faktura <<Faktura>> #dddddd
-rectangle "protokol1" <<AkceptacniProtokol>> #99ff99
-rectangle "protokol2" <<AkceptacniProtokol>> #ffff99
-rectangle "nabidka" <<Nabídka>> #99ff99
-rectangle "poptavka" <<Poptávka>> #99ff99
+rectangle "faktura" <<Faktura>> #9999ff
+rectangle "protokol 1" as protokol_1 <<Akceptační protokol>> #99ff99
+rectangle "protokol 2" as protokol_2 <<Akceptační protokol>> #ffff99
+rectangle "nabídka" <<Nabídka>> #99ff99
+rectangle "poptávka" <<Poptávka>> #99ff99
 rectangle "specifikace" <<Specifikace>> #99ff99
 
-poptavka -d-> specifikace
-faktura -d-> nabidka
-faktura -d-> protokol1
-faktura -d-> protokol2
-protokol1 -d-> specifikace
-protokol1 -d-> nabidka
-protokol2 -d-> specifikace
-protokol2 -d-> nabidka
-nabidka -d-> poptavka
+poptávka -d-> specifikace
+faktura -d-> nabídka
+faktura -d-> protokol_1
+faktura -d-> protokol_2
+protokol_1 -d-> specifikace
+protokol_1 -d-> nabídka
+protokol_2 -d-> specifikace
+protokol_2 -d-> nabídka
+nabídka -d-> poptávka
 @enduml
 ....
 
-V příkladu je `protokol2` nedokončený, ale pracovník zodpovědný za schválení faktury ho označil za provizorní. To proto, aby mohl provizorně dokončit a fakturu a mohla proběhnout platba. Pokud se zmýlil a pracovník zodpovědný za `protokol2` tento nedokončí, mohou být vyvozeny důsledky.
+V příkladu je `protokol 2` nedokončený, ale pracovník zodpovědný za schválení faktury ho označil za provizorní. To proto, aby mohl vytvořit provizorní fakturu a mohla proběhnout platba. Pokud se zmýlil a pracovník zodpovědný za `protokol 2` tento nedokončí, mohou být vyvozeny důsledky.
 
 Z důvodu průkaznosti nelze dokončené dokumenty měnit. Pokud by se tak mělo stát, je vytvořen dokument nový, který ten původní nahradí v jeho roli. Pokud se na předchozí dokument jiný dokument spoléhá, je považován za neplatný. Uveďme si příklad:
 
 [plantuml,align="center"]
 ....
 @startuml
-rectangle "faktura (verze 1)" as faktura <<Faktura>> #ff9999
-rectangle "protokol (verze 2)" as protokol <<AkceptacniProtokol>> #9999ff
-rectangle "specifikace (verze 1)" as specifikace <<Specifikace>> #99ff99
+rectangle "faktura" <<Faktura>> #ff9999
+rectangle "protokol" <<Akceptační protokol>> #9999ff
+rectangle "specifikace" <<Specifikace>> #99ff99
 
 faktura -d-> protokol
 protokol -d-> specifikace
+
+note right of faktura: verze 1
+note right of protokol: verze 2
+note right of specifikace: verze 1
 @enduml
 ....
 
@@ -101,45 +105,99 @@ Za účelem snazší orientace uživatelů v systému jsou projekty a jejich typ
 
 <<<
 
-== Editor dokumentů
+== Dokumenty
 
 Pod pojmem dokument rozumíme strukturovaná, strojová data, se kterými uživatel nakládá přímo v systému. Tyto dokumenty často mívají přílohy, což jsou nestrukturovaná data (často různé formátované texty, tabulky či obrázky), které vznikají mimo systém a jsou do něj pouze vkládány.
 
-Dokumenty mají kromě vnitřní struktury také takzvané závislosti. Pomocí těch pak tvoří určité vnější struktury. Dokumenty mohou záviset pouze na jiných dokumentech, a to vždy v určitých rolích. Pro ilustraci:
+Dokumenty mají kromě vnitřní struktury také takzvané závislosti a díky nim pak tvoří určité vnější struktury. Tyto závislosti jsou dokumentům vlastní ve všech projektech, kterých jsou součástí.
+
+=== Typy dokumentů
+
+Typy dokumentů shrnují vnitřní strukturu, závislosti, použité komponenty uživatelského rozhraní a další vlastnosti instancí (tedy dokumentů) do jednoznačného pojmenování. V příkladech výše jsme zatím viděli například typy nazvané `Faktura` nebo `Akceptační protokol`.
+
+==== Závislosti
+
+Dokumenty mohou záviset pouze na jiných dokumentech, a to vždy v určitých rolích. Pro ilustraci:
 
 [plantuml,align="center"]
 ....
 @startuml
-rectangle "zapujcka" <<Zapujcka>> #9999ff
-rectangle "predani1" <<PredavaciProtokol>> #99ff99
-rectangle " " as predani2 <<PredavaciProtokol>> #dddddd
+rectangle "zápůjčka" <<Zápůjčka>> #9999ff
+rectangle "předání 1" as předání_1 <<Předávací protokol>> #99ff99
+rectangle " " as předání_2 <<Předávací protokol>> #dddddd
 
-zapujcka -d-> predani1 : vstupní
-zapujcka -d-> predani2 : výstupní
+zápůjčka -d-> předání_1 : vstupní
+zápůjčka -d-> předání_2 : výstupní
+
+note right of zápůjčka
+  Rozpracovaný dokument,
+  jejž zatím nelze dokončit.
+end note
+
+note bottom of předání_2
+  Neexistující dokument.
+end note
 @enduml
 ....
 
-V příkladu je předávací protokol použit nejprve pro dokumentaci zahájení zápůjčky věci a následně bude použit pro dokumentaci jejího navrácení. Pro vyložení závislého dokumentu `zapujcka` je podstatné tyto dva protokoly od sebe odlišit.
+V příkladu je předávací protokol použit nejprve pro dokumentaci zahájení zápůjčky věci a následně bude použit pro dokumentaci jejího navrácení. Pro vyložení závislého dokumentu `zápůjčka` je podstatné tyto dva protokoly od sebe odlišit.
 
-WARNING: Popíšeme, co je to dokument a z čeho se skládá (vlastní data a závislosti v daných rolích). Závislosti mohou být kvantifikovány {n, m} a opatřeny buď typem, nebo několika typovými třídami. To, které podstromy dokumentu jsou aktivní může být ovlivněno dalšími logickými výrazy, tentokrát pracujícími s dosavadními daty dokumentu a jeho závislostí.
+Oproti skutečným dokumentům mohou typy záviset pouze na dalších typech (nebo typových třídách, což je vysvětleno dále).
 
-=== Komponenty
+==== Kvantifikace
 
-Jsou opakovaně použitelné a je možné je aplikovat s dodatečnými parametry, které změní jejich chování. Mají stránku datovou a reprezentační.
+Závislosti je možné kvantifikovat. Lze tedy říci, že v některé roli může vystupovat konkrétní počet dokumentů. Uveďme si příklad struktury dokumentů:
 
-WARNING: Rozepsat komponenty...
+[plantuml,align="center"]
+....
+@startuml
+rectangle "rozpočet" <<Rozpočet>> #9999ff
+rectangle "návrh 1" as návrh_1 <<Dílčí návrh rozpočtu>> #99ff99
+rectangle "návrh 2" as návrh_2 <<Dílčí návrh rozpočtu>> #99ff99
+rectangle "návrh 3" as návrh_3 <<Dílčí návrh rozpočtu>> #9999ff
 
-=== Typy
+rozpočet -d-> návrh_1 : dle návrhu
+rozpočet -d-> návrh_2 : dle návrhu
+rozpočet -d-> návrh_3 : dle návrhu
+@enduml
+....
 
-Typy dokumentů shrnují strukturu, závislosti, použité komponenty uživatelského rozhraní a další vlastnosti dokumentů, které daného typu jsou.
+Ve struktuře se vyskytuje trojice dokumentů se shodným typem ve shodné roli. Jak budou vypadat typy pro tuto strukturu? Patrně následovně:
 
-WARNING: Rozepsat...
+[plantuml,align="center"]
+....
+@startuml
+skinparam monochrome true
 
-=== Typové třídy
+rectangle "rozpočet" <<Rozpočet>>
+rectangle "návrh" <<Dílčí návrh rozpočtu>>
+
+rozpočet -d-> "{1,}" návrh : dle návrhu
+@enduml
+....
+
+Kvantifikátor `{1,}` zde značí přítomnost alespoň jednoho dokumentu daného typu v dané roli. Je však možné specifikovat libovolný rozsah, tedy například:
+
+`{,}` nebo `{0,}`::
+Libovolný počet dokumentů.
+
+`{1,3}`::
+Jeden až tři dokumenty.
+
+`{,5}` nebo `{0,5}`::
+Až pět dokumentů.
+
+==== Typové třídy
 
 Typové třídy popisují dílčí strukturu dokumentů tak, aby mohlo dojít k použití více typů dokumentů ve stejné roli závislosti. Dále také upravují jak strukturu dokumentů dané třídy, tak i jejich závislosti. Umožňují tak i vytvářet podobné typy.
 
 WARNING: Uvést příklady...
+
+==== Schéma
+
+=== Komponenty
+
+WARNING: Komponenty...
 
 <<<
 
