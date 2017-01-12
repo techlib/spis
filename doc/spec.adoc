@@ -280,6 +280,8 @@ Pokud autor daného typu pohledu vytvořil nástroj pro zobrazení mapových vrs
 
 Obsah pohledu je dán popisem tématu, ve kterém je použit. Součástí tohoto popisu je i soubor dotazů do databáze, prostřednictvím kterých dojde k získání zobrazovaných dat. Tyto dotazy jsou parametrizovány hodnotami, které uživatel mění při prohlížení.
 
+WARNING: Popsat komponenty a způsob, jak se k nim dostanou data.
+
 <<<
 
 == Model oprávnění
