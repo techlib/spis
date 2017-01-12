@@ -31,9 +31,25 @@ SpIS bude napojen na vybrané další informační systémy, ze kterých bude č
 
 <<<
 
+=== Sekce a Témata
+
+Za účelem snazší orientaci uživatelů jsou veškeré objekty v systému roztříděny do témat a tématických sekcí. Toto členění nemá žádné důsledky pro funkci, ani pro řízení přístupu. Také nijak nesouvisí s organizačním členěním.
+
+=== Témata
+
+Téma seskupuje pohledy, které mají za úkol poskytnout informace o stavu věcí, se správou projektů a dokumentů, které umožňují tento stav ovlivňovat. Vhodná témata mohou být například *Rozpočet* nebo *Smlouvy*.
+
+Pokud to dává smysl, mohou se věci v tématech opakovat. Například určité pohledy mohou být přínosné pro více témat, některé projekty mohou souviset s vícero tématy a podobně. Názorným příkladem budiž *Nákup*, který zasahuje jak do *Rozpočtu*, tak právě do *Smluv*.
+
+=== Sekce
+
+Sekce slouží k seskupení několika témat. Není běžné, aby se věci opakovaly v různých sekcích, ale není to vyloučeno. Příkladem sekcí mohou být například *Finance*, *Legislativa* a *Vnější ukazatele*. V první sekci se setkáme s tématy, která jsme zmínili výše, v sekci *Legislativa* najdeme jen projekty pro práci s *Vnitřními předpisy* a konečně v sekci *Vnější ukazatele* nenajdeme sice žádné projekty, ale zato se zde setkáme s řadou pohledů na data získaná při provozu instituce, například *Návštěvnost*, nebo *Skladbu uživatelů*.
+
+<<<
+
 == Hierarchické pracovní struktury
 
-Hierarchické pracovní struktury jsou formou vedení *projektu*. Tato forma spočívá v postupném vytváření a schvalování dokumentů, které dokládají provedené úkony. dokumenty mohou být v různých stavech, ale zejména bývají *Rozpracované*, časem *Dokončené* a výjimečně *Provizorní*.
+Hierarchické pracovní struktury jsou formou vedení *projektů*. Tato forma spočívá v postupném vytváření a schvalování dokumentů, které dokládají provedené úkony. dokumenty mohou být v různých stavech, ale zejména bývají *Rozpracované*, časem *Dokončené* a výjimečně *Provizorní*.
 
 Rozpracované::
 Dokumenty, které ještě nejsou hotové a nelze se na ně spoléhat.
@@ -99,12 +115,6 @@ V příkladu došlo k tomu, že byla v důsledku aktualizace dokumentu `protokol
 Každý projekt je opatřen popisem své hierarchické struktury. Protože si jsou některé projekty ve své struktuře velmi podobné, definujeme pojmenované typy projektů. Tyto typy reprezentují strukturu, které se dokumenty v projektu přizpůsobují.
 
 V případě potřeby je možné typ aktivního projektu změnit a dokumenty přeuspořádat do nových rolí. Stejně tak je možné do struktury vložit již existující dokumenty, pokud tak nedojde k porušení jejich vazeb na závislosti.
-
-=== Sekce a Témata
-
-Za účelem snazší orientace uživatelů v systému jsou projekty a jejich typy rozčleněny do sekcí a témat. Ve stejném členění jsou zařazeny také přehledy, což usnadňuje nalezení nástrojů pro zásahy do dat, která přehledy představují. Zároveň toto členění usnadňuje kontrolu výsledků aktivních projektů -- po dokončení práce na projektu se uživatel snadno vrací na přehledy daného tématu.
-
-WARNING: Pokud čtu sekvenčně, v tuto chvíli nevím, co je téma a sekce. Je vhodné odkázat.
 
 === Účast na projektech
 
@@ -269,14 +279,6 @@ Pohled může být využit ve více tématech. Každý pohled je určitého typu
 Pokud autor daného typu pohledu vytvořil nástroj pro zobrazení mapových vrstev s vyznačenými body, je možné s jeho pomocí zobrazovat prostorová data. Pokud se jedná o nástroj pro zobrazení tabulky, je možné s jeho pomocí zobrazovat data relační a tak dále.
 
 Obsah pohledu je dán popisem tématu, ve kterém je použit. Součástí tohoto popisu je i soubor dotazů do databáze, prostřednictvím kterých dojde k získání zobrazovaných dat. Tyto dotazy jsou parametrizovány hodnotami, které zvídavý uživatel mění při prohlížení.
-
-=== Témata
-
-WARNING: Uskupení pohledů, součást sekce. Obsahuje i seznam typů projektů k zahájení.
-
-=== Sekce
-
-WARNING: Základní organizační členění.
 
 <<<
 
