@@ -329,12 +329,13 @@ Některé typy dokumentů mohou pro dokončení vyžadovat podpisy od různých 
 Způsob manipulace také upravuje, se kterými částmi těla dokumentu a se kterými přílohami přesně smí uživatel nakládat. Oprávnění k částem těl dokumentů jsou rekurzivní a musí tedy podporovat nejen svolení, ale také zákazy.
 
 .Příklad popisu způsobů manipulace s tělem dokumentu
-[options="header",cols="5,>1"]
+[options="header",cols="5,>2"]
 |===
 | Cesta              | Manipulace
-| `/název`           | měnit
-| `/zdůvodnění`      | měnit
-| `/odhadovaná-cena` | číst
+| `/`                | číst klíče
+| `/název`           | číst a měnit hodnotu
+| `/zdůvodnění`      | číst a měnit hodnotu
+| `/odhadovaná-cena` | číst hodnotu
 |===
 
 <<<
