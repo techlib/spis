@@ -11,7 +11,7 @@ html: ${htmls}
 pdf: ${pdfs}
 
 clean:
-	rm -f doc/*.html doc/*.png doc/*.cache
+	rm -f doc/*.html doc/*.png doc/*.cache doc/*.pdf
 
 %.html: %.adoc
 	asciidoctor -r asciidoctor-diagram -b html5 -o $@ $<
