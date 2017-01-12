@@ -305,18 +305,12 @@ Role::
 Soubor vícero oprávnění se souhrnným názvem. Například role s názvem *Vedoucí ICT* smí *Podepisovat Faktury Odboru ICT* a *Podepisovat Předávací protokoly Oddělení provozu*.
 
 Odvislá role::
-Odvislá role je podobná běžné roli, ale vypouští obor působnosti. Ten je doplněn automaticky oborem působnosti, který je osobě do role jmenované vlastní. Jako příklad můžeme uvést odvislou roli *Vedoucí (oboru)*, která smí *Podepisovat Faktury (oboru)*.
+Odvislá role je podobná běžné roli, ale vypouští obor působnosti. Ten je doplněn při jmenování. Jako příklad můžeme uvést odvislou roli *Vedoucí (oboru)*, která smí *Podepisovat Faktury (tohoto oboru)*.
 
 Jmenování::
 Díky jmenování určité osoby do některé role dojde k aplikaci všech pravidel vyplývajících z dané role na danou osobu a tedy ke vzniku oprávnění osoby nakládat vymezeným způsobem s předmětnými dokumenty.
 +
-Podobných výsledků můžeme dosáhnout jmenováním do konkrétní role (například *Ondřej Koch* je *Vedoucí ICT*) ale také jmenováním do odvislé role (například *Ondřej Koch (Odbor ICT) je Vedoucí (svého oboru působnosti)*). Druhý způsob se hodí v případech, kdy mají jmenovaní uživatelé k vlastnímu oboru působnosti vždy stejné povinnosti.
-
-=== Uživatelé a obory působnosti
-
-Každý obor působnosti sdružuje dokumenty, se kterými manipulují určité okruhy uživatelů. Bývají to zpravidla ty, kterým je tento obor vlastní například proto, že jsou do něj organizačně zařazeni a tudíž jsou pak v systému jeho součástí. Příslušnost uživatelů do určitých oborů působnosti je klíčová pro aplikaci odvislých rolí, které zásadně zjednodušují správu oprávnění v dnes běžných organizacích.
-
-Protože uživatel může být součástí více oborů působnosti, může dojít k tomu, že má ve všech skrze odvislé role určitá oprávnění. Aby tato oprávnění nebyla nesmyslná, je možné omezit typy dokumentů, které mohou do jednotlivých oborů spadat.
+Podobných výsledků můžeme dosáhnout jmenováním do konkrétní role (například *Ondřej Koch* je *Vedoucí ICT*) ale také jmenováním do odvislé role (například *Ondřej Koch* je *Vedoucí (Odboru ICT)*). Druhý způsob se hodí v případech, kdy mají jmenovaní uživatelé k oborům působnosti vždy stejné povinnosti.
 
 === Uživatelské role
 
