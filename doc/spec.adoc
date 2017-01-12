@@ -4,6 +4,7 @@
 :lang: cs
 :note-caption: Poznámka
 :warning-caption: Pozor
+:table-caption: Tabulka
 :toc-title: Obsah
 :toc: left
 :sectnumlevels: 6
@@ -11,8 +12,6 @@
 == Úvod
 
 Správní informační systém, zkráceně _SpIS_ je otevřený nástroj pro vedení elektronických evidencí. Měl by zpřehlednit správu věcí a to zejména těch veřejných. V praxi bude tedy evidovat doklady a další dokumenty.
-
-WARNING: Správa věcí veřejných... Spíše by měl zpřehlednit správní agendy společné pro všechny organizace, zvláště ty pro ty veřejné.
 
 Výběr z funkcí, které očekáváme v prvních verzích:
 
@@ -29,8 +28,6 @@ Oprávnění::
 Pružný systém oprávnění založený na uživatelských rolích a organizačních jednotkách umožňuje pracovat pouze s těmi dokumenty a na těch projektech, které se uživatelů týkají.
 
 SpIS bude napojen na vybrané další informační systémy, ze kterých bude čerpat podklady a do kterých bude předávat výstupy nebo dílčí dokumenty. Napojení bude realizováno prostřednictvím datové vrstvy, tedy v databázi.
-
-WARNING: Nejen v databázi. Potenciálně bude potřeba volat nějaké služby, což se jaksi pomalu, ale jistě dostáváme k ESB.
 
 <<<
 
@@ -108,6 +105,15 @@ V případě potřeby je možné typ aktivního projektu změnit a dokumenty př
 Za účelem snazší orientace uživatelů v systému jsou projekty a jejich typy rozčleněny do sekcí a témat. Ve stejném členění jsou zařazeny také přehledy, což usnadňuje nalezení nástrojů pro zásahy do dat, která přehledy představují. Zároveň toto členění usnadňuje kontrolu výsledků aktivních projektů -- po dokončení práce na projektu se uživatel snadno vrací na přehledy daného tématu.
 
 WARNING: Pokud čtu sekvenčně, v tuto chvíli nevím, co je téma a sekce. Je vhodné odkázat.
+
+=== Účast na projektech
+
+Po vytvoření projektu lze na základě typů dokumentů přítomných v typu projektu sestavit seznam rolí, které na projektu musejí spolupracovat, aby jej bylo možné dokončit. Účastníci projektu mohou v jakékoliv chvíli pozvat vybrané role (nejen) z tohoto seznamu, čímž dojde k otevření projektu uživatelům v této roli. K účasti na projektu je možné uživatele přizvat i jmenovitě.
+
+Uživatelé přístupem do projektu nezískávají žádná dodatečná oprávnění. Stále mohou manipulovat pouze s dokumenty, ke kterým mají oprávnění vyplývající z uživatelských rolí. V řadě případů je totiž možné do projektu zahrnout libovolné dokumenty, což ovšem nelze produktivně zohlednit pozváním všech uživatelů v organizaci.
+
+Dalším důvodem k individuálnímu pozvání může být například zajištění procesu nákupu napříč útvary, kdy si útvar nákup požadující přizve odborníky z jiného útvaru pro spolupráci na zadání ve společném oboru působnosti. Například tehdy, když si *Oddělení pro styk s veřejností* přizve pracovníky z *Odboru ICT* do projektu v oboru *Technické vybavení pro produkci multimédií*.
+
 <<<
 
 == Dokumenty
@@ -275,28 +281,65 @@ WARNING: Základní organizační členění.
 <<<
 
 == Model oprávnění
-Model oprvánění je v systému navržen ve dvou rovinách a to v rovině oprávnění k typům dokumentů a způsobům, jak s ním nakládat (oprávnění), a v rovině původu dokumentu (obor působnosti). Kompozice množin oprávnění a oborů působnosti se nazývá role. Uživatel může vystupovat ve více rolích, přičemž platí, že cokoliv mu jedna role povolí, nemůže mu jiná zakázat a to z důvodu, že oprávnění jsou přiřazována explicitně (tj. implicitně je jakákoliv interakce zakázana).
 
-=== Oprávnění
+Model oprávnění umožňuje určit, ke kterým datům v systému mají ti kteří uživatelé přístup a mohou je číst nebo měnit. Model pracuje s pravidly ve tvaru *Osoba / Oprávnění / Dokument* a nejlépe jej lze pochopit s pomocí termínů, se kterými pracuje:
 
-Každý dokument má v rámci projektu definovány stavy, v nichž se může nacházet. Oprávnění v tomto případě znamená, že daná role může s danými typy dokumentů operovat do nějaké úrovně a může je tak např. rozpracovat a učinit provizorními, nikoliv však dokončit.
-Speciálním typem oprávnění je pak možnost určité typy dokumentů podepsat. Při podepisování není možné dokument již nijak měnit, podpisem lze pouze vyjádřit svůj úplný souhlas s obsahem daného dokumentu.
+Typ dokumentu::
+Typ je základní a neměnnou vlastností každého dokumentu, popisující jeho charakter. Dokument může být například typu, který se nazývá *Faktura*.
 
-=== Obory působnosti
+Obor působnosti::
+Právě za účelem kontroly přístupu musí být každý dokument zařazen do takzvaného oboru působnosti. Obor může, ale nemusí vycházet z organizačního členění. Může se tedy jednat například o obor nazvaný *Odbor ICT*.
 
-Obor působnosti sdružuje dokumenty, se kterými manipulují určité okruhy osob a to zpravidla takové, které jsou zařazeny v jedné organizační jednotce. Implicitně je každý uživatel zařazen do alespoň jedné organizační jednotky. Z takovéhoto zařazení vyplývají obory působnosti pro všechna oprávnění, tedy nikoliv jen pro ta, která jsou explicitně definovaná v roli.
+Předmětný dokument::
+Jedná o dokument určitého typu, který spadá do určitého oboru působnosti. Předmětnými dokumenty určitého oprávnění (popsaného níže) mohou být například *Faktury Odboru ICT*.
 
-Uveďme si příklad. Nechť existuje role "Majetkář", která definuje oprávnění k dokumentům typu "Zařazovací list" a "Předávací protokol pracovních pomůcek". Nechť je definováno, že existuje více "Majetkářů", z nichž někteří evidují o kancelářských potřebách, židlích, stolech, stolních větrácích apod. a jiní evidují o kancelářské výpočetní technice.
-První i druhá skupina má přiřazenu stejnou roli, ale každý z nich je zařazen v jiné organizační jednotce. Za majetek každého z nich odpovídá jiný organizační celek. Není však třeba definovat role specifické pro každý z těchto celků, postačí implicitní přiřazení osoby do oboru působnosti.
+Způsob manipulace::
+Způsobem manipulace rozumíme to, jak bude s předmětnými dokumenty nakládáno. Součástí popisu způsobu je i detailní vymezení toho, jak bude přistupováno k jednotlivým částem předmětných dokumentů. Příkladem způsobu manipulace může být například *Podepisovat*.
+
+Oprávnění::
+Spojení způsobu manipulace s typem dokumentů a oborů působnosti. Oprávnění představují to, co uživatelé ke své práci potřebují. Například *Podepisovat Faktury Odboru ICT*.
+
+Role::
+Soubor vícero oprávnění se souhrnným názvem. Například role s názvem *Vedoucí ICT* smí *Podepisovat Faktury Odboru ICT* a *Podepisovat Předávací protokoly Oddělení provozu*.
+
+Odvislá role::
+Odvislá role je podobná běžné roli, ale vypouští obor působnosti. Ten je doplněn automaticky oborem působnosti, který je osobě do role jmenované vlastní. Jako příklad můžeme uvést odvislou roli *Vedoucí (oboru)*, která smí *Podepisovat Faktury (oboru)*.
+
+Jmenování::
+Díky jmenování určité osoby do některé role dojde k aplikaci všech pravidel vyplývajících z dané role na danou osobu a tedy ke vzniku oprávnění osoby nakládat vymezeným způsobem s předmětnými dokumenty.
++
+Podobných výsledků můžeme dosáhnout jmenováním do konkrétní role (například *Ondřej Koch* je *Vedoucí ICT*) ale také jmenováním do odvislé role (například *Ondřej Koch (Odbor ICT) je Vedoucí (svého oboru působnosti)*). Druhý způsob se hodí v případech, kdy mají jmenovaní uživatelé k vlastnímu oboru působnosti vždy stejné povinnosti.
+
+=== Uživatelé a obory působnosti
+
+Každý obor působnosti sdružuje dokumenty, se kterými manipulují určité okruhy uživatelů. Bývají to zpravidla ty, kterým je tento obor vlastní například proto, že jsou do něj organizačně zařazeni a tudíž jsou pak v systému jeho součástí. Příslušnost uživatelů do určitých oborů působnosti je klíčová pro aplikaci odvislých rolí, které zásadně zjednodušují správu oprávnění v dnes běžných organizacích.
+
+Protože uživatel může být součástí více oborů působnosti, může dojít k tomu, že má ve všech skrze odvislé role určitá oprávnění. Aby tato oprávnění nebyla nesmyslná, je možné omezit typy dokumentů, které mohou do jednotlivých oborů spadat.
 
 === Uživatelské role
 
-Uživatelské role představují oprávnění k provádění množiny úkonů nad množinou typů dokumentů v rámci množiny organizačních jednotek. Libovolný uživatel může vystupovat v řadě rolí.
+Role představují oprávnění uživatelů, kteří jsou součástí určitých oborů působnosti k manipulaci s množinou předmětných dokumentů, spadajících do stejných nebo jiných oborů.
 
-=== Zvaní do projektů
+TIP: Pro jmenování uživatelů do rolí může sloužit zabudovaná funkce systému, nebo k němu může docházet na základě dokumentů, které jsou v systému vedené.
 
-Po vytvoření projektu lze na základě typu projektu resp. dokumentů nutných k jeho dokončení sestavit seznam rolí, které na projektu musejí spolupracovat, aby jej bylo možné dokončit. Autor projektu může v jakékoliv chvíli povolit přístup daným rolím v tomto seznamu, čímž dojde k vyrozumění patřičných uživatelů v dané roli.
-Současně je možné pozvat k projektu explicitně definované role či konkrétní uživatele. Tito uživatelé, nebudou-li příslušní k některé z rolí, které se projektu účastní, budou moci operovat pouze s dokumenty, které budou zpravidla přílohou dokumentů nutných k dopracování projektu. Typickým příkladem je doplnění funkční specifikace od odborného útvaru, kde předmětem nákupu je komodita jíž bude účelně využivat jiný útvar, a který tedy bude řešit proces nákupu.
+Úlohou rolí je pojmenovat skupiny oprávnění, které mají určití uživatelé a tím umožnit jejich kontrolu a změny. Běžné role se uplatní zejména při netypických situacích, jako jsou projekty mimo běžný rámec organizační struktury. Odvislé role se naopak uplatní při formulování oprávnění pro pravidelné organizační struktury.
+
+=== Způsoby manipulace
+
+Každý dokument se může nacházet ve třech stavech. Manipulace znamená například to, že určitý uživatel u předmětného dokumentu tento stav změní. Tedy dokument rozpracuje, označí za provizorně dokončený, nebo jej dokončí. Obsah dokumentů, které jsou (byť jen provizorně) dokončené, již není možné dále měnit. Provizorní dokument je ovšem možné dokončit.
+
+Některé typy dokumentů mohou pro dokončení vyžadovat podpisy od různých uživatelů. Způsob manipulace pro tyto typy dokumentů určuje, kteří uživatelé jsou oprávněni vytvořit které podpisové doložky.
+
+Způsob manipulace také upravuje, se kterými částmi těla dokumentu a se kterými přílohami přesně smí uživatel nakládat. Oprávnění k částem těl dokumentů jsou rekurzivní a musí tedy podporovat nejen svolení, ale také zákazy.
+
+.Příklad popisu způsobů manipulace s tělem dokumentu
+[options="header",cols="5,>1"]
+|===
+| Cesta              | Manipulace
+| `/název`           | měnit
+| `/zdůvodnění`      | měnit
+| `/odhadovaná-cena` | číst
+|===
 
 <<<
 
