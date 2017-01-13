@@ -11,7 +11,7 @@
 
 == Úvod
 
-Správní informační systém, zkráceně _SpIS_ je otevřený nástroj pro vedení elektronických evidencí. Měl by zpřehlednit správu věcí a to zejména těch veřejných. V praxi bude tedy evidovat doklady a další dokumenty.
+Správní informační systém, zkráceně _SpIS_ je otevřený nástroj pro vedení elektronických evidencí. Měl by zpřehlednit výkon organizačních úkonů. V praxi bude tedy evidovat doklady a další dokumenty.
 
 Výběr z funkcí, které očekáváme v prvních verzích:
 
@@ -105,7 +105,7 @@ note right of protokol: verze 2
 @enduml
 ....
 
-V příkladu došlo k tomu, že byla v důsledku aktualizace dokumentu `protokol` zneplatněna aktuální verze dokumentu `faktura`. V této situaci jsou v podstatě jen dvě možnosti, jak postupovat správně:
+V příkladu došlo k tomu, že byla v důsledku aktualizace dokumentu `protokol` zneplatněna aktuální verze dokumentu `faktura`. V této situaci jsou v podstatě jen dvě možnosti jak postupovat správně:
 
 1. Vrátit se k předchozí verzi dokumentu `protokol`, kterou systém uchovává.
 2. Schválit novou verzi dokumentu `protokol` a následně vytvořit novou verzi dokumentu `faktura`.
@@ -122,13 +122,13 @@ Po vytvoření projektu lze na základě typů dokumentů přítomných v typu p
 
 Uživatelé přístupem do projektu nezískávají žádná dodatečná oprávnění. Stále mohou manipulovat pouze s dokumenty, ke kterým mají oprávnění vyplývající z uživatelských rolí. V řadě případů je totiž možné do projektu zahrnout libovolné dokumenty, což ovšem nelze produktivně zohlednit pozváním všech uživatelů v organizaci.
 
-Dalším důvodem k individuálnímu pozvání může být například zajištění procesu nákupu napříč útvary, kdy si útvar nákup požadující přizve odborníky z jiného útvaru pro spolupráci na zadání ve společném oboru působnosti. Například tehdy, když si *Oddělení pro styk s veřejností* přizve pracovníky z *Odboru ICT* do projektu v oboru *Technické vybavení pro produkci multimédií*.
+Dalším důvodem k individuálnímu pozvání může být například zajištění procesu nákupu napříč útvary, kdy si útvar požadující nákup přizve odborníky z jiného útvaru pro spolupráci na zadání ve společném oboru působnosti. Například tehdy, když si *Oddělení pro styk s veřejností* přizve pracovníky z *Odboru ICT* do projektu v oboru *Technické vybavení pro produkci multimédií*.
 
 <<<
 
 == Dokumenty
 
-Pod pojmem dokument rozumíme strukturovaná, strojová data, se kterými uživatel nakládá přímo v systému. Tyto dokumenty často mívají přílohy, což jsou nestrukturovaná data (často různé formátované texty, tabulky či obrázky), které vznikají mimo systém a jsou do něj pouze vkládány.
+Pod pojmem dokument rozumíme strukturovaná strojová data, se kterými uživatel nakládá přímo v systému. Tyto dokumenty často mívají přílohy, což jsou nestrukturovaná data (často různé formátované texty, tabulky či obrázky), které vznikají mimo systém a jsou do něj pouze vkládány.
 
 Dokumenty mají kromě vnitřní struktury také takzvané závislosti a díky nim pak tvoří určité vnější struktury. Tyto závislosti jsou dokumentům vlastní ve všech projektech, kterých jsou součástí.
 
@@ -250,7 +250,7 @@ plán -d-> výdaj_2 : zahrnuje
 @enduml
 ....
 
-Termín typová třída se hojně vyskytuje v kontextu programovacího jazyka Haskell. Typové třídy v Haskellu ale neposkytují stejný polymorfismus jako typové třídy popsané výše. V Haskellu by musely být oba výdaje v příkladu zcela stejného typu.
+Termín typová třída se vyskytuje hojně v kontextu funkcionálního programování. Typové třídy tam ale obvykle neposkytují stejný druh polymorfismu jako typové třídy popsané výše. Dle tamější praxe by musely být oba výdaje v příkladu zcela stejného typu.
 
 ==== Schéma
 
