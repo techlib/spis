@@ -49,7 +49,7 @@ Sekce slouží k seskupení několika témat. Není běžné, aby se věci opako
 
 == Hierarchické pracovní struktury
 
-Hierarchické pracovní struktury jsou formou vedení *projektů*. Tato forma spočívá v postupném vytváření a schvalování dokumentů, které dokládají provedené úkony. dokumenty mohou být v různých stavech, ale zejména bývají *Rozpracované*, časem *Dokončené* a výjimečně *Provizorní*.
+Hierarchické pracovní struktury jsou formou vedení *projektů*. Tato forma spočívá v postupném vytváření a schvalování dokumentů, které dokládají provedené úkony. Dokumenty mohou být v různých stavech, ale zejména bývají *Rozpracované*, časem *Dokončené* a výjimečně *Provizorní*.
 
 Rozpracované::
 Dokumenty, které ještě nejsou hotové a nelze se na ně spoléhat.
@@ -274,26 +274,26 @@ WARNING: Komponenty...
 
 === Pohledy
 
-Pohled může být využit ve více tématech. Každý pohled je určitého typu, což určuje to, jaká data dokáže prezentovat a zároveň způsob, jakým tak činí.
+Pohled může být využit ve více tématech. Každý pohled je určitého typu, což určuje to, jaká data dokáže prezentovat, a zároveň způsob, jakým tak činí.
 
 Pokud autor daného typu pohledu vytvořil nástroj pro zobrazení mapových vrstev s vyznačenými body, je možné s jeho pomocí zobrazovat prostorová data. Pokud se jedná o nástroj pro zobrazení tabulky, je možné s jeho pomocí zobrazovat data relační a tak dále.
 
-Obsah pohledu je dán popisem tématu, ve kterém je použit. Součástí tohoto popisu je i soubor dotazů do databáze, prostřednictvím kterých dojde k získání zobrazovaných dat. Tyto dotazy jsou parametrizovány hodnotami, které zvídavý uživatel mění při prohlížení.
+Obsah pohledu je dán popisem tématu, ve kterém je použit. Součástí tohoto popisu je i soubor dotazů do databáze, prostřednictvím kterých dojde k získání zobrazovaných dat. Tyto dotazy jsou parametrizovány hodnotami, které uživatel mění při prohlížení.
 
 <<<
 
 == Model oprávnění
 
-Model oprávnění umožňuje určit, ke kterým datům v systému mají ti kteří uživatelé přístup a mohou je číst nebo měnit. Model pracuje s pravidly ve tvaru *Osoba / Oprávnění / Dokument* a nejlépe jej lze pochopit s pomocí termínů, se kterými pracuje:
+Model oprávnění umožňuje určit, k jakým datům v systému mají jací uživatelé přístup a mohou je číst nebo měnit. Model pracuje s pravidly ve tvaru *Osoba / Oprávnění / Dokument* a nejlépe jej lze pochopit s pomocí termínů, se kterými pracuje:
 
 Typ dokumentu::
-Typ je základní a neměnnou vlastností každého dokumentu, popisující jeho charakter. Dokument může být například typu, který se nazývá *Faktura*.
+Typ je základní a neměnnou vlastností každého dokumentu popisující jeho charakter. Dokument může být například typu *Faktura*.
 
 Obor působnosti::
 Právě za účelem kontroly přístupu musí být každý dokument zařazen do takzvaného oboru působnosti. Obor může, ale nemusí vycházet z organizačního členění. Může se tedy jednat například o obor nazvaný *Odbor ICT*.
 
 Předmětný dokument::
-Jedná o dokument určitého typu, který spadá do určitého oboru působnosti. Předmětnými dokumenty určitého oprávnění (popsaného níže) mohou být například *Faktury Odboru ICT*.
+Jedná se o dokument určitého typu, který spadá do určitého oboru působnosti. Předmětnými dokumenty určitého oprávnění (popsaného níže) mohou být například *Faktury Odboru ICT*.
 
 Způsob manipulace::
 Způsobem manipulace rozumíme to, jak bude s předmětnými dokumenty nakládáno. Součástí popisu způsobu je i detailní vymezení toho, jak bude přistupováno k jednotlivým částem předmětných dokumentů. Příkladem způsobu manipulace může být například *Podepisovat*.
@@ -310,19 +310,19 @@ Odvislá role je podobná běžné roli, ale vypouští obor působnosti. Ten je
 Jmenování::
 Díky jmenování určité osoby do některé role dojde k aplikaci všech pravidel vyplývajících z dané role na danou osobu a tedy ke vzniku oprávnění osoby nakládat vymezeným způsobem s předmětnými dokumenty.
 +
-Podobných výsledků můžeme dosáhnout jmenováním do konkrétní role (například *Ondřej Koch* je *Vedoucí ICT*) ale také jmenováním do odvislé role (například *Ondřej Koch* je *Vedoucí (Odboru ICT)*). Druhý způsob se hodí v případech, kdy mají jmenovaní uživatelé k oborům působnosti vždy stejné povinnosti.
+Podobných výsledků můžeme dosáhnout jmenováním do konkrétní role (například *Ondřej Koch* je *Vedoucí ICT*), ale také jmenováním do odvislé role (například *Ondřej Koch* je *Vedoucí (Odboru ICT)*). Druhý způsob se hodí v případech, kdy mají jmenovaní uživatelé k oborům působnosti vždy stejné povinnosti.
 
 === Uživatelské role
 
-Role představují oprávnění uživatelů, kteří jsou součástí určitých oborů působnosti k manipulaci s množinou předmětných dokumentů, spadajících do stejných nebo jiných oborů.
+Role představují oprávnění uživatelů, kteří jsou součástí určitých oborů působnosti k manipulaci s množinou předmětných dokumentů spadajících do stejných nebo jiných oborů.
 
-TIP: Pro jmenování uživatelů do rolí může sloužit zabudovaná funkce systému, nebo k němu může docházet na základě dokumentů, které jsou v systému vedené.
+TIP: Pro jmenování uživatelů do rolí může sloužit zabudovaná funkce systému nebo k němu může docházet na základě dokumentů, které jsou v systému vedené.
 
-Úlohou rolí je pojmenovat skupiny oprávnění, které mají určití uživatelé a tím umožnit jejich kontrolu a změny. Běžné role se uplatní zejména při netypických situacích, jako jsou projekty mimo běžný rámec organizační struktury. Odvislé role se naopak uplatní při formulování oprávnění pro pravidelné organizační struktury.
+Úlohou rolí je pojmenovat skupiny oprávnění, které mají určití uživatelé, a tím umožnit jejich kontrolu a změny. Běžné role se uplatní zejména při netypických situacích, jako jsou projekty mimo běžný rámec organizační struktury. Odvislé role se naopak uplatní při formulování oprávnění pro pravidelné organizační struktury.
 
 === Způsoby manipulace
 
-Každý dokument se může nacházet ve třech stavech. Manipulace znamená například to, že určitý uživatel u předmětného dokumentu tento stav změní. Tedy dokument rozpracuje, označí za provizorně dokončený, nebo jej dokončí. Obsah dokumentů, které jsou (byť jen provizorně) dokončené, již není možné dále měnit. Provizorní dokument je ovšem možné dokončit.
+Každý dokument se může nacházet ve třech stavech. Manipulace znamená například to, že určitý uživatel u předmětného dokumentu tento stav změní. Tedy dokument rozpracuje, označí za provizorně dokončený nebo jej dokončí. Obsah dokumentů, které jsou (byť jen provizorně) dokončené, již není možné dále měnit. Provizorní dokument však dokončit lze.
 
 Některé typy dokumentů mohou pro dokončení vyžadovat podpisy od různých uživatelů. Způsob manipulace pro tyto typy dokumentů určuje, kteří uživatelé jsou oprávněni vytvořit které podpisové doložky.
 
@@ -380,9 +380,9 @@ cloud "Externí systémy" {
 @enduml
 ....
 
-Uživatelé budou se SpISem komunikovat pomocí webového rozhraní, spuštěném v běžném webovém prohlížeči. Pro účely elektronického podepisování bude na jejich zařízeních nasazena další aplikace, ve schématu označená jako _Pečetidlo_.
+Uživatelé budou se SpISem komunikovat pomocí webového rozhraní spuštěném v běžném webovém prohlížeči. Pro účely elektronického podepisování bude na jejich zařízeních nasazena další aplikace, ve schématu označená jako _Pečetidlo_.
 
-Jak naznačuje schéma výše, _Aplikace_ samotná je běhovým prostředím pro jakési _Politiky_. Ty vytváří programátoři a popisují jimi nejen strukturu dokumentů, které se ve _SpISu_ vyskytují, ale také jejich vzájemné vazby v projektech, použité prvky uživatelského rozhraní a další rysy systému vlastní organizaci, které systém využívá.
+Jak naznačuje schéma výše, _Aplikace_ samotná je běhovým prostředím pro určité _Politiky_. Ty vytváří programátoři a popisují jimi nejen strukturu dokumentů, které se ve _SpISu_ vyskytují, ale také jejich vzájemné vazby v projektech, použité prvky uživatelského rozhraní a další rysy systému dané organizace.
 
 === Datová vrstva
 
