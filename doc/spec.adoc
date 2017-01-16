@@ -272,7 +272,7 @@ WARNING: Komponenty... Podobné jako u Pohledů. Editace... vedení revizí, v p
 
 == Přehledy
 
-Přehledy jsou klíčovou součástí systému umožňující generování statistik. Poskytují uživatelům vhled do současného, dřívějšího a někdy i možného budoucího stavu věcí. Právě na jejich základě zahajují uživatelé projekty a svými dokumenty mění jejich stav.
+Přehledy jsou klíčovou součástí systému. Poskytují uživatelům vhled do současného, dřívějšího a někdy i možného budoucího stavu věcí. Právě na jejich základě zahajují uživatelé projekty a svými dokumenty stav věcí mění.
 
 === Pohledy a komponenty
 
