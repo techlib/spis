@@ -94,6 +94,7 @@ sources:
     name: Holidays
     name[cs]: Svátky
 
+    optional: true
     provides: {$ref: "calendar.json#/definitions/events"}
     expects:
       period: {$ref: "calendar.json#/definitions/period"}
@@ -124,6 +125,8 @@ provides: {$ref: "calendar.json#/definitions/events"}
 expects:
   period: {$ref: "calendar.json#/definitions/period"}
 ....
+
+WARNING: Je potřeba se rozepsat o významu jednotlivých polí a zmínit se o smyslu odkazů na společná schémata. Obecně by bylo dobré nějak popsat charakter politik. Možná v závěru dokumentu?
 
 <<<
 
@@ -344,9 +347,61 @@ WARNING: Popsat hlouběji jazyk pro vytváření schémat dokumentů.
 
 === Komponenty
 
-Komponenty úzce souvisí se schématem dokumentu. Právě z nich si programátor vybírá, jak realizovat uživatelské rozhraní pro úpravy jednotlivých částí dokumentu.
+Komponenty úzce souvisí se schématem dokumentu. Právě v něm si programátor vybírá, ze kterých se prostředí pro úpravy daného typu dokumentu bude skládat.
 
-WARNING: Komponenty... Podobné jako u Pohledů. Editace... vedení revizí, v případě změny nutné odsouhlasit veškeré změny (nebo každou zvlášť přebít vlastní verzí) než bude možné znovu zkusit uložit.
+Ve většině případů pracují komponenty se skaláry a jedná se v podstatě o dobře známé prvky uživatelských rozhraní. V jistých případech však komponenty editoru dokumentů vyžadují další informace a začínají ve svém uspořádání připomínat komponenty pohledů.
+
+[source,yaml]
+.{example-caption} {counter:example}. Popis komponenty umožňující výběr dne
+....
+name: Simple Date Picker
+name[cs]: Jednoduchý výběr dne
+
+provides: {$ref: "calendar.json#/definitions/date"}
+
+sources:
+  holidays:
+    name: Holidays
+    name[cs]: Svátky
+
+    optional: true
+    provides: {$ref: "calendar.json#/definitions/events"}
+    expects:
+      period: {$ref: "calendar.json#/definitions/period"}
+
+options:
+  mode: {$ref: "calendar.json#/definitions/mode"}
+....
+
+Z příkladu výše je patrná hlavní odlišnost popisu komponenty editoru dokumentů od popisu komponenty pohledu. Jedná se o klíč `provides`, který popisuje schéma dílčí části dokumentu, jejíž úpravy komponenta zprostředkovává.
+
+=== Verze a revize
+
+Ačkoliv se může zdát, že dokumenty lze upravovat, ve skutečnosti tomu tak není. Při každé zdánlivé změně vzniká nová revize dokumentu, která předchozí revizi nahrazuje. Souběžně s označením revize je u každého dokumentu vedeno také označení jeho verze.
+
+Při každém dokončení dokumentu dochází k uzamčení jeho současné verze na současné revizi. To znamená, že již není možné vytvořit revizi se shodnou verzí a musí tedy při další změně dojít k použití nového označení.
+
+.Změny ve verzi a revizi v důsledku úprav dokumentu
+[options="header",cols="^1,^1,<5"]
+|===
+| Verze | Revize | Popis změny
+|   1   |   1    | Dokument vytvořen
+|   1   |   2    | Drobná změna dokumentu
+|   1   |   3    | Zásadní změna dokumentu
+|   1   |   4    | Dokument dokončen
+|   2   |   5    | Drobná změna dokumentu
+|   2   |   6    | Dokument zrušen
+|===
+
+Běžný postup úpravy dokumentu probíhá tak, že si uživatel otevře aktuální revizi, zanese do ní požadované změny a výsledek uloží jako revizi novou. Pokud dojde k souběhu a druhý uživatel (například v době kdy první stále chystá své změny) úspěšně vytvoří novou revizi, dojde při pokusu o uložení ze strany prvního uživatele ke konfliktu.
+
+Konflikt je uživateli prezentován v plné šíři. Pokud chce se změnami pokračovat, musí se u každé komponenty rozhodnout pro některou z následujících možností:
+
+1. Přijme změnu od konkurujícího uživatele.
+2. Zamítne změnu a navrátí hodnotu do původního stavu.
+3. Prosadí svou změnu, kterou případně dále přizpůsobí.
+
+Po vypořádání všech konfliktů je uživateli opět umožněno uložit novou revizi dokumentu.
 
 <<<
 
