@@ -47,6 +47,84 @@ Sekce slouží k seskupení několika témat. Není běžné, aby se věci opako
 
 <<<
 
+== Přehledy
+
+Přehledy jsou klíčovou součástí systému. Poskytují uživatelům vhled do současného, dřívějšího a někdy i možného budoucího stavu věcí. Právě na jejich základě zahajují uživatelé projekty a svými dokumenty stav věcí mění.
+
+=== Pohledy a komponenty
+
+Každý pohled využívá pro zobrazení určitou komponentu. Pokud je komponenta určena pro zobrazení mapových vrstev s vyznačenými body, je možné ji použít pro zobrazení prostorových dat. Pokud se jedná o komponentu pro zobrazení tabulky, je možné pomoci ní zobrazovat data relační a tak dále.
+
+To, jaká data pohled představuje, je kromě komponenty dáno zejména souborem databázových dotazů, která data získávají. Tyto dotazy mohou být u interaktivních komponent ovlivněny hodnotami, které uživatel při prohlížení mění.
+
+=== Datová vrstva
+
+Komponentu tvoří popis zdrojů dat, ze kterých dokáže čerpat, a dále kód pro jejich zobrazení. Jedna komponenta může být v rámci jednoho pohledu navázána na předem určenou sadu datových zdrojů. Pohled pak pouze provazuje určitou komponentu s uloženými procedurami v databázi.
+
+[source,yaml]
+.Příklad: Popis pohledu
+....
+name: Event Calendar
+name[cs]: Kalendář akcí
+
+interface:
+  component: calendar
+  options:
+    mode: next-30-days
+
+data:
+  holidays: planning.czech_holidays
+  events: planning.events
+....
+
+Za účelem kontroly shody komponenty s datovým zdrojem je nutné popsat, jaké rozhraní komponenta vyžaduje a jaké rozhraní která databázová procedura nabízí. Systém pak při zavádění nových politik tuto kontrolu provede.
+
+TIP: Vzhledem k tomu, že formátem pro komunikaci komponent s datovými zdroji bude pravděpodobně `JSON`, je možné s výhodou opět vyžít připravované normy link:http://json-schema.org/[JSON Schema]. Viz příklady níže.
+
+[source,yaml]
+.Příklad: Popis komponenty
+....
+name: Calendar
+name[cs]: Kalendář
+
+sources:
+  holidays:
+    name: Holidays
+    name[cs]: Svátky
+
+    provides: {$ref: "calendar.json#/definitions/events"}
+    expects:
+      period: {$ref: "calendar.json#/definitions/period"}
+
+  events:
+    name: Events
+    name[cs]: Události
+
+    provides: {$ref: "calendar.json#/definitions/events"}
+    expects:
+      period: {$ref: "calendar.json#/definitions/period"}
+
+options:
+  mode: {$ref: "calendar.json#/definitions/mode"}
+....
+
+Aby mohla být provedena kontrola pohledu, je potřeba popsat i datové zdroje. V příkladu níže je popsána uložená procedura `calendar.events`.
+
+[source,yaml]
+.Příklad: Popis uložené procedury
+....
+name: Calendar Events
+name[cs]: Kalendářní události
+
+procedure: calendar.events
+
+provides: {$ref: "calendar.json#/definitions/events"}
+expects:
+  period: {$ref: "calendar.json#/definitions/period"}
+....
+
+<<<
+
 == Hierarchické pracovní struktury
 
 Hierarchické pracovní struktury jsou formou vedení *projektů*. Tato forma spočívá v postupném vytváření a schvalování dokumentů, které dokládají provedené úkony. Dokumenty mohou být v různých stavech, ale zejména bývají *Rozpracované*, časem *Dokončené* a výjimečně *Provizorní*.
@@ -267,84 +345,6 @@ WARNING: Popsat hlouběji jazyk pro vytváření schémat dokumentů.
 Komponenty úzce souvisí se schématem dokumentu. Právě z nich si programátor vybírá, jak realizovat uživatelské rozhraní pro úpravy jednotlivých částí dokumentu.
 
 WARNING: Komponenty... Podobné jako u Pohledů. Editace... vedení revizí, v případě změny nutné odsouhlasit veškeré změny (nebo každou zvlášť přebít vlastní verzí) než bude možné znovu zkusit uložit.
-
-<<<
-
-== Přehledy
-
-Přehledy jsou klíčovou součástí systému. Poskytují uživatelům vhled do současného, dřívějšího a někdy i možného budoucího stavu věcí. Právě na jejich základě zahajují uživatelé projekty a svými dokumenty stav věcí mění.
-
-=== Pohledy a komponenty
-
-Každý pohled využívá pro zobrazení určitou komponentu. Pokud je komponenta určena pro zobrazení mapových vrstev s vyznačenými body, je možné ji použít pro zobrazení prostorových dat. Pokud se jedná o komponentu pro zobrazení tabulky, je možné pomoci ní zobrazovat data relační a tak dále.
-
-To, jaká data pohled představuje, je kromě komponenty dáno zejména souborem databázových dotazů, která data získávají. Tyto dotazy mohou být u interaktivních komponent ovlivněny hodnotami, které uživatel při prohlížení mění.
-
-=== Datová vrstva
-
-Komponentu tvoří popis zdrojů dat, ze kterých dokáže čerpat, a dále kód pro jejich zobrazení. Jedna komponenta může být v rámci jednoho pohledu navázána na předem určenou sadu datových zdrojů. Pohled pak pouze provazuje určitou komponentu s uloženými procedurami v databázi.
-
-[source,yaml]
-.Příklad: Popis pohledu
-....
-name: Event Calendar
-name[cs]: Kalendář akcí
-
-interface:
-  component: calendar
-  options:
-    mode: next-30-days
-
-data:
-  holidays: planning.czech_holidays
-  events: planning.events
-....
-
-Za účelem kontroly shody komponenty s datovým zdrojem je nutné popsat, jaké rozhraní komponenta vyžaduje a jaké rozhraní která databázová procedura nabízí. Systém pak při zavádění nových politik tuto kontrolu provede.
-
-TIP: Vzhledem k tomu, že formátem pro komunikaci komponent s datovými zdroji bude pravděpodobně `JSON`, je možné s výhodou opět vyžít připravované normy link:http://json-schema.org/[JSON Schema]. Viz příklady níže.
-
-[source,yaml]
-.Příklad: Popis komponenty
-....
-name: Calendar
-name[cs]: Kalendář
-
-sources:
-  holidays:
-    name: Holidays
-    name[cs]: Svátky
-
-    provides: {$ref: "calendar.json#/definitions/events"}
-    expects:
-      period: {$ref: "calendar.json#/definitions/period"}
-
-  events:
-    name: Events
-    name[cs]: Události
-
-    provides: {$ref: "calendar.json#/definitions/events"}
-    expects:
-      period: {$ref: "calendar.json#/definitions/period"}
-
-options:
-  mode: {$ref: "calendar.json#/definitions/mode"}
-....
-
-Aby mohla být provedena kontrola pohledu, je potřeba popsat i datové zdroje. V příkladu níže je popsána uložená procedura `calendar.events`.
-
-[source,yaml]
-.Příklad: Popis uložené procedury
-....
-name: Calendar Events
-name[cs]: Kalendářní události
-
-procedure: calendar.events
-
-provides: {$ref: "calendar.json#/definitions/events"}
-expects:
-  period: {$ref: "calendar.json#/definitions/period"}
-....
 
 <<<
 
