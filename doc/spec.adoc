@@ -5,6 +5,8 @@
 :note-caption: Poznámka
 :warning-caption: Pozor
 :table-caption: Tabulka
+:figure-caption: Obrázek
+:example-caption: Příklad
 :toc-title: Obsah
 :toc: left
 :sectnumlevels: 6
@@ -62,7 +64,7 @@ To, jaká data pohled představuje, je kromě komponenty dáno zejména souborem
 Komponentu tvoří popis zdrojů dat, ze kterých dokáže čerpat, a dále kód pro jejich zobrazení. Jedna komponenta může být v rámci jednoho pohledu navázána na předem určenou sadu datových zdrojů. Pohled pak pouze provazuje určitou komponentu s uloženými procedurami v databázi.
 
 [source,yaml]
-.Příklad: Popis pohledu
+.{example-caption} {counter:example}. Popis pohledu
 ....
 name: Event Calendar
 name[cs]: Kalendář akcí
@@ -82,7 +84,7 @@ Za účelem kontroly shody komponenty s datovým zdrojem je nutné popsat, jaké
 TIP: Vzhledem k tomu, že formátem pro komunikaci komponent s datovými zdroji bude pravděpodobně `JSON`, je možné s výhodou opět vyžít připravované normy link:http://json-schema.org/[JSON Schema]. Viz příklady níže.
 
 [source,yaml]
-.Příklad: Popis komponenty
+.{example-caption} {counter:example}. Popis komponenty
 ....
 name: Calendar
 name[cs]: Kalendář
@@ -111,7 +113,7 @@ options:
 Aby mohla být provedena kontrola pohledu, je potřeba popsat i datové zdroje. V příkladu níže je popsána uložená procedura `calendar.events`.
 
 [source,yaml]
-.Příklad: Popis uložené procedury
+.{example-caption} {counter:example}. Popis uložené procedury
 ....
 name: Calendar Events
 name[cs]: Kalendářní události
@@ -394,7 +396,7 @@ Některé typy dokumentů mohou pro dokončení vyžadovat podpisy od různých 
 
 Způsob manipulace také upravuje, se kterými částmi těla dokumentu a se kterými přílohami přesně smí uživatel nakládat. Oprávnění k částem těl dokumentů jsou rekurzivní a musí tedy podporovat nejen svolení, ale také zákazy.
 
-.Příklad popisu způsobů manipulace s tělem dokumentu
+.Popis způsobů manipulace s tělem dokumentu
 [options="header",cols="5,>2"]
 |===
 | Cesta              | Manipulace
