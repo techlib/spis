@@ -272,7 +272,7 @@ WARNING: Komponenty... Podobné jako u Pohledů. Editace... vedení revizí, v p
 
 == Přehledy
 
-Přehledy jsou klíčovou součástí systému. Poskytují uživatelům vhled do současného, dřívějšího a někdy i možného budoucího stavu věcí. Právě na jejich základě zahajují uživatelé projekty a svými dokumenty stav věcí mění.
+Přehledy jsou klíčovou součástí systému umožňující generování statistik. Poskytují uživatelům vhled do současného, dřívějšího a někdy i možného budoucího stavu věcí. Právě na jejich základě zahajují uživatelé projekty a svými dokumenty mění jejich stav.
 
 === Pohledy a komponenty
 
@@ -300,7 +300,7 @@ data:
   events: planning.events
 ....
 
-Za účelem kontroly shody komponenty s datovým zdrojem je nutné popsat, jaké rozhraní vyžaduje komponenta a jaké rozhraní nabízí ta která databázová procedura. Systém pak při zavádění nových politik tuto kontrolu provede.
+Za účelem kontroly shody komponenty s datovým zdrojem je nutné popsat, jaké rozhraní komponenta vyžaduje a jaké rozhraní která databázová procedura nabízí. Systém pak při zavádění nových politik tuto kontrolu provede.
 
 TIP: Vzhledem k tomu, že formátem pro komunikaci komponent s datovými zdroji bude pravděpodobně `JSON`, je možné s výhodou opět vyžít připravované normy link:http://json-schema.org/[JSON Schema]. Viz příklady níže.
 
