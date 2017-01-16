@@ -258,7 +258,7 @@ Dokument je ve své podstatě stromovou strukturou kompatibilní s formáty JSON
 
 Každý typ nebo typová třída dokumentu popisuje část schématu. Skutečné schéma získáme sjednocením typu dokumentu se všemi typovými třídami, které typ dokumentu implementuje. Schéma popisuje vnitřní strukturu dokumentu, tedy především názvy a typy jeho polí.
 
-Jazyk schématu vychází z normy link:http://json-schema.org/[JSON Schema], kterou však rozšiřuje o další prvky. Jedná se například o popis uživatelského rozhraní pro editaci stromu, spustitelný kód v řadě významů a také o schopnost přejímat hodnoty ze závislostí.
+Jazyk schématu vychází z připravované normy link:http://json-schema.org/[JSON Schema], kterou však rozšiřuje o další prvky. Jedná se například o popis uživatelského rozhraní pro editaci stromu, spustitelný kód v řadě významů a také o schopnost přejímat hodnoty ze závislostí.
 
 WARNING: Popsat hlouběji jazyk pro vytváření schémat dokumentů.
 
@@ -266,27 +266,91 @@ WARNING: Popsat hlouběji jazyk pro vytváření schémat dokumentů.
 
 Komponenty úzce souvisí se schématem dokumentu. Právě z nich si programátor vybírá, jak realizovat uživatelské rozhraní pro úpravy jednotlivých částí dokumentu.
 
-WARNING: Komponenty...
+WARNING: Komponenty... Podobné jako u Pohledů. Editace... vedení revizí, v případě změny nutné odsouhlasit veškeré změny (nebo každou zvlášť přebít vlastní verzí) než bude možné znovu zkusit uložit.
 
 <<<
 
 == Přehledy
 
-=== Pohledy
+Přehledy jsou klíčovou součástí systému. Poskytují uživatelům vhled do současného, dřívějšího a někdy i možného budoucího stavu věcí. Právě na jejich základě zahajují uživatelé projekty a svými dokumenty stav věcí mění.
 
-Pohled může být využit ve více tématech. Každý pohled je určitého typu, což určuje to, jaká data dokáže prezentovat, a zároveň způsob, jakým tak činí.
+=== Pohledy a komponenty
 
-Pokud autor daného typu pohledu vytvořil nástroj pro zobrazení mapových vrstev s vyznačenými body, je možné s jeho pomocí zobrazovat prostorová data. Pokud se jedná o nástroj pro zobrazení tabulky, je možné s jeho pomocí zobrazovat data relační a tak dále.
+Každý pohled využívá pro zobrazení určitou komponentu. Pokud je komponenta určena pro zobrazení mapových vrstev s vyznačenými body, je možné ji použít pro zobrazení prostorových dat. Pokud se jedná o komponentu pro zobrazení tabulky, je možné pomoci ní zobrazovat data relační a tak dále.
 
-Obsah pohledu je dán popisem tématu, ve kterém je použit. Součástí tohoto popisu je i soubor dotazů do databáze, prostřednictvím kterých dojde k získání zobrazovaných dat. Tyto dotazy jsou parametrizovány hodnotami, které uživatel mění při prohlížení.
+To, jaká data pohled představuje, je kromě komponenty dáno zejména souborem databázových dotazů, která data získávají. Tyto dotazy mohou být u interaktivních komponent ovlivněny hodnotami, které uživatel při prohlížení mění.
 
-WARNING: Popsat komponenty a způsob, jak se k nim dostanou data.
+=== Datová vrstva
+
+Komponentu tvoří popis zdrojů dat, ze kterých dokáže čerpat, a dále kód pro jejich zobrazení. Jedna komponenta může být v rámci jednoho pohledu navázána na předem určenou sadu datových zdrojů. Pohled pak pouze provazuje určitou komponentu s uloženými procedurami v databázi.
+
+[source,yaml]
+.Příklad: Popis pohledu
+....
+name: Event Calendar
+name[cs]: Kalendář akcí
+
+interface:
+  component: calendar
+  options:
+    mode: next-30-days
+
+data:
+  holidays: planning.czech_holidays
+  events: planning.events
+....
+
+Za účelem kontroly shody komponenty s datovým zdrojem je nutné popsat, jaké rozhraní vyžaduje komponenta a jaké rozhraní nabízí ta která databázová procedura. Systém pak při zavádění nových politik tuto kontrolu provede.
+
+TIP: Vzhledem k tomu, že formátem pro komunikaci komponent s datovými zdroji bude pravděpodobně `JSON`, je možné s výhodou opět vyžít připravované normy link:http://json-schema.org/[JSON Schema]. Viz příklady níže.
+
+[source,yaml]
+.Příklad: Popis komponenty
+....
+name: Calendar
+name[cs]: Kalendář
+
+sources:
+  holidays:
+    name: Holidays
+    name[cs]: Svátky
+
+    provides: {$ref: "calendar.json#/definitions/events"}
+    expects:
+      period: {$ref: "calendar.json#/definitions/period"}
+
+  events:
+    name: Events
+    name[cs]: Události
+
+    provides: {$ref: "calendar.json#/definitions/events"}
+    expects:
+      period: {$ref: "calendar.json#/definitions/period"}
+
+options:
+  mode: {$ref: "calendar.json#/definitions/mode"}
+....
+
+Aby mohla být provedena kontrola pohledu, je potřeba popsat i datové zdroje. V příkladu níže je popsána uložená procedura `calendar.events`.
+
+[source,yaml]
+.Příklad: Popis uložené procedury
+....
+name: Calendar Events
+name[cs]: Kalendářní události
+
+procedure: calendar.events
+
+provides: {$ref: "calendar.json#/definitions/events"}
+expects:
+  period: {$ref: "calendar.json#/definitions/period"}
+....
 
 <<<
 
 == Model oprávnění
 
-Model oprávnění umožňuje určit, k jakým datům v systému mají jací uživatelé přístup a mohou je číst nebo měnit. Model pracuje s pravidly ve tvaru *Osoba / Oprávnění / Dokument* a nejlépe jej lze pochopit s pomocí termínů, se kterými pracuje:
+Model oprávnění umožňuje určit, ke kterým datům v systému mají jací uživatelé přístup a mohou je číst nebo měnit. Model pracuje s pravidly ve tvaru *Osoba / Oprávnění / Dokument* a nejlépe jej lze pochopit s pomocí termínů, se kterými pracuje:
 
 Typ dokumentu::
 Typ je základní a neměnnou vlastností každého dokumentu popisující jeho charakter. Dokument může být například typu *Faktura*.
