@@ -95,20 +95,20 @@ sources:
     name[cs]: Svátky
 
     optional: true
-    provides: {$ref: "calendar.json#/definitions/events"}
+    provides: {$ref: "calendar.yaml#/definitions/events"}
     expects:
-      period: {$ref: "calendar.json#/definitions/period"}
+      period: {$ref: "calendar.yaml#/definitions/period"}
 
   events:
     name: Events
     name[cs]: Události
 
-    provides: {$ref: "calendar.json#/definitions/events"}
+    provides: {$ref: "calendar.yaml#/definitions/events"}
     expects:
-      period: {$ref: "calendar.json#/definitions/period"}
+      period: {$ref: "calendar.yaml#/definitions/period"}
 
 options:
-  mode: {$ref: "calendar.json#/definitions/mode"}
+  mode: {$ref: "calendar.yaml#/definitions/mode"}
 ....
 
 Aby mohla být provedena kontrola pohledu, je potřeba popsat i datové zdroje. V příkladu níže je popsána uložená procedura `calendar.events`.
@@ -121,9 +121,9 @@ name[cs]: Kalendářní události
 
 procedure: calendar.events
 
-provides: {$ref: "calendar.json#/definitions/events"}
+provides: {$ref: "calendar.yaml#/definitions/events"}
 expects:
-  period: {$ref: "calendar.json#/definitions/period"}
+  period: {$ref: "calendar.yaml#/definitions/period"}
 ....
 
 WARNING: Je potřeba se rozepsat o významu jednotlivých polí a zmínit se o smyslu odkazů na společná schémata. Obecně by bylo dobré nějak popsat charakter politik. Možná v závěru dokumentu?
@@ -357,7 +357,7 @@ Ve většině případů pracují komponenty se skaláry a jedná se v podstatě
 name: Simple Date Picker
 name[cs]: Jednoduchý výběr dne
 
-provides: {$ref: "calendar.json#/definitions/date"}
+provides: {$ref: "calendar.yaml#/definitions/date"}
 
 sources:
   holidays:
@@ -365,12 +365,12 @@ sources:
     name[cs]: Svátky
 
     optional: true
-    provides: {$ref: "calendar.json#/definitions/events"}
+    provides: {$ref: "calendar.yaml#/definitions/events"}
     expects:
-      period: {$ref: "calendar.json#/definitions/period"}
+      period: {$ref: "calendar.yaml#/definitions/period"}
 
 options:
-  mode: {$ref: "calendar.json#/definitions/mode"}
+  mode: {$ref: "calendar.yaml#/definitions/mode"}
 ....
 
 Z příkladu výše je patrná hlavní odlišnost popisu komponenty editoru dokumentů od popisu komponenty pohledu. Jedná se o klíč `provides`, který popisuje schéma dílčí části dokumentu, jejíž úpravy komponenta zprostředkovává.
