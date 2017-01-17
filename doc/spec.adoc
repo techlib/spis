@@ -53,35 +53,36 @@ Sekce slouží k seskupení několika témat. Není běžné, aby se věci opako
 
 Přehledy jsou klíčovou součástí systému. Poskytují uživatelům vhled do současného, dřívějšího a někdy i možného budoucího stavu věcí. Právě na jejich základě zahajují uživatelé projekty a svými dokumenty stav věcí mění.
 
-=== Pohledy a komponenty
+=== Pohledy, komponenty a zdroje dat
 
 Každý pohled využívá pro zobrazení určitou komponentu. Pokud je komponenta určena pro zobrazení mapových vrstev s vyznačenými body, je možné ji použít pro zobrazení prostorových dat. Pokud se jedná o komponentu pro zobrazení tabulky, je možné pomoci ní zobrazovat data relační a tak dále.
 
-To, jaká data pohled představuje, je kromě komponenty dáno zejména souborem databázových dotazů, která data získávají. Tyto dotazy mohou být u interaktivních komponent ovlivněny hodnotami, které uživatel při prohlížení mění.
-
-=== Datová vrstva
-
-Komponentu tvoří popis zdrojů dat, ze kterých dokáže čerpat, a dále kód pro jejich zobrazení. Jedna komponenta může být v rámci jednoho pohledu navázána na předem určenou sadu datových zdrojů. Pohled pak pouze provazuje určitou komponentu s uloženými procedurami v databázi.
+To, jaká data pohled představuje, je kromě komponenty dáno zejména souborem datových zdrojů, ze kterých pohled čerpá. Tyto zdroje mohou být při použití interaktivních komponent ovlivněny hodnotami, které uživatel při prohlížení mění.
 
 [source,yaml]
 .{example-caption} {counter:example}. Popis pohledu
 ....
+# Název pohledu včetně české lokalizace
 name: Event Calendar
 name[cs]: Kalendář akcí
 
+# Výběr komponenty uživatelského rozhraní
 interface:
   component: calendar
+
+  # Úprava konfigurace komponenty
   options:
     mode: next-30-days
 
+# Výběr datových zdrojů pro komponentu
 data:
   holidays: planning.czech_holidays
   events: planning.events
 ....
 
-Za účelem kontroly shody komponenty s datovým zdrojem je nutné popsat, jaké rozhraní komponenta vyžaduje a jaké rozhraní která databázová procedura nabízí. Systém pak při zavádění nových politik tuto kontrolu provede.
+Komponentu tvoří popis jejího rozhraní, včetně popisu zdrojů dat, ze kterých dokáže čerpat a dále kód pro její zobrazení. Komponenta je totiž v pohledu navázána na sadu datových zdrojů, což jsou fakticky procedury uložené v databázi. Popis rozhraní komponenty umožňuje provést automatickou kontrolu shody s rozhraním procedur.
 
-TIP: Vzhledem k tomu, že formátem pro komunikaci komponent s datovými zdroji bude pravděpodobně `JSON`, je možné s výhodou opět vyžít připravované normy link:http://json-schema.org/[JSON Schema]. Viz příklady níže.
+Vzhledem k tomu, že formátem pro komunikaci komponent s datovými zdroji je `JSON`, je možné s výhodou opět vyžít připravované normy link:http://json-schema.org/[JSON Schema].
 
 [source,yaml]
 .{example-caption} {counter:example}. Popis komponenty
@@ -89,13 +90,19 @@ TIP: Vzhledem k tomu, že formátem pro komunikaci komponent s datovými zdroji 
 name: Calendar
 name[cs]: Kalendář
 
+# Popis očekávaných datových zdrojů
 sources:
   holidays:
     name: Holidays
     name[cs]: Svátky
 
+    # Komponenta bude fungovat i bez tohoto zdroje
     optional: true
+
+    # Schéma poskytovaných dat
     provides: {$ref: "calendar.yaml#/definitions/events"}
+
+    # Schémata očekávaných argumentů
     expects:
       period: {$ref: "calendar.yaml#/definitions/period"}
 
@@ -107,6 +114,7 @@ sources:
     expects:
       period: {$ref: "calendar.yaml#/definitions/period"}
 
+# Popis dalších nastavení
 options:
   mode: {$ref: "calendar.yaml#/definitions/mode"}
 ....
@@ -119,14 +127,13 @@ Aby mohla být provedena kontrola pohledu, je potřeba popsat i datové zdroje. 
 name: Calendar Events
 name[cs]: Kalendářní události
 
+# Plně kvalifikovaný název uložené procedury
 procedure: calendar.events
 
 provides: {$ref: "calendar.yaml#/definitions/events"}
 expects:
   period: {$ref: "calendar.yaml#/definitions/period"}
 ....
-
-WARNING: Je potřeba se rozepsat o významu jednotlivých polí a zmínit se o smyslu odkazů na společná schémata. Obecně by bylo dobré nějak popsat charakter politik. Možná v závěru dokumentu?
 
 <<<
 
