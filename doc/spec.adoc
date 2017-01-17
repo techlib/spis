@@ -68,7 +68,7 @@ name[cs]: Kalendář akcí
 
 # Výběr komponenty uživatelského rozhraní
 interface:
-  component: calendar
+  component: CalendarView
 
   # Úprava konfigurace komponenty
   options:
@@ -350,7 +350,71 @@ Každý typ nebo typová třída dokumentu popisuje část schématu. Skutečné
 
 Jazyk schématu vychází z připravované normy link:http://json-schema.org/[JSON Schema], kterou však rozšiřuje o další prvky. Jedná se například o popis uživatelského rozhraní pro editaci stromu, spustitelný kód v řadě významů a také o schopnost přejímat hodnoty ze závislostí.
 
-WARNING: Popsat hlouběji jazyk pro vytváření schémat dokumentů.
+[source,yaml]
+.{example-caption} {counter:example}. Schéma zápůjčky (hlavička)
+....
+name: Lease
+name[cs]: Zápůjčka
+
+dependencies:
+  lender:
+    name: Lender
+    name[cs]: Půjčovatel
+    type: Party
+
+  borrower:
+    name: Borrower
+    name[cs]: Vypůjčovatel
+    type: Party
+
+attachments:
+  subject:
+    name: Subject
+    name[cs]: Předmět
+    accept: [document, image]
+    count: [0, inf]
+....
+
+V příkladu výše vidíme závislosti (`lender` a `borrower`), které dokument vyžaduje. Protože u nich není uvedena žádná kvantifikace, předpokládá se výchozí, tedy `{1,1}`. Typ obou závislostí je `Party` (smluvní strana), což bude pravděpodobně typová třída.
+
+Dále můžeme vidět jediný typ přílohy, dokument nebo obrázek v roli `subject` (předmět). Vzhledem k neomezenému počtu se bude patrně jednat o sbírku dokladů popisujících zapůjčovanou věc a snad i další podmínky zápůjčky.
+
+Následuje popis těla dokumentu.
+
+[source,yaml]
+.{example-caption} {counter:example}. Schéma zápůjčky (tělo dokumentu)
+....
+import:
+  - from: spis.datetime
+    names: [today, timedelta]
+
+body:
+  type: object
+  required: [period]
+
+  properties:
+    period:
+      allOf: [{$ref: "calendar.yaml#/definitions/daterange"}]
+
+      interface:
+        component: DateRangePicker
+
+        data:
+          holidays: planning.czech_holidays
+
+        options:
+          mode: year-view
+
+      default:
+        start: !eval "today()"
+        end: !eval "today() + timedelta(days=14)"
+....
+
+Hned v první části příkladu vidíme import funkcí (`today` a `timedelta` z modulu `spis.datetime`). V politice je možné využívat vypočítaných hodnot a tímto způsobem je možné získat knihovní funkce. Modul `spis` a jeho součásti obsahují zabudované funkce systému.
+
+V popisu samotného těla dokumentu vidíme, že se v tomto případě nejedná o žádnou složitou strukturu, ale pouze o doplnění příloh a závislostí o termín platnosti výpůjčky představovaný sekcí `period`. Její hrubý popis je čerpán z knihovny schémat a úpravy probíhají pomocí komponenty editoru dokumentů `DateRangePicker` se zobrazením svátků.
+
+V závěru sekce pak nalezneme určení výchozích hodnot pro nový dokument, které využívá právě knihovních funkcí importovaných výše k nastavení výpůjčky ode dnes na 14 dní.
 
 === Komponenty
 
