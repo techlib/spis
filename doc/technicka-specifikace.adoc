@@ -136,6 +136,55 @@ expects:
   period: {$ref: "calendar.yaml#/definitions/period"}
 ....
 
+
+=== Původ dat
+
+Relační datové struktury, ze kterých uložené procedury čerpají data pro pohledy, se mohou do systému dostat v zásadě dvěma způsoby. Může jít o data z jiných systémů nebo rozbory místních dokumentů.
+
+==== Cizí systémy
+
+Data z cizích systémů se do systému zanáší zpravidla pomocí zvláštních nástrojů vyvinutých na míru jednak cizímu systému a dále dle potřeb konkrétních procesů vedených ve SpISu.
+
+//left to right direction
+
+[plantuml,align="center"]
+....
+@startuml
+
+package "SpIS" {
+  database "DB" as db1
+  component "Aplikace" as app1
+
+  () SQL as sql1
+  app1 -r-> sql1
+  sql1 - db1
+}
+
+package "Cizí systém" {
+  component "Aplikace" as app2
+  database "DB" as db2
+
+  () SQL as sql2
+  () API as api2
+
+  app2 - api2
+  sql2 - db2
+  app2 --> sql2
+}
+
+component "Nástroj pro\n synchronizaci" as sn
+
+sn <-> api2
+sn <-> sql1
+@enduml
+....
+
+Ve výjimečných případech může docházet také k přímému provazování cizích systémů.
+
+
+==== Dokumenty
+
+
 <<<
 
 == Hierarchické pracovní struktury

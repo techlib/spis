@@ -1,0 +1,15 @@
+= Správní informační systém: Funkční specifikace
+:numbered:
+:icons: font
+:lang: cs
+:note-caption: Poznámka
+:warning-caption: Pozor
+:table-caption: Tabulka
+:figure-caption: Obrázek
+:example-caption: Příklad
+:toc-title: Obsah
+:toc: left
+:sectnumlevels: 6
+
+
+// vim:set spelllang=cs:
