@@ -136,55 +136,6 @@ expects:
   period: {$ref: "calendar.yaml#/definitions/period"}
 ....
 
-
-=== Původ dat
-
-Relační datové struktury, ze kterých uložené procedury čerpají data pro pohledy, se mohou do systému dostat v zásadě dvěma způsoby. Může jít o data z jiných systémů nebo rozbory místních dokumentů.
-
-==== Cizí systémy
-
-Data z cizích systémů se do systému zanáší zpravidla pomocí zvláštních nástrojů vyvinutých na míru jednak cizímu systému a dále dle potřeb konkrétních procesů vedených ve SpISu.
-
-//left to right direction
-
-[plantuml,align="center"]
-....
-@startuml
-
-package "SpIS" {
-  database "DB" as db1
-  component "Aplikace" as app1
-
-  () SQL as sql1
-  app1 -r-> sql1
-  sql1 - db1
-}
-
-package "Cizí systém" {
-  component "Aplikace" as app2
-  database "DB" as db2
-
-  () SQL as sql2
-  () API as api2
-
-  app2 - api2
-  sql2 - db2
-  app2 --> sql2
-}
-
-component "Nástroj pro\n synchronizaci" as sn
-
-sn <-> api2
-sn <-> sql1
-@enduml
-....
-
-Ve výjimečných případech může docházet také k přímému provazování cizích systémů.
-
-
-==== Dokumenty
-
-
 <<<
 
 == Hierarchické pracovní struktury
@@ -630,7 +581,67 @@ Jak naznačuje schéma výše, _Aplikace_ samotná je běhovým prostředím pro
 
 === Datová vrstva
 
-WARNING: PostgreSQL, FDW a Multicorn...
+WARNING: Rozepsat se o uspořádání DB jako takovém.
+
+==== Zdroje dat
+
+Relační datové struktury, ze kterých uložené procedury čerpají data pro pohledy, se mohou do systému dostat v zásadě dvěma způsoby. Může jít o data z jiných systémů nebo rozbory místních dokumentů.
+
+===== Cizí systémy
+
+Data z cizích systémů se do systému zanáší zpravidla pomocí zvláštních nástrojů vyvinutých na míru jednak cizímu systému a dále dle potřeb konkrétních procesů vedených ve SpISu.
+
+[plantuml,align="center"]
+....
+@startuml
+title Synchronizace dat z cizího systému\n
+
+package "SpIS" {
+  database "DB" as db1
+  () SQL as sql1
+  db1 - sql1
+}
+
+package "Cizí systém" {
+  component "Aplikace" as app2
+  () API as api2
+  api2 - app2
+}
+
+component "Nástroj pro\n synchronizaci" as sn
+
+sn <-u-> api2
+sn <-u-> sql1
+@enduml
+....
+
+V některých případech je možné využít také databázový mechanismus zapouzdření cizích dat (Foreign Data Wrappers). Díky tomu se mohou cizí data jevit jako součást vlastní databáze a je možné s nimi pracovat jako s pohledy. Tento druh provázání se hodí zejména pro čerpání z rozsáhlých databází, které není výhodné přenášet celé.
+
+[plantuml,align="center"]
+....
+@startuml
+left to right direction
+title Zapouzdření cizích dat\n
+
+package "SpIS" {
+  database "DB" as db1
+}
+
+package "Cizí systém" {
+  component "Aplikace" as app2
+  () API as api2
+  app2 - api2
+}
+
+db1 -> api2: FDW
+@enduml
+....
+
+
+===== Dokumenty
+
+WARNING: Vlastní dokumenty jsou také zdrojem dat. Využívají se triggery, které data z dokumentů přenáší do tabulek.
+
 
 === Uživatelské rozhraní
 
