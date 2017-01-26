@@ -1,4 +1,4 @@
-= Správní informační systém: Funkční specifikace
+= Informační systém evidence veřejných zakázek: Funkční specifikace
 :numbered:
 :icons: font
 :lang: cs
@@ -11,5 +11,836 @@
 :toc: left
 :sectnumlevels: 6
 
+== Úvod
+=== Účel IS
+
+Informační systém evidence veřejných zakázek (zkráceně IS) je důležitým nástrojem pro organizace veřejné správy, který jim umožňuje plánovat a hlídat workflow zpracování veřejných zakázek (dále VZ), vést evidenci zakázek včetně všech jejich fází a plánovat rozpočet na další období.
+
+IS bude obsahovat tři základní části z hlediska tematických oblastí. První částí je workflow, jeho nastavení a změny. Druhou částí je tvorba a evidence veřejných zakázek. Třetí částí IS je plánování rozpočtu organizace, který je tvořen částečně probíhajícími zakázkami evidovanými v IS a plánovanými výdaji pro další rozpočtové období.
+
+IS bude sloužit především jako nástroj plánování a hlídání schvalovacích procesů v rámci zpracování VZ od vytvoření záměru, vypsání zakázky, schválení dodavatele, až po realizaci a fakturaci. Workflow bude obecné a uživatelsky nastavitelné pro každou instituci individuálně dle jejích vnitřních pravidel.
+
+Veřejné zakázky budou v systému evidovány, včetně všech potřebných dokumentů a informací o zakázce, jejím rozsahu, obsahu, dodavateli, podmínkách fakturace, stavu atd.
+
+Evidované informace o zakázkách, především finanční plnění, budou sloužit jako podklad pro tvorbu rozpočtu. Tento se obvykle skládá z financí alokovaných na již probíhající zakázky a nově plánovaných projekty.
+
+Ze všech částí IS budou tvořeny tiskové a statistické výstupy, které budou definovány pro jednotlivé organizace a uživatelské role zvlášť.
+
+IS bude propojen pomocí API s externími systémy jednotlivých institucí dle individuální specifikace. Bude se jednat hlavně o Active Directory kvůli autentizaci uživatelů, napojení na účetní systém, ze kterého budou přebírány informace o fakturách a stavu proplacení a IS bude naopak účetnímu systému předávat informace, případně naskenovaný dokument faktury.
+
+IS také bude obsahovat vazbu na E-spis k automatickému odesílání smluv do registrů veřejných zakázek. IS bude propojen i s webovými stránkami zadavatelů kvůli zveřejňování smluv a informací.
+
+Uživateli IS budou zaměstnanci s oprávněným přístupem k obchodním informacím organizace, jako jsou vedoucí zaměstnanci, garanti VZ či zaměstnanci právních a obchodních oddělení. Každý uživatel bude mít definována práva do IS dle svých kompetencí. Zaměstnanci obchodních a právních oddělení dostanou nástroj na efektivní práci s daty, garanti veřejných zakázek budou mít přehled o plnění svých zakázek, vedení získá snadno a rychle informace o vynaložených nákladech a další potřebné informace nejen pro plánování rozpočtu.
+
+Velký důraz bude kladen na plně elektronickou agendu včetně možnosti nahrávání příloh, definovaného workflow s možností poznámek a sledování verze dokumentů. Dále automatizovaného publikování vybraného obsahu na definovaná místa webů. Zároveň bude kladen důraz na celkovou ergonomii systém, jednoduchost ovládání a možnost individuálního nastavení. V neposlední řadě bude velmi důležitá stabilita IS, bezpečné uchování dat a dlouhodobá podpora dodavatele IS, včetně definovaných SLA.
+
+=== Slovník pojmů
+
+Veřejná zakázka (VZ) – zakázka, která je zadána veřejným subjektem a k jejímu zaplacení se použijí veřejné zdroje. Jedná se o nákup zboží, zadání práce, objednání díla nebo služby. Veřejné zakázky se dělí dle druhu předmětu zakázky (služby, dodávky, stavební práce) a dle předpokládané hodnoty vynaložených prostředků (VZ malého rozsahu, podlimitní VZ a nadlimitní VZ).
+
+Záměr k zadání veřejné zakázky (Záměr) – dokument popisující požadavek na pořízení dodávek, služeb nebo stavebních prací. Záměr specifikuje předmět zakázky, předpokládanou hodnotu zakázky a odůvodnění požadavku na vypsání veřejné zakázky. Jedná se o inicializační dokument k vypsání veřejné zakázky.
+
+Objednávka – oficiální dokument, kterým je objednán hmotný/nehmotný majetek nebo služba do finančního limitu stanoveného legislativou.
+
+Smlouva – právní dokument, kterým je písemně stvrzena dohoda mezi dodavatelem/dodavateli a zadavatelem.
+
+Výzva k zadání veřejné zakázky (Výzva) – právně obchodní dokument, kterým zadavatel vybízí případné zájemce k předložení nabídky. Jedná se o zadání předmětu zakázky, pravidel pro zakázku a všech příslušných právně obchodních náležitostí. Výzva je oficiální dokument a musí být plně v souladu se Zákonem o zadávání veřejných zakázek i Občanským zákoníkem.
+
+Vnitřní sdělení – dokument pro interní komunikaci v rámci organizace. Pomocí vnitřního sdělení se oficiálně předávají uvnitř institucí žádosti a informace.
+
+Předávací protokol/dodací list/akceptační protokol – dokument, kterým dodavatel se zadavatelem stvrzují předání předmětu veřejné zakázky či její části.
+
+Faktura – daňový doklad se všemi zákonnými náležitostmi.
+
+Obchodní případ – pro účely tohoto dokumentu termín označující celý proces veřejné zakázky, tedy od vytvoření záměru, přes schvalovací řízení, průběh zakázky, až po fakturu, akceptační a předávací protokoly a řádné ukončení zakázky.
+
+Garant – osoba, která iniciuje vypsání veřejné zakázky, odpovídá za její plnění, je v kontaktu s obchodním a právním oddělením své organizace a spolupracuje s dodavatelem.
+
+=== Uživatelé
+
+IS bude sloužit především pracovníkům obchodního a právního oddělení organizace k zajištění vypsání a sledování průběhu veřejných zakázek. Garantům jednotlivých zakázek k vytvoření záměru a sledování průběhu svých zakázek a vedení organizace ke sledování finančních toků a plánování rozpočtu. Dalšími uživateli budou pracovníci IT, kteří budou systém udržovat. Vybrané části IS budou k dispozici k nahlížení i ostatním zaměstnancům.
+
+Do IS bude pro zápis přistupovat pouze omezený počet uživatelů s oprávněním k obchodním informacím. Každý uživatel musí při prvním přihlášení akceptovat prokazatelně informace o „přístupu k citlivým informacím“ a zavázat se k dodržování zaměstnavatelem definovaných podmínek.
+
+Odhad na počet uživatelů v rámci jedné organizace:
+
+* pracovníci obchodního a právního oddělení – cca 15 uživatelů
+* členové vedení – cca 10 uživatelů
+* garanti projektů – cca 20 uživatelů
+* administrátoři systému - cca 2 uživatelé
+
+Hlavní uživatelské skupiny:
+
+* podatelna
+* garant
+* vedoucí
+* ředitel
+* zpracovatel
+* správce rozpočtu
+* právník/ekonom
+* administrátor
+* ostatní
+
+Specifické výstupy IS budou přístupné pro čtení i pro ostatní zaměstnance organizací.
+
+<<<
+
+== Požadavky na architekturu informačního systému
+
+Informační systém bude dodán jako open source vícevrstvý modulární systém tvořený těmito částmi:
+
+* server
+* webové služby/API pro návaznost na externí systémy
+* klient – uživatelské rozhraní
+* úložiště
+
+Server bude zajišťovat výkonnou část jednotlivých modulů IS (popsány níže), komunikaci s datovými zdroji a webové služby či API pro návaznost na externí systémy. Klientskou část bude tvořit tenký nebo tlustý klient sloužící jako uživatelské rozhraní pro evidenci obchodních případů, plánování rozpočtu, export tiskových a statistických výstupů, správu uživatelských účtů a administraci systému. Úložiště bude sloužit k ukládání veškerého datového obsahu IS a dokumentů.
+
+Schéma architektury je v příloze 1.
+
+=== Server
+
+IS se bude skládat z jednotlivých modulů pro evidenci faktur, evidenci záměrů, evidenci veřejných zakázek, plánování rozpočtu, administraci systému a uživatelů. Dále bude obsahovat workflow, log změn a exporty tiskových sestav. Součástí bude i specifický náhled na úložiště dokumentů a kontaktních údajů dodavatelů.
+
+=== Webové služby
+
+IS bude komunikovat s dalšími systémy zadavatelů pomocí webových služeb či připraveného API. Jedná se o vazby na účetní systémy, Active Directory, obchodní a živnostenský rejstřík, E-spis a webové stránky zadavatelů. Všechny webové služby či API budou podrobně specifikovány v rámci implementační analýzy.
+
+==== Účetní systém
+
+IS bude provázán s účetním systémem tak, aby IS přebíral a poskytoval uživatelům informaci o proplacení evidované faktury včetně času a výše platby. Dále bude IS předávat informace do účetního systému o evidovaných daňových dokladech tak, aby nebylo nutné doklady evidovat více než jednou.
+
+==== Active Directory
+
+IS bude přístupný pouze oprávněným pracovníkům organizací, kteří mají účet v Active Directory (zkráceně AD). V IS budou přiřazena práva pro uživatele z AD dle rolí, případně přímo přiřazených speciálních oprávnění k jednotlivým částem IS.
+
+IS bude obsahovat administrátorskou roli, u které bude v případě potřeby možné zakázat přístup na citlivé dokumenty, ale bude umožněna administrace a nastavování samotného IS. Dále bude obsahovat uživatelské skupiny a uživatele, kteří budou mít řízen přístup do jednotlivých částí IS dle zařazení do skupiny a přidělených práv od administrátora.
+
+Všechny změny a přístupy do IS budou sledovány tak, aby bylo možné dohledat uživatele, který změnu provedl, čas provedení změny a jaká změna byla provedena. V systému práv bude řešeno i delegování práv – zastupitelnost a to jak trvalá, tak dočasná definovaná uživatelsky časovým obdobím.
+
+==== E-spis
+
+V rámci IS bude možné odeslat jakýkoli vybraný dokument přes E-spis. IS bude předávat E-spisu vybraný dokument jako přílohu.
+
+==== Webové stránky zadavatelů
+
+Vybrané dokumenty (smlouvy, zadání veřejné zakázky,…) a informace z modulů IS budou publikovány na webech zadavatelů či jiných určených ke zveřejnění veřejných zakázek. K tomuto účelu zadavatelé vytvoří API či webovou službu ve spolupráci s dodavatelem.
+
+==== Obchodní a živnostenský rejstřík
+
+IS bude využívat vlastní adresář dodavatelů. Informace o dodavatelích budou ověřovány ve veřejně dostupných rejstřících, kde bude taktéž možné vyhledat nový kontakt zadáním názvu či Identifikačního Čísla subjektu a tento uložit do adresáře IS. Při použití údajů uloženého dodavatele budou vždy na pozadí ověřeny jeho údaje z IS z rejstříku, v případě nalezení změn budou kontaktní údaje dodavatele v IS aktualizovány.
+
+=== Klient
+
+Klient bude tvořen uživatelským rozhraním IS včetně správy IS. Klient může být tvořen jako tlustý klient instalovaný na lokální počítače zadavatelů s neomezeným počtem licencí či tenký webový klient, pokud bude zajištěna plná funkčnost. Vzhled uživatelského rozhraní, dostupné moduly a jejich obsah bude řízen rolí přihlášeného uživatele.
+
+=== Úložiště
+
+Úložiště bude sloužit k ukládání veškerého datového obsahu IS, kontaktních údajů o dodavatelích a dokumentů. Obsahově bude tvořeno minimálně dvěma částmi. První bude sloužit k ukládání dat z IS, druhá k ukládání souborů dokumentů nahrávaných do IS. K uložení se předpokládá využití databázového úložiště zadavatele a souborového systému. Podrobné řešení infrastruktury úložiště bude specifikováno dle požadavků na objem dat, jejich dostupnost a zabezpečení v rámci implementační analýzy.
+
+<<<
+
+== Workflow obchodního případu
+
+Dokumenty, které definují rámce obchodního případu, podléhají schvalovacímu procesu. Jedná se především o záměry, objednávky, výzvy či oznámení, smlouvy včetně příloh a dodatků, faktury, vnitřní sdělení a další. Tyto dokumenty jsou schvalovány interně nastaveným procesem, který se v jednotlivých organizacích liší.
+
+Schvalovací proces bude definován pro každou organizaci samostatně dle jejích specifických požadavků. Tato kapitola popisuje obecné požadavky na možnosti nastavení workflow a obecný popis procesu realizace VZ.
+
+=== Nastavení workflow
+
+V rámci implementační analýzy bude pro každou organizaci specifikován workflow model pro každý typ dokumentu a uživatele. Administrátor systému bude mít právo v modulu nastavovat změny v připravených procesech či nastavit nový, včetně definice dotčených uživatelů, jejich povinností a práv v rámci procesu. Dále i nastavení dokumentů, jejich stavů a možných akcí.
+
+=== Obecný postup
+
+Obchodní případ vzniká vytvořením záměru, kde obvykle garant či vedoucí pracovník definuje, co a za jakých okolností navrhuje realizovat (specifikuje předmět veřejné zakázky), odhadne finanční a časový rozsah záměru. Záměr prochází schvalovacím procesem, po jehož schválení se z návrhu na realizaci stává veřejná zakázka. Dle rozsahu je obvykle specifikován časový harmonogram, finanční náročnost, způsob vypsání zakázky a výběru dodavatele. Připraví se všechny doprovodné dokumenty, jejichž schválení podléhá taktéž určitému procesu schválení vedení. Zakázka je vypsána, proběhne výběr dodavatele, schválení výběru a podpis smlouvy.
+
+Po podpisu smlouvy začíná realizace samotné zakázky. Zakázka může obsahovat několik etap, na jejichž konci je část zakázky vždy předána dodavatelem ke schválení. V rámci každé etapy probíhá obvykle také fakturace.
+
+Faktura má v rámci IS vlastní workflow. Faktura je do systému vložena pracovníkem podatelny, její přiřazení ke konkrétní veřejné zakázce a schválení je však určeno dalším procesem.
+
+Akceptace etap a fakturace se opakuje až do skončení trvání veřejné zakázky.
+
+Schéma obecného workflow obchodního případu je v příloze 2, schéma workflow faktury v příloze 4.
+
+=== Schvalovací centrum
+
+IS bude obsahovat schvalovací centrum – seznam položek ke schválení po přihlášení konkrétního uživatele. Položky ke schválení musí korespondovat s kompetencemi daného uživatele. Vybrané položky ve schvalovacím centru bude možné kromě schválení i okomentovat a elektronicky podepsat.
+
+Schvalování dokumentů bude umožňovat dynamické změny procesů na základě zodpovědností a kompetencí v rámci organizační struktury.
+
+<<<
+
+== Moduly obchodního případu
+=== Evidence záměrů
+
+Modul bude sloužit k vytvoření a evidenci záměrů. Záměr je inicializační dokument k obchodnímu případu, kde je definováno, co a za jakých okolností se navrhuje realizovat (specifikuje se předmět veřejné zakázky). Autor bude tvorbou proveden pomocí jednoduchého formuláře. Záměr prochází schvalovacím procesem, který je daný v rámci každé organizace, ale zároveň IS musí reflektovat případné změny v jejich vnitřním chodu.
+
+Záměr je po celou dobu schvalovacího procesu dostupný pro editace a připomínkování. V průběhu schvalování záměru musí mít každý člen schvalovací procedury možnost záměr připomínkovat. Zároveň musí být záměr dostupný i v původních verzích v historii záměru.
+
+Každá změna v údaji záměru a akce v rámci jeho schvalování bude uložena v logu a dostupná oprávněným uživatelům. Změny v záměru budou jasně odlišené od původní verze včetně autora změny.
+
+Schvalování záměru musí proběhnout plně elektronicky s prokazatelnou a unikátní akceptací definovanými pracovníky. Schvalování záměru musí probíhat včetně všech souvisejících příloh k záměru. Na vybrané změny budou uživatelé upozorněni notifikací.
+
+Po konečném schválení záměru je na jeho základě vytvořena veřejná zakázka, pro kterou je záměr základem. Záměr tedy vždy iniciuje objednávku, nebo výzvu k podání nabídek.
+
+Formulář na tvorbu záměru bude obsahovat pole s více datovými typy, jejichž hodnoty se budou plnit ručně i automaticky, včetně možnosti nahrávání dokumentů a číselníků definovaných zadavatelem. Dle zadaného obsahu či zvolené hodnoty číselníku se může lišit obsah dalších polí či navazující workflow zpracování obchodního případu.
+
+Součástí formuláře bude i věcná nápověda k vyplňování a výběru hodnot z číselníků (např. kdy se jedná o objednávku, zjednodušené výběrové řízení atp.). Obsah nápovědy i číselníky bude možné spravovat v administraci systému.
+
+Detailní specifikace procesu pro jednotlivé organizace bude provedena v rámci implementační analýzy.
+
+==== Návrh evidovaných informací o záměru
+
+* Název
+* Evidenční číslo
+* Vymezení předmětu VZ
+* Důvod zadání
+* Účel zajištění činnosti
+* Způsob zadání VZ
+* Předpokládaná hodnota (bez DPH i s DPH)
+* Druh finančních prostředků
+* Typ čerpání rozpočtu
+* Předpokládaný termín dokončení zakázky
+* Garant
+
+Metadata záměru
+
+* Datum vytvoření
+* Autor vytvoření
+* Datum poslední změny
+* Autor poslední změny
+
+Další
+
+* Poznámka garanta
+* Přílohy (včetně metadat o dokumentech – datum nahrání, změny a autor)
+* Podmínky fakturace
+* Etapy záměru
+** Název
+** Částka bez DPH
+** Částka s DPH
+** Druh financí
+** Datum zahájení
+** Datum ukončení
+* Text storna záměru
+
+Informace spojené se schvalováním záměru
+
+* Stav schválení záměru (metadata o stavu v rámci workflow – datum předání ke schválení, aktuální schvalovatel)
+* Zpracovatel/Vyřizuje
+* Datum schválení záměru
+
+==== Seznam záměrů
+
+Součástí modulu bude přehledný seznam všech záměrů v IS, přizpůsobený preferencím a právům konkrétního uživatele. V seznamu bude možné hledat, filtrovat a řadit záměry dle všech atributů či přednastavených rychlých filtrů (vlastní uživatelské nastavení).
+
+==== Funkce a kontroly modulu
+
+* Uložení či tisk rozpracované verze záměru
+* Tisk záměru (tiskárna, PDF)
+* Export a tisk seznamu záměrů (XLS, CSV, PDF)
+* Tiskové sestavy
+* Přidání komentáře či připomínky k položkám záměru i jeho etapám
+* Historie záměru – odkaz do logu změn
+* Kontrola zadání duplicitního záznamu záměru či dodavatele
+* Kontrola dodržení finančních limitů dle druhu zakázky
+* Notifikace uživatelů při změně v záměru
+* Schválení (odeslání záměru ke schválení dalšímu uživateli v rámci workflow)
+* Uzavření záměru (uzamknutí jako podkladu pro zakázku, včetně příloh) – záměr je převeden kompletně na zakázku
+
+=== Evidence veřejných zakázek
+
+Evidence VZ je stěžejní agendou obchodního a právního oddělení organizace. Jsou zde evidovány všechny veřejné zakázky, od zakázek malého rozsahu až po nadlimitní zakázky. Evidence VZ je souhrnný přehled všeho, co je k zakázce evidováno, o vynaložené částce, termínech plnění, stavu jednotlivých částí (faktura, smlouva,…) ve všech fázích realizace. Informace o zakázce jsou přebírány ze záměru, ze kterého zakázka vznikla. Zakázka je postupně doplňována o další informace a dokumenty. Součástí každé veřejné zakázky jsou dále faktury (spárované z evidence faktur), objednávka, smlouva, vnitřní sdělení a další potřebné dokumenty a přílohy. Z výše uvedených dokumentů, které jsou přiřazeny buď ze související agendy či nahrány jako soubory, se k veřejné zakázce evidují vybrané informace přímo v IS.
+
+==== Proces zpracování VZ
+
+Po schválení záměru se z něj stává veřejná zakázka, kterou obvykle po ekonomické a právní stránce zpracuje obchodní či právní oddělení organizace a společně s garantem zakázky připraví všechny potřebné dokumenty (smlouvu, objednávku či výzvu), vyvěsí výzvu na web organizace a další příslušná místa. V průběhu přípravy veřejné zakázky jsou do IS nahrávány příslušné dokumenty a měněn stav zakázky. Všechny dokumenty musí být odsouhlaseny všemi oprávněnými osobami. Po uběhnutí zákonem stanovených lhůt je vybrán dodavatel a podepsána s ním smlouva. Po podpisu smlouvy jsou do IS oprávněnou osobou doplněny závazné termíny pro plnění jednotlivých etap, podmínky akceptace a fakturace a finanční částky vyplývající ze smlouvy či zákona. Smlouva je nahrána do IS, ze kterého je taktéž možné jí odeslat do E-spisu, nahrát na web zadavatele či veřejný rejstřík smluv. V rámci jednotlivých etap VZ jsou sledovány limity vynaložených prostředků a skutečně vynaložených prostředků. V okamžiku přijetí jakékoli faktury (zaevidované v IS v modulu evidence faktur) k dané zakázce je tato připojena k VZ a do etap jsou evidovány příslušné částky a termíny. Taktéž při ukončení jednotlivých etap pověřený pracovník připojuje k VZ předávací protokoly až do ukončení plnění veřejné zakázky.
+
+VZ je dostupná pro editace a připomínkování po celou dobu jejího trvání. Veškeré změny k zakázce jsou ukládány do logu změn a dostupné oprávněným uživatelům stejně jako v evidenci záměrů. Na vybrané změny budou vybraní uživatelé upozorňováni notifikací.
+
+Každá veřejná zakázka vychází ze záměru, z něhož převezme všechny informace o celku i o jednotlivých etapách zakázky, tyto informace mohou být následně upraveny dle hodnot ve smlouvě, pokud dojde ke změně. Ke každé VZ, případně jejím jednotlivým etapám jsou přiřazovány dokumenty (smlouva, faktury, předávací protokoly, interní sdělení atp.). Veřejná zakázka i její etapy budou obsahovat informace o termínech plnění, plánovaných a skutečně vynaložených finančních prostředcích. VZ bude označena volitelným štítkem, který bude sloužit k seskupování tematicky podobných zakázek. Tento štítek bude dostupný při plánování rozpočtu.
+
+==== Návrh informací o zakázce
+
+* Informace přebrané ze záměru
+* Evidenční číslo
+* Datum podpisu smlouvy
+* Účinnost smlouvy
+* Vynaložené finance (s DPH, bez DPH)
+* Termín ukončení zakázky
+* Text storna zakázky
+
+Metadata k zakázce
+
+* Štítek (tematické označení)
+* Datum zahájení administrace
+* Vyřizuje
+* Stav zakázky
+* Datum poslední změny
+* Autor poslední změny
+
+Druhy příloh zakázky
+
+* Schválený podepsaný tištěný záměr
+* Zadání
+* SLA
+* Výzva / Objednávka
+* Smlouva
+* Faktura
+* Předávací protokol
+* Vnitřní sdělení
+
+Ke každé příloze budou evidována metadata: datum importu a uživatel, který dokument nahrál, datum a autor poslední změny. Smlouvu bude možné navíc přes IS odeslat do E-spisu či přímo nahrát na web zadavatele či veřejný rejstřík smluv.
+
+Informace o etapě zakázky navíc oproti záměru
+
+* Skutečná částka s DPH i bez DPH
+* Skutečný termín ukončení
+* Podmínka fakturace
+* Termín fakturace
+* Fakturace
+* Neuhrazená fakturace
+
+Dokumenty přiřazované k etapě
+
+* Faktura
+* Akceptační protokol
+* Předávací protokol
+* Vnitřní sdělení
+
+Ke každé příloze budou evidována metadata: datum importu a uživatel, který dokument nahrál, datum a autor poslední změny.
+
+==== Seznam zakázek
+
+Součástí modulu bude přehledný seznam všech zakázek v IS, přizpůsobený preferencím a právům konkrétního uživatele. V seznamu bude možné hledat, filtrovat a řadit zakázky dle všech atributů či přednastavených rychlých filtrů. Seznam bude možné exportovat do xls, csv nebo tisknout.
+
+==== Funkce a kontroly modulu
+
+* Tisk informací o zakázce
+* Tisk příloh zakázky
+* Export a tisk seznamu zakázek
+* Tiskové sestavy
+* Přidání komentáře či připomínky k VZ i jejím etapám
+* Historie veřejné zakázky – odkaz do logu změn
+* Kontrola zadání duplicitního záznamu VZ či dodavatele
+* Kontrola dodržení finančních limitů a termínů
+* Notifikace uživatelů na změny ve VZ
+* Notifikace uživatelů na vypršení termínů (fakturace, konec etapy, zakázky)
+
+Detailní specifikace procesu a funkcí pro jednotlivé organizace bude provedena v rámci implementační analýzy.
+
+=== Evidence faktur
+
+Evidence faktur bude obsahovat informace o fakturách zadaných do IS oprávněnými pracovníky, obvykle z podatelny. Faktury budou evidovány jako záznam v databázi a každý záznam bude mít připojen naskenovaný dokument. Evidence faktur bude propojena s účetním systémem, se kterým si bude pomocí webové služby předávat informace o faktuře a soubor s dokumentem. Z účetního systému budou přebírány informace o proplacení faktury.
+
+==== Proces přijetí a kontroly faktur
+
+Faktura je přijata, očíslována a zaevidována do IS oprávněným pracovníkem (obvykle podatelna). Dále je předána ke kontrole (datum splatnosti, částka, dodavatel atd.) nadřízenému uživateli, který jí schválí, spáruje s VZ, zkontroluje splnění podmínek k fakturaci u zakázky a případně předá fakturu ke schválení dalším oprávněným osobám. Při spárování faktura převezme štítek uvedený u VZ pro účely tvorby rozpočtu a přehledu čerpání financí. Po schválení všemi zúčastněnými stranami je faktura poslána k proplacení do účetního systému. Z účetního systému jsou přebírány informace o změně stavu faktury a jejím proplacení. Na tyto změny jsou uživatelé upozorňováni notifikací.
+
+==== Návrh informací o faktuře
+
+Základní údaje:
+
+* Číslo faktury
+* IČ dodavatele
+* Dodavatel
+* Variabilní symbol
+* Zdanitelné plnění
+* Datum splatnosti
+* Částka s DPH
+* Částka v cizí měně
+* Měna
+* Příloha: Naskenovaná faktura
+
+Metadatové údaje:
+
+* Datum přijetí
+* Zpracovatel
+* Datum poslední změny
+* Autor poslední změny
+
+Další údaje:
+
+* Číslo veřejné zakázky (spárování v IS)
+* Štítek veřejné zakázky (spárování v IS)
+* Stav v rámci workflow
+
+Externí údaje:
+
+* Datum uhrazení
+* Text storna
+* Číslo účetního dokladu
+
+Podrobná specifikace významu a seznam položek faktury pro jednotlivé organizace bude součástí implementační analýzy.
+
+==== Seznam faktur
+
+Součástí modulu bude přehledný seznam všech faktur v IS, přizpůsobený preferencím a právům konkrétního uživatele. V seznamu bude možné hledat, filtrovat a řadit faktury dle všech atributů či přednastavených rychlých filtrů. Seznam bude možné exportovat do xls, csv nebo tisknout.
+
+==== Funkce a kontroly modulu
+
+* Uložení či tisk faktury
+* Export a tisk seznamu faktur
+
+* Tiskové sestavy
+* Synchronizace s účetním systémem
+* Historie faktury – odkaz do logu změn
+
+* Kontrola zadání duplicitního záznamu faktury či dodavatele
+* Kontrola dodržení termínů
+* Notifikace na změny dle uživatel
+
+=== Adresář dokumentů
+
+Jedná se o doplňkový modul sloužící k jednoduššímu prohlížení a přístupu k dokumentům. Všechny dokumenty nahrávané do IS budou k dispozici v adresáři, v němž bude možné dokumenty filtrovat a vyhledávat dle vybraných atributů. Kromě aktuální verze dokumentu budou dostupné i jeho starší verze. Dokumenty bude možné z tohoto modulu exportovat či tisknout. Nahrávání nových dokumentů bude ale možné pouze přes modul týkající se daného dokumentu (záměr VZ, faktura).
+
+Informace o dokumentu:
+
+* Typ (smlouva, objednávka, vnitřní sdělení atd.)
+* Datum poslední úpravy
+* ID příslušného záměru
+* ID příslušné zakázky
+
+Funkce adresáře
+
+* Export a tisk dokumentů
+* Export a tisk seznamu dokumentů
+* Verze (odkaz na všechny verze dokumentu)
+
+Podrobný popis významu položek adresáře bude součástí implementační analýzy.
+
+=== Adresář dodavatelů
+
+Adresář bude obsahovat seznam dodavatelů a kontaktů uložených v IS, který bude využíván napříč celým IS při vyplňování dodavatele k záměru či zakázce, pro kontroly faktury atd. Adresář bude napojen na veřejný obchodní a živnostenský rejstřík, ze kterého bude IS ověřovat správnost uložených údajů a bude získávat informace o novém dodavateli ukládaném do IS. V IS bude vyplňováno jméno nebo IČ dodavatele a ostatní informace budou importovány z veřejného rejstříku.
+
+Detailní specifikace obsahu a funkcí modulu bude provedena v rámci implementační analýzy.
+
+Informace o dodavateli:
+
+* Název
+* IČ
+* Adresa
+* Kontakty (telefon, email)
+* Bankovní spojení
+* Ověřeno v  rejstříku (příznak ověření správnosti údajů)
+
+<<<
+
+== Rozpočet
+
+V IS bude probíhat plánování rozpočtu na nadcházející období. Rozpočet bude tvořen jako výstup pro nadřízenou instituci organizace i jako podklad pro plánování a nástroj kontroly nad financemi organizace jako celku i jejích organizačních struktur či jinak definovaných skupin. Modul rozpočet bude také poskytovat přehled o plánovaném a skutečném čerpání financí dle požadavků uživatele (např. dle období, dle skupiny či účelu, plán versus skutečné čerpání financí atd.). Přehledy bude možné exportovat a tisknout.
+
+Do rozpočtu na následující období zasahují vždy záměry a zakázky již evidované v IS, jejichž informace budou do rozpočtu přebírány automaticky dle zadaných kritérií. Dále budou v modulu tvořeny nové zakázky, čistě pro účely plánování rozpočtu (plán zakázek). Rozpočet na následující období se obvykle odevzdává společně s přehledem skutečného čerpání financí z aktuálního období.
+
+Součástí modulu bude evidence plánovaných zakázek, tvorba návrhu rozpočtu pro nadřízený orgán a modul pro interní plánování a změny rozpočtu včetně přehledu jeho čerpání dle různých kritérií.
+
+=== Plán zakázek
+
+Plán zakázek bude evidenční agenda IS, kde budou jednotlivé organizační nebo jinak definované celky zadávat plány na veřejné zakázky pro účely plánování rozpočtu na další období. Jedná se o zjednodušenou evidenci zakázek, ze které bude možné zakázku v případě realizace přebrat do evidence záměrů.
+
+Položky plánu budou vytvářet garanti projektů či vedoucí pracovníci. Vytvořený plán bude podléhat schvalovacímu procesu v rámci hierarchie organizace. Schválené položky plánu zakázek budou promítnuty do tvorby rozpočtu.
+
+==== Obsah modulu
+
+Modul bude obsahovat plánované zakázky, které by se měly realizovat v následujícím rozpočtovém období. Z plánu bude patrné, kolik finančních prostředků rozdělených dle druhu bude v definovaném období vynaloženo za organizaci jako celek, její části nebo tematické oblasti (rozděleno dle štítků).
+
+Návrh informací o plánované zakázce
+
+* Název zakázky
+* Předpokládaný termín začátku
+* Předpokládaný termín ukončení
+* Předpokládaná hodnota (bez DPH i s DPH)
+* Druh finančních prostředků
+* Štítek
+* Poznámka
+
+Metadata o plánované zakázce
+
+* Organizační celek (oddělení, sekce)
+* Autor
+* Datum vytvoření
+* Datum poslední změny
+* Autor poslední změny
+
+==== Funkce modulu
+
+* Filtrování a řazení položek
+* Export a tisk seznamu
+* Převzít do záměrů – převezme všechna data z plánované zakázky a vytvoří na jeho základě záznam v evidenci záměrů
+* Schválení seznamu (odeslání seznamu naplánovaných zakázek ke schválení dalšímu uživateli v rámci workflow)
+
+Detailní specifikace obsahu a funkcí modulu pro jednotlivé organizace bude předmětem implementační analýzy.
+
+=== Tvorba rozpočtu
+
+Rozpočet je tvořen jednou za rok na nadcházející období pro nadřízenou instituci organizace. Modul bude umožňovat vytvořit rozpočet i pro jakékoli období, případně pouze dílčí část rozpočtu (například jen investice, jen IT projekty atd.) pro interní účely organizace.
+
+Vstupními daty rozpočtu jsou aktuálně běžící zakázky z evidence zakázek a plánované zakázky z plánu zakázek. Z evidencí jsou přebírány informace o termínech plnění a finanční částky vynaložené v jednotlivých etapách. Ze všech dostupných informací je vytvořen návrh rozpočtu, který bude možné rozdělit do kapitol dle účelu využití financí, organizačního celku či jiné tematické oblasti.
+
+Návrh rozpočtu je předložen ke schválení nadřízenému orgánu, který schválí plnou částku, nebo její část, která je zpětně rozdělena v rámci organizace pro jednotlivé organizační celky dle různých kritérií. Finance přidělené od nadřízeného orgánu jsou vloženy do IS správcem rozpočtu a jsou závazné pro všechny uživatele jako limity čerpání pro další plánování a kontrolu čerpání.
+
+Detailní specifikace procesu, obsahu a funkcí modulu pro jednotlivé organizace bude předmětem implementační analýzy. Obecný postup tvorby rozpočtu je v příloze 5.
+
+==== Obsah modulu
+
+Modul bude obsahovat položky z modulů evidence zakázek a plánu zakázek zasahující do plánovaného období. Především zde bude přehled o vynaložených finančních částkách na jednotlivé VZ. Seznam položek bude možné ručně doplnit o další položky z výše uvedených evidencí, ze seznamu bude možné položky i odebrat. Kromě seznamu bude k dispozici přehledová tabulka o výši rozpočtu za jednotlivé útvary organizační struktury a rozdělený dle účelu využití či jiných kategorií.
+
+Obsah modulu se bude lišit dle přihlášeného uživatele.
+
+*Seznam položek*
+
+Seznam bude obsahovat vybrané informace z přebíraných položek jednotlivých evidencí.
+
+Návrh informací o položkách
+
+* Typ (zakázka, plán)
+* Evidenční číslo
+* Název
+* Štítek (kategorie)
+* Druh finančních prostředků
+
+* Částka bez DPH
+* Částka s DPH
+* Termín začátku etapy/zakázky
+* Termín ukončení etapy/zakázky
+* Garant
+
+*Přehledová tabulka*
+
+Jedná se o přehledovou tabulku, jejíž hodnoty se budou dynamicky počítat až do uzamčení návrhu rozpočtu. Tabulka bude obsahovat navrhované částky rozdělené dle útvarů organizační struktury, účelu vynaložení či jiných specifikovaných kritérií. K dispozici budou i mezisoučty a celková částka rozpočtu. Všechny částky budou uvedeny bez DPH i s DPH. Obsah přehledové tabulky bude přizpůsoben dle práv přihlášeného uživatele.
+
+==== Funkce modulu
+
+* Filtrování a řazení položek
+* Export a tisk seznamu včetně přehledové tabulky
+* Tiskové sestavy
+* Přidat/odebrat položky z modulů
+* Ukončit a předat ke schválení – přeposlat návrh ke schválení nadřízenému uživateli
+* Uzamknout – uzamčený návrh předaný ke schválení nadřízenému orgánu
+
+=== Rozpočet, změny rozpočtu a přehled čerpání
+
+Rozpočet schválený nadřízeným orgánem je závazný pro plánování a přehled čerpání přidělených financí. Částky schválené nadřízeným orgánem rozdělí správce rozpočtu zpětně mezi jednotlivé útvary organizační struktury dle účelu využití. Přidělené částky jsou závazné pro všechny uživatele jako limity čerpání, jejich změnu smí provést pouze správce rozpočtu na základě rozhodnutí nadřízeného orgánu.
+
+V jednotlivých organizacích je možné v rámci limitů čerpání přerozdělovat finance mezi útvary organizační struktury a měnit účel jejich vynaložení. Tyto změny může provádět pouze správce rozpočtu a jsou schvalovány vedoucími pracovníky, jichž se změny týkají.
+
+Detailní specifikace obsahu a funkcí modulu bude předmětem implementační analýzy.
+
+==== Obsah modulu
+
+Modul bude obsahovat podklady k rozpočtu (limity čerpání), seznam položek zasahujících do čerpání a přehledové tabulky s hodnotami pro kontrolu čerpání rozpočtu. Obsah a funkce budou přizpůsobeny dle práv přihlášeného uživatele.
+
+*Seznam zakázek v rozpočtu*
+
+V seznamu zakázek budou informace o položkách přebíraných z evidence zakázek a plánu zakázek zasahující do vybraného časového úseku.
+
+Informace o položkách
+
+* Typ (zakázka, plán)
+* Evidenční číslo
+* Štítek
+* Název + název etapy
+* Druh finančních prostředků
+* Částka bez DPH
+* Částka s DPH
+* Termín začátku etapy/zakázky
+* Termín ukončení etapy/zakázky
+* Útvar organizační struktury
+* Garant zakázky
+
+*Přehledové tabulky*
+
+Společně se seznamem položek bude vždy k dispozici přehled sum čerpaných financí zobrazených položek, limity z rozpočtu a jejich rozdíl. Výpočty budou dynamické a budou vždy odpovídat vyfiltrovaným položkám. Přehledy budou obsahovat celkové sumy i sumy rozdělené dle útvarů organizační struktury, účelu vynaložených financí a definovaného období.
+
+Příklady přehledových tabulek:
+
+Informace o přidělených financích dle útvarů organizační struktury a účelu využití
+
+* Útvar organizační struktury
+* Účel
+* Objem finančních prostředků
+
+Souhrn přidělených financí dle účelu využití finančních prostředků
+
+* Účel využití
+* Objem finančních prostředků
+* Celkový objem
+
+Souhrnné sumy čerpaných financí dle účelu využití finančních prostředků za vybrané časové období
+
+* Účel využití
+* Objem finančních prostředků - plán
+* Objem finančních prostředků - čerpání
+
+==== Funkce a kontroly modulu
+
+* Filtrování a řazení položek
+* Výběr časového období
+* Export a tisk seznamu položek včetně přehledových tabulek
+* Tiskové sestavy
+* Editace limitů (pouze pro správce rozpočtu)
+
+<<<
+
+== Tiskové sestavy a přehledy
+
+IS bude umožňovat export tiskových sestav a statistických přehledů z jednotlivých modulů. Sestavy a přehledy bude možné uživatelsky definovat a nejčastěji používané budou předdefinované. Sestavy a přehledy budou tisknuty nebo exportovány do formátů PDF, Word a Excel.
+
+Konkrétní sestavy a přehledy budou navrhnuty a definovány v rámci implementační analýzy.
+
+=== Tiskové sestavy
+
+Sestavy budou exportovat seznamy sledovaných entit (například veřejná zakázka, faktura, čerpání rozpočtu) a jejich vybraných atributů z různých hledisek. Jedná se například o výpis veřejných zakázek za určité období dle dodavatele. Výpis proplacených faktur za určité období atd. Z modulů rozpočtu bude možné tisknout sestavy s přehledem plánovaných zakázek rozdělený dle různých kritérií pro účely jednání o výši rozpočtu, výpis dílčího čerpání rozpočtu dle druhu financí či jiných kritérií a výpis plánu a realizace zakázek. Předdefinované sestavy budou stanoveny v rámci implementační analýzy.
+
+=== Statistické přehledy
+
+IS bude podporovat základní statistiku. Půjde například o přehled o počtu vypsaných soutěží jednotlivých rozsahů (dle zákona) v definovaném období, finanční objem nasmlouvaných zakázek za definované období, finanční objem vynaložený na tematickou skupinu za definované období atd.
+
+Cílem těchto přehledů je především získání informací k plánování rozpočtu a získání dat pro nadřízený orgán. Přehledy budou specifikovány v rámci implementační analýzy.
+
+<<<
+
+== Systémové funkce
+=== Alarmy a notifikace
+
+IS bude kontrolovat citlivá místa všech procesů, která vyplynou z úvodní implementační analýzy. Mezi taková místa patří například duplicitní evidence dodavatele, dokladů (faktur, smluv, atd.), překročení maximálního objemu financí pro zakázku nebo jednotlivé etapy, překročení termínů plnění atd. Notifikace budou nastaveny i na změny v dokumentech a položkách jednotlivých modulů. Notifikace budou nastaveny i na položky uživatele čekající ve schvalovacím centru.
+
+Notifikace budou mít různou podobu podle potřeby a jejich nastavení bude v kompetenci administrátora systému. Uživatelé s právem na zápis si budou moci upravit časový interval k upozornění na překročení termínů plnění u zakázek.
+
+Způsoby upozornění
+
+* Označení v IS
+* Hláška v IS
+* SMS
+* Email
+
+Atributy notifikace
+
+* Akce vyvolávající upozornění
+* Limit vyvolávající upozornění (časový úsek, výše čerpání financí)
+* Název
+* Text
+* Způsob upozornění
+* Příjemci
+
+=== Log změn
+
+Jakékoli změny v položkách všech modulů včetně dokumentů budou v rámci IS zapisovány do logu, který bude dostupný z jednotlivých modulů IS jako historie každé entity. Jedná se o změny obsahu, textů, komentářů, stavu a příloh.
+
+Obsah logu
+
+* Typ změny
+* Datum a čas změny
+* Autor změny
+* Výpis změny nebo odkaz na danou verzi měněného dokumentu.
+
+<<<
+
+== Administrace systému a správa uživatelů
+
+Modul administrace bude umožňovat správu uživatelských účtů a uživatelských práv na jednotlivé moduly a jejich části a správu jednotlivých částí systému, textový obsah, číselníky, tiskové šablony a tiskové sestavy.
+
+Detailní specifikace práv administrátora bude součástí implementační analýzy.
+
+=== Správa rolí a uživatelů
+
+Administrátor systému bude mít právo na správu uživatelských rolí, skupin a práv jednotlivých uživatelů na jednotlivé moduly IS a jejich části.
+
+Uživateli systému jsou výhradně pracovníci organizací, kteří mají ověřenou identitu a účet v Active Directory, kde bude probíhat uživatelská autentizace. V IS bude probíhat autorizace uživatelů a přiřazení práv dle role.
+
+Správa uživatelských rolí
+
+* Tvorba nové role
+* Nastavení práv role k modulům
+* Editace či zrušení stávající role
+
+Informace o uživatelské roli
+
+* Název
+* Seznam dostupných modulů
+* Práva na jednotlivé moduly a jejich části
+
+Správa uživatelů
+
+* Přidání nového uživatele
+* Přiřazení role
+* Změna role uživatele
+* Odebrání uživatele
+
+Informace o uživateli
+
+* Jméno (z AD)
+* Přihlašovací údaje (z AD)
+* Role
+
+=== Administrace systému
+
+V rámci IS bude mít administrátor systému právo na nastavení a úpravy jeho vybraných částí. Jedná se především o správu textů v aplikaci, nápovědy, nastavení notifikací, šablon pro tiskové sestavy a další dle specifikace v rámci implementační analýzy.
+
+Nápověda
+
+* Změna textů nápovědy
+* Doplnění nové nápovědy
+
+Číselníky
+
+* Změna hodnot v číselníku
+* Doplnění hodnot do číselníku
+
+Notifikace
+
+* Nová notifikace
+* Editace notifikace
+* Změna způsobu upozornění
+* Změna příjemců
+* Zrušení notifikace
+
+Tiskové výstupy
+
+* Tvorba, editace a mazání šablon tiskových sestav
+* Tvorba, editace a mazání statistických výstupů
+* Úprava šablony tištěné verze Záměru
+
+Workflow
+
+* Změna procesů a akcí v rámci workflow
+* Změna dokumentů v rámci procesu
+* Správa uživatelů vystupujících v rámci workflow
+
+<<<
+
+== Další požadavky na chování IS
+
+Níže popsané chování IS bude vyžadováno napříč celým systémem v jednotlivých modulech. Pro každou část systému bude chování a jeho přesná specifikace upřesněna v rámci implementační analýzy. Jedná se o požadavky, které umožní jednoduché a intuitivní ovládání IS.
+
+=== Vyhledávání, řazení a zadávání hodnot
+
+Podpora fulltextového vyhledávání a řazení a filtrování seznamu dle všech dostupných atributů jednotlivých záznamů (včetně přebíraných). Filtrování bude navíc umožněno zadáním časového úseku (roku, na časové ose atp.). Při vyhledávání a zadávání bude dostupná funkce našeptávače. Vyhledávání a zadávání bude uzpůsobeno danému datovému typu (u data bude uživateli nabídnut kalendář pro snadné zadání, v číselnících bude možné vyhledávat i textově, ne jen scrollováním atd.).
+
+Informace v jednotlivých atributech budou sloužit jako odkaz na položku v jiném modulu IS, pokud to bude možné a vhodné (například evidenční číslo záměru bude odkazovat na podrobnosti k danému záměru).
+
+=== Nápověda
+
+Vybraná pole pro vkládání textu (či jiného datového typu) budou obsahovat 'našeptávač'. V případě složitějšího popisu bude uživateli nabídnuta nápověda. Forma nápovědy bude pro každý případ definována v rámci analýzy.
+
+=== Dokumenty v IS
+
+Dokumenty budou do IS nahrávány více způsoby: Vyhledání a výběr dokumentu pomocí průzkumníku, přetažení dokumentu myší. IS bude umět zobrazit náhled základních formátů (Word, Excel, PDF, JPEG atd.) po kliknutí na již nahraný dokument.
+
+Dokumenty bude možné exportovat do vybraných formátů (Word, Excel, csv, PDF) či tisknout (přímo tiskárna, PDF).
+
+=== Komentáře, poznámky
+
+Uživatelům bude umožněno přidávat poznámky a komentáře k jednotlivým záznamům, dokumentům, fakturám, záměrům, veřejným zakázkám i jejich etapám a dalším entitám systému.
+
+=== Uživatelské nastavení
+
+Uživatelům bude přednastaven obsah IS, jeho funkce i notifikace dle jejich uživatelských práv.
+
+Každý uživatel bude mít přizpůsobeny jednotlivé části IS dle svých uživatelských oprávnění. Navíc bude uživateli umožněno vlastní nastavení viditelných informací o záznamu, pořadí sloupců, přednastavení filtrů atp. dle jeho priorit. Součástí uživatelského nastavení bude taktéž definice tiskových sestav a statistických výstupů.
+
+<<<
+
+== Technologické požadavky
+=== Požadavky vyplývající z technologického prostředí zadavatelů
+
+Nabídka na IS musí ve své kalkulaci počítat s částkou na implementaci SW do dvou různých prostředí. Na IPR Praha a do prostředí NTK. Níže jsou popsány technické požadavky obou organizací.
+
+Obecným požadavkem na software je tvorba pod open source licencí.
+
+==== IPR
+
+Vzhledem k současnému zázemí IPR je třeba IS provozovat na DB Oracle EE 11g (k dispozici je licence bez omezení na přístupy), nebo DB MS SQL v.11, dále je požadován provoz IS serverů v prostředí VMware ESXi 6 a vyšším. K dispozici je také OS Windows server 2012 a vyšší. IPR má volné kapacity pouze ve VMware farmě, DB Oracle a DB MS SQL.
+
+IS musí umožnit paralelní zadávání dat včetně přikládání dokumentů z několika pracovišť v různých lokalitách.
+
+==== NTK
+
+…
+
+=== Obecné API
+
+Software bude obsahovat taktéž obecné API pro účel možného rozšíření SW a propojení s dalšími systémy na straně zadavatelů.
+
+=== Požadavky na ukládání a zabezpečení dat a dokumentů
+
+Do IS budou nahrávány soubory dokumentů (smlouvy, faktury, objednávky) v různých, což bude vytvářet větší objemy dat. Ukládání těchto dokumentů proto předpokládáme spíše ve filesystému.
+
+<<<
+
+== Požadavky na výstupy
+=== Software a dokumentace
+
+Software bude dodán pod open source licencí v podobě komentovaných zdrojových kódů všech částí informačního systému s výjimkou využitých licencovaných komponent třetích stran. Zdrojové kódy budou předávány zadavateli spolu s dokumentací (viz dále) při zahájení ostrého provozu, dále jednou ročně a při každé zásadnější aktualizaci systému (požadavek na mimořádné předání zdrojových kódů bude vždy specifikován zadavateli). Dále budou předány instalační soubory pro veškeré části systému včetně aktualizací a bude provedena instalace systému do běhového prostředí zadavatelů a zajištění instalace aktualizací.
+
+K software bude dodavatel udržovat aktuální systémovou a uživatelskou dokumentaci pro veškeré moduly systému. Dokumentace bude předána poprvé při zahájení ostrého provozu, dále jednou ročně a při každé zásadnější aktualizaci systému (požadavek na mimořádné předání aktualizované dokumentace bude vždy specifikován zadavateli).
+
+Textové části dokumentace budou k dispozici ve formě PDF dokumentů nebo www aplikace.
+
+Způsob zpracování a obsah dokumentace bude upřesněn na základě implementačního návrhu v součinnosti se zadavateli a bude předmětem samostatné části akceptace.
+
+Obsah předání:
+
+* Komentované zdrojové kódy
+* Instalační soubory
+* Aktualizační soubory
+* Dokumentace
+
+=== Implementace do prostředí zadavatelů
+
+Dodavatel v součinnosti se zadavateli nasadí systém na testovací a produkční prostředí (včetně propojení s okolními systémy) a zajistí testovací provoz. Testovací prostředí bude dále sloužit pro testování implementace změnových požadavků.
+
+Dále bude součástí řešení migrace dat ze stávajícího software a příprava pro produkční nasazení.
+
+=== Školení
+
+Dodavatel zajistí realizaci školení uživatelů a administrátorů IS při zahájení pilotního provozu. Počet školených uživatelů bude cca 50 z obou organizací. Uživatelé budou školeni po skupinkách dle využití systému – samostatně budou školeni pracovníci obchodních a právních oddělení, garanti zakázek a administrátoři systému. Školení proběhne na pracovištích zadavatelů na prostředí reálně nasazeného systému. Rozsah školení se předpokládá pro každou organizaci cca 2 dny pro garanty (cca 20 uživatelů), 3 dny pro pracovníky obchodního a právního oddělení (cca 25 uživatelů) a cca 2 dny pro administrátory (4 uživatelé).
+
+Cílem školení je skutečná znalost IS, včetně příslušných datových a funkčních vazeb, možností uživatelského nastavení, znalosti tvorby statistických přehledů a tiskových sestav.
+
+=== Podpora a změnové požadavky
+
+Dodavatel zajistí uživatelskou podporu systému v rozsahu a způsobem specifikovaným v SLA (viz samostatný dokument).
+
+Provedení upgrade systémové platformy a zajištění odpovídající aktualizace IS se předpokládá provádět na základě dohody mezi zadavateli a dodavatelem. Úpravy technologie budou v těchto případech prováděny prostřednictvím změnových požadavků.
+
+Provedení změn a aktualizací systému bude vždy testováno na testovacím prostředí zadavatelů. Po akceptaci budou změny následně implementovány do produkčního prostředí. Technologie systému musí umožňovat návrat k předchozí verzi jednotlivých částí systému v případě selhání funkčnosti aktualizací.
+
+=== Předpokládaná součinnost
+
+Vzhledem k požadované analýze potřeb a požadavků na IS a obchodních procesů obou organizací je předpokládána součinnost pracovníků s dodavatelem IS.
+
+Pro potřeby analýzy a pozdějšího vývoje IS bude k dispozici za každou organizaci vedoucí projektu za a zároveň garant projektu, který bude odpovědný za komunikaci s dodavatelem, zajištění potřebných informací a podkladů, domlouvání schůzek a zajišťování součinnosti s dalšími pracovníky.
+
+<<<
+
+== Přílohy
+=== Zjednodušené schéma architektury IS
+
+image:media/image1.png[width=620]
+
+<<<
+
+=== Obecné workflow obchodního případu
+
+image:media/image2.png[width=500]
+
+<<<
+
+=== Obecný proces přípravy zakázky
+
+image:media/image3.png[width=620]
+
+<<<
+
+=== Obecné workflow faktury
+
+image:media/image4.png[width=360]
+
+<<<
+
+=== Obecný proces tvorby rozpočtu
+
+image:media/image5.png[width=400]
 
 // vim:set spelllang=cs:
