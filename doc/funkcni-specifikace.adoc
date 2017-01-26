@@ -36,37 +36,37 @@ Velký důraz bude kladen na plně elektronickou agendu včetně možnosti nahr�
 
 === Slovník pojmů
 
-Veřejná zakázka (VZ) – zakázka, která je zadána veřejným subjektem a k jejímu zaplacení se použijí veřejné zdroje. Jedná se o nákup zboží, zadání práce, objednání díla nebo služby. Veřejné zakázky se dělí dle druhu předmětu zakázky (služby, dodávky, stavební práce) a dle předpokládané hodnoty vynaložených prostředků (VZ malého rozsahu, podlimitní VZ a nadlimitní VZ).
+Veřejná zakázka (VZ) -- zakázka, která je zadána veřejným subjektem a k jejímu zaplacení se použijí veřejné zdroje. Jedná se o nákup zboží, zadání práce, objednání díla nebo služby. Veřejné zakázky se dělí dle druhu předmětu zakázky (služby, dodávky, stavební práce) a dle předpokládané hodnoty vynaložených prostředků (VZ malého rozsahu, podlimitní VZ a nadlimitní VZ).
 
-Záměr k zadání veřejné zakázky (Záměr) – dokument popisující požadavek na pořízení dodávek, služeb nebo stavebních prací. Záměr specifikuje předmět zakázky, předpokládanou hodnotu zakázky a odůvodnění požadavku na vypsání veřejné zakázky. Jedná se o inicializační dokument k vypsání veřejné zakázky.
+Záměr k zadání veřejné zakázky (Záměr) -- dokument popisující požadavek na pořízení dodávek, služeb nebo stavebních prací. Záměr specifikuje předmět zakázky, předpokládanou hodnotu zakázky a odůvodnění požadavku na vypsání veřejné zakázky. Jedná se o inicializační dokument k vypsání veřejné zakázky.
 
-Objednávka – oficiální dokument, kterým je objednán hmotný/nehmotný majetek nebo služba do finančního limitu stanoveného legislativou.
+Objednávka -- oficiální dokument, kterým je objednán hmotný/nehmotný majetek nebo služba do finančního limitu stanoveného legislativou.
 
-Smlouva – právní dokument, kterým je písemně stvrzena dohoda mezi dodavatelem/dodavateli a zadavatelem.
+Smlouva -- právní dokument, kterým je písemně stvrzena dohoda mezi dodavatelem/dodavateli a zadavatelem.
 
-Výzva k zadání veřejné zakázky (Výzva) – právně obchodní dokument, kterým zadavatel vybízí případné zájemce k předložení nabídky. Jedná se o zadání předmětu zakázky, pravidel pro zakázku a všech příslušných právně obchodních náležitostí. Výzva je oficiální dokument a musí být plně v souladu se Zákonem o zadávání veřejných zakázek i Občanským zákoníkem.
+Výzva k zadání veřejné zakázky (Výzva) -- právně obchodní dokument, kterým zadavatel vybízí případné zájemce k předložení nabídky. Jedná se o zadání předmětu zakázky, pravidel pro zakázku a všech příslušných právně obchodních náležitostí. Výzva je oficiální dokument a musí být plně v souladu se Zákonem o zadávání veřejných zakázek i Občanským zákoníkem.
 
-Vnitřní sdělení – dokument pro interní komunikaci v rámci organizace. Pomocí vnitřního sdělení se oficiálně předávají uvnitř institucí žádosti a informace.
+Vnitřní sdělení -- dokument pro interní komunikaci v rámci organizace. Pomocí vnitřního sdělení se oficiálně předávají uvnitř institucí žádosti a informace.
 
-Předávací protokol/dodací list/akceptační protokol – dokument, kterým dodavatel se zadavatelem stvrzují předání předmětu veřejné zakázky či její části.
+Předávací protokol/dodací list/akceptační protokol -- dokument, kterým dodavatel se zadavatelem stvrzují předání předmětu veřejné zakázky či její části.
 
-Faktura – daňový doklad se všemi zákonnými náležitostmi.
+Faktura -- daňový doklad se všemi zákonnými náležitostmi.
 
-Obchodní případ – pro účely tohoto dokumentu termín označující celý proces veřejné zakázky, tedy od vytvoření záměru, přes schvalovací řízení, průběh zakázky, až po fakturu, akceptační a předávací protokoly a řádné ukončení zakázky.
+Obchodní případ -- pro účely tohoto dokumentu termín označující celý proces veřejné zakázky, tedy od vytvoření záměru, přes schvalovací řízení, průběh zakázky, až po fakturu, akceptační a předávací protokoly a řádné ukončení zakázky.
 
-Garant – osoba, která iniciuje vypsání veřejné zakázky, odpovídá za její plnění, je v kontaktu s obchodním a právním oddělením své organizace a spolupracuje s dodavatelem.
+Garant -- osoba, která iniciuje vypsání veřejné zakázky, odpovídá za její plnění, je v kontaktu s obchodním a právním oddělením své organizace a spolupracuje s dodavatelem.
 
 === Uživatelé
 
 IS bude sloužit především pracovníkům obchodního a právního oddělení organizace k zajištění vypsání a sledování průběhu veřejných zakázek. Garantům jednotlivých zakázek k vytvoření záměru a sledování průběhu svých zakázek a vedení organizace ke sledování finančních toků a plánování rozpočtu. Dalšími uživateli budou pracovníci IT, kteří budou systém udržovat. Vybrané části IS budou k dispozici k nahlížení i ostatním zaměstnancům.
 
-Do IS bude pro zápis přistupovat pouze omezený počet uživatelů s oprávněním k obchodním informacím. Každý uživatel musí při prvním přihlášení akceptovat prokazatelně informace o „přístupu k citlivým informacím“ a zavázat se k dodržování zaměstnavatelem definovaných podmínek.
+Do IS bude pro zápis přistupovat pouze omezený počet uživatelů s oprávněním k obchodním informacím. Každý uživatel musí při prvním přihlášení akceptovat prokazatelně informace o "přístupu k citlivým informacím" a zavázat se k dodržování zaměstnavatelem definovaných podmínek.
 
 Odhad na počet uživatelů v rámci jedné organizace:
 
-* pracovníci obchodního a právního oddělení – cca 15 uživatelů
-* členové vedení – cca 10 uživatelů
-* garanti projektů – cca 20 uživatelů
+* pracovníci obchodního a právního oddělení -- cca 15 uživatelů
+* členové vedení -- cca 10 uživatelů
+* garanti projektů -- cca 20 uživatelů
 * administrátoři systému - cca 2 uživatelé
 
 Hlavní uživatelské skupiny:
@@ -91,7 +91,7 @@ Informační systém bude dodán jako open source vícevrstvý modulární syst�
 
 * server
 * webové služby/API pro návaznost na externí systémy
-* klient – uživatelské rozhraní
+* klient -- uživatelské rozhraní
 * úložiště
 
 Server bude zajišťovat výkonnou část jednotlivých modulů IS (popsány níže), komunikaci s datovými zdroji a webové služby či API pro návaznost na externí systémy. Klientskou část bude tvořit tenký nebo tlustý klient sloužící jako uživatelské rozhraní pro evidenci obchodních případů, plánování rozpočtu, export tiskových a statistických výstupů, správu uživatelských účtů a administraci systému. Úložiště bude sloužit k ukládání veškerého datového obsahu IS a dokumentů.
@@ -116,7 +116,7 @@ IS bude přístupný pouze oprávněným pracovníkům organizací, kteří maj�
 
 IS bude obsahovat administrátorskou roli, u které bude v případě potřeby možné zakázat přístup na citlivé dokumenty, ale bude umožněna administrace a nastavování samotného IS. Dále bude obsahovat uživatelské skupiny a uživatele, kteří budou mít řízen přístup do jednotlivých částí IS dle zařazení do skupiny a přidělených práv od administrátora.
 
-Všechny změny a přístupy do IS budou sledovány tak, aby bylo možné dohledat uživatele, který změnu provedl, čas provedení změny a jaká změna byla provedena. V systému práv bude řešeno i delegování práv – zastupitelnost a to jak trvalá, tak dočasná definovaná uživatelsky časovým obdobím.
+Všechny změny a přístupy do IS budou sledovány tak, aby bylo možné dohledat uživatele, který změnu provedl, čas provedení změny a jaká změna byla provedena. V systému práv bude řešeno i delegování práv -- zastupitelnost a to jak trvalá, tak dočasná definovaná uživatelsky časovým obdobím.
 
 ==== E-spis
 
@@ -164,7 +164,7 @@ Schéma obecného workflow obchodního případu je v příloze 2, schéma work
 
 === Schvalovací centrum
 
-IS bude obsahovat schvalovací centrum – seznam položek ke schválení po přihlášení konkrétního uživatele. Položky ke schválení musí korespondovat s kompetencemi daného uživatele. Vybrané položky ve schvalovacím centru bude možné kromě schválení i okomentovat a elektronicky podepsat.
+IS bude obsahovat schvalovací centrum -- seznam položek ke schválení po přihlášení konkrétního uživatele. Položky ke schválení musí korespondovat s kompetencemi daného uživatele. Vybrané položky ve schvalovacím centru bude možné kromě schválení i okomentovat a elektronicky podepsat.
 
 Schvalování dokumentů bude umožňovat dynamické změny procesů na základě zodpovědností a kompetencí v rámci organizační struktury.
 
@@ -213,7 +213,7 @@ Metadata záměru
 Další
 
 * Poznámka garanta
-* Přílohy (včetně metadat o dokumentech – datum nahrání, změny a autor)
+* Přílohy (včetně metadat o dokumentech -- datum nahrání, změny a autor)
 * Podmínky fakturace
 * Etapy záměru
 ** Název
@@ -226,7 +226,7 @@ Další
 
 Informace spojené se schvalováním záměru
 
-* Stav schválení záměru (metadata o stavu v rámci workflow – datum předání ke schválení, aktuální schvalovatel)
+* Stav schválení záměru (metadata o stavu v rámci workflow -- datum předání ke schválení, aktuální schvalovatel)
 * Zpracovatel/Vyřizuje
 * Datum schválení záměru
 
@@ -241,12 +241,12 @@ Součástí modulu bude přehledný seznam všech záměrů v IS, přizpůsoben
 * Export a tisk seznamu záměrů (XLS, CSV, PDF)
 * Tiskové sestavy
 * Přidání komentáře či připomínky k položkám záměru i jeho etapám
-* Historie záměru – odkaz do logu změn
+* Historie záměru -- odkaz do logu změn
 * Kontrola zadání duplicitního záznamu záměru či dodavatele
 * Kontrola dodržení finančních limitů dle druhu zakázky
 * Notifikace uživatelů při změně v záměru
 * Schválení (odeslání záměru ke schválení dalšímu uživateli v rámci workflow)
-* Uzavření záměru (uzamknutí jako podkladu pro zakázku, včetně příloh) – záměr je převeden kompletně na zakázku
+* Uzavření záměru (uzamknutí jako podkladu pro zakázku, včetně příloh) -- záměr je převeden kompletně na zakázku
 
 === Evidence veřejných zakázek
 
@@ -321,7 +321,7 @@ Součástí modulu bude přehledný seznam všech zakázek v IS, přizpůsoben�
 * Export a tisk seznamu zakázek
 * Tiskové sestavy
 * Přidání komentáře či připomínky k VZ i jejím etapám
-* Historie veřejné zakázky – odkaz do logu změn
+* Historie veřejné zakázky -- odkaz do logu změn
 * Kontrola zadání duplicitního záznamu VZ či dodavatele
 * Kontrola dodržení finančních limitů a termínů
 * Notifikace uživatelů na změny ve VZ
@@ -384,7 +384,7 @@ Součástí modulu bude přehledný seznam všech faktur v IS, přizpůsobený 
 
 * Tiskové sestavy
 * Synchronizace s účetním systémem
-* Historie faktury – odkaz do logu změn
+* Historie faktury -- odkaz do logu změn
 
 * Kontrola zadání duplicitního záznamu faktury či dodavatele
 * Kontrola dodržení termínů
@@ -466,7 +466,7 @@ Metadata o plánované zakázce
 
 * Filtrování a řazení položek
 * Export a tisk seznamu
-* Převzít do záměrů – převezme všechna data z plánované zakázky a vytvoří na jeho základě záznam v evidenci záměrů
+* Převzít do záměrů -- převezme všechna data z plánované zakázky a vytvoří na jeho základě záznam v evidenci záměrů
 * Schválení seznamu (odeslání seznamu naplánovaných zakázek ke schválení dalšímu uživateli v rámci workflow)
 
 Detailní specifikace obsahu a funkcí modulu pro jednotlivé organizace bude předmětem implementační analýzy.
@@ -515,8 +515,8 @@ Jedná se o přehledovou tabulku, jejíž hodnoty se budou dynamicky počítat a
 * Export a tisk seznamu včetně přehledové tabulky
 * Tiskové sestavy
 * Přidat/odebrat položky z modulů
-* Ukončit a předat ke schválení – přeposlat návrh ke schválení nadřízenému uživateli
-* Uzamknout – uzamčený návrh předaný ke schválení nadřízenému orgánu
+* Ukončit a předat ke schválení -- přeposlat návrh ke schválení nadřízenému uživateli
+* Uzamknout -- uzamčený návrh předaný ke schválení nadřízenému orgánu
 
 === Rozpočet, změny rozpočtu a přehled čerpání
 
@@ -794,7 +794,7 @@ Dále bude součástí řešení migrace dat ze stávajícího software a příp
 
 === Školení
 
-Dodavatel zajistí realizaci školení uživatelů a administrátorů IS při zahájení pilotního provozu. Počet školených uživatelů bude cca 50 z obou organizací. Uživatelé budou školeni po skupinkách dle využití systému – samostatně budou školeni pracovníci obchodních a právních oddělení, garanti zakázek a administrátoři systému. Školení proběhne na pracovištích zadavatelů na prostředí reálně nasazeného systému. Rozsah školení se předpokládá pro každou organizaci cca 2 dny pro garanty (cca 20 uživatelů), 3 dny pro pracovníky obchodního a právního oddělení (cca 25 uživatelů) a cca 2 dny pro administrátory (4 uživatelé).
+Dodavatel zajistí realizaci školení uživatelů a administrátorů IS při zahájení pilotního provozu. Počet školených uživatelů bude cca 50 z obou organizací. Uživatelé budou školeni po skupinkách dle využití systému -- samostatně budou školeni pracovníci obchodních a právních oddělení, garanti zakázek a administrátoři systému. Školení proběhne na pracovištích zadavatelů na prostředí reálně nasazeného systému. Rozsah školení se předpokládá pro každou organizaci cca 2 dny pro garanty (cca 20 uživatelů), 3 dny pro pracovníky obchodního a právního oddělení (cca 25 uživatelů) a cca 2 dny pro administrátory (4 uživatelé).
 
 Cílem školení je skutečná znalost IS, včetně příslušných datových a funkčních vazeb, možností uživatelského nastavení, znalosti tvorby statistických přehledů a tiskových sestav.
 
