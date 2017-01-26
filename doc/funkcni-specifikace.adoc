@@ -1,4 +1,4 @@
-= Informační systém evidence veřejných zakázek: Funkční specifikace
+= Správní informační systém: Funkční specifikace
 :numbered:
 :icons: font
 :lang: cs
@@ -14,7 +14,7 @@
 == Úvod
 === Účel IS
 
-Informační systém evidence veřejných zakázek (zkráceně IS) je důležitým nástrojem pro organizace veřejné správy, který jim umožňuje plánovat a hlídat workflow zpracování veřejných zakázek (dále VZ), vést evidenci zakázek včetně všech jejich fází a plánovat rozpočet na další období.
+Správní informační systém, zkráceně _SpIS_ je otevřený nástroj pro vedení elektronických evidencí. Umožňuje plánovat a sledovat průběh zpracování veřejných zakázek (dále VZ), vést evidenci zakázek včetně všech jejich etap a plánovat rozpočet na další období.
 
 IS bude obsahovat tři základní části z hlediska tematických oblastí. První částí je workflow, jeho nastavení a změny. Druhou částí je tvorba a evidence veřejných zakázek. Třetí částí IS je plánování rozpočtu organizace, který je tvořen částečně probíhajícími zakázkami evidovanými v IS a plánovanými výdaji pro další rozpočtové období.
 
@@ -250,7 +250,7 @@ Součástí modulu bude přehledný seznam všech záměrů v IS, přizpůsoben
 
 === Evidence veřejných zakázek
 
-Evidence VZ je stěžejní agendou obchodního a právního oddělení organizace. Jsou zde evidovány všechny veřejné zakázky, od zakázek malého rozsahu až po nadlimitní zakázky. Evidence VZ je souhrnný přehled všeho, co je k zakázce evidováno, o vynaložené částce, termínech plnění, stavu jednotlivých částí (faktura, smlouva,…) ve všech fázích realizace. Informace o zakázce jsou přebírány ze záměru, ze kterého zakázka vznikla. Zakázka je postupně doplňována o další informace a dokumenty. Součástí každé veřejné zakázky jsou dále faktury (spárované z evidence faktur), objednávka, smlouva, vnitřní sdělení a další potřebné dokumenty a přílohy. Z výše uvedených dokumentů, které jsou přiřazeny buď ze související agendy či nahrány jako soubory, se k veřejné zakázce evidují vybrané informace přímo v IS.
+Evidence VZ je stěžejní agendou obchodního a právního oddělení organizace. Jsou zde evidovány všechny veřejné zakázky, od zakázek malého rozsahu až po nadlimitní zakázky. Evidence VZ je souhrnný přehled všeho, co je k zakázce evidováno, o vynaložené částce, termínech plnění, stavu jednotlivých částí (faktura, smlouva,…) ve všech etapách realizace. Informace o zakázce jsou přebírány ze záměru, ze kterého zakázka vznikla. Zakázka je postupně doplňována o další informace a dokumenty. Součástí každé veřejné zakázky jsou dále faktury (spárované z evidence faktur), objednávka, smlouva, vnitřní sdělení a další potřebné dokumenty a přílohy. Z výše uvedených dokumentů, které jsou přiřazeny buď ze související agendy či nahrány jako soubory, se k veřejné zakázce evidují vybrané informace přímo v IS.
 
 ==== Proces zpracování VZ
 
