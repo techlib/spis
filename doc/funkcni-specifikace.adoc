@@ -46,8 +46,9 @@ Aby bylo možné zpracovávat v systému agendy uvedené výše, je potřeba, ab
 | Elektronický systém spisové služby | E-spis           | iFIS
 | Elektronické tržiště               | ?                | TenderMarket
 | Otevřená data                      | CKAN             | CKAN
-| Registr smluv                      | centrální        | centrální
 |===
+
+Systém bude dále napojen na národní Registr smluv a Obchodní a Živnostenský rejstřík.
 
 
 === Slovník pojmů
