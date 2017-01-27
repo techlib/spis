@@ -9,79 +9,92 @@
 :example-caption: Příklad
 :toc-title: Obsah
 :toc: left
+:toclevels: 2
 :sectnumlevels: 6
 
 == Úvod
-=== Účel IS
 
-Správní informační systém, zkráceně _SpIS_ je otevřený nástroj pro vedení elektronických evidencí. Umožňuje plánovat a sledovat průběh zpracování veřejných zakázek (dále VZ), vést evidenci zakázek včetně všech jejich etap a plánovat rozpočet na další období.
+Správní informační systém, zkráceně _SpIS_ je otevřený nástroj pro vedení elektronických evidencí. Měl by zpřehlednit výkon organizačních úkonů, mezi které patří například příprava a jednotlivé kroky pro realizaci veřejných zakázek včetně dodání podkladů pro fakturaci, plánování rozpočtu a jednotlivých výdajových záměrů nebo nastavení pracovních procesů a schvalovacích mechanismů dle rolí přidělených pracovníkům a dodavatelům dané organizace. Systém bude tedy v praxi evidovat doklady a další dokumenty.
 
-IS bude obsahovat tři základní části z hlediska tematických oblastí. První částí je workflow, jeho nastavení a změny. Druhou částí je tvorba a evidence veřejných zakázek. Třetí částí IS je plánování rozpočtu organizace, který je tvořen částečně probíhajícími zakázkami evidovanými v IS a plánovanými výdaji pro další rozpočtové období.
+Jeho technickými charakteristikami se zabývá <<technicka-specifikace.adoc#,Technická specifikace>>.
 
-IS bude sloužit především jako nástroj plánování a hlídání schvalovacích procesů v rámci zpracování VZ od vytvoření záměru, vypsání zakázky, schválení dodavatele, až po realizaci a fakturaci. Workflow bude obecné a uživatelsky nastavitelné pro každou instituci individuálně dle jejích vnitřních pravidel.
 
-Veřejné zakázky budou v systému evidovány, včetně všech potřebných dokumentů a informací o zakázce, jejím rozsahu, obsahu, dodavateli, podmínkách fakturace, stavu atd.
+=== Agendy
 
-Evidované informace o zakázkách, především finanční plnění, budou sloužit jako podklad pro tvorbu rozpočtu. Tento se obvykle skládá z financí alokovaných na již probíhající zakázky a nově plánovaných projekty.
+Systém v prvních verzích umožňuje zpracování následujících agend IPR a NTK. Systém by však měl být konstruován s ohledem na budoucí rozvoj, při kterém dojde k rozšíření seznamu níže.
 
-Ze všech částí IS budou tvořeny tiskové a statistické výstupy, které budou definovány pro jednotlivé organizace a uživatelské role zvlášť.
+Řízení výdajů::
+Sekce řízení výdajů sdružuje řadu témat, která se dotýkají výdajových procesů různých typů. Jedná se například o evidence záměrů, objednávek, veřejných zakázek, předávacích protokolů, faktur a dalších, souvisejících dokumentů.
 
-IS bude propojen pomocí API s externími systémy jednotlivých institucí dle individuální specifikace. Bude se jednat hlavně o Active Directory kvůli autentizaci uživatelů, napojení na účetní systém, ze kterého budou přebírány informace o fakturách a stavu proplacení a IS bude naopak účetnímu systému předávat informace, případně naskenovaný dokument faktury.
+Rozpočtování::
+Sekce rozpočtu sdružuje témata související s přípravou, úpravami a sledováním čerpání prostředků z rozpočtu. Umožňuje jeho sestavování s přihlédnutím k plánovaným nákupům a platným smlouvám.
 
-IS také bude obsahovat vazbu na E-spis k automatickému odesílání smluv do registrů veřejných zakázek. IS bude propojen i s webovými stránkami zadavatelů kvůli zveřejňování smluv a informací.
+Partneři a smlouvy::
+Sekce partnerů a smluv se soustředí na téma evidence platných smluv a z nich plynoucích závazků. Dále také obsahuje evidenci smluvních partnerů včetně kontaktních informací.
 
-Uživateli IS budou zaměstnanci s oprávněným přístupem k obchodním informacím organizace, jako jsou vedoucí zaměstnanci, garanti VZ či zaměstnanci právních a obchodních oddělení. Každý uživatel bude mít definována práva do IS dle svých kompetencí. Zaměstnanci obchodních a právních oddělení dostanou nástroj na efektivní práci s daty, garanti veřejných zakázek budou mít přehled o plnění svých zakázek, vedení získá snadno a rychle informace o vynaložených nákladech a další potřebné informace nejen pro plánování rozpočtu.
 
-Velký důraz bude kladen na plně elektronickou agendu včetně možnosti nahrávání příloh, definovaného workflow s možností poznámek a sledování verze dokumentů. Dále automatizovaného publikování vybraného obsahu na definovaná místa webů. Zároveň bude kladen důraz na celkovou ergonomii systém, jednoduchost ovládání a možnost individuálního nastavení. V neposlední řadě bude velmi důležitá stabilita IS, bezpečné uchování dat a dlouhodobá podpora dodavatele IS, včetně definovaných SLA.
+=== Integrace
+
+Aby bylo možné zpracovávat v systému agendy uvedené výše, je potřeba, aby byl systém provázán s cizími systémy a mohl tak pracovat s jejich daty. Tyto systémy nejsou v IPR a NTK shodné.
+
+.Cizí systémy, se kterými je potřeba se integrovat
+[options="header",cols="<4,^2,^2"]
+|===
+| Úloha cizího systému               | IPR              | NTK
+| Databáze uživatelů                 | Active Directory | OpenLDAP
+| Ekonomický systém                  | Ginis            | iFIS
+| Elektronický systém spisové služby | E-spis           | iFIS
+| Elektronické tržiště               | ?                | TenderMarket
+| Otevřená data                      | CKAN             | CKAN
+| Registr smluv                      | centrální        | centrální
+|===
+
 
 === Slovník pojmů
 
-Veřejná zakázka (VZ) -- zakázka, která je zadána veřejným subjektem a k jejímu zaplacení se použijí veřejné zdroje. Jedná se o nákup zboží, zadání práce, objednání díla nebo služby. Veřejné zakázky se dělí dle druhu předmětu zakázky (služby, dodávky, stavební práce) a dle předpokládané hodnoty vynaložených prostředků (VZ malého rozsahu, podlimitní VZ a nadlimitní VZ).
+Veřejná zakázka (Zakázka)::
+Zakázka, která je zadána veřejným subjektem a k jejímu zaplacení se použijí veřejné zdroje. Jedná se o nákup zboží, zadání práce, objednání díla nebo služby. Veřejné zakázky se dělí dle druhu předmětu zakázky (služby, dodávky, stavební práce) a dle předpokládané hodnoty vynaložených prostředků (zakázka malého rozsahu, podlimitní zakázka a nadlimitní zakázka).
 
-Záměr k zadání veřejné zakázky (Záměr) -- dokument popisující požadavek na pořízení dodávek, služeb nebo stavebních prací. Záměr specifikuje předmět zakázky, předpokládanou hodnotu zakázky a odůvodnění požadavku na vypsání veřejné zakázky. Jedná se o inicializační dokument k vypsání veřejné zakázky.
+Záměr k zadání veřejné zakázky (Záměr)::
+Dokument popisující požadavek na pořízení dodávek, služeb nebo stavebních prací. Záměr specifikuje předmět zakázky, předpokládanou hodnotu zakázky a odůvodnění požadavku na vypsání veřejné zakázky. Záměr je základním dokumentem zakázky.
 
-Objednávka -- oficiální dokument, kterým je objednán hmotný/nehmotný majetek nebo služba do finančního limitu stanoveného legislativou.
+Objednávka::
+Oficiální dokument, kterým je objednán hmotný nebo nehmotný majetek či služba do finančního limitu stanoveného legislativou.
 
-Smlouva -- právní dokument, kterým je písemně stvrzena dohoda mezi dodavatelem/dodavateli a zadavatelem.
+Smlouva::
+V kontextu zakázek jde o právní dokument, kterým se písemně stvrzuje dohoda mezi zadavateli zakázky a dodavateli o plnění předmětu a platebních podmínkách.
 
-Výzva k zadání veřejné zakázky (Výzva) -- právně obchodní dokument, kterým zadavatel vybízí případné zájemce k předložení nabídky. Jedná se o zadání předmětu zakázky, pravidel pro zakázku a všech příslušných právně obchodních náležitostí. Výzva je oficiální dokument a musí být plně v souladu se Zákonem o zadávání veřejných zakázek i Občanským zákoníkem.
+Výzva k zadání veřejné zakázky (Výzva)::
+Právně obchodní dokument, kterým zadavatel vybízí případné zájemce k předložení nabídky. Jedná se o zadání předmětu zakázky, pravidel pro zakázku a všech příslušných právně obchodních náležitostí. Výzva je oficiální dokument a musí být plně v souladu se Zákonem o zadávání veřejných zakázek a dále s Občanským zákoníkem.
 
-Vnitřní sdělení -- dokument pro interní komunikaci v rámci organizace. Pomocí vnitřního sdělení se oficiálně předávají uvnitř institucí žádosti a informace.
+Vnitřní sdělení::
+Dokument pro interní komunikaci v rámci organizace. Pomocí vnitřního sdělení se oficiálně předávají uvnitř institucí žádosti a informace.
 
-Předávací protokol/dodací list/akceptační protokol -- dokument, kterým dodavatel se zadavatelem stvrzují předání předmětu veřejné zakázky či její části.
+Předávací protokol / dodací list / akceptační protokol::
+Dokument, kterým zadavatel od dodavatele přebírá předmět veřejné zakázky či jeho část.
 
-Faktura -- daňový doklad se všemi zákonnými náležitostmi.
+Faktura::
+Daňový doklad se všemi zákonnými náležitostmi.
 
-Obchodní případ -- pro účely tohoto dokumentu termín označující celý proces veřejné zakázky, tedy od vytvoření záměru, přes schvalovací řízení, průběh zakázky, až po fakturu, akceptační a předávací protokoly a řádné ukončení zakázky.
+Obchodní případ::
+Pro účely tohoto dokumentu termín označující celý proces veřejné zakázky, tedy od vytvoření záměru, přes schvalovací řízení, průběh zakázky, až po fakturu, akceptační a předávací protokoly a řádné ukončení zakázky.
 
-Garant -- osoba, která iniciuje vypsání veřejné zakázky, odpovídá za její plnění, je v kontaktu s obchodním a právním oddělením své organizace a spolupracuje s dodavatelem.
+Garant::
+Osoba, která iniciuje vypsání veřejné zakázky, odpovídá za její plnění, je v kontaktu s obchodním a právním oddělením své organizace a spolupracuje s dodavatelem.
 
 === Uživatelé
 
-IS bude sloužit především pracovníkům obchodního a právního oddělení organizace k zajištění vypsání a sledování průběhu veřejných zakázek. Garantům jednotlivých zakázek k vytvoření záměru a sledování průběhu svých zakázek a vedení organizace ke sledování finančních toků a plánování rozpočtu. Dalšími uživateli budou pracovníci IT, kteří budou systém udržovat. Vybrané části IS budou k dispozici k nahlížení i ostatním zaměstnancům.
+SpIS bude sloužit především nákupčím a právníkům k zajištění vypsání a sledování průběhu veřejných zakázek, dále garantům jednotlivých zakázek k vytvoření záměru a sledování průběhu zakázky a vedení organizace ke sledování finančních toků a plánování rozpočtu. Dalšími uživateli budou pracovníci IT, kteří budou systém udržovat. Vybrané části systému budou k dispozici pro nahlížení i ostatním pracovníkům.
 
-Do IS bude pro zápis přistupovat pouze omezený počet uživatelů s oprávněním k obchodním informacím. Každý uživatel musí při prvním přihlášení akceptovat prokazatelně informace o "přístupu k citlivým informacím" a zavázat se k dodržování zaměstnavatelem definovaných podmínek.
-
-Odhad na počet uživatelů v rámci jedné organizace:
-
-* pracovníci obchodního a právního oddělení -- cca 15 uživatelů
-* členové vedení -- cca 10 uživatelů
-* garanti projektů -- cca 20 uživatelů
-* administrátoři systému - cca 2 uživatelé
-
-Hlavní uživatelské skupiny:
-
-* podatelna
-* garant
-* vedoucí
-* ředitel
-* zpracovatel
-* správce rozpočtu
-* právník/ekonom
-* administrátor
-* ostatní
-
-Specifické výstupy IS budou přístupné pro čtení i pro ostatní zaměstnance organizací.
+.Odhadovaný počet uživatelů v daných rolích
+[options="header",cols="<4,^1,^1"]
+|===
+| Uživatelská role   | IPR | NTK
+| Nákupčí a právníci | 15  | 8
+| Členové vedení     | 10  | 10
+| Garanti zakázek    | 20  | 20
+| Správci systému    | 2   | 4
+|===
 
 <<<
 
