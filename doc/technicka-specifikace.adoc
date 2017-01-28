@@ -539,7 +539,7 @@ Podobných výsledků můžeme dosáhnout jmenováním do konkrétní role (nap�
 
 Role představují oprávnění uživatelů, kteří jsou součástí určitých oborů působnosti k manipulaci s množinou předmětných dokumentů spadajících do stejných nebo jiných oborů.
 
-TIP: Pro jmenování uživatelů do rolí může sloužit zabudovaná funkce systému nebo k němu může docházet na základě dokumentů, které jsou v systému vedené.
+TIP: Pro jmenování uživatelů do rolí může sloužit například jejich příslušnost do určitých skupin, která se zjistí z vnější evidence uživatelů.
 
 Úlohou rolí je pojmenovat skupiny oprávnění, které mají určití uživatelé, a tím umožnit jejich kontrolu a změny. Běžné role se uplatní zejména při netypických situacích, jako jsou projekty mimo běžný rámec organizační struktury. Odvislé role se naopak uplatní při formulování oprávnění pro pravidelné organizační struktury.
 
