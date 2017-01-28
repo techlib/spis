@@ -60,8 +60,9 @@ Každý pohled využívá pro zobrazení určitou komponentu. Pokud je komponent
 
 To, jaká data pohled představuje, je kromě komponenty dáno zejména souborem datových zdrojů, ze kterých pohled čerpá. Tyto zdroje mohou být při použití interaktivních komponent ovlivněny hodnotami, které uživatel při prohlížení mění.
 
+.Popis pohledu
+====
 [source,yaml]
-.{example-caption} {counter:example}. Popis pohledu
 ....
 # Název pohledu včetně české lokalizace
 name: Event Calendar
@@ -80,13 +81,15 @@ data:
   holidays: planning.czech_holidays
   events: planning.events
 ....
+====
 
 Komponentu tvoří popis jejího rozhraní, včetně popisu zdrojů dat, ze kterých dokáže čerpat a dále kód pro její zobrazení. Komponenta je totiž v pohledu navázána na sadu datových zdrojů, což jsou fakticky procedury uložené v databázi. Popis rozhraní komponenty umožňuje provést automatickou kontrolu shody s rozhraním procedur.
 
 Vzhledem k tomu, že formátem pro komunikaci komponent s datovými zdroji je `JSON`, je možné s výhodou opět vyžít připravované normy link:http://json-schema.org/[JSON Schema].
 
+.Popis komponenty
+====
 [source,yaml]
-.{example-caption} {counter:example}. Popis komponenty
 ....
 name: Calendar
 name[cs]: Kalendář
@@ -119,11 +122,13 @@ sources:
 options:
   mode: {$ref: "calendar.yaml#/definitions/mode"}
 ....
+====
 
-Aby mohla být provedena kontrola pohledu, je potřeba popsat i datové zdroje. V příkladu níže je popsána uložená procedura `calendar.events`.
+Pro kontrolu datového zdroje je v příkladu níže popsána uložená procedura `calendar.events`.
 
+.Popis uložené procedury
+====
 [source,yaml]
-.{example-caption} {counter:example}. Popis uložené procedury
 ....
 name: Calendar Events
 name[cs]: Kalendářní události
@@ -135,6 +140,7 @@ provides: {$ref: "calendar.yaml#/definitions/events"}
 expects:
   period: {$ref: "calendar.yaml#/definitions/period"}
 ....
+====
 
 <<<
 
@@ -151,10 +157,10 @@ Dokumenty, které jsou hotové a schválené zodpovědnou osobou. Tato osoba ru�
 Provizorní::
 Dokumenty, které jsou hotové, ale nejsou schválené zodpovědnou osobou. Pokud se na ně pracovníci spoléhají, přebírají tím na sebe riziko, které jinak leží na zodpovědné osobě.
 
-Dokumenty ve struktuře na sobě vzájemně závisí. Některé dokumenty tvoří kořeny, na kterých již žádné další dokumenty nezávisí. Na jiných dokumentech závisí jeden i více dokumentů. V podstatě se jedná o acyklický orientovaný graf.
+Dokumenty ve struktuře na sobě vzájemně závisí a tvoří tak acyklický orientovaný graf.
 
-V praxi může hierarchická struktura vypadat například takto (šipky značí závislost):
-
+.Hierarchická pracovní struktura (šipky značí závislost)
+====
 [plantuml,align="center"]
 ....
 @startuml
@@ -176,11 +182,14 @@ protokol_2 -d-> nabídka
 nabídka -d-> poptávka
 @enduml
 ....
+====
 
 V příkladu je `protokol 2` nedokončený, ale pracovník zodpovědný za schválení faktury ho označil za provizorní. To proto, aby mohl vytvořit provizorní fakturu a mohla proběhnout platba. Pokud se zmýlil a pracovník zodpovědný za `protokol 2` tento nedokončí, mohou být vyvozeny důsledky.
 
-Z důvodu průkaznosti nelze dokončené dokumenty měnit. Pokud by se tak mělo stát, je vytvořen dokument nový, který ten původní nahradí v jeho roli. Pokud se na předchozí dokument jiný dokument spoléhá, je považován za neplatný. Uveďme si příklad:
+Z důvodu průkaznosti nelze dokončené dokumenty měnit. Pokud by se tak mělo stát, je vytvořen dokument nový, který ten původní nahradí v jeho roli. Pokud se na předchozí dokument jiný dokument spoléhá, je považován za neplatný.
 
+.Zneplatnění dokumentu revizí jeho závislosti
+====
 [plantuml,align="center"]
 ....
 @startuml
@@ -195,6 +204,7 @@ note right of faktura: verze 1
 note right of protokol: verze 2
 @enduml
 ....
+====
 
 V příkladu došlo k tomu, že byla v důsledku aktualizace dokumentu `protokol` zneplatněna aktuální verze dokumentu `faktura`. V této situaci jsou v podstatě jen dvě možnosti jak postupovat správně:
 
@@ -229,8 +239,10 @@ Typy dokumentů shrnují vnitřní strukturu, závislosti, použité komponenty 
 
 ==== Závislosti
 
-Dokumenty mohou záviset pouze na jiných dokumentech, a to vždy v určitých rolích. Pro ilustraci:
+Dokumenty mohou záviset pouze na jiných dokumentech, a to vždy v určitých rolích.
 
+.Závislosti mají konkrétní role
+====
 [plantuml,align="center"]
 ....
 @startuml
@@ -251,11 +263,14 @@ note bottom of předání_2
 end note
 @enduml
 ....
+====
 
 V příkladu je předávací protokol použit nejprve pro dokumentaci zahájení zápůjčky věci a následně bude použit pro dokumentaci jejího navrácení. Pro vyložení závislého dokumentu `zápůjčka` je podstatné tyto dva protokoly od sebe odlišit.
 
-Oproti instancím (dokumentům) mohou typy záviset pouze na dalších typech (nebo typových třídách, které jsou vysvětleny níže). Pro některé situace může být užitečné, aby dokument závisel na určitém počtu zcela libovolných dokumentů, bez ohledu na jejich typ. To ale odbíháme. Typy pro příklad výše budou vypadat například následovně:
+Oproti instancím (dokumentům) mohou typy záviset pouze na dalších typech (nebo typových třídách, které jsou vysvětleny níže). Pro některé situace může být užitečné, aby dokument závisel na určitém počtu zcela libovolných dokumentů, bez ohledu na jejich typ. To ale odbíháme.
 
+.Typy pro předchozí příklad
+====
 [plantuml,align="center"]
 ....
 @startuml
@@ -270,13 +285,16 @@ zápůjčka -d-> "{1,1}" předání_1 : vstupní
 zápůjčka -d-> "{1,1}" předání_2 : výstupní
 @enduml
 ....
+====
 
 Za povšimnutí stojí uvedení dokumentů, které by měly být přítomny, ale v příkladu výše zatím schází. Také jsou zde u rolí uvedeny kvantifikátory.
 
 ==== Kvantifikace
 
-Závislosti je nutné kvantifikovat. V určité roli může vystupovat konkrétní počet dokumentů. Uveďme si příklad struktury dokumentů:
+Závislosti je nutné kvantifikovat. V určité roli může vystupovat konkrétní počet dokumentů.
 
+.Struktura se třemi dokumenty ve stejné roli
+====
 [plantuml,align="center"]
 ....
 @startuml
@@ -290,9 +308,12 @@ rozpočet -d-> návrh_2 : dle návrhu
 rozpočet -d-> návrh_3 : dle návrhu
 @enduml
 ....
+====
 
-Ve struktuře se vyskytuje trojice dokumentů se shodným typem ve shodné roli. Jak budou vypadat typy pro tuto strukturu? Patrně následovně:
+Jak budou vypadat typy pro tuto strukturu?
 
+.Typy pro předchozí příklad
+====
 [plantuml,align="center"]
 ....
 @startuml
@@ -305,6 +326,7 @@ rectangle "návrh" <<Dílčí návrh rozpočtu>>
 rozpočet -d-> "{1,}" návrh : dle návrhu
 @enduml
 ....
+====
 
 Kvantifikátor `{1,}` zde značí přítomnost alespoň jednoho dokumentu daného typu v dané roli. Je však možné specifikovat libovolný rozsah, tedy například `{,}` nebo `{0,}` pro libovolný počet dokumentů, `{1,3}` pro jeden až tři dokumenty a `{,5}` nebo `{0,5}` pro až pět dokumentů.
 
@@ -312,8 +334,10 @@ Kvantifikátor `{1,}` zde značí přítomnost alespoň jednoho dokumentu danéh
 
 Typové třídy popisují dílčí strukturu dokumentů tak, aby mohlo dojít k použití více typů dokumentů ve stejné roli. Upravují jak strukturu typů dané třídy, tak i jejich závislosti.
 
-Můžeme si například zavést typové třídy `Mající výši plnění (x)` a `Mající termín realizace (x)`, které popisují části schématu dokumentu, ve kterém předepisují přítomnost finanční částky s určitým významem a dále termínu, kdy dojde k nějaké realizaci. S pomocí těchto typových tříd pak můžeme popsat některé závislosti obecněji. Například:
+Můžeme si například zavést typové třídy `Mající výši plnění (x)` a `Mající termín realizace (x)`, které popisují části schématu dokumentu, ve kterém předepisují přítomnost finanční částky s určitým významem a dále termínu, kdy dojde k nějaké realizaci. S pomocí těchto typových tříd pak můžeme popsat některé závislosti obecněji.
 
+.Využití typové třídy
+====
 [plantuml,align="center"]
 ....
 @startuml
@@ -326,9 +350,12 @@ rectangle "výdaj" <<Pro d, pokud platí\n Mající výši plnění (d),\n Mají
 plán -d-> "{,}" výdaj : zahrnuje
 @enduml
 ....
+====
 
-Pokud typy dokumentů `Plánovaná investice` a `Plánovaný provozní výdaj` implementují obě tyto typové třídy, pak je možné typy z předešlého případu splnit například následující strukturou:
+Pokud typy dokumentů `Plánovaná investice` a `Plánovaný provozní výdaj` implementují obě tyto typové třídy, pak je možné typy z předešlého případu splnit například následující strukturou.
 
+.Implementace typů z předchozího příkladu
+====
 [plantuml,align="center"]
 ....
 @startuml
@@ -340,6 +367,7 @@ plán -d-> výdaj_1 : zahrnuje
 plán -d-> výdaj_2 : zahrnuje
 @enduml
 ....
+====
 
 Termín typová třída se vyskytuje hojně v kontextu funkcionálního programování. Typové třídy tam ale obvykle neposkytují stejný druh polymorfismu jako typové třídy popsané výše. Dle tamější praxe by musely být oba výdaje v příkladu zcela stejného typu.
 
