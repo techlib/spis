@@ -12,6 +12,9 @@
 :toclevels: 3
 :sectnumlevels: 6
 
+:y: icon:check[role="green"]
+:n: icon:times[role="red"]
+
 == Úvod
 
 Správní informační systém, zkráceně _SpIS_ je otevřený nástroj pro vedení elektronických evidencí. Měl by zpřehlednit výkon organizačních úkonů, mezi které patří například příprava a jednotlivé kroky pro realizaci veřejných zakázek včetně dodání podkladů pro fakturaci, plánování rozpočtu a jednotlivých výdajových záměrů nebo nastavení pracovních procesů a schvalovacích mechanismů dle rolí přidělených pracovníkům a dodavatelům dané organizace. Systém bude tedy v praxi evidovat doklady a další dokumenty.
@@ -34,25 +37,85 @@ SpIS bude napojen na vybrané další informační systémy, ze kterých bude č
 
 <<<
 
-=== Sekce a Témata
-
-Za účelem snazší orientaci uživatelů jsou veškeré objekty v systému roztříděny do témat a tématických sekcí. Toto členění nemá žádné důsledky pro funkci, ani pro řízení přístupu. Také nijak nesouvisí s organizačním členěním.
-
-=== Témata
-
-Téma seskupuje pohledy, které mají za úkol poskytnout informace o stavu věcí, se správou projektů a dokumentů, které umožňují tento stav ovlivňovat. Vhodná témata mohou být například *Rozpočet* nebo *Smlouvy*.
-
-Pokud to dává smysl, mohou se věci v tématech opakovat. Například určité pohledy mohou být přínosné pro více témat, některé projekty mohou souviset s vícero tématy a podobně. Názorným příkladem budiž *Nákup*, který zasahuje jak do *Rozpočtu*, tak právě do *Smluv*.
+== Struktura uživatelského rozhraní
 
 === Sekce
 
+Za účelem snazší orientaci uživatelů jsou veškeré objekty v systému roztříděny do témat a tématických sekcí. Toto členění nemá žádné důsledky pro funkci, ani pro řízení přístupu. Také nijak nesouvisí s organizačním členěním.
+
 Sekce slouží k seskupení několika témat. Není běžné, aby se věci opakovaly v různých sekcích, ale není to vyloučeno. Příkladem sekcí mohou být například *Finance*, *Legislativa* a *Vnější ukazatele*. V první sekci se setkáme s tématy, která jsme zmínili výše, v sekci *Legislativa* najdeme jen projekty pro práci s *Vnitřními předpisy* a konečně v sekci *Vnější ukazatele* nenajdeme sice žádné projekty, ale zato se zde setkáme s řadou pohledů na data získaná při provozu instituce, například *Návštěvnost*, nebo *Skladbu uživatelů*.
+
+==== Témata
+
+Téma seskupuje pohledy a sestavy, které mají za úkol poskytnout informace o stavu věcí, se správou projektů a dokumentů, které umožňují tento stav ovlivňovat. Vhodná témata mohou být například *Rozpočet* nebo *Smlouvy*.
+
+Pokud to dává smysl, mohou se věci v tématech opakovat. Například určité pohledy mohou být přínosné pro více témat, některé projekty mohou souviset s vícero tématy a podobně. Názorným příkladem budiž *Nákup*, který zasahuje jak do *Rozpočtu*, tak právě do *Smluv*.
+
+===== Pohledy
+
+Pohledům je v rámci daného tématu věnován hlavní prostor. Některé pohledy jsou interaktivní, takže je možné s nimi manipulovat a dovídat se tak nové souvislosti. Například pokud pohled zobrazuje mapu, je možné s ní pohybovat, přibližovat ji nebo ji oddalovat. Pokud jsou na mapě interaktivní objekty, je možné je aktivovat a zkoumat jejich detaily.
+
+Některé pohledy mohou umožňovat přímo spustit nový projekt, nebo se odkazovat na existující projekty a dokumenty. Tyto vazby bývají obvykle realizovány odkazy, které může uživatel otevřít v nové záložce prohlížeče.
+
+===== Sestavy
+
+Na stránce každého tématu je vyhrazen prostor, ve kterém se nachází odkazy jednak na systémové a dále také na daným uživatelem vytvořené sestavy pohledů. Protože pohledy podporují zobrazení verze pro tisk, je možné sestavy s automatickým skrytím nepotřebných prvků uživatelského rozhraní tisknout běžným způsobem.
+
+Ze stránky tématu je možné aktivovat editor sestav, který umožňuje na stránku uspořádat výběr z pohledů, ke kterým má uživatel přístup. Těmto pohledům je následně možné interaktivně nastavit potřebné zobrazení. Takto připravenou sestavu je následně možné uložit, nebo případně jen vytisknout.
+
+===== Projekty
+
+Pokud téma obsahuje alespoň jeden typ projektu, je na jeho stránce k dispozici přehled projektů, kterých se aktuální uživatel účastní spolu s prvkem, který umožňuje zahájit nový, je-li k tomu uživatel oprávněn.
+
+Z přehledu jsou patrné základní údaje o projektech a zda-li do nich může uživatel zasáhnout, případně je-li to po něm někým požadováno. Přehled je interaktivní a umožňuje třídění i hledání.
+
+===== Dokumenty
+
+Pokud téma obsahuje prostřednictvím přiřazených typů projektů alespoň jeden typ dokumentu, je na jeho stránce k dispozici přehled dokumentů, ke kterým má aktuální uživatel přístup. Pokud je k tomu uživatel oprávněn, může z tohoto přehledu zahájit změnu dokumentu.
+
+Z přehledu jsou patrné základní údaje o dokumentech. Dá se z něj také zjistit, do kterých projektů vstupují, má-li k nim aktuální uživatel přístup. Přehled je interaktivní a umožňuje třídění i hledání.
+
+=== Předvolby uživatele
+
+Část systému umožňující uživateli přizpůsobit si systém dle svých potřeb. Uživatel si zde může zvolit alespoň jazyk uživatelského rozhraní a způsob upozorňování na události v systému.
+
+.Předvolby upozorňování
+[options="header",cols="<4,^1,^1,^1"]
+|===
+| Událost                                           | Nikdy | Ihned | Souhrnně
+| Je požadována Vaše práce na dokumentu             |       | {y}   | {y}
+| Můžete vytvořit chybějící dokument                | {y}   |       | {y}
+| Vámi naposledy upravený dokument byl změněn       | {y}   | {y}   | {y}
+| Vámi sledovaný dokument byl změněn                | {y}   | {y}   | {y}
+| Dokument projektu, které se účastníte, byl změněn | {y}   | {y}   | {y}
+| Projekt, kterého se účastníte byl změněn          | {y}   | {y}   | {y}
+| Změnila se Vaše účast na projektu                 | {y}   | {y}   | {y}
+| Změnily se Vaše role v systému                    | {y}   | {y}   | {y}
+|===
+
+=== Předvolby systému
+
+Část systému umožňující správci nastavit jednak výchozí uživatelské předvolby, ale také případná obecná nastavení.
+
+==== Integrační můstky
+
+Za účelem alespoň částečného řízení komunikaci s navázanými cizími systémy je zde možné nastavovat a měnit předvolby ve tvaru `klíč = hodnota`, které mohou můstky pro integraci s cizími systémy následně využít.
+
+Pokud by existoval můstek pro komunikaci s veřejnými rejstříky, volbou `ares.refresh_after = 48` bychom mu mohli sdělit, že má záznamy převzaté ze systému ARES kontrolovat nejdříve po 48 hodinách.
+
+Podrobnější konfiguraci budou muset integrační můstky implementovat odděleně.
+
+==== Správa modelu oprávnění
+
+Součástí předvoleb systému je pak správa modelu oprávnění, v rámci které je možné například nastavit párování skupin či rolí z evidence uživatelů s rolemi systému nebo upravit rozsah oprávnění jednotlivých rolí.
+
+Více o modelu najdete v kapitole <<Model oprávnění>>.
 
 <<<
 
 == Přehledy
 
-Přehledy jsou klíčovou součástí systému. Poskytují uživatelům vhled do současného, dřívějšího a někdy i možného budoucího stavu věcí. Právě na jejich základě zahajují uživatelé projekty a svými dokumenty stav věcí mění.
+Přehledem se nemíní konkrétní soubor pohledů, ale obecné pojetí představování dat uživatelům tak, aby získali podstatné informace a tedy i přehled. Poskytují vhled do současného, dřívějšího a někdy i možného budoucího stavu věcí. Právě na jejich základě zahajují uživatelé projekty a svými dokumenty stav věcí mění.
 
 === Pohledy, komponenty a zdroje dat
 
