@@ -41,7 +41,7 @@ Aby bylo možné zpracovávat v systému agendy uvedené výše, je potřeba, ab
 [options="header",cols="<4,^2,^2"]
 |===
 | Úloha cizího systému               | IPR              | NTK
-| Databáze uživatelů                 | Active Directory | OpenLDAP
+| Evidence uživatelů                 | Active Directory | OpenLDAP
 | Ekonomický systém                  | Ginis            | iFIS
 | Elektronický systém spisové služby | E-spis           | iFIS
 | Elektronické tržiště               | ?                | TenderMarket
@@ -85,7 +85,7 @@ Osoba, která iniciuje vypsání veřejné zakázky, odpovídá za její plněn�
 
 === Uživatelé
 
-SpIS bude sloužit především nákupčím a právníkům k zajištění vypsání a sledování průběhu veřejných zakázek, dále garantům jednotlivých zakázek k vytvoření záměru a sledování průběhu zakázky a vedení organizace ke sledování finančních toků a plánování rozpočtu. Dalšími uživateli budou pracovníci IT, kteří budou systém udržovat. Vybrané části systému budou k dispozici pro nahlížení i ostatním pracovníkům.
+SpIS slouží především nákupčím a právníkům k zajištění vypsání a sledování průběhu veřejných zakázek, dále garantům jednotlivých zakázek k vytvoření záměru a sledování průběhu zakázky a vedení organizace ke sledování finančních toků a plánování rozpočtu. Dalšími uživateli jsou pracovníci IT, kteří systém spravují. Vybrané části systému jsou k dispozici pro nahlížení i ostatním pracovníkům.
 
 .Odhadovaný počet uživatelů v daných rolích
 [options="header",cols="<4,^1,^1"]
@@ -99,58 +99,43 @@ SpIS bude sloužit především nákupčím a právníkům k zajištění vyps�
 
 <<<
 
-== Požadavky na architekturu informačního systému
+== Integrace s cizími systémy
 
-Informační systém bude dodán jako open source vícevrstvý modulární systém tvořený těmito částmi:
+=== Evidence uživatelů
 
-* server
-* webové služby/API pro návaznost na externí systémy
-* klient -- uživatelské rozhraní
-* úložiště
+SpIS je přístupný pouze oprávněným pracovníkům, kteří mají platný uživatelský účet v evidenci. Oprávnění v rámci systému jsou uživatelům přidělena na základě údajů z této evidence a dále pak správcem přímo v systému.
 
-Server bude zajišťovat výkonnou část jednotlivých modulů IS (popsány níže), komunikaci s datovými zdroji a webové služby či API pro návaznost na externí systémy. Klientskou část bude tvořit tenký nebo tlustý klient sloužící jako uživatelské rozhraní pro evidenci obchodních případů, plánování rozpočtu, export tiskových a statistických výstupů, správu uživatelských účtů a administraci systému. Úložiště bude sloužit k ukládání veškerého datového obsahu IS a dokumentů.
+* IPR uživatele eviduje v systému Microsoft Active Directory. Role je vyjádřena členstvím uživatelů v určitých skupinách. Je tedy potřeba párovat role v systému se skupinami v evidenci.
 
-Schéma architektury je v příloze 1.
+* NTK uživatele eviduje v systému OpenLDAP s nestandardním schématem. Role přiděluje seznamem institučních rolí u každého uživatele zvlášť. Je tedy potřeba párovat role v systému s institučními rolemi v evidenci.
 
-=== Server
+=== Ekonomický systém
 
-IS se bude skládat z jednotlivých modulů pro evidenci faktur, evidenci záměrů, evidenci veřejných zakázek, plánování rozpočtu, administraci systému a uživatelů. Dále bude obsahovat workflow, log změn a exporty tiskových sestav. Součástí bude i specifický náhled na úložiště dokumentů a kontaktních údajů dodavatelů.
+SpIS je provázán s ekonomickým systémem tak, že z něj přebírá a uživatelům poskytuje informace o proplacení evidovaných faktur a to včetně času a výše plateb. SpIS do účetního systému naopak předává informace o evidovaných daňových dokladech, aby nebylo nutné doklady evidovat více než jednou.
 
-=== Webové služby
+=== Elektronický systém spisové služby
 
-IS bude komunikovat s dalšími systémy zadavatelů pomocí webových služeb či připraveného API. Jedná se o vazby na účetní systémy, Active Directory, obchodní a živnostenský rejstřík, E-spis a webové stránky zadavatelů. Všechny webové služby či API budou podrobně specifikovány v rámci implementační analýzy.
+WARNING: Dopsat. Viz úkol #13.
 
-==== Účetní systém
+=== Elektronické tržiště
 
-IS bude provázán s účetním systémem tak, aby IS přebíral a poskytoval uživatelům informaci o proplacení evidované faktury včetně času a výše platby. Dále bude IS předávat informace do účetního systému o evidovaných daňových dokladech tak, aby nebylo nutné doklady evidovat více než jednou.
+WARNING: Dopsat.
 
-==== Active Directory
+=== Otevřená data
 
-IS bude přístupný pouze oprávněným pracovníkům organizací, kteří mají účet v Active Directory (zkráceně AD). V IS budou přiřazena práva pro uživatele z AD dle rolí, případně přímo přiřazených speciálních oprávnění k jednotlivým částem IS.
+WARNING: Dopsat.
 
-IS bude obsahovat administrátorskou roli, u které bude v případě potřeby možné zakázat přístup na citlivé dokumenty, ale bude umožněna administrace a nastavování samotného IS. Dále bude obsahovat uživatelské skupiny a uživatele, kteří budou mít řízen přístup do jednotlivých částí IS dle zařazení do skupiny a přidělených práv od administrátora.
+=== Registr smluv
 
-Všechny změny a přístupy do IS budou sledovány tak, aby bylo možné dohledat uživatele, který změnu provedl, čas provedení změny a jaká změna byla provedena. V systému práv bude řešeno i delegování práv -- zastupitelnost a to jak trvalá, tak dočasná definovaná uživatelsky časovým obdobím.
+WARNING: Dopsat.
 
-==== E-spis
+=== Obchodní a Živnostenský rejstřík
 
-V rámci IS bude možné odeslat jakýkoli vybraný dokument přes E-spis. IS bude předávat E-spisu vybraný dokument jako přílohu.
+SpIS využívá vlastní adresář smluvních partnerů. Informace o nich pravidelně ověřuje ve veřejně dostupných rejstřících, ve kterých také umožňuje vyhledat nové subjekty a uložit je do místního adresáře. Hledání je možné provést zadáním názvu nebo IČ.
 
-==== Webové stránky zadavatelů
+Četnost automatické kontroly platnosti údajů může nastavit správce systému. V případě potřeby je také možné provést kontrolu platnosti údajů u vybraného subjektu na požádání ihned. Automaticky se kontrolují ty subjekty, kterých se týkají některé otevřené projekty.
 
-Vybrané dokumenty (smlouvy, zadání veřejné zakázky,…) a informace z modulů IS budou publikovány na webech zadavatelů či jiných určených ke zveřejnění veřejných zakázek. K tomuto účelu zadavatelé vytvoří API či webovou službu ve spolupráci s dodavatelem.
-
-==== Obchodní a živnostenský rejstřík
-
-IS bude využívat vlastní adresář dodavatelů. Informace o dodavatelích budou ověřovány ve veřejně dostupných rejstřících, kde bude taktéž možné vyhledat nový kontakt zadáním názvu či Identifikačního Čísla subjektu a tento uložit do adresáře IS. Při použití údajů uloženého dodavatele budou vždy na pozadí ověřeny jeho údaje z IS z rejstříku, v případě nalezení změn budou kontaktní údaje dodavatele v IS aktualizovány.
-
-=== Klient
-
-Klient bude tvořen uživatelským rozhraním IS včetně správy IS. Klient může být tvořen jako tlustý klient instalovaný na lokální počítače zadavatelů s neomezeným počtem licencí či tenký webový klient, pokud bude zajištěna plná funkčnost. Vzhled uživatelského rozhraní, dostupné moduly a jejich obsah bude řízen rolí přihlášeného uživatele.
-
-=== Úložiště
-
-Úložiště bude sloužit k ukládání veškerého datového obsahu IS, kontaktních údajů o dodavatelích a dokumentů. Obsahově bude tvořeno minimálně dvěma částmi. První bude sloužit k ukládání dat z IS, druhá k ukládání souborů dokumentů nahrávaných do IS. K uložení se předpokládá využití databázového úložiště zadavatele a souborového systému. Podrobné řešení infrastruktury úložiště bude specifikováno dle požadavků na objem dat, jejich dostupnost a zabezpečení v rámci implementační analýzy.
+V případě nalezení změn jsou kontaktní údaje subjektu v systému aktualizovány.
 
 <<<
 
