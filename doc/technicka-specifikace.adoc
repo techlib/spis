@@ -602,7 +602,7 @@ Obsah dokumentů by nemělo být vůbec možné měnit, pouze vytvářet nové r
 
 Relační datové struktury, ze kterých uložené procedury čerpají data pro pohledy, se mohou do systému dostat dvěma způsoby. Může jít o data z jiných systémů nebo rozbory dokumentů.
 
-===== Cizí systémy
+===== Data z cizích systémů
 
 Data z cizích systémů se do systému zanáší zpravidla pomocí zvláštních nástrojů vyvinutých na míru jednak cizímu systému a dále dle potřeb konkrétních procesů vedených ve SpISu.
 
@@ -650,7 +650,7 @@ db1 -> api2: FDW
 ....
 
 
-===== Dokumenty
+===== Data z dokumentů
 
 Žádná existující databáze zatím neobsahuje funkci automatického, okamžitého odvozování tabulek a reakci na změny takto odvozených řádků. Pro naplnění relačních datových struktur z dokumentů se tak využívají spouště, které data z dokumentů přenáší do tabulek ihned po vytvoření nové revize nebo změně stavu dokumentu.
 
