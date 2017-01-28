@@ -740,33 +740,6 @@ Každý uživatel bude mít přizpůsobeny jednotlivé části IS dle svých už
 
 <<<
 
-== Technologické požadavky
-=== Požadavky vyplývající z technologického prostředí zadavatelů
-
-Nabídka na IS musí ve své kalkulaci počítat s částkou na implementaci SW do dvou různých prostředí. Na IPR Praha a do prostředí NTK. Níže jsou popsány technické požadavky obou organizací.
-
-Obecným požadavkem na software je tvorba pod open source licencí.
-
-==== IPR
-
-Vzhledem k současnému zázemí IPR je třeba IS provozovat na DB Oracle EE 11g (k dispozici je licence bez omezení na přístupy), nebo DB MS SQL v.11, dále je požadován provoz IS serverů v prostředí VMware ESXi 6 a vyšším. K dispozici je také OS Windows server 2012 a vyšší. IPR má volné kapacity pouze ve VMware farmě, DB Oracle a DB MS SQL.
-
-IS musí umožnit paralelní zadávání dat včetně přikládání dokumentů z několika pracovišť v různých lokalitách.
-
-==== NTK
-
-…
-
-=== Obecné API
-
-Software bude obsahovat taktéž obecné API pro účel možného rozšíření SW a propojení s dalšími systémy na straně zadavatelů.
-
-=== Požadavky na ukládání a zabezpečení dat a dokumentů
-
-Do IS budou nahrávány soubory dokumentů (smlouvy, faktury, objednávky) v různých, což bude vytvářet větší objemy dat. Ukládání těchto dokumentů proto předpokládáme spíše ve filesystému.
-
-<<<
-
 == Požadavky na výstupy
 === Software a dokumentace
 
