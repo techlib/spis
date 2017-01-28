@@ -113,11 +113,7 @@ Více o modelu najdete v kapitole <<Model oprávnění>>.
 
 <<<
 
-== Přehledy
-
-Přehledem se nemíní konkrétní soubor pohledů, ale obecné pojetí představování dat uživatelům tak, aby získali podstatné informace a tedy i přehled. Poskytují vhled do současného, dřívějšího a někdy i možného budoucího stavu věcí. Právě na jejich základě zahajují uživatelé projekty a svými dokumenty stav věcí mění.
-
-=== Pohledy, komponenty a zdroje dat
+== Pohledy, komponenty a zdroje dat
 
 Každý pohled využívá pro zobrazení určitou komponentu. Pokud je komponenta určena pro zobrazení mapových vrstev s vyznačenými body, je možné ji použít pro zobrazení prostorových dat. Pokud se jedná o komponentu pro zobrazení tabulky, je možné pomoci ní zobrazovat data relační a tak dále.
 
