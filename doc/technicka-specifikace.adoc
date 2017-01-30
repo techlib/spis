@@ -203,20 +203,9 @@ expects:
 
 <<<
 
-== Hierarchické pracovní struktury
+== Projekty
 
-Hierarchické pracovní struktury jsou formou vedení *projektů*. Tato forma spočívá v postupném vytváření a schvalování dokumentů, které dokládají provedené úkony. Dokumenty mohou být v různých stavech, ale zejména bývají *Rozpracované*, časem *Dokončené* a výjimečně *Provizorní*.
-
-Rozpracované::
-Dokumenty, které ještě nejsou hotové a nelze se na ně spoléhat.
-
-Dokončené::
-Dokumenty, které jsou hotové a schválené zodpovědnou osobou. Tato osoba ručí za jejich správnost a platnost. Ostatní se na ně mohou obvykle bez obav spolehnout.
-
-Provizorní::
-Dokumenty, které jsou hotové, ale nejsou schválené zodpovědnou osobou. Pokud se na ně pracovníci spoléhají, přebírají tím na sebe riziko, které jinak leží na zodpovědné osobě.
-
-Dokumenty ve struktuře na sobě vzájemně závisí a tvoří tak acyklický orientovaný graf.
+Každý projekt je *hierarchickou pracovní strukturou*. Práce na něm spočívá v postupném vytváření a schvalování dokumentů, které dokládají provedené úkony. Dokumenty mohou být v různých stavech a na základě svých závislostí tvoří acyklický orientovaný graf.
 
 .Hierarchická pracovní struktura (šipky značí závislost)
 ====
@@ -245,7 +234,19 @@ nabídka -d-> poptávka
 
 V příkladu je `protokol 2` nedokončený, ale pracovník zodpovědný za schválení faktury ho označil za provizorní. To proto, aby mohl vytvořit provizorní fakturu a mohla proběhnout platba. Pokud se zmýlil a pracovník zodpovědný za `protokol 2` tento nedokončí, mohou být vyvozeny důsledky.
 
-Z důvodu průkaznosti nelze dokončené dokumenty měnit. Pokud by se tak mělo stát, je vytvořen dokument nový, který ten původní nahradí v jeho roli. Pokud se na předchozí dokument jiný dokument spoléhá, je považován za neplatný.
+Požadované::
+Dokumenty prázdné, u kterých se požaduje jejich naplnění a dokončení.
+
+Rozpracované::
+Dokumenty, které ještě nejsou hotové a nelze se na ně spoléhat.
+
+Dokončené::
+Dokumenty, které jsou hotové a schválené zodpovědnou osobou. Tato osoba ručí za jejich správnost a platnost. Ostatní se na ně mohou obvykle bez obav spolehnout.
+
+Provizorní::
+Dokumenty, které jsou hotové, ale nejsou schválené zodpovědnou osobou. Pokud se na ně pracovníci spoléhají, přebírají tím na sebe riziko, které jinak leží na zodpovědné osobě.
+
+Z důvodu průkaznosti nelze dokončené dokumenty revidovat. Pokud by se tak mělo stát, je vytvořena nová verze, která ten původní nahradí v jeho roli. Pokud se na předchozí verzi jiný dokument spoléhá, je považován za neplatný.
 
 .Zneplatnění dokumentu revizí jeho závislosti
 ====
