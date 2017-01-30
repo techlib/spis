@@ -24,7 +24,7 @@ Jeho technickými charakteristikami se zabývá <<technicka-specifikace.adoc#,Te
 Systém v prvních verzích umožňuje zpracování následujících agend IPR a NTK. Systém by však měl být konstruován s ohledem na budoucí rozvoj, při kterém dojde k rozšíření seznamu níže.
 
 Řízení výdajů::
-Sekce řízení výdajů sdružuje řadu témat, která se dotýkají výdajových procesů různých typů. Jedná se například o evidence záměrů, objednávek, veřejných zakázek, předávacích protokolů, faktur a dalších, souvisejících dokumentů.
+Sekce řízení výdajů sdružuje řadu témat, která se dotýkají výdajových procesů různých typů. Jedná se například o tvorbu a evidenci záměrů, veřejných zakázek, předávacích protokolů, faktur a dalších, souvisejících dokumentů.
 
 Rozpočtování::
 Sekce rozpočtu sdružuje témata související s přípravou, úpravami a sledováním čerpání prostředků z rozpočtu. Umožňuje jeho sestavování s přihlédnutím k plánovaným nákupům a platným smlouvám.
