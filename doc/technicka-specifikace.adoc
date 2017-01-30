@@ -631,6 +631,8 @@ TIP: Pro jmenování uživatelů do rolí může sloužit například jejich př
 
 Úlohou rolí je pojmenovat skupiny oprávnění, které mají určití uživatelé, a tím umožnit jejich kontrolu a změny. Běžné role se uplatní zejména při netypických situacích, jako jsou projekty mimo běžný rámec organizační struktury. Odvislé role se naopak uplatní při formulování oprávnění pro pravidelné organizační struktury.
 
+Správce může k jednotlivým rolím připojit poučení pro jejich nabyvatele. Tito pak po jmenování do daných rolí musí toto poučení vzít na vědomí, jinak jim není umožněno se systémem dále pracovat. Stejně tak musí nabyvatelé vzít poučení na vědomí při jeho dodatečné změně.
+
 === Způsoby manipulace
 
 Každý dokument se může nacházet ve třech stavech. Manipulace znamená například to, že určitý uživatel u předmětného dokumentu tento stav změní. Tedy dokument rozpracuje, označí za provizorně dokončený nebo jej dokončí. Obsah dokumentů, které jsou (byť jen provizorně) dokončené, již není možné dále měnit. Provizorní dokument však dokončit lze.
