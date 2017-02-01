@@ -11,6 +11,7 @@
 :toc: left
 :toclevels: 3
 :sectnumlevels: 6
+:source-highlighter: pygments
 
 :y: icon:check[role="green"]
 :n: icon:times[role="red"]
