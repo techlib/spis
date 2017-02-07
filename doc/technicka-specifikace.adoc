@@ -468,8 +468,9 @@ Každý typ nebo typová třída dokumentu popisuje část schématu. Skutečné
 
 Jazyk schématu vychází z připravované normy link:http://json-schema.org/[JSON Schema], kterou však rozšiřuje o další prvky. Jedná se například o popis uživatelského rozhraní pro editaci stromu, spustitelný kód v řadě významů a také o schopnost přejímat hodnoty ze závislostí.
 
+.Schéma zápůjčky (hlavička)
+====
 [source,yaml]
-.{example-caption} {counter:example}. Schéma zápůjčky (hlavička)
 ....
 name: Lease
 name[cs]: Zápůjčka
@@ -492,15 +493,15 @@ attachments:
     accept: [document, image]
     count: [0, inf]
 ....
+====
 
 V příkladu výše vidíme závislosti (`lender` a `borrower`), které dokument vyžaduje. Protože u nich není uvedena žádná kvantifikace, předpokládá se výchozí, tedy `{1,1}`. Typ obou závislostí je `Party` (smluvní strana), což bude pravděpodobně typová třída.
 
 Dále můžeme vidět jediný typ přílohy, dokument nebo obrázek v roli `subject` (předmět). Vzhledem k neomezenému počtu se bude patrně jednat o sbírku dokladů popisujících zapůjčovanou věc a snad i další podmínky zápůjčky.
 
-Následuje popis těla dokumentu.
-
+.Schéma zápůjčky (tělo dokumentu)
+====
 [source,yaml]
-.{example-caption} {counter:example}. Schéma zápůjčky (tělo dokumentu)
 ....
 import:
   - from: spis.datetime
@@ -527,6 +528,7 @@ body:
         start: !eval "today()"
         end: !eval "today() + timedelta(days=14)"
 ....
+====
 
 Hned v první části příkladu vidíme import funkcí (`today` a `timedelta` z modulu `spis.datetime`). V politice je možné využívat vypočítaných hodnot a tímto způsobem je možné získat knihovní funkce. Modul `spis` a jeho součásti obsahují zabudované funkce systému.
 
@@ -540,8 +542,9 @@ Komponenty úzce souvisí se schématem dokumentu. Právě v něm si programáto
 
 Ve většině případů pracují komponenty se skaláry a jedná se v podstatě o dobře známé prvky uživatelských rozhraní. V jistých případech však komponenty editoru dokumentů vyžadují další informace a začínají ve svém uspořádání připomínat komponenty pohledů.
 
+.Popis komponenty umožňující výběr dne
+====
 [source,yaml]
-.{example-caption} {counter:example}. Popis komponenty umožňující výběr dne
 ....
 name: Simple Date Picker
 name[cs]: Jednoduchý výběr dne
@@ -561,6 +564,7 @@ sources:
 options:
   mode: {$ref: "calendar.yaml#/definitions/mode"}
 ....
+====
 
 Z příkladu výše je patrná hlavní odlišnost popisu komponenty editoru dokumentů od popisu komponenty pohledu. Jedná se o klíč `provides`, který popisuje schéma dílčí části dokumentu, jejíž úpravy komponenta zprostředkovává.
 
