@@ -140,7 +140,7 @@ V případě nalezení změn jsou kontaktní údaje subjektu v systému aktuali
 
 <<<
 
-== Workflow obchodního případu
+== Zpracování obchodního případu
 
 Dokumenty, které definují rámce obchodního případu, podléhají schvalovacímu procesu. Jedná se především o záměry, objednávky, výzvy či oznámení, smlouvy včetně příloh a dodatků, faktury, vnitřní sdělení a další. Tyto dokumenty jsou schvalovány interně nastaveným procesem, který se v jednotlivých organizacích liší.
 
@@ -160,7 +160,7 @@ Faktura je do systému vložena pracovníkem podatelny, její přiřazení ke ko
 
 Akceptace etap a fakturace se opakuje až do skončení trvání veřejné zakázky.
 
-Schéma obecného workflow obchodního případu je v příloze 2, schéma workflow faktury v příloze 4.
+Schéma zpracování obchodního případu je v příloze 2, schéma zpracování faktury v příloze 4.
 
 === Schvalovací centrum
 
@@ -173,7 +173,7 @@ Schvalování dokumentů bude umožňovat dynamické změny procesů na základ�
 == Moduly obchodního případu
 === Evidence záměrů
 
-Modul bude sloužit k vytvoření a evidenci záměrů. Záměr je inicializační dokument k obchodnímu případu, kde je definováno, co a za jakých okolností se navrhuje realizovat (specifikuje se předmět veřejné zakázky). Autor bude tvorbou proveden pomocí jednoduchého formuláře. Záměr prochází schvalovacím procesem, který je daný v rámci každé organizace, ale zároveň IS musí reflektovat případné změny v jejich vnitřním chodu.
+Modul bude sloužit k vytvoření a evidenci záměrů. Záměr je inicializační dokument k obchodnímu případu, kde je definováno, co a za jakých okolností se navrhuje realizovat (specifikuje se předmět veřejné zakázky). Autor bude tvorbou proveden pomocí jednoduchého formuláře. Záměr prochází schvalovacím procesem, který je daný v rámci každé organizace, zároveň musí systém reflektovat případné změny v jejich vnitřním chodu.
 
 Záměr je po celou dobu schvalovacího procesu dostupný pro editace a připomínkování. V průběhu schvalování záměru musí mít každý člen schvalovací procedury možnost záměr připomínkovat. Zároveň musí být záměr dostupný i v původních verzích v historii záměru.
 
@@ -183,7 +183,7 @@ Schvalování záměru musí proběhnout plně elektronicky s prokazatelnou a u
 
 Po konečném schválení záměru je na jeho základě vytvořena veřejná zakázka, pro kterou je záměr základem. Záměr tedy vždy iniciuje objednávku, nebo výzvu k podání nabídek.
 
-Formulář na tvorbu záměru bude obsahovat pole s více datovými typy, jejichž hodnoty se budou plnit ručně i automaticky, včetně možnosti nahrávání dokumentů a číselníků definovaných zadavatelem. Dle zadaného obsahu či zvolené hodnoty číselníku se může lišit obsah dalších polí či navazující workflow zpracování obchodního případu.
+Formulář na tvorbu záměru bude obsahovat pole s více datovými typy, jejichž hodnoty se budou plnit ručně i automaticky, včetně možnosti nahrávání dokumentů a číselníků definovaných zadavatelem. Dle zadaného obsahu či zvolené hodnoty číselníku se může lišit obsah dalších polí či navazující zpracování obchodního případu.
 
 Součástí formuláře bude i věcná nápověda k vyplňování a výběru hodnot z číselníků (např. kdy se jedná o objednávku, zjednodušené výběrové řízení atp.). Obsah nápovědy i číselníky bude možné spravovat v administraci systému.
 
@@ -479,7 +479,7 @@ Vstupními daty rozpočtu jsou aktuálně běžící zakázky z evidence zakáz
 
 Návrh rozpočtu je předložen ke schválení nadřízenému orgánu, který schválí plnou částku, nebo její část, která je zpětně rozdělena v rámci organizace pro jednotlivé organizační celky dle různých kritérií. Finance přidělené od nadřízeného orgánu jsou vloženy do IS správcem rozpočtu a jsou závazné pro všechny uživatele jako limity čerpání pro další plánování a kontrolu čerpání.
 
-Detailní specifikace procesu, obsahu a funkcí modulu pro jednotlivé organizace bude předmětem implementační analýzy. Obecný postup tvorby rozpočtu je v příloze 5.
+Detailní specifikace procesu, obsahu a funkcí modulu pro jednotlivé organizace bude předmětem implementační analýzy. Schéma procesu tvorby rozpočtu je v příloze 5.
 
 ==== Obsah modulu
 
@@ -794,25 +794,25 @@ image:media/image1.png[width=620]
 
 <<<
 
-=== Obecné workflow obchodního případu
+=== Schéma zpracování obchodního případu
 
 image:media/image2.png[width=500]
 
 <<<
 
-=== Obecný proces přípravy zakázky
+=== Schéma procesu přípravy zakázky
 
 image:media/image3.png[width=620]
 
 <<<
 
-=== Obecné workflow faktury
+=== Schéma zpracování faktury
 
 image:media/image4.png[width=360]
 
 <<<
 
-=== Obecný proces tvorby rozpočtu
+=== Schéma procesu tvorby rozpočtu
 
 image:media/image5.png[width=400]
 
