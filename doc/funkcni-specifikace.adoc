@@ -711,7 +711,7 @@ Workflow
 
 == Další požadavky na chování IS
 
-Níže popsané chování IS bude vyžadováno napříč celým systémem v jednotlivých modulech. Pro každou část systému bude chování a jeho přesná specifikace upřesněna v rámci implementační analýzy. Jedná se o požadavky, které umožní jednoduché a intuitivní ovládání IS.
+Níže popsané chování IS bude vyžadováno napříč celým systémem. Pro každou část systému bude chování a jeho přesná specifikace upřesněna v rámci implementační analýzy. Jedná se o požadavky, které umožní jednoduché a intuitivní ovládání IS.
 
 === Vyhledávání, řazení a zadávání hodnot
 
@@ -723,19 +723,17 @@ Informace v jednotlivých atributech budou sloužit jako odkaz na položku v j
 
 Vybraná pole pro vkládání textu (či jiného datového typu) budou obsahovat 'našeptávač'. V případě složitějšího popisu bude uživateli nabídnuta nápověda. Forma nápovědy bude pro každý případ definována v rámci analýzy.
 
-=== Dokumenty v IS
+=== Nahrávání souborů
 
-Dokumenty budou do IS nahrávány více způsoby: Vyhledání a výběr dokumentu pomocí průzkumníku, přetažení dokumentu myší. IS bude umět zobrazit náhled základních formátů (Word, Excel, PDF, JPEG atd.) po kliknutí na již nahraný dokument.
+Soubory budou do IS nahrávány více způsoby: Vyhledání a výběr dokumentu pomocí průzkumníku, přetažení dokumentu myší. IS bude umět zobrazit náhled základních formátů (Word, Excel, PDF, JPEG atd.) po kliknutí na již nahraný dokument.
 
-Dokumenty bude možné exportovat do vybraných formátů (Word, Excel, csv, PDF) či tisknout (přímo tiskárna, PDF).
+Soubory bude možné exportovat do vybraných formátů (Word, Excel, csv, PDF) či tisknout (přímo tiskárna, PDF).
 
-=== Komentáře, poznámky
+=== Komentáře a poznámky
 
 Uživatelům bude umožněno přidávat poznámky a komentáře k jednotlivým záznamům, dokumentům, fakturám, záměrům, veřejným zakázkám i jejich etapám a dalším entitám systému.
 
 === Uživatelské nastavení
-
-Uživatelům bude přednastaven obsah IS, jeho funkce i notifikace dle jejich uživatelských práv.
 
 Každý uživatel bude mít přizpůsobeny jednotlivé části IS dle svých uživatelských oprávnění. Navíc bude uživateli umožněno vlastní nastavení viditelných informací o záznamu, pořadí sloupců, přednastavení filtrů atp. dle jeho priorit. Součástí uživatelského nastavení bude taktéž definice tiskových sestav a statistických výstupů.
 
@@ -769,13 +767,13 @@ Dále bude součástí řešení migrace dat ze stávajícího software a příp
 
 Dodavatel zajistí realizaci školení uživatelů a administrátorů IS při zahájení pilotního provozu. Počet školených uživatelů bude cca 50 z obou organizací. Uživatelé budou školeni po skupinkách dle využití systému -- samostatně budou školeni pracovníci obchodních a právních oddělení, garanti zakázek a administrátoři systému. Školení proběhne na pracovištích zadavatelů na prostředí reálně nasazeného systému. Rozsah školení se předpokládá pro každou organizaci cca 2 dny pro garanty (cca 20 uživatelů), 3 dny pro pracovníky obchodního a právního oddělení (cca 25 uživatelů) a cca 2 dny pro administrátory (4 uživatelé).
 
-Cílem školení je skutečná znalost IS, včetně příslušných datových a funkčních vazeb, možností uživatelského nastavení, znalosti tvorby statistických přehledů a tiskových sestav.
+Cílem školení je poskytnout uživatelům IS znalosti a dovednosti potřebné pro práci s ním, včetně vysvětlení příslušných datových a funkčních vazeb, možností uživatelského nastavení a tvorby statistických přehledů a tiskových sestav.
 
 === Podpora a změnové požadavky
 
 Dodavatel zajistí uživatelskou podporu systému v rozsahu a způsobem specifikovaným v SLA (viz samostatný dokument).
 
-Provedení upgrade systémové platformy a zajištění odpovídající aktualizace IS se předpokládá provádět na základě dohody mezi zadavateli a dodavatelem. Úpravy technologie budou v těchto případech prováděny prostřednictvím změnových požadavků.
+Provedení upgrade systémové platformy a zajištění odpovídající aktualizace IS se předpokládá na základě dohody mezi zadavateli a dodavatelem. Úpravy technologie budou v těchto případech prováděny prostřednictvím změnových požadavků.
 
 Provedení změn a aktualizací systému bude vždy testováno na testovacím prostředí zadavatelů. Po akceptaci budou změny následně implementovány do produkčního prostředí. Technologie systému musí umožňovat návrat k předchozí verzi jednotlivých částí systému v případě selhání funkčnosti aktualizací.
 
@@ -783,7 +781,7 @@ Provedení změn a aktualizací systému bude vždy testováno na testovacím pr
 
 Vzhledem k požadované analýze potřeb a požadavků na IS a obchodních procesů obou organizací je předpokládána součinnost pracovníků s dodavatelem IS.
 
-Pro potřeby analýzy a pozdějšího vývoje IS bude k dispozici za každou organizaci vedoucí projektu za a zároveň garant projektu, který bude odpovědný za komunikaci s dodavatelem, zajištění potřebných informací a podkladů, domlouvání schůzek a zajišťování součinnosti s dalšími pracovníky.
+Pro potřeby analýzy a pozdějšího vývoje IS bude k dispozici za každou organizaci vedoucí projektu a zároveň garant projektu, který bude odpovědný za komunikaci s dodavatelem, zajištění potřebných informací a podkladů, domlouvání schůzek a zajišťování součinnosti s dalšími pracovníky.
 
 <<<
 
