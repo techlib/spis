@@ -15,17 +15,17 @@
 
 == Úvod
 
-Správní informační systém, zkráceně _SpIS_ je otevřený nástroj pro vedení elektronických evidencí. Měl by zpřehlednit výkon organizačních úkonů, mezi které patří například příprava a jednotlivé kroky pro realizaci veřejných zakázek včetně dodání podkladů pro fakturaci, plánování rozpočtu a jednotlivých výdajových záměrů nebo nastavení pracovních procesů a schvalovacích mechanismů dle rolí přidělených pracovníkům a dodavatelům dané organizace. Systém bude tedy v praxi evidovat doklady a další dokumenty.
+Správní informační systém, zkráceně _SpIS_ je otevřený nástroj pro vedení elektronických evidencí. Měl by zpřehlednit výkon organizačních úkonů, mezi které patří například příprava a jednotlivé kroky pro realizaci veřejných zakázek včetně dodání podkladů pro fakturaci, plánování rozpočtu a jednotlivých výdajových záměrů nebo nastavení pracovních procesů a schvalovacích mechanismů dle rolí přidělených pracovníkům a dodavatelům dané organizace. Zároveň bude systém v praxi evidovat doklady a další dokumenty.
 
 Jeho technickými charakteristikami se zabývá <<technicka-specifikace.adoc#,Technická specifikace>>.
 
 
 === Agendy
 
-Systém v prvních verzích umožňuje zpracování následujících agend IPR a NTK. Systém by však měl být konstruován s ohledem na budoucí rozvoj, při kterém dojde k rozšíření seznamu níže.
+Systém v prvních verzích umožňuje zpracování následujících agend IPR a NTK. Systém by však měl být navržen s ohledem na budoucí rozvoj, při kterém dojde k rozšíření seznamu níže.
 
 Řízení výdajů::
-Sekce řízení výdajů sdružuje řadu témat, která se dotýkají výdajových procesů různých typů. Jedná se například o tvorbu a evidenci záměrů, veřejných zakázek, předávacích protokolů, faktur a dalších, souvisejících dokumentů.
+Sekce řízení výdajů sdružuje řadu témat, která se dotýkají výdajových procesů různých typů. Jedná se například o tvorbu a evidenci záměrů, veřejných zakázek, předávacích protokolů, faktur a dalších souvisejících dokumentů.
 
 Rozpočtování::
 Sekce rozpočtu sdružuje témata související s přípravou, úpravami a sledováním čerpání prostředků z rozpočtu. Umožňuje jeho sestavování s přihlédnutím k plánovaným nákupům a platným smlouvám.
@@ -144,19 +144,19 @@ V případě nalezení změn jsou kontaktní údaje subjektu v systému aktuali
 
 Dokumenty, které definují rámce obchodního případu, podléhají schvalovacímu procesu. Jedná se především o záměry, objednávky, výzvy či oznámení, smlouvy včetně příloh a dodatků, faktury, vnitřní sdělení a další. Tyto dokumenty jsou schvalovány interně nastaveným procesem, který se v jednotlivých organizacích liší.
 
-Schvalovací proces bude definován pro každou organizaci samostatně dle jejích specifických požadavků. Tato kapitola popisuje obecné požadavky na možnosti nastavení workflow a obecný popis procesu realizace VZ.
+Schvalovací proces bude definován pro každou organizaci samostatně dle jejích specifických požadavků. Tato kapitola popisuje obecné požadavky na možnosti nastavení pracovních postupů a obecný popis procesu realizace VZ.
 
-=== Nastavení workflow
+=== Nastavení pracovních postupů
 
-V rámci implementační analýzy bude pro každou organizaci specifikován workflow model pro každý typ dokumentu a uživatele. Administrátor systému bude mít právo v modulu nastavovat změny v připravených procesech či nastavit nový, včetně definice dotčených uživatelů, jejich povinností a práv v rámci procesu. Dále i nastavení dokumentů, jejich stavů a možných akcí.
+V rámci implementační analýzy bude pro každou organizaci specifikován pracovní model pro každý typ dokumentu a uživatele. Administrátor systému bude mít oprávnění nastavovat změny v připravených procesech či nastavit nový proces včetně definice dotčených uživatelů, jejich povinností a práv, stejně tak i nastavení dokumentů, jejich stavů a možných akcí.
 
 === Obecný postup
 
-Obchodní případ vzniká vytvořením záměru, kde obvykle garant či vedoucí pracovník definuje, co a za jakých okolností navrhuje realizovat (specifikuje předmět veřejné zakázky), odhadne finanční a časový rozsah záměru. Záměr prochází schvalovacím procesem, po jehož schválení se z návrhu na realizaci stává veřejná zakázka. Dle rozsahu je obvykle specifikován časový harmonogram, finanční náročnost, způsob vypsání zakázky a výběru dodavatele. Připraví se všechny doprovodné dokumenty, jejichž schválení podléhá taktéž určitému procesu schválení vedení. Zakázka je vypsána, proběhne výběr dodavatele, schválení výběru a podpis smlouvy.
+Obchodní případ vzniká vytvořením záměru, kde obvykle garant či vedoucí pracovník definuje, co a za jakých okolností navrhuje realizovat (specifikuje předmět veřejné zakázky), odhadne finanční a časový rozsah záměru. Záměr prochází schvalovacím procesem, po jehož schválení se z návrhu na realizaci stává veřejná zakázka. Dle rozsahu je obvykle specifikován časový harmonogram, finanční náročnost, způsob vypsání zakázky a výběru dodavatele. Připraví se všechny doprovodné dokumenty, které rovněž podléhají procesu schválení vedením. Zakázka je vypsána, proběhne výběr dodavatele, schválení výběru a podpis smlouvy.
 
 Po podpisu smlouvy začíná realizace samotné zakázky. Zakázka může obsahovat několik etap, na jejichž konci je část zakázky vždy předána dodavatelem ke schválení. V rámci každé etapy probíhá obvykle také fakturace.
 
-Faktura má v rámci IS vlastní workflow. Faktura je do systému vložena pracovníkem podatelny, její přiřazení ke konkrétní veřejné zakázce a schválení je však určeno dalším procesem.
+Faktura je do systému vložena pracovníkem podatelny, její přiřazení ke konkrétní veřejné zakázce a schválení je však určeno dalším procesem.
 
 Akceptace etap a fakturace se opakuje až do skončení trvání veřejné zakázky.
 
