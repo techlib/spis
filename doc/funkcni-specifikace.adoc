@@ -120,27 +120,27 @@ Napojení na elektronický systém spisové služby (ESSS) slouží jednak k zí
 
 ==== Import
 
-Import souborů z ESSS pro jejich využití v roli dokumentů, příloh nebo pro rekonstrukci projektu probíhá tak, že je oprávněný uživatel prostřednictvím k tomu určeného rozhraní integračního můstku v ESSS vyhledá a vybere.
+Import souborů z ESSS pro jejich využití v roli dokumentů, příloh nebo pro rekonstrukci případu probíhá tak, že je oprávněný uživatel prostřednictvím k tomu určeného rozhraní integračního můstku v ESSS vyhledá a vybere.
 
-* Dříve exportované dokumenty ze systému SpIS jsou plnohodnotně importovány a to včetně automatického dohledání jejich příloh na základě v exportu uvedených spisových značek. Import probíhá vždy do konkrétního projektu.
+* Dříve exportované dokumenty ze systému SpIS jsou plnohodnotně importovány a to včetně automatického dohledání jejich příloh na základě v exportu uvedených spisových značek. Import probíhá vždy do konkrétního případu.
 
-* Dříve exportované projekty ze systému SpIS jsou plnohodnotně importovány, čímž dojde k vytvoření nového projektu. Při tom dojde k dohledání jednotlivých dokumentů na základě v exportu uvedených spisových značek a následně i k dohledání jejich příloh.
+* Dříve exportované případy ze systému SpIS jsou plnohodnotně importovány, čímž dojde k vytvoření nového případu. Při tom dojde k dohledání jednotlivých dokumentů na základě v exportu uvedených spisových značek a následně i k dohledání jejich příloh.
 
 * Pokud se jedná o jiný typ souboru, je možné jej použít pouze jako přílohu. V takovém případě se u ní uvede i její spisová značka.
 
-Není žádoucí znovu importovat dokument nebo projekt, který již ve SpISu existuje. Pokud na tom uživatel trvá, systém mu umožní tak učinit a projekt nebo dokument importovat _jako nový_, což znamená, že dojde k zpřetrhání jeho historických souvislostí.
+Není žádoucí znovu importovat dokument nebo případ, který již ve SpISu existuje. Pokud na tom uživatel trvá, systém mu umožní tak učinit a případ nebo dokument importovat _jako nový_, což znamená, že dojde k zpřetrhání jeho historických souvislostí.
 
 ==== Export
 
-Export projektů, dokumentů a příloh do ESSS probíhá automaticky a průběžně. Vždy, když je dokument ve SpISu dokončen, dojde k jeho asynchronnímu exportu a to včetně příloh. Obdobně je exportována konečná podoba projektu při jeho uzavření. Dokumenty sdružené ve SpISu do projektu se v ESSS řadí do jednoho spisu.
+Export případů, dokumentů a příloh do ESSS probíhá automaticky a průběžně. Vždy, když je dokument ve SpISu dokončen, dojde k jeho asynchronnímu exportu a to včetně příloh. Obdobně je exportována konečná podoba případu při jeho uzavření. Dokumenty sdružené ve SpISu do případu se v ESSS řadí do jednoho spisu.
 
 * Spis v ESSS je založen při exportu prvního dokumentu, který do něj má být zařazen.
 
-* V případě, že je jeden dokument použit ve více projektech, je exportován pro každý projekt zvlášť. Pokud ESSS podporuje řazení dokumentu do více spisů, předejde pomocí této funkce integrační můstek vzniku duplicity.
+* V případě, že je jeden dokument použit ve více případech, je exportován pro každý případ zvlášť. Pokud ESSS podporuje řazení dokumentu do více spisů, předejde pomocí této funkce integrační můstek vzniku duplicity.
 
-* Po exportu dokumentu, přílohy nebo projektu do ESSS se zaznamená spisová značka, pod kterou je možné výsledný soubor v ESSS dohledat. Při exportu nadřazeného objektu je na dceřinné objekty odkazováno právě pomocí spisových značek.
+* Po exportu dokumentu, přílohy nebo případu do ESSS se zaznamená spisová značka, pod kterou je možné výsledný soubor v ESSS dohledat. Při exportu nadřazeného objektu je na dceřinné objekty odkazováno právě pomocí spisových značek.
 
-Do ESSS nejsou exportovány případně režijní poznámky a přílohy k projektu samotnému. Ty mají pouze informativní charakter, nejsou závazné a není třeba je dlouhodobě uchovávat.
+Do ESSS nejsou exportovány případně režijní poznámky a přílohy k případu samotnému. Ty mají pouze informativní charakter, nejsou závazné a není třeba je dlouhodobě uchovávat.
 
 === Elektronické tržiště
 
@@ -158,7 +158,7 @@ WARNING: Dopsat.
 
 SpIS využívá vlastní adresář smluvních partnerů. Informace o nich pravidelně ověřuje ve veřejně dostupných rejstřících, ve kterých také umožňuje vyhledat nové subjekty a uložit je do místního adresáře. Hledání je možné provést zadáním názvu nebo IČ.
 
-Četnost automatické kontroly platnosti údajů může nastavit správce systému. V případě potřeby je také možné provést kontrolu platnosti údajů u vybraného subjektu na požádání ihned. Automaticky se kontrolují ty subjekty, kterých se týkají některé otevřené projekty.
+Četnost automatické kontroly platnosti údajů může nastavit správce systému. V případě potřeby je také možné provést kontrolu platnosti údajů u vybraného subjektu na požádání ihned. Automaticky se kontrolují ty subjekty, kterých se týkají některé otevřené případy.
 
 V případě nalezení změn jsou kontaktní údaje subjektu v systému aktualizovány.
 

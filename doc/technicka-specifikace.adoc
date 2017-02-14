@@ -23,16 +23,16 @@ Správní informační systém, zkráceně _SpIS_ je otevřený nástroj pro ved
 Výběr z funkcí, které očekáváme v prvních verzích:
 
 Hierarchické pracovní struktury::
-Rozklad předmětu plnění na jednotlivé dodávané výsledky (což jsou pro nás dokumenty) v předepsané hierarchii (dle typu projektu). Tento postup se jinde označuje pojmem link:https://cs.wikipedia.org/wiki/Work_breakdown_structure[WBS].
+Rozklad předmětu plnění na jednotlivé dodávané výsledky (což jsou pro nás dokumenty) v předepsané hierarchii (dle typu případu). Tento postup se jinde označuje pojmem link:https://cs.wikipedia.org/wiki/Work_breakdown_structure[WBS].
 
 Editor dokumentů::
 Nástroj pro vytváření a úpravy dokumentů, představující uživatelské rozhraní uzpůsobené jejich konkrétním typům. Využívá zásuvné moduly, které realizují dílčí komponenty rozhraní. Každý typ dokumentu popisuje, jaké komponenty se mají pro jeho pole využít.
 
 Přehledy::
-Vhodně zvolené přehledy čerpající z projektů a dalších evidencí. Pro jejich zobrazení se využívají komponenty realizované jako zásuvné moduly. Tyto komponenty se provazují s konkrétními daty, čímž vznikají pohledy, které se dále seskupují do témat.
+Vhodně zvolené přehledy čerpající z případů a dalších evidencí. Pro jejich zobrazení se využívají komponenty realizované jako zásuvné moduly. Tyto komponenty se provazují s konkrétními daty, čímž vznikají pohledy, které se dále seskupují do témat.
 
 Oprávnění::
-Pružný systém oprávnění založený na uživatelských rolích a organizačních jednotkách umožňuje pracovat pouze s těmi dokumenty a na těch projektech, které se uživatelů týkají.
+Pružný systém oprávnění založený na uživatelských rolích a organizačních jednotkách umožňuje pracovat pouze s těmi dokumenty a na těch případech, které se uživatelů týkají.
 
 SpIS bude napojen na vybrané další informační systémy, ze kterých bude čerpat podklady a do kterých bude předávat výstupy nebo dílčí dokumenty. Napojení bude realizováno prostřednictvím datové vrstvy, tedy v databázi.
 
@@ -42,33 +42,33 @@ SpIS bude napojen na vybrané další informační systémy, ze kterých bude č
 
 === Pracovní přehled
 
-Samostatná část systému, která je výchozí stránkou přihlášeného uživatele. Hlavním prvkem stránky je seznam projektů, do kterých má uživatel přístup, seřazený dle jeho schopnosti přispět a dále dle naléhavosti.
+Samostatná část systému, která je výchozí stránkou přihlášeného uživatele. Hlavním prvkem stránky je seznam případů, do kterých má uživatel přístup, seřazený dle jeho schopnosti přispět a dále dle naléhavosti.
 
-.Řazení projektů dle možnosti na nich pracovat
-1. Projekty, ve kterých je uživatel aktuálně *žádán o práci* na některém dokumentu.
-2. Projekty, ve kterých je uživatel oprávněn *dokončit* některý dokument.
-3. Projekty, ve kterých je uživatel oprávněn *vytvořit* některý dokument.
-4. Ostatní projekty, do kterých má uživatel přístup.
+.Řazení případů dle možnosti na nich pracovat
+1. Případy, ve kterých je uživatel aktuálně *žádán o práci* na některém dokumentu.
+2. Případy, ve kterých je uživatel oprávněn *dokončit* některý dokument.
+3. Případy, ve kterých je uživatel oprávněn *vytvořit* některý dokument.
+4. Ostatní případy, do kterých má uživatel přístup.
 
-V rámci prvních dvou bodů jsou projekty řazeny podle nejčasnějšího termínu dokončení dokumentů, díky kterým je projekt na dané pozici. Dokumenty z třetího bodu neexistují a není tedy možné u nich sledovat termíny a zbylé projekty může uživatel pouze komentovat.
+V rámci prvních dvou bodů jsou případy řazeny podle nejčasnějšího termínu dokončení dokumentů, díky kterým je případ na dané pozici. Dokumenty z třetího bodu neexistují a není tedy možné u nich sledovat termíny a zbylé případy může uživatel pouze komentovat.
 
 === Sekce
 
 Za účelem snazší orientaci uživatelů jsou veškeré objekty v systému roztříděny do témat a tématických sekcí. Toto členění nemá žádné důsledky pro funkci, ani pro řízení přístupu. Také nijak nesouvisí s organizačním členěním.
 
-Sekce slouží k seskupení několika témat. Není běžné, aby se věci opakovaly v různých sekcích, ale není to vyloučeno. Příkladem sekcí mohou být například *Finance*, *Legislativa* a *Vnější ukazatele*. V první sekci se setkáme s tématy, která jsme zmínili výše, v sekci *Legislativa* najdeme jen projekty pro práci s *Vnitřními předpisy* a konečně v sekci *Vnější ukazatele* nenajdeme sice žádné projekty, ale zato se zde setkáme s řadou pohledů na data získaná při provozu instituce, například *Návštěvnost*, nebo *Skladbu uživatelů*.
+Sekce slouží k seskupení několika témat. Není běžné, aby se věci opakovaly v různých sekcích, ale není to vyloučeno. Příkladem sekcí mohou být například *Finance*, *Legislativa* a *Vnější ukazatele*. V první sekci se setkáme s tématy, která jsme zmínili výše, v sekci *Legislativa* najdeme jen případy pro práci s *Vnitřními předpisy* a konečně v sekci *Vnější ukazatele* nenajdeme sice žádné případy, ale zato se zde setkáme s řadou pohledů na data získaná při provozu instituce, například *Návštěvnost*, nebo *Skladbu uživatelů*.
 
 ==== Témata
 
-Téma seskupuje pohledy a sestavy, které mají za úkol poskytnout informace o stavu věcí, se správou projektů a dokumentů, které umožňují tento stav ovlivňovat. Vhodná témata mohou být například *Rozpočet* nebo *Smlouvy*.
+Téma seskupuje pohledy a sestavy, které mají za úkol poskytnout informace o stavu věcí, se správou případů a dokumentů, které umožňují tento stav ovlivňovat. Vhodná témata mohou být například *Rozpočet* nebo *Smlouvy*.
 
-Pokud to dává smysl, mohou se věci v tématech opakovat. Například určité pohledy mohou být přínosné pro více témat, některé projekty mohou souviset s vícero tématy a podobně. Názorným příkladem budiž *Nákup*, který zasahuje jak do *Rozpočtu*, tak právě do *Smluv*.
+Pokud to dává smysl, mohou se věci v tématech opakovat. Například určité pohledy mohou být přínosné pro více témat, některé případy mohou souviset s vícero tématy a podobně. Názorným příkladem budiž *Nákup*, který zasahuje jak do *Rozpočtu*, tak právě do *Smluv*.
 
 ===== Pohledy
 
 Pohledům je v rámci daného tématu věnován hlavní prostor. Některé pohledy jsou interaktivní, takže je možné s nimi manipulovat a dovídat se tak nové souvislosti. Například pokud pohled zobrazuje mapu, je možné s ní pohybovat, přibližovat ji nebo ji oddalovat. Pokud jsou na mapě interaktivní objekty, je možné je aktivovat a zkoumat jejich detaily.
 
-Některé pohledy mohou umožňovat přímo spustit nový projekt, nebo se odkazovat na existující projekty a dokumenty. Tyto vazby bývají obvykle realizovány odkazy, které může uživatel otevřít v nové záložce prohlížeče.
+Některé pohledy mohou umožňovat přímo spustit nový případ, nebo se odkazovat na existující případy a dokumenty. Tyto vazby bývají obvykle realizovány odkazy, které může uživatel otevřít v nové záložce prohlížeče.
 
 ===== Sestavy
 
@@ -76,21 +76,21 @@ Na stránce každého tématu je vyhrazen prostor, ve kterém se nachází odkaz
 
 Ze stránky tématu je možné aktivovat editor sestav, který umožňuje na stránku uspořádat výběr z pohledů, ke kterým má uživatel přístup. Těmto pohledům je následně možné interaktivně nastavit potřebné zobrazení. Takto připravenou sestavu je následně možné uložit, nebo případně jen vytisknout.
 
-===== Projekty
+===== Případy
 
-Pokud téma obsahuje alespoň jeden typ projektu, je na jeho stránce k dispozici přehled projektů, kterých se aktuální uživatel účastní spolu s prvkem, který umožňuje zahájit nový, je-li k tomu uživatel oprávněn.
+Pokud téma obsahuje alespoň jeden typ případu, je na jeho stránce k dispozici přehled případů, kterých se aktuální uživatel účastní spolu s prvkem, který umožňuje zahájit nový, je-li k tomu uživatel oprávněn.
 
-Z přehledu jsou patrné základní údaje o projektech a zda-li do nich může uživatel zasáhnout, případně je-li to po něm někým požadováno. Přehled je interaktivní a umožňuje třídění i hledání.
+Z přehledu jsou patrné základní údaje o případech a zda-li do nich může uživatel zasáhnout, případně je-li to po něm někým požadováno. Přehled je interaktivní a umožňuje třídění i hledání.
 
 ===== Dokumenty
 
-Pokud téma obsahuje prostřednictvím přiřazených typů projektů alespoň jeden typ dokumentu, je na jeho stránce k dispozici přehled dokumentů, ke kterým má aktuální uživatel přístup. Pokud je k tomu uživatel oprávněn, může z tohoto přehledu zahájit změnu dokumentu.
+Pokud téma obsahuje prostřednictvím přiřazených typů případů alespoň jeden typ dokumentu, je na jeho stránce k dispozici přehled dokumentů, ke kterým má aktuální uživatel přístup. Pokud je k tomu uživatel oprávněn, může z tohoto přehledu zahájit změnu dokumentu.
 
-Z přehledu jsou patrné základní údaje o dokumentech. Dá se z něj také zjistit, do kterých projektů vstupují, má-li k nim aktuální uživatel přístup. Přehled je interaktivní a umožňuje třídění i hledání.
+Z přehledu jsou patrné základní údaje o dokumentech. Dá se z něj také zjistit, do kterých případů vstupují, má-li k nim aktuální uživatel přístup. Přehled je interaktivní a umožňuje třídění i hledání.
 
 === Předvolby uživatele
 
-Část systému umožňující uživateli přizpůsobit si systém dle svých potřeb. Uživatel si zde může zvolit alespoň jazyk uživatelského rozhraní a způsob upozorňování na události v systému. Upozornění týkající se dokumentů a projektů je možné omezit na jejich konkrétní typy.
+Část systému umožňující uživateli přizpůsobit si systém dle svých potřeb. Uživatel si zde může zvolit alespoň jazyk uživatelského rozhraní a způsob upozorňování na události v systému. Upozornění týkající se dokumentů a případů je možné omezit na jejich konkrétní typy.
 
 .Předvolby upozorňování
 [options="header",cols="<4,^1,^1,^1"]
@@ -100,9 +100,9 @@ Z přehledu jsou patrné základní údaje o dokumentech. Dá se z něj také zj
 | Můžete vytvořit chybějící dokument                | {y}   |       | {y}
 | Vámi naposledy upravený dokument byl změněn       | {y}   | {y}   | {y}
 | Vámi sledovaný dokument byl změněn                | {y}   | {y}   | {y}
-| Dokument projektu, které se účastníte, byl změněn | {y}   | {y}   | {y}
-| Projekt, kterého se účastníte, byl změněn         | {y}   | {y}   | {y}
-| Změnila se Vaše účast na projektu                 | {y}   | {y}   | {y}
+| Dokument případu, které se účastníte, byl změněn  | {y}   | {y}   | {y}
+| Případ, kterého se účastníte, byl změněn          | {y}   | {y}   | {y}
+| Změnila se Vaše účast na případu                  | {y}   | {y}   | {y}
 | Změnily se Vaše role v systému                    | {y}   | {y}   | {y}
 |===
 
@@ -218,9 +218,9 @@ expects:
 
 <<<
 
-== Projekty
+== Případy
 
-Každý projekt je *hierarchickou pracovní strukturou*. Práce na něm spočívá v postupném vytváření a schvalování dokumentů, které dokládají provedené úkony. Dokumenty mohou být v různých stavech a na základě svých závislostí tvoří acyklický orientovaný graf.
+Každý případ je *hierarchickou pracovní strukturou*. Práce na něm spočívá v postupném vytváření a schvalování dokumentů, které dokládají provedené úkony. Dokumenty mohou být v různých stavech a na základě svých závislostí tvoří acyklický orientovaný graf.
 
 .Hierarchická pracovní struktura (šipky značí závislost)
 ====
@@ -286,23 +286,23 @@ V příkladu došlo k tomu, že byla v důsledku aktualizace dokumentu `protokol
 1. Vrátit se k předchozí verzi dokumentu `protokol`, kterou systém uchovává.
 2. Schválit novou verzi dokumentu `protokol` a následně vytvořit novou verzi dokumentu `faktura`.
 
-=== Typy projektů
+=== Typy případů
 
-Každý projekt je opatřen popisem své hierarchické struktury. Protože si jsou některé projekty ve své struktuře velmi podobné, definujeme pojmenované typy projektů. Tyto typy reprezentují strukturu, které se dokumenty v projektu přizpůsobují.
+Každý případ je opatřen popisem své hierarchické struktury. Protože si jsou některé případy ve své struktuře velmi podobné, definujeme pojmenované typy případů. Tyto typy reprezentují strukturu, které se dokumenty v případu přizpůsobují.
 
-V případě potřeby je možné typ aktivního projektu změnit a dokumenty přeuspořádat do nových rolí. Stejně tak je možné do struktury vložit již existující dokumenty, pokud tak nedojde k porušení jejich vazeb na závislosti.
+V případě potřeby je možné typ aktivního případu změnit a dokumenty přeuspořádat do nových rolí. Stejně tak je možné do struktury vložit již existující dokumenty, pokud tak nedojde k porušení jejich vazeb na závislosti.
 
-=== Účast na projektech
+=== Účast na případech
 
-Po vytvoření projektu lze na základě typů dokumentů přítomných v typu projektu sestavit seznam rolí, které na projektu musejí spolupracovat, aby jej bylo možné dokončit. Účastníci projektu mohou v jakékoliv chvíli pozvat vybrané role (nejen) z tohoto seznamu, čímž dojde k otevření projektu uživatelům v této roli. K účasti na projektu je možné uživatele přizvat i jmenovitě.
+Po vytvoření případu lze na základě typů dokumentů přítomných v typu případu sestavit seznam rolí, které na případu musejí spolupracovat, aby jej bylo možné dokončit. Účastníci případu mohou v jakékoliv chvíli pozvat vybrané role (nejen) z tohoto seznamu, čímž dojde k otevření případu uživatelům v této roli. K účasti na případu je možné uživatele přizvat i jmenovitě.
 
-Uživatelé přístupem do projektu nezískávají žádná dodatečná oprávnění. Stále mohou manipulovat pouze s dokumenty, ke kterým mají oprávnění vyplývající z uživatelských rolí. V řadě případů je možné do projektu zahrnout libovolné dokumenty, což ovšem nelze produktivně zohlednit pozváním všech uživatelů v organizaci.
+Uživatelé přístupem do případu nezískávají žádná dodatečná oprávnění. Stále mohou manipulovat pouze s dokumenty, ke kterým mají oprávnění vyplývající z uživatelských rolí. V řadě případů je možné do případu zahrnout libovolné dokumenty, což ovšem nelze produktivně zohlednit pozváním všech uživatelů v organizaci.
 
-Dalším důvodem k individuálnímu pozvání může být například zajištění procesu nákupu napříč útvary, kdy si útvar požadující nákup přizve odborníky z jiného útvaru pro spolupráci na zadání ve společném oboru působnosti. Například tehdy, když si *Oddělení pro styk s veřejností* přizve pracovníky z *Odboru ICT* do projektu v oboru *Technické vybavení pro produkci multimédií*.
+Dalším důvodem k individuálnímu pozvání může být například zajištění procesu nákupu napříč útvary, kdy si útvar požadující nákup přizve odborníky z jiného útvaru pro spolupráci na zadání ve společném oboru působnosti. Například tehdy, když si *Oddělení pro styk s veřejností* přizve pracovníky z *Odboru ICT* do případu v oboru *Technické vybavení pro produkci multimédií*.
 
 === Žádost o práci na dokumentu
 
-Pokud je k tomu uživatel oprávněn, smí v rámci projektu požádat o práci na některém dokumentu. Žádat je možné buď jednoho uživatele nebo roli, která byla do projektu přizvána. Úkolování nemá přímou vazbu na termín požadovaného dokončení dokumentu, který je stanoven odděleně a na základě jiného oprávnění.
+Pokud je k tomu uživatel oprávněn, smí v rámci případu požádat o práci na některém dokumentu. Žádat je možné buď jednoho uživatele nebo roli, která byla do případu přizvána. Úkolování nemá přímou vazbu na termín požadovaného dokončení dokumentu, který je stanoven odděleně a na základě jiného oprávnění.
 
 Oprávnění úkolovat jiné vyplývá z oprávnění dané roli uživatele vzhledem ke konkrétnímu typu dokumentu. Dále jím však disponují i uživatelé oprávnění manipulovat libovolným způsobem se závislými dokumenty. Tito uživatelé jsou oprávnění také vytvářet nové, požadované dokumenty právě za účelem možnosti vznést požadavek na jejich vyhotovení.
 
@@ -310,7 +310,7 @@ Ve zkratce platí, že potřebuje-li uživatel něco od ostatních, je mu umožn
 
 === Lhůta pro vyhotovení dokumentu
 
-Pokud je k tomu uživatel oprávněn, smí v rámci projektu nastavit nebo změnit lhůtu pro dokončení určitého dokumentu. Tato lhůta je všem viditelná a zohledňuje se například při řazení projektů na stránce pracovního přehledu.
+Pokud je k tomu uživatel oprávněn, smí v rámci případu nastavit nebo změnit lhůtu pro dokončení určitého dokumentu. Tato lhůta je všem viditelná a zohledňuje se například při řazení případů na stránce pracovního přehledu.
 
 Každý typ dokumentu má možnost upravit výchozí lhůtou pro dokončení. Pokud tak neučiní, při vytvoření dokumentu daného typu není žádná lhůta nastavena. Pokud dokument neexistuje alespoň jako požadovaný, není možné mu nastavit lhůtu žádnou.
 
@@ -320,7 +320,7 @@ Každý typ dokumentu má možnost upravit výchozí lhůtou pro dokončení. Po
 
 Pod pojmem dokument rozumíme strukturovaná strojová data, se kterými uživatel nakládá přímo v systému. Tyto dokumenty často mívají přílohy, což jsou nestrukturovaná data (často různé formátované texty, tabulky či obrázky), které vznikají mimo systém a jsou do něj pouze vkládány.
 
-Dokumenty mají kromě vnitřní struktury také takzvané závislosti a díky nim pak tvoří určité vnější struktury. Tyto závislosti jsou dokumentům vlastní ve všech projektech, kterých jsou součástí.
+Dokumenty mají kromě vnitřní struktury také takzvané závislosti a díky nim pak tvoří určité vnější struktury. Tyto závislosti jsou dokumentům vlastní ve všech případech, kterých jsou součástí.
 
 === Typy dokumentů
 
@@ -634,7 +634,7 @@ Role představují oprávnění uživatelů, kteří jsou součástí určitých
 
 TIP: Pro jmenování uživatelů do rolí může sloužit například jejich příslušnost do určitých skupin, která se zjistí z vnější evidence uživatelů.
 
-Úlohou rolí je pojmenovat skupiny oprávnění, které mají určití uživatelé, a tím umožnit jejich kontrolu a změny. Běžné role se uplatní zejména při netypických situacích, jako jsou projekty mimo běžný rámec organizační struktury. Odvislé role se naopak uplatní při formulování oprávnění pro pravidelné organizační struktury.
+Úlohou rolí je pojmenovat skupiny oprávnění, které mají určití uživatelé, a tím umožnit jejich kontrolu a změny. Běžné role se uplatní zejména při netypických situacích, jako jsou případy mimo běžný rámec organizační struktury. Odvislé role se naopak uplatní při formulování oprávnění pro pravidelné organizační struktury.
 
 Správce může k jednotlivým rolím připojit poučení pro jejich nabyvatele. Tito pak po jmenování do daných rolí musí toto poučení vzít na vědomí, jinak jim není umožněno se systémem dále pracovat. Stejně tak musí nabyvatelé vzít poučení na vědomí při jeho dodatečné změně.
 
@@ -667,10 +667,10 @@ Kromě okamžitého upozornění si může uživatel nastavit upozornění dávk
 === Události
 
 Je požadována práce uživatele na dokumentu::
-Někdo uložil danému uživateli pracovat na určitém dokumentu. Upozornění obsahuje odkaz na projekt, v rámci kterého k události došlo a dále identifikátor dokumentu, o který se jedná. Po zobrazení odkazované stránky je uživateli naznačeno, o který dokument se jedná.
+Někdo uložil danému uživateli pracovat na určitém dokumentu. Upozornění obsahuje odkaz na případ, v rámci kterého k události došlo a dále identifikátor dokumentu, o který se jedná. Po zobrazení odkazované stránky je uživateli naznačeno, o který dokument se jedná.
 
 Uživatel nově může vytvořit chybějící dokument::
-Obdobně jako v případě požadované práce, pouze k události dochází obvykle vytvořením všech potřebných závislostí určitého, zatím neexistujícího dokumentu v rámci projektu.
+Obdobně jako v případě požadované práce, pouze k události dochází obvykle vytvořením všech potřebných závislostí určitého, zatím neexistujícího dokumentu v rámci případu.
 
 Uživatelem naposledy upravený dokument byl změněn::
 Někdo změnil dokument, který naposledy upravoval upozorňovaný uživatel. Tato událost se spustí jen při první změně jiným uživatelem. Pokud si uživatel přeje být informován o všech změnách daného dokumentu, musí ho začít sledovat. Odkaz je shodný s odkazem v předchozích událostech.
@@ -678,14 +678,14 @@ Někdo změnil dokument, který naposledy upravoval upozorňovaný uživatel. Ta
 Uživatelem sledovaný dokument byl změněn::
 Obdobně jako v případě předchozí události, jen je sledující uživatel upozorňován na všechny změny dokumentu.
 
-Dokument projektu, které se uživatel účastní, byl změněn::
-Velmi široká volba pro upozorňování, díky které bude uživatel upozorněn při libovolné změně libovolného dokumentu ve všech projektech, kterých se účastní.
+Dokument případu, které se uživatel účastní, byl změněn::
+Velmi široká volba pro upozorňování, díky které bude uživatel upozorněn při libovolné změně libovolného dokumentu ve všech případech, kterých se účastní.
 
-Projekt, kterého se uživatel účastní, byl změněn::
-Touto událostí se myslí takové změny projektu, které se netýkají konkrétních dokumentů ani účasti uživatelů nebo rolí na projektu. Jedná se tedy především o změny metadat projektu. Součástí upozornění je odkaz na projekt.
+Případ, kterého se uživatel účastní, byl změněn::
+Touto událostí se myslí takové změny případu, které se netýkají konkrétních dokumentů ani účasti uživatelů nebo rolí na případu. Jedná se tedy především o změny metadat případu. Součástí upozornění je odkaz na případ.
 
-Změnila se účast uživatele na projektu::
-Někdo uživatele pozval do nového projektu. Součástí upozornění je kromě odkazu na projekt i jméno uživatele, který jej pozval a role, ve kterých v projektu figuruje.
+Změnila se účast uživatele na případu::
+Někdo uživatele pozval do nového případu. Součástí upozornění je kromě odkazu na případ i jméno uživatele, který jej pozval a role, ve kterých v případu figuruje.
 
 Změnily se role uživatele v systému::
 Správce systému udělil nebo odebral uživateli role. Součástí upozornění jsou i informace o tom, jaká role mu byly přiděleny a jaké odebrány, případně ve kterých oblastech působnosti.
@@ -732,7 +732,7 @@ actor :Uživatel:
 
 Uživatelé budou se SpISem komunikovat pomocí webového rozhraní spuštěném v běžném webovém prohlížeči. Pro účely elektronického podepisování bude na jejich zařízeních nasazena další aplikace, ve schématu označená jako _Pečetidlo_.
 
-Jak naznačuje schéma výše, _Aplikace_ samotná je běhovým prostředím pro určité _Politiky_. Ty vytváří programátoři a popisují jimi nejen strukturu dokumentů, které se ve SpISu vyskytují, ale také jejich vzájemné vazby v projektech, použité prvky uživatelského rozhraní a další rysy systému dané organizace.
+Jak naznačuje schéma výše, _Aplikace_ samotná je běhovým prostředím pro určité _Politiky_. Ty vytváří programátoři a popisují jimi nejen strukturu dokumentů, které se ve SpISu vyskytují, ale také jejich vzájemné vazby v případech, použité prvky uživatelského rozhraní a další rysy systému dané organizace.
 
 === Datová vrstva
 
