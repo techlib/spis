@@ -116,7 +116,31 @@ SpIS je provázán s ekonomickým systémem tak, že z něj přebírá a uživa
 
 === Elektronický systém spisové služby
 
-WARNING: Dopsat. Viz úkol #13.
+Napojení na elektronický systém spisové služby (ESSS) slouží jednak k získávání dokumentů a příloh pro další práci s nimi (import) a dále pak pro ukládání hotových dokumentů a příloh za účelem jejich trvalého uchování (export).
+
+==== Import
+
+Import souborů z ESSS pro jejich využití v roli dokumentů, příloh nebo pro rekonstrukci projektu probíhá tak, že je oprávněný uživatel prostřednictvím k tomu určeného rozhraní integračního můstku v ESSS vyhledá a vybere.
+
+* Dříve exportované dokumenty ze systému SpIS jsou plnohodnotně importovány a to včetně automatického dohledání jejich příloh na základě v exportu uvedených spisových značek. Import probíhá vždy do konkrétního projektu.
+
+* Dříve exportované projekty ze systému SpIS jsou plnohodnotně importovány, čímž dojde k vytvoření nového projektu. Při tom dojde k dohledání jednotlivých dokumentů na základě v exportu uvedených spisových značek a následně i k dohledání jejich příloh.
+
+* Pokud se jedná o jiný typ souboru, je možné jej použít pouze jako přílohu. V takovém případě se u ní uvede i její spisová značka.
+
+Není žádoucí znovu importovat dokument nebo projekt, který již ve SpISu existuje. Pokud na tom uživatel trvá, systém mu umožní tak učinit a projekt nebo dokument importovat _jako nový_, což znamená, že dojde k zpřetrhání jeho historických souvislostí.
+
+==== Export
+
+Export projektů, dokumentů a příloh do ESSS probíhá automaticky a průběžně. Vždy, když je dokument ve SpISu dokončen, dojde k jeho asynchronnímu exportu a to včetně příloh. Obdobně je exportována konečná podoba projektu při jeho uzavření. Dokumenty sdružené ve SpISu do projektu se v ESSS řadí do jednoho spisu.
+
+* Spis v ESSS je založen při exportu prvního dokumentu, který do něj má být zařazen.
+
+* V případě, že je jeden dokument použit ve více projektech, je exportován pro každý projekt zvlášť. Pokud ESSS podporuje řazení dokumentu do více spisů, předejde pomocí této funkce integrační můstek vzniku duplicity.
+
+* Po exportu dokumentu, přílohy nebo projektu do ESSS se zaznamená spisová značka, pod kterou je možné výsledný soubor v ESSS dohledat. Při exportu nadřazeného objektu je na dceřinné objekty odkazováno právě pomocí spisových značek.
+
+Do ESSS nejsou exportovány případně režijní poznámky a přílohy k projektu samotnému. Ty mají pouze informativní charakter, nejsou závazné a není třeba je dlouhodobě uchovávat.
 
 === Elektronické tržiště
 
