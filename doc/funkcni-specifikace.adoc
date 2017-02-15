@@ -22,7 +22,7 @@ Jeho technickými charakteristikami se zabývá <<technicka-specifikace.adoc#,Te
 
 === Agendy
 
-Systém v prvních verzích umožňuje zpracování následujících agend IPR a NTK. Systém by však měl být navržen s ohledem na budoucí rozvoj, při kterém dojde k rozšíření seznamu níže.
+Systém v prvních verzích umožňuje zpracování agend IPR a NTK souvisejících s přípravou a čerpáním rozpočtu. Systém by však musí být navržen s ohledem na budoucí rozvoj, při kterém dojde k rozšíření následujícho seznamu zajišťovaných agend.
 
 Řízení výdajů::
 Sekce řízení výdajů sdružuje řadu témat, která se dotýkají výdajových procesů různých typů. Jedná se například o tvorbu a evidenci záměrů, veřejných zakázek, předávacích protokolů, faktur a dalších souvisejících dokumentů.
@@ -36,7 +36,7 @@ Sekce partnerů a smluv se soustředí na téma evidence platných smluv a z nic
 
 === Integrace
 
-Aby bylo možné zpracovávat v systému agendy uvedené výše, je potřeba, aby byl systém provázán s cizími systémy a mohl tak pracovat s jejich daty. Tyto systémy nejsou v IPR a NTK shodné.
+Pro zpracování výše uvedených agend v systému je nezbytné, aby byl systém provázán s cizími systémy a mohl tak pracovat s jejich daty. Tyto systémy nejsou v IPR a NTK shodné.
 
 .Cizí systémy, se kterými je potřeba se integrovat
 [options="header",cols="<4,^2,^2"]
