@@ -450,13 +450,13 @@ Informace o dodavateli:
 
 <<<
 
-== Rozpočet
+== Plánování rozpočtu
 
-V IS bude probíhat plánování rozpočtu na nadcházející období. Rozpočet bude tvořen jako výstup pro nadřízenou instituci organizace i jako podklad pro plánování a nástroj kontroly nad financemi organizace jako celku i jejích organizačních struktur či jinak definovaných skupin. Modul rozpočet bude také poskytovat přehled o plánovaném a skutečném čerpání financí dle požadavků uživatele (např. dle období, dle skupiny či účelu, plán versus skutečné čerpání financí atd.). Přehledy bude možné exportovat a tisknout.
+V IS bude probíhat plánování rozpočtu na nadcházející období. Rozpočet bude tvořen jako výstup pro nadřízenou instituci organizace i jako podklad pro plánování a nástroj kontroly nad financemi organizace jako celku i jejích organizačních struktur či jinak definovaných skupin. Modul rozpočet bude také poskytovat přehled o plánovaném a skutečném čerpání financí dle požadavků uživatele (např. dle období, dle skupiny či účelu, plán versus skutečné čerpání financí atd.). Přehledy bude možné exportovat a tisknout.
 
 Do rozpočtu na následující období zasahují vždy záměry a zakázky již evidované v IS, jejichž informace budou do rozpočtu přebírány automaticky dle zadaných kritérií. Dále budou v modulu tvořeny nové zakázky, čistě pro účely plánování rozpočtu (plán zakázek). Rozpočet na následující období se obvykle odevzdává společně s přehledem skutečného čerpání financí z aktuálního období.
 
-Součástí modulu bude evidence plánovaných zakázek, tvorba návrhu rozpočtu pro nadřízený orgán a modul pro interní plánování a změny rozpočtu včetně přehledu jeho čerpání dle různých kritérií.
+Plánování rozpočtu bude probíhat prostřednictvím evidence plánovaných zakázek, nástrojů pro tvorbu návrhu rozpočtu pro nadřízený orgán a pro interní plánování a přehledu čerpání rozpočtu dle různých kritérií včetně jeho změn.
 
 === Plán zakázek
 
@@ -464,83 +464,17 @@ Plán zakázek bude evidenční agenda IS, kde budou jednotlivé organizační n
 
 Položky plánu budou vytvářet garanti projektů či vedoucí pracovníci. Vytvořený plán bude podléhat schvalovacímu procesu v rámci hierarchie organizace. Schválené položky plánu zakázek budou promítnuty do tvorby rozpočtu.
 
-==== Obsah modulu
-
-Modul bude obsahovat plánované zakázky, které by se měly realizovat v následujícím rozpočtovém období. Z plánu bude patrné, kolik finančních prostředků rozdělených dle druhu bude v definovaném období vynaloženo za organizaci jako celek, její části nebo tematické oblasti (rozděleno dle štítků).
-
-Návrh informací o plánované zakázce
-
-* Název zakázky
-* Předpokládaný termín začátku
-* Předpokládaný termín ukončení
-* Předpokládaná hodnota (bez DPH i s DPH)
-* Druh finančních prostředků
-* Štítek
-* Poznámka
-
-Metadata o plánované zakázce
-
-* Organizační celek (oddělení, sekce)
-* Autor
-* Datum vytvoření
-* Datum poslední změny
-* Autor poslední změny
-
-==== Funkce modulu
-
-* Filtrování a řazení položek
-* Export a tisk seznamu
-* Převzít do záměrů -- převezme všechna data z plánované zakázky a vytvoří na jeho základě záznam v evidenci záměrů
-* Schválení seznamu (odeslání seznamu naplánovaných zakázek ke schválení dalšímu uživateli v rámci workflow)
-
-Detailní specifikace obsahu a funkcí modulu pro jednotlivé organizace bude předmětem implementační analýzy.
+Detailní specifikace obsahu plánu zakázek pro jednotlivé organizace bude předmětem implementační analýzy.
 
 === Tvorba rozpočtu
 
-Rozpočet je tvořen jednou za rok na nadcházející období pro nadřízenou instituci organizace. Modul bude umožňovat vytvořit rozpočet i pro jakékoli období, případně pouze dílčí část rozpočtu (například jen investice, jen IT projekty atd.) pro interní účely organizace.
+Rozpočet je tvořen jednou za rok na nadcházející období pro nadřízenou instituci organizace. Systém bude umožňovat vytvořit rozpočet i pro jakékoli období, případně pouze dílčí část rozpočtu (například jen investice, jen IT projekty atd.) pro interní účely organizace.
 
 Vstupními daty rozpočtu jsou aktuálně běžící zakázky z evidence zakázek a plánované zakázky z plánu zakázek. Z evidencí jsou přebírány informace o termínech plnění a finanční částky vynaložené v jednotlivých etapách. Ze všech dostupných informací je vytvořen návrh rozpočtu, který bude možné rozdělit do kapitol dle účelu využití financí, organizačního celku či jiné tematické oblasti.
 
-Návrh rozpočtu je předložen ke schválení nadřízenému orgánu, který schválí plnou částku, nebo její část, která je zpětně rozdělena v rámci organizace pro jednotlivé organizační celky dle různých kritérií. Finance přidělené od nadřízeného orgánu jsou vloženy do IS správcem rozpočtu a jsou závazné pro všechny uživatele jako limity čerpání pro další plánování a kontrolu čerpání.
+Návrh rozpočtu je předložen ke schválení nadřízenému orgánu, který schválí plnou částku nebo její část, která je zpětně rozdělena v rámci organizace pro jednotlivé organizační celky dle různých kritérií. Finance přidělené od nadřízeného orgánu jsou vloženy do IS správcem rozpočtu a jsou závazné pro všechny uživatele jako limity čerpání pro další plánování a kontrolu čerpání.
 
-Detailní specifikace procesu, obsahu a funkcí modulu pro jednotlivé organizace bude předmětem implementační analýzy. Schéma procesu tvorby rozpočtu je v příloze 5.
-
-==== Obsah modulu
-
-Modul bude obsahovat položky z modulů evidence zakázek a plánu zakázek zasahující do plánovaného období. Především zde bude přehled o vynaložených finančních částkách na jednotlivé VZ. Seznam položek bude možné ručně doplnit o další položky z výše uvedených evidencí, ze seznamu bude možné položky i odebrat. Kromě seznamu bude k dispozici přehledová tabulka o výši rozpočtu za jednotlivé útvary organizační struktury a rozdělený dle účelu využití či jiných kategorií.
-
-Obsah modulu se bude lišit dle přihlášeného uživatele.
-
-*Seznam položek*
-
-Seznam bude obsahovat vybrané informace z přebíraných položek jednotlivých evidencí.
-
-Návrh informací o položkách
-
-* Typ (zakázka, plán)
-* Evidenční číslo
-* Název
-* Štítek (kategorie)
-* Druh finančních prostředků
-
-* Částka bez DPH
-* Částka s DPH
-* Termín začátku etapy/zakázky
-* Termín ukončení etapy/zakázky
-* Garant
-
-*Přehledová tabulka*
-
-Jedná se o přehledovou tabulku, jejíž hodnoty se budou dynamicky počítat až do uzamčení návrhu rozpočtu. Tabulka bude obsahovat navrhované částky rozdělené dle útvarů organizační struktury, účelu vynaložení či jiných specifikovaných kritérií. K dispozici budou i mezisoučty a celková částka rozpočtu. Všechny částky budou uvedeny bez DPH i s DPH. Obsah přehledové tabulky bude přizpůsoben dle práv přihlášeného uživatele.
-
-==== Funkce modulu
-
-* Filtrování a řazení položek
-* Export a tisk seznamu včetně přehledové tabulky
-* Tiskové sestavy
-* Přidat/odebrat položky z modulů
-* Ukončit a předat ke schválení -- přeposlat návrh ke schválení nadřízenému uživateli
-* Uzamknout -- uzamčený návrh předaný ke schválení nadřízenému orgánu
+Detailní specifikace procesu, obsahu a funkcí pro jednotlivé organizace bude předmětem implementační analýzy. Schéma procesu tvorby rozpočtu je v příloze 5.
 
 === Rozpočet, změny rozpočtu a přehled čerpání
 
@@ -548,61 +482,7 @@ Rozpočet schválený nadřízeným orgánem je závazný pro plánování a př
 
 V jednotlivých organizacích je možné v rámci limitů čerpání přerozdělovat finance mezi útvary organizační struktury a měnit účel jejich vynaložení. Tyto změny může provádět pouze správce rozpočtu a jsou schvalovány vedoucími pracovníky, jichž se změny týkají.
 
-Detailní specifikace obsahu a funkcí modulu bude předmětem implementační analýzy.
-
-==== Obsah modulu
-
-Modul bude obsahovat podklady k rozpočtu (limity čerpání), seznam položek zasahujících do čerpání a přehledové tabulky s hodnotami pro kontrolu čerpání rozpočtu. Obsah a funkce budou přizpůsobeny dle práv přihlášeného uživatele.
-
-*Seznam zakázek v rozpočtu*
-
-V seznamu zakázek budou informace o položkách přebíraných z evidence zakázek a plánu zakázek zasahující do vybraného časového úseku.
-
-Informace o položkách
-
-* Typ (zakázka, plán)
-* Evidenční číslo
-* Štítek
-* Název + název etapy
-* Druh finančních prostředků
-* Částka bez DPH
-* Částka s DPH
-* Termín začátku etapy/zakázky
-* Termín ukončení etapy/zakázky
-* Útvar organizační struktury
-* Garant zakázky
-
-*Přehledové tabulky*
-
-Společně se seznamem položek bude vždy k dispozici přehled sum čerpaných financí zobrazených položek, limity z rozpočtu a jejich rozdíl. Výpočty budou dynamické a budou vždy odpovídat vyfiltrovaným položkám. Přehledy budou obsahovat celkové sumy i sumy rozdělené dle útvarů organizační struktury, účelu vynaložených financí a definovaného období.
-
-Příklady přehledových tabulek:
-
-Informace o přidělených financích dle útvarů organizační struktury a účelu využití
-
-* Útvar organizační struktury
-* Účel
-* Objem finančních prostředků
-
-Souhrn přidělených financí dle účelu využití finančních prostředků
-
-* Účel využití
-* Objem finančních prostředků
-* Celkový objem
-
-Souhrnné sumy čerpaných financí dle účelu využití finančních prostředků za vybrané časové období
-
-* Účel využití
-* Objem finančních prostředků - plán
-* Objem finančních prostředků - čerpání
-
-==== Funkce a kontroly modulu
-
-* Filtrování a řazení položek
-* Výběr časového období
-* Export a tisk seznamu položek včetně přehledových tabulek
-* Tiskové sestavy
-* Editace limitů (pouze pro správce rozpočtu)
+Detailní specifikace obsahu a funkcí bude předmětem implementační analýzy.
 
 <<<
 
