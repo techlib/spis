@@ -196,9 +196,6 @@ IS bude obsahovat schvalovací centrum -- seznam položek ke schválení po při
 
 Schvalování dokumentů bude umožňovat dynamické změny procesů na základě zodpovědností a kompetencí v rámci organizační struktury.
 
-<<<
-
-== Moduly obchodního případu
 === Evidence záměrů
 
 Modul bude sloužit k vytvoření a evidenci záměrů. Záměr je inicializační dokument k obchodnímu případu, kde je definováno, co a za jakých okolností se navrhuje realizovat (specifikuje se předmět veřejné zakázky). Autor bude tvorbou proveden pomocí jednoduchého formuláře. Záměr prochází schvalovacím procesem, který je daný v rámci každé organizace, zároveň musí systém reflektovat případné změny v jejich vnitřním chodu.
