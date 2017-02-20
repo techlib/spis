@@ -45,7 +45,6 @@ Pro zpracování výše uvedených agend v systému je nezbytné, aby byl systé
 | Evidence uživatelů                 | Active Directory | OpenLDAP
 | Ekonomický systém                  | Ginis            | iFIS
 | Elektronický systém spisové služby | E-spis           | iFIS
-| Elektronické tržiště               | ?                | TenderMarket
 | Otevřená data                      | CKAN             | CKAN
 |===
 
@@ -144,11 +143,9 @@ Do ESSS nejsou exportovány případně režijní poznámky a přílohy k příp
 
 === Elektronické tržiště
 
-SpIS skrze integrační můstek umí odesílat a zpětně přebírat záznamy o veřejných zakázkách uskutečňovaných pomocí NEN.
+Integrační můstek zajišťující napojení na elektronické tržiště (pravděpodobně link:https://nen.nipez.cz/[NEN]) bude zcela řídit profil zadavatele a na základě informací ve SpISu zveřejňovat výzvy, zprostředkovávat průběh řízení a nakonec do systému SpIS přebírat výsledky.
 
-NEBO
-
-SpIS skrze integrační můstek umí spravovat profil zadavatele a zpracování veřejných zakázek na NEN.
+Pokud vazbu nebude možné z technických nebo jiných důvodů realizovat v tomto rozsahu, zajistí můstek alespoň předání podkladů a převzetí výsledků řízení. Obsluha výběrového řízení bude provedena v systému tržiště pověřeným uživatelem.
 
 === Otevřená data
 
