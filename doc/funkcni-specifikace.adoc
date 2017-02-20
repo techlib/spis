@@ -153,7 +153,7 @@ Integrační můstek automaticky převádí a vkládá data z vybraných datový
 
 === Registr smluv
 
-Prostřednictvím ESSS, její výpravny a následně API registru smluv bude SpIS skrze integrační můstek odesílat dokumenty k tomu připravené a označené. Následně SpIS ověří zveřejnění dokumentů (smluv) v registru, čímž umožní další navazující činnosti (jako je příprava souvisejících výdajových záměrů a fakturace).
+Integrační můstek využívá výpravnu ESSS pro odesílání dokumentů do Registru smluv a následně API tohoto registru pro kontrolu jejich řádného zanesení. Zveřejněny budou přílohy závislostí v roli _Ke zveřejnění_ všech dokumentů typu _Potvrzení o zveřejnění v Registru smluv_. Po ověření budou _Potvrzení_ vytvořena, doplněna doložkou v příloze a dokončena.
 
 === Obchodní a Živnostenský rejstřík
 
