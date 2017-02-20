@@ -149,7 +149,7 @@ Pokud vazbu nebude možné z technických nebo jiných důvodů realizovat v tom
 
 === Otevřená data
 
-SpIS umožňuje automatizovanou publikaci označených pohledů. Integrační můstek umí převést a vložit vybrané pohledy a data v nich obsažená do CKAN. Tato data jsou následně veřejně dostupná přes webové rozhraní.
+Integrační můstek automaticky převádí a vkládá data z vybraných datových zdrojů do systému CKAN. To, o které datové zdroje se jedná a jaké parametry jsou jim předány je upraveno v souboru ve formátu kompatibilním s popisem pohledu.
 
 === Registr smluv
 
