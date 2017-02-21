@@ -114,6 +114,8 @@ Více o upozorněních najdete v kapitole <<Upozornění na událost>>.
 
 ==== Integrační můstky
 
+WARNING: Toto již nestačí, bude zapotřebí lepší rozhraní pro můstky.
+
 Za účelem alespoň částečného řízení komunikaci s navázanými cizími systémy je zde možné nastavovat a měnit předvolby ve tvaru `klíč = hodnota`, které mohou můstky pro integraci s cizími systémy následně využít.
 
 Pokud by existoval můstek pro komunikaci s veřejnými rejstříky, volbou `ares.refresh_after = 48` bychom mu mohli sdělit, že má záznamy převzaté ze systému ARES kontrolovat nejdříve po 48 hodinách.
