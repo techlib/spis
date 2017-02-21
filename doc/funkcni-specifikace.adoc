@@ -145,7 +145,9 @@ Do ESSS nejsou exportovány případně režijní poznámky a přílohy k příp
 
 Integrační můstek zajišťující napojení na elektronické tržiště (pravděpodobně link:https://nen.nipez.cz/[NEN]) bude zcela řídit profil zadavatele a na základě informací ve SpISu zveřejňovat výzvy, zprostředkovávat průběh řízení a nakonec do systému SpIS přebírat výsledky.
 
-Pokud vazbu nebude možné z technických nebo jiných důvodů realizovat v tomto rozsahu, zajistí můstek alespoň předání podkladů a převzetí výsledků řízení. Obsluha výběrového řízení bude provedena v systému tržiště pověřeným uživatelem.
+TIP: Elektronické tržiště NEN disponuje link:https://nen.nipez.cz/Soubor.aspx?id=1499363[API na bázi protokolu SOAP].
+
+Pokud vazbu nebude možné z technických nebo jiných důvodů realizovat v plném rozsahu, zajistí můstek alespoň předání podkladů a převzetí výsledků řízení. Obsluha výběrového řízení bude provedena v systému tržiště pověřeným uživatelem.
 
 === Otevřená data
 
