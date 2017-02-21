@@ -32,7 +32,7 @@ Přehledy::
 Vhodně zvolené přehledy čerpající z případů a dalších evidencí. Pro jejich zobrazení se využívají komponenty realizované jako zásuvné moduly. Tyto komponenty se provazují s konkrétními daty, čímž vznikají pohledy, které se dále seskupují do témat.
 
 Oprávnění::
-Pružný systém oprávnění založený na uživatelských rolích a organizačních jednotkách umožňuje pracovat pouze s těmi dokumenty a na těch případech, které se uživatelů týkají.
+Pružný systém oprávnění založený na uživatelských rolích a organizačních jednotkách umožňuje pracovat pouze s těmi dokumenty a na těch případech, které se uživatelů týkají. Uživatelské účty se vždy přebírají z vnější evidence uživatelů.
 
 SpIS bude napojen na vybrané další informační systémy, ze kterých bude čerpat podklady a do kterých bude předávat výstupy nebo dílčí dokumenty. Napojení bude realizováno prostřednictvím datové vrstvy, tedy v databázi.
 
