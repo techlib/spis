@@ -1,0 +1,23 @@
+== 
+
+|===
+| Evidenční číslo:				| 
+| Výdaj:					| 
+| Položka:					| 
+| Případ:					| 
+| Zdroj financování:				| 
+| Částka:					| 
+| Podpis garanta zakázky:			| [check]
+| Souhlas odpovědného útvaru:			| [check]
+| Schválení nadřízeného útvaru:			| 
+| Schválení nadřízeného orgánu:			| 
+|===
+
+|===
+| Vytvořeno:					| 
+| Změněno:					| 
+| Poznámka:					| 
+|===
+
+**Přílohy:**
+

@@ -1,0 +1,23 @@
+== RFID čtečky
+
+|===
+| Evidenční číslo:				| 102
+| Výdaj:					| RFID čtečky
+| Položka:					| 518.9152
+| Případ:					| zajištění provozu RFID čteček
+| Zdroj financování:				| kmenová činnost
+| Částka:					| 100000
+| Podpis garanta zakázky:			| [check]
+| Souhlas odpovědného útvaru:			| [check]
+| Schválení nadřízeného útvaru:			| 
+| Schválení nadřízeného orgánu:			| 
+|===
+
+|===
+| Vytvořeno:					| 2016-11-25 (od Jakub Sháněl)
+| Změněno:					| 
+| Poznámka:					| 
+|===
+
+**Přílohy:**
+

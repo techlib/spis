@@ -1,0 +1,23 @@
+== Materiál ICT
+
+|===
+| Evidenční číslo:				| 103
+| Výdaj:					| Materiál ICT
+| Položka:					| 501.212
+| Případ:					| nákup materiálu ICT
+| Zdroj financování:				| hybridní knihovna
+| Částka:					| 200000
+| Podpis garanta zakázky:			| [check]
+| Souhlas odpovědného útvaru:			| [check]
+| Schválení nadřízeného útvaru:			| 
+| Schválení nadřízeného orgánu:			| 
+|===
+
+|===
+| Vytvořeno:					| 2016-11-25 (od Jakub Sháněl)
+| Změněno:					| 
+| Poznámka:					| 
+|===
+
+**Přílohy:**
+
