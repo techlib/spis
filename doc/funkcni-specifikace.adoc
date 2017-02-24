@@ -452,7 +452,7 @@ Informace o dodavateli:
 
 == Plánování rozpočtu
 
-V IS bude probíhat plánování rozpočtu na nadcházející období. Rozpočet bude tvořen jako výstup pro nadřízenou instituci organizace i jako podklad pro plánování a nástroj kontroly nad financemi organizace jako celku i jejích organizačních struktur či jinak definovaných skupin. Modul rozpočet bude také poskytovat přehled o plánovaném a skutečném čerpání financí dle požadavků uživatele (např. dle období, dle skupiny či účelu, plán versus skutečné čerpání financí atd.). Přehledy bude možné exportovat a tisknout.
+V IS bude probíhat plánování rozpočtu na nadcházející období. Rozpočet bude tvořen jako výstup pro nadřízenou instituci organizace i jako podklad pro plánování a nástroj kontroly nad financemi organizace jako celku i jejích organizačních struktur či jinak definovaných skupin. SpIS bude také poskytovat přehled o plánovaném a skutečném čerpání financí dle požadavků uživatele (např. dle období, dle skupiny či účelu, plán versus skutečné čerpání financí atd.). Přehledy bude možné exportovat a tisknout.
 
 Do rozpočtu na následující období zasahují vždy záměry a zakázky již evidované v IS, jejichž informace budou do rozpočtu přebírány automaticky dle zadaných kritérií. Dále budou v modulu tvořeny nové zakázky, čistě pro účely plánování rozpočtu (plán zakázek). Rozpočet na následující období se obvykle odevzdává společně s přehledem skutečného čerpání financí z aktuálního období.
 
@@ -483,88 +483,6 @@ Rozpočet schválený nadřízeným orgánem je závazný pro plánování a př
 V jednotlivých organizacích je možné v rámci limitů čerpání přerozdělovat finance mezi útvary organizační struktury a měnit účel jejich vynaložení. Tyto změny může provádět pouze správce rozpočtu a jsou schvalovány vedoucími pracovníky, jichž se změny týkají.
 
 Detailní specifikace obsahu a funkcí bude předmětem implementační analýzy.
-
-<<<
-
-== Požadavky na systémové funkce
-
-Níže popsané chování IS bude vyžadováno napříč celým systémem. Pro každou část systému bude chování a jeho přesná specifikace upřesněna v rámci implementační analýzy. Jedná se o požadavky, které umožní jednoduché a intuitivní ovládání IS.
-
-=== Tiskové sestavy a přehledy
-
-IS bude umožňovat export tiskových sestav a statistických přehledů z jednotlivých modulů. Sestavy a přehledy bude možné uživatelsky definovat a nejčastěji používané budou předdefinované. Sestavy a přehledy budou tisknuty nebo exportovány do formátů PDF, Word a Excel.
-
-Konkrétní sestavy a přehledy budou navrhnuty a definovány v rámci implementační analýzy.
-
-==== Tiskové sestavy
-
-Sestavy budou exportovat seznamy sledovaných entit (například veřejná zakázka, faktura, čerpání rozpočtu) a jejich vybraných atributů z různých hledisek. Jedná se například o výpis veřejných zakázek za určité období dle dodavatele. Výpis proplacených faktur za určité období atd. Z modulů rozpočtu bude možné tisknout sestavy s přehledem plánovaných zakázek rozdělený dle různých kritérií pro účely jednání o výši rozpočtu, výpis dílčího čerpání rozpočtu dle druhu financí či jiných kritérií a výpis plánu a realizace zakázek. Předdefinované sestavy budou stanoveny v rámci implementační analýzy.
-
-==== Statistické přehledy
-
-IS bude podporovat základní statistiku. Půjde například o přehled o počtu vypsaných soutěží jednotlivých rozsahů (dle zákona) v definovaném období, finanční objem nasmlouvaných zakázek za definované období, finanční objem vynaložený na tematickou skupinu za definované období atd.
-
-Cílem těchto přehledů je především získání informací k plánování rozpočtu a získání dat pro nadřízený orgán. Přehledy budou specifikovány v rámci implementační analýzy.
-
-=== Alarmy a notifikace
-
-IS bude kontrolovat citlivá místa všech procesů, která vyplynou z úvodní implementační analýzy. Mezi taková místa patří například duplicitní evidence dodavatele, dokladů (faktur, smluv, atd.), překročení maximálního objemu financí pro zakázku nebo jednotlivé etapy, překročení termínů plnění atd. Notifikace budou nastaveny i na změny v dokumentech a položkách jednotlivých modulů. Notifikace budou nastaveny i na položky uživatele čekající ve schvalovacím centru.
-
-Notifikace budou mít různou podobu podle potřeby a jejich nastavení bude v kompetenci administrátora systému. Uživatelé s právem na zápis si budou moci upravit časový interval k upozornění na překročení termínů plnění u zakázek.
-
-Způsoby upozornění
-
-* Označení v IS
-* Hláška v IS
-* SMS
-* Email
-
-Atributy notifikace
-
-* Akce vyvolávající upozornění
-* Limit vyvolávající upozornění (časový úsek, výše čerpání financí)
-* Název
-* Text
-* Způsob upozornění
-* Příjemci
-
-=== Log změn
-
-Jakékoli změny v položkách všech modulů včetně dokumentů budou v rámci IS zapisovány do logu, který bude dostupný z jednotlivých modulů IS jako historie každé entity. Jedná se o změny obsahu, textů, komentářů, stavu a příloh.
-
-Obsah logu
-
-* Typ změny
-* Datum a čas změny
-* Autor změny
-* Výpis změny nebo odkaz na danou verzi měněného dokumentu.
-
-
-=== Vyhledávání, řazení a zadávání hodnot
-
-Podpora fulltextového vyhledávání a řazení a filtrování seznamu dle všech dostupných atributů jednotlivých záznamů (včetně přebíraných). Filtrování bude navíc umožněno zadáním časového úseku (roku, na časové ose atp.). Při vyhledávání a zadávání bude dostupná funkce našeptávače. Vyhledávání a zadávání bude uzpůsobeno danému datovému typu (u data bude uživateli nabídnut kalendář pro snadné zadání, v číselnících bude možné vyhledávat i textově, ne jen scrollováním atd.).
-
-Informace v jednotlivých atributech budou sloužit jako odkaz na položku v jiném modulu IS, pokud to bude možné a vhodné (například evidenční číslo záměru bude odkazovat na podrobnosti k danému záměru).
-
-=== Nápověda
-
-Vybraná pole pro vkládání textu (či jiného datového typu) budou obsahovat 'našeptávač'. V případě složitějšího popisu bude uživateli nabídnuta nápověda. Forma nápovědy bude pro každý případ definována v rámci analýzy.
-
-=== Nahrávání souborů
-
-Soubory budou do IS nahrávány více způsoby: Vyhledání a výběr dokumentu pomocí průzkumníku, přetažení dokumentu myší. IS bude umět zobrazit náhled základních formátů (Word, Excel, PDF, JPEG atd.) po kliknutí na již nahraný dokument.
-
-Soubory bude možné exportovat do vybraných formátů (Word, Excel, csv, PDF) či tisknout (přímo tiskárna, PDF).
-
-=== Komentáře a poznámky
-
-Uživatelům bude umožněno přidávat poznámky a komentáře k jednotlivým záznamům, dokumentům, fakturám, záměrům, veřejným zakázkám i jejich etapám a dalším entitám systému.
-
-=== Uživatelské nastavení
-
-Každý uživatel bude mít přizpůsobeny jednotlivé části IS dle svých uživatelských oprávnění. Navíc bude uživateli umožněno vlastní nastavení viditelných informací o záznamu, pořadí sloupců, přednastavení filtrů atp. dle jeho priorit. Součástí uživatelského nastavení bude taktéž definice tiskových sestav a statistických výstupů.
-
-<<<
 
 == Přílohy
 === Zjednodušené schéma architektury IS
