@@ -54,15 +54,15 @@ V rámci prvních dvou bodů jsou případy řazeny podle nejčasnějšího term
 
 === Sekce
 
-Za účelem snazší orientaci uživatelů jsou veškeré objekty v systému roztříděny do témat a tématických sekcí. Toto členění nemá žádné důsledky pro funkci, ani pro řízení přístupu. Také nijak nesouvisí s organizačním členěním.
+Za účelem snazší orientace uživatelů jsou veškeré objekty v systému roztříděny do témat a tematických sekcí. Toto členění nemá žádné důsledky pro funkci, ani pro řízení přístupu. Také nijak nesouvisí s organizačním členěním.
 
-Sekce slouží k seskupení několika témat. Není běžné, aby se věci opakovaly v různých sekcích, ale není to vyloučeno. Příkladem sekcí mohou být například *Finance*, *Legislativa* a *Vnější ukazatele*. V první sekci se setkáme s tématy, která jsme zmínili výše, v sekci *Legislativa* najdeme jen případy pro práci s *Vnitřními předpisy* a konečně v sekci *Vnější ukazatele* nenajdeme sice žádné případy, ale zato se zde setkáme s řadou pohledů na data získaná při provozu instituce, například *Návštěvnost*, nebo *Skladbu uživatelů*.
+Sekce slouží k seskupení několika témat. Není běžné, aby se věci opakovaly v různých sekcích, ale není to vyloučeno. Příkladem sekcí mohou být například *Finance*, *Legislativa* a *Vnější ukazatele*. V sekci *Finance* se setkáme s tématy, v sekci *Legislativa* najdeme jen případy pro práci s *Vnitřními předpisy* a konečně v sekci *Vnější ukazatele* nenajdeme sice žádné případy, ale zato se zde setkáme s řadou pohledů na data získaná při provozu instituce, například *Návštěvnost*, nebo *Skladbu uživatelů*.
 
 ==== Témata
 
 Téma seskupuje pohledy a sestavy, které mají za úkol poskytnout informace o stavu věcí, se správou případů a dokumentů, které umožňují tento stav ovlivňovat. Vhodná témata mohou být například *Rozpočet* nebo *Smlouvy*.
 
-Pokud to dává smysl, mohou se věci v tématech opakovat. Například určité pohledy mohou být přínosné pro více témat, některé případy mohou souviset s vícero tématy a podobně. Názorným příkladem budiž *Nákup*, který zasahuje jak do *Rozpočtu*, tak právě do *Smluv*.
+Pokud to dává smysl, mohou se věci v tématech opakovat. Například určité pohledy mohou být přínosné pro více témat, některé případy mohou souviset s vícero tématy a podobně. Názorným příkladem budiž *Nákup*, který zasahuje jak do *Rozpočtu*, tak do *Smluv*.
 
 ===== Pohledy
 
@@ -80,13 +80,13 @@ Ze stránky tématu je možné aktivovat editor sestav, který umožňuje na str
 
 Pokud téma obsahuje alespoň jeden typ případu, je na jeho stránce k dispozici přehled případů, kterých se aktuální uživatel účastní spolu s prvkem, který umožňuje zahájit nový, je-li k tomu uživatel oprávněn.
 
-Z přehledu jsou patrné základní údaje o případech a zda-li do nich může uživatel zasáhnout, případně je-li to po něm někým požadováno. Přehled je interaktivní a umožňuje třídění i hledání.
+Z přehledu jsou patrné základní údaje o případech a zda-li do nich může uživatel zasáhnout, případně je-li to po něm požadováno. Přehled je interaktivní a umožňuje řazení, třídění i hledání.
 
 ===== Dokumenty
 
 Pokud téma obsahuje prostřednictvím přiřazených typů případů alespoň jeden typ dokumentu, je na jeho stránce k dispozici přehled dokumentů, ke kterým má aktuální uživatel přístup. Pokud je k tomu uživatel oprávněn, může z tohoto přehledu zahájit změnu dokumentu.
 
-Z přehledu jsou patrné základní údaje o dokumentech. Dá se z něj také zjistit, do kterých případů vstupují, má-li k nim aktuální uživatel přístup. Přehled je interaktivní a umožňuje třídění i hledání.
+Z přehledu jsou patrné základní údaje o dokumentech. Dá se z něj také zjistit, do kterých případů vstupují, má-li k nim aktuální uživatel přístup. Přehled je interaktivní a umožňuje řazení, třídění i hledání.
 
 === Předvolby uživatele
 
@@ -95,18 +95,18 @@ Z přehledu jsou patrné základní údaje o dokumentech. Dá se z něj také zj
 .Předvolby upozorňování
 [options="header",cols="<4,^1,^1,^1"]
 |===
-| Událost                                           | Nikdy | Ihned | Souhrnně
-| Je požadována Vaše práce na dokumentu             |       | {y}   | {y}
-| Můžete vytvořit chybějící dokument                | {y}   |       | {y}
-| Vámi naposledy upravený dokument byl změněn       | {y}   | {y}   | {y}
-| Vámi sledovaný dokument byl změněn                | {y}   | {y}   | {y}
-| Dokument případu, které se účastníte, byl změněn  | {y}   | {y}   | {y}
-| Případ, kterého se účastníte, byl změněn          | {y}   | {y}   | {y}
-| Změnila se Vaše účast na případu                  | {y}   | {y}   | {y}
-| Změnily se Vaše role v systému                    | {y}   | {y}   | {y}
+| Událost                                             | Nikdy | Ihned | Souhrnně
+| Je požadována Vaše práce na dokumentu               |       | {y}   | {y}
+| Můžete vytvořit chybějící dokument                  | {y}   |       | {y}
+| Vámi naposledy upravený dokument byl změněn         | {y}   | {y}   | {y}
+| Vámi sledovaný dokument byl změněn                  | {y}   | {y}   | {y}
+| Dokument případu, kterého se účastníte, byl změněn  | {y}   | {y}   | {y}
+| Případ, kterého se účastníte, byl změněn            | {y}   | {y}   | {y}
+| Změnila se Vaše účast na případu                    | {y}   | {y}   | {y}
+| Změnily se Vaše role v systému                      | {y}   | {y}   | {y}
 |===
 
-Více o upozorněních najdete v kapitole <<Upozornění na událost>>.
+Více o upozorněních je v kapitole <<Upozornění na událost>>.
 
 === Předvolby systému
 
@@ -116,7 +116,7 @@ Více o upozorněních najdete v kapitole <<Upozornění na událost>>.
 
 WARNING: Toto již nestačí, bude zapotřebí lepší rozhraní pro můstky.
 
-Za účelem alespoň částečného řízení komunikaci s navázanými cizími systémy je zde možné nastavovat a měnit předvolby ve tvaru `klíč = hodnota`, které mohou můstky pro integraci s cizími systémy následně využít.
+Za účelem alespoň částečného řízení komunikace s navázanými cizími systémy je zde možné nastavovat a měnit předvolby ve tvaru `klíč = hodnota`, které mohou můstky pro integraci s cizími systémy následně využít.
 
 Pokud by existoval můstek pro komunikaci s veřejnými rejstříky, volbou `ares.refresh_after = 48` bychom mu mohli sdělit, že má záznamy převzaté ze systému ARES kontrolovat nejdříve po 48 hodinách.
 
@@ -126,7 +126,7 @@ Podrobnější konfiguraci budou muset integrační můstky implementovat odděl
 
 Součástí předvoleb systému je pak správa modelu oprávnění, v rámci které je možné například nastavit párování skupin či rolí z evidence uživatelů s rolemi systému nebo upravit rozsah oprávnění jednotlivých rolí.
 
-Více o modelu najdete v kapitole <<Model oprávnění>>.
+Více o modelu je v kapitole <<Model oprávnění>>.
 
 <<<
 
