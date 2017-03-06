@@ -22,7 +22,7 @@ Jeho technickými charakteristikami se zabývá <<technicka-specifikace.adoc#,Te
 
 === Agendy
 
-Systém v prvních verzích umožňuje zpracování agend IPR a NTK souvisejících s přípravou a čerpáním rozpočtu. Systém by však musí být navržen s ohledem na budoucí rozvoj, při kterém dojde k rozšíření následujícho seznamu zajišťovaných agend.
+Systém v prvních verzích umožňuje zpracování agend IPR a NTK souvisejících s přípravou a čerpáním rozpočtu. Systém však musí být navržen s ohledem na budoucí rozvoj, při kterém dojde k rozšíření následujícho seznamu zajišťovaných agend.
 
 Řízení výdajů::
 Sekce řízení výdajů sdružuje řadu témat, která se dotýkají výdajových procesů různých typů. Jedná se například o tvorbu a evidenci záměrů, veřejných zakázek, předávacích protokolů, faktur a dalších souvisejících dokumentů.
@@ -36,7 +36,7 @@ Sekce partnerů a smluv se soustředí na téma evidence platných smluv a z nic
 
 === Integrace
 
-Pro zpracování výše uvedených agend v systému je nezbytné, aby byl systém provázán s cizími systémy a mohl tak pracovat s jejich daty. Tyto systémy nejsou v IPR a NTK shodné.
+Pro zpracování výše uvedených agend v systému je nezbytné, aby byl provázán s cizími systémy a mohl tak pracovat s jejich daty. Tyto systémy nejsou v IPR a NTK shodné.
 
 .Cizí systémy, se kterými je potřeba se integrovat
 [options="header",cols="<4,^2,^2"]
@@ -48,7 +48,7 @@ Pro zpracování výše uvedených agend v systému je nezbytné, aby byl systé
 | Otevřená data                      | CKAN             | CKAN
 |===
 
-Systém bude dále napojen na národní Registr smluv a Obchodní a Živnostenský rejstřík.
+Systém bude dále napojen na národní Registr smluv, Obchodní rejstřík a Živnostenský rejstřík.
 
 
 === Slovník pojmů
@@ -57,7 +57,7 @@ Veřejná zakázka (Zakázka)::
 Zakázka, která je zadána veřejným subjektem a k jejímu zaplacení se použijí veřejné zdroje. Jedná se o nákup zboží, zadání práce, objednání díla nebo služby. Veřejné zakázky se dělí dle druhu předmětu zakázky (služby, dodávky, stavební práce) a dle předpokládané hodnoty vynaložených prostředků (zakázka malého rozsahu, podlimitní zakázka a nadlimitní zakázka).
 
 Záměr k zadání veřejné zakázky (Záměr)::
-Dokument popisující požadavek na pořízení dodávek, služeb nebo stavebních prací. Záměr specifikuje předmět zakázky, předpokládanou hodnotu zakázky a odůvodnění požadavku na vypsání veřejné zakázky. Záměr je základním dokumentem zakázky.
+Dokument popisující požadavek na pořízení dodávek, služeb nebo stavebních prací. Záměr specifikuje předmět zakázky, předpokládanou hodnotu zakázky a odůvodnění požadavku na vypsání veřejné zakázky. Záměr je zakládajícím dokumentem zakázky.
 
 Objednávka::
 Oficiální dokument, kterým je objednán hmotný nebo nehmotný majetek či služba do finančního limitu stanoveného legislativou.
@@ -77,7 +77,7 @@ Dokument, kterým zadavatel od dodavatele přebírá předmět veřejné zakázk
 Faktura::
 Daňový doklad se všemi zákonnými náležitostmi.
 
-Obchodní případ::
+Obchodní případ (Případ)::
 Pro účely tohoto dokumentu termín označující celý proces veřejné zakázky, tedy od vytvoření záměru, přes schvalovací řízení, průběh zakázky, až po fakturu, akceptační a předávací protokoly a řádné ukončení zakázky.
 
 Garant::
@@ -85,7 +85,7 @@ Osoba, která iniciuje vypsání veřejné zakázky, odpovídá za její plněn�
 
 === Uživatelé
 
-SpIS slouží především nákupčím a právníkům k zajištění vypsání a sledování průběhu veřejných zakázek, dále garantům jednotlivých zakázek k vytvoření záměru a sledování průběhu zakázky a vedení organizace ke sledování finančních toků a plánování rozpočtu. Dalšími uživateli jsou pracovníci IT, kteří systém spravují. Vybrané části systému jsou k dispozici pro nahlížení i ostatním pracovníkům.
+SpIS slouží především nákupčím a právníkům k zajištění vypsání a sledování průběhu veřejných zakázek, dále garantům jednotlivých zakázek k vytvoření záměru a sledování průběhu zakázky a vedení organizace ke sledování finančních toků a plánování rozpočtu. Dalšími uživateli jsou pracovníci IT, kteří systém spravují. Vybrané části systému jsou k dispozici pro nahlížení i ostatním pracovníkům organizace.
 
 .Odhadovaný počet uživatelů v daných rolích
 [options="header",cols="<4,^1,^1"]
@@ -103,7 +103,7 @@ SpIS slouží především nákupčím a právníkům k zajištění vypsání 
 
 === Evidence uživatelů
 
-SpIS je přístupný pouze oprávněným pracovníkům, kteří mají platný uživatelský účet v evidenci. Oprávnění v rámci systému jsou uživatelům přidělena na základě údajů z této evidence a dále pak správcem přímo v systému.
+SpIS je přístupný pouze oprávněným pracovníkům, kteří mají platný uživatelský účet v evidenci dané organizace. Oprávnění v rámci systému jsou uživatelům přidělena na základě údajů z této evidence a dále pak správcem přímo v systému.
 
 * IPR uživatele eviduje v systému Microsoft Active Directory. Role je vyjádřena členstvím uživatelů v určitých skupinách. Je tedy potřeba párovat role v systému se skupinami v evidenci.
 
@@ -115,7 +115,7 @@ SpIS je provázán s ekonomickým systémem tak, že z něj přebírá a uživa
 
 === Elektronický systém spisové služby
 
-Napojení na elektronický systém spisové služby (ESSS) slouží jednak k získávání dokumentů a příloh pro další práci s nimi (import) a dále pak pro ukládání hotových dokumentů a příloh za účelem jejich trvalého uchování (export).
+Napojení na elektronický systém spisové služby (ESSS) bude sloužit jednak k získávání dokumentů a příloh pro další práci s nimi (import) a dále pak pro ukládání hotových dokumentů a příloh za účelem jejich trvalého uchování (export).
 
 ==== Import
 
@@ -125,7 +125,7 @@ Import souborů z ESSS pro jejich využití v roli dokumentů, příloh nebo pro
 
 * Dříve exportované případy ze systému SpIS jsou plnohodnotně importovány, čímž dojde k vytvoření nového případu. Při tom dojde k dohledání jednotlivých dokumentů na základě v exportu uvedených spisových značek a následně i k dohledání jejich příloh.
 
-* Pokud se jedná o jiný typ souboru, je možné jej použít pouze jako přílohu. V takovém případě se u ní uvede i její spisová značka.
+* Pokud se jedná o jiný typ souboru, je možné jej použít pouze jako přílohu. V takovém případě je u přílohy uvedena i její spisová značka.
 
 Není žádoucí znovu importovat dokument nebo případ, který již ve SpISu existuje. Pokud na tom uživatel trvá, systém mu umožní tak učinit a případ nebo dokument importovat _jako nový_, což znamená, že dojde k zpřetrhání jeho historických souvislostí.
 
@@ -139,7 +139,7 @@ Export případů, dokumentů a příloh do ESSS probíhá automaticky a průbě
 
 * Po exportu dokumentu, přílohy nebo případu do ESSS se zaznamená spisová značka, pod kterou je možné výsledný soubor v ESSS dohledat. Při exportu nadřazeného objektu je na dceřinné objekty odkazováno právě pomocí spisových značek.
 
-Do ESSS nejsou exportovány případně režijní poznámky a přílohy k případu samotnému. Ty mají pouze informativní charakter, nejsou závazné a není třeba je dlouhodobě uchovávat.
+Do ESSS nejsou exportovány režijní poznámky a přílohy k případu samotnému. Ty mají pouze informativní charakter, nejsou závazné a není třeba je dlouhodobě uchovávat.
 
 === Elektronické tržiště
 
@@ -169,9 +169,9 @@ V případě nalezení změn jsou kontaktní údaje subjektu v systému aktuali
 
 == Zpracování obchodního případu
 
-Dokumenty, které definují rámce obchodního případu, podléhají schvalovacímu procesu. Jedná se především o záměry, objednávky, výzvy či oznámení, smlouvy včetně příloh a dodatků, faktury, vnitřní sdělení a další. Tyto dokumenty jsou schvalovány interně nastaveným procesem, který se v jednotlivých organizacích liší.
+Dokumenty, které definují rámec obchodního případu, podléhají schvalovacímu procesu. Jedná se především o záměry, objednávky, výzvy či oznámení, smlouvy včetně příloh a dodatků, faktury, vnitřní sdělení a další. Tyto dokumenty jsou schvalovány interně nastaveným procesem, který se v jednotlivých organizacích liší.
 
-Schvalovací proces bude definován pro každou organizaci samostatně dle jejích specifických požadavků. Tato kapitola popisuje obecné požadavky na možnosti nastavení pracovních postupů a obecný popis procesu realizace VZ.
+Schvalovací proces bude definován pro každou organizaci samostatně dle jejích specifických požadavků. Tato kapitola popisuje obecné požadavky na možnosti nastavení pracovních postupů a obecný popis procesu realizace zakázky.
 
 === Nastavení pracovních postupů
 
@@ -179,7 +179,7 @@ V rámci implementační analýzy bude pro každou organizaci specifikován pra
 
 === Obecný postup
 
-Obchodní případ vzniká vytvořením záměru, kde obvykle garant či vedoucí pracovník definuje, co a za jakých okolností navrhuje realizovat (specifikuje předmět veřejné zakázky), odhadne finanční a časový rozsah záměru. Záměr prochází schvalovacím procesem, po jehož schválení se z návrhu na realizaci stává veřejná zakázka. Dle rozsahu je obvykle specifikován časový harmonogram, finanční náročnost, způsob vypsání zakázky a výběru dodavatele. Připraví se všechny doprovodné dokumenty, které rovněž podléhají procesu schválení vedením. Zakázka je vypsána, proběhne výběr dodavatele, schválení výběru a podpis smlouvy.
+Obchodní případ vzniká vytvořením záměru, kde obvykle garant či vedoucí pracovník definuje, co a za jakých okolností navrhuje realizovat (specifikuje předmět veřejné zakázky), odhadne finanční a časový rozsah zakázky. Záměr prochází schvalovacím procesem, po jehož schválení se z návrhu na realizaci stává veřejná zakázka. Dle rozsahu je obvykle specifikován časový harmonogram, finanční náročnost, způsob vypsání zakázky a výběru dodavatele. Připraví se všechny doprovodné dokumenty, které rovněž podléhají procesu schválení vedením. Zakázka je vypsána, proběhne výběr dodavatele, schválení výběru a podpis smlouvy.
 
 Po podpisu smlouvy začíná realizace samotné zakázky. Zakázka může obsahovat několik etap, na jejichž konci je část zakázky vždy předána dodavatelem ke schválení. V rámci každé etapy probíhá obvykle také fakturace.
 
