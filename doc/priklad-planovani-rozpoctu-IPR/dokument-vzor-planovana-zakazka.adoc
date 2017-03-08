@@ -1,16 +1,19 @@
-== 
+== Plánovaná zakázka
 
 |===
-| Evidenční číslo:				| 
-| Výdaj:					| 
+| Evidenční číslo:
+| Název zakázky:				| 
 | Položka:					| 
 | Případ:					| 
-| Zdroj financování:				| 
+| Druh finančních prostředků:			| 
 | Částka:					| 
+| Částka (s DPH):				| 
 | Podpis garanta zakázky:			| [check]
 | Souhlas odpovědného útvaru:			| [check]
 | Schválení nadřízeného útvaru:			| 
 | Schválení nadřízeného orgánu:			| 
+| Předpokládaný termín začátku:			|
+| Předpokládaný termín ukončení:		|
 |===
 
 |===

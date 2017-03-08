@@ -1,8 +1,0 @@
-== Pohled pro přípravu rozpočtu
-
-|===
-|Plánovaný výdaj | částka 
-|https://github.com/techlib/spis/blob/master/doc/priklad-planovani-rozpoctu/vzor-planovany-vydaj-101.adoc[poplatky Aleph] | 1000000
-|https://github.com/techlib/spis/blob/master/doc/priklad-planovani-rozpoctu/vzor-planovany-vydaj-102.adoc[RFID čtečky] | 100000
-|https://github.com/techlib/spis/blob/master/doc/priklad-planovani-rozpoctu/vzor-planovany-vydaj-103.adoc[Materiál ICT] | 200000
-|Plánované výdaje celkem | 1300000
