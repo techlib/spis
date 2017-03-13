@@ -452,15 +452,15 @@ Informace o dodavateli:
 
 == Plánování rozpočtu
 
-V IS bude probíhat plánování rozpočtu na nadcházející období. Rozpočet bude tvořen jako výstup pro nadřízenou instituci organizace i jako podklad pro plánování a nástroj kontroly nad financemi organizace jako celku i jejích organizačních struktur či jinak definovaných skupin. SpIS bude také poskytovat přehled o plánovaném a skutečném čerpání financí dle požadavků uživatele (např. dle období, dle skupiny či účelu, plán versus skutečné čerpání financí atd.). Přehledy bude možné exportovat a tisknout.
+SpIS bude umožňovat plánování rozpočtu na nadcházející období. Rozpočet bude tvořen jako výstup pro nadřízenou instituci organizace i jako podklad pro plánování a nástroj kontroly nad financemi organizace jako celku i jejích organizačních struktur či jinak definovaných skupin. SpIS bude také poskytovat přehled o plánovaném a skutečném čerpání financí dle požadavků uživatele (např. dle období, dle skupiny či účelu, plán versus skutečné čerpání financí atd.). Přehledy bude možné exportovat a tisknout.
 
-Do rozpočtu na následující období zasahují vždy záměry a zakázky již evidované v IS, jejichž informace budou do rozpočtu přebírány automaticky dle zadaných kritérií. Dále budou v modulu tvořeny nové zakázky, čistě pro účely plánování rozpočtu (plán zakázek). Rozpočet na následující období se obvykle odevzdává společně s přehledem skutečného čerpání financí z aktuálního období.
+Do rozpočtu na následující období zasahují vždy záměry a zakázky již evidované v systému, jejichž informace budou do rozpočtu přebírány automaticky dle zadaných kritérií. Dále zde budou tvořeny nové zakázky pro účely plánování rozpočtu (plán zakázek). Rozpočet na následující období se obvykle odevzdává společně s přehledem skutečného čerpání financí z aktuálního období.
 
 Plánování rozpočtu bude probíhat prostřednictvím evidence plánovaných zakázek, nástrojů pro tvorbu návrhu rozpočtu pro nadřízený orgán a pro interní plánování a přehledu čerpání rozpočtu dle různých kritérií včetně jeho změn.
 
 === Plán zakázek
 
-Plán zakázek bude evidenční agenda IS, kde budou jednotlivé organizační nebo jinak definované celky zadávat plány na veřejné zakázky pro účely plánování rozpočtu na další období. Jedná se o zjednodušenou evidenci zakázek, ze které bude možné zakázku v případě realizace přebrat do evidence záměrů.
+Plán zakázek bude evidenční agenda systému, ve které budou jednotlivé organizační nebo jinak definované celky zadávat plány na veřejné zakázky pro účely plánování rozpočtu na další období. Jedná se o zjednodušenou evidenci zakázek, ze které bude možné zakázku v případě realizace přebrat do evidence záměrů.
 
 Položky plánu budou vytvářet garanti projektů či vedoucí pracovníci. Vytvořený plán bude podléhat schvalovacímu procesu v rámci hierarchie organizace. Schválené položky plánu zakázek budou promítnuty do tvorby rozpočtu.
 
@@ -470,9 +470,9 @@ Detailní specifikace obsahu plánu zakázek pro jednotlivé organizace bude př
 
 Rozpočet je tvořen jednou za rok na nadcházející období pro nadřízenou instituci organizace. Systém bude umožňovat vytvořit rozpočet i pro jakékoli období, případně pouze dílčí část rozpočtu (například jen investice, jen IT projekty atd.) pro interní účely organizace.
 
-Vstupními daty rozpočtu jsou aktuálně běžící zakázky z evidence zakázek a plánované zakázky z plánu zakázek. Z evidencí jsou přebírány informace o termínech plnění a finanční částky vynaložené v jednotlivých etapách. Ze všech dostupných informací je vytvořen návrh rozpočtu, který bude možné rozdělit do kapitol dle účelu využití financí, organizačního celku či jiné tematické oblasti.
+Vstupními daty rozpočtu jsou aktuálně běžící zakázky z evidence zakázek a plánované zakázky z plánu zakázek, případně další k tomu určené a označené přehledy výdajových záměrů. Z evidencí jsou přebírány informace o termínech plnění a finanční částky vynaložené v jednotlivých etapách. Ze všech dostupných informací je vytvořen návrh rozpočtu, který bude možné rozdělit do kapitol dle účelu využití financí, organizačního celku či jiné tematické oblasti.
 
-Návrh rozpočtu je předložen ke schválení nadřízenému orgánu, který schválí plnou částku nebo její část, která je zpětně rozdělena v rámci organizace pro jednotlivé organizační celky dle různých kritérií. Finance přidělené od nadřízeného orgánu jsou vloženy do IS správcem rozpočtu a jsou závazné pro všechny uživatele jako limity čerpání pro další plánování a kontrolu čerpání.
+Návrh rozpočtu je předložen ke schválení nadřízenému orgánu, který schválí plnou částku nebo její část, která je zpětně rozdělena v rámci organizace pro jednotlivé organizační celky dle různých kritérií. Finance přidělené od nadřízeného orgánu jsou do systému vloženy správcem rozpočtu a jsou závazné pro všechny uživatele jako limity čerpání pro další plánování a kontrolu čerpání.
 
 Detailní specifikace procesu, obsahu a funkcí pro jednotlivé organizace bude předmětem implementační analýzy. Schéma procesu tvorby rozpočtu je v příloze 5.
 
@@ -482,7 +482,9 @@ Rozpočet schválený nadřízeným orgánem je závazný pro plánování a př
 
 V jednotlivých organizacích je možné v rámci limitů čerpání přerozdělovat finance mezi útvary organizační struktury a měnit účel jejich vynaložení. Tyto změny může provádět pouze správce rozpočtu a jsou schvalovány vedoucími pracovníky, jichž se změny týkají.
 
-Detailní specifikace obsahu a funkcí bude předmětem implementační analýzy.
+Systém bude poskytovat kontrolu čerpání rozpočtu prostřednictvím přehledu sum čerpaných financí a jejich limitů dle jednotlivých schválených rozpočtových položek. Výpočty budou dynamické a budou odpovídat zadaným filtrům.
+
+Detailní specifikace obsahu a funkcí přehledu čerpání rozpočtu bude předmětem implementační analýzy.
 
 == Přílohy
 === Zjednodušené schéma architektury IS
