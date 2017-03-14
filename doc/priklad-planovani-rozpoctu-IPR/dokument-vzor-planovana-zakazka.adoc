@@ -1,7 +1,7 @@
 == Plánovaná zakázka
 
 |===
-| Evidenční číslo:
+| Evidenční číslo:      |
 | Název zakázky:				| 
 | Položka:					| 
 | Případ:					| 
