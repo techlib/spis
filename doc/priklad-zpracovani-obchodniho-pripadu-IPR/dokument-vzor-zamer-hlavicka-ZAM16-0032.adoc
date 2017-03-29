@@ -5,7 +5,7 @@ Ukázka záměru pro objednávku.
 === Hlavička záměru (vše povinné)
 
 |===
-| Evidenční číslo | ZAM16 0032
+| Evidenční číslo | ZAM16-0032
 | Název záměru | Podpora personálního SW Avensio
 | Vymezení předmětu | Bližší popis záměru
 | Důvod zadání | odůvodnění kvůli schválení
@@ -31,3 +31,7 @@ Předpokládaný termín dokončení:  2019-12-31
 |===
 
 **Přílohy:**
+Etapa 1
+<<dokument-vzor-zamer-hlavicka-ZAM16-0032.adoc#,Etapa 2>>
+Etapa 3
+Etapa 4
