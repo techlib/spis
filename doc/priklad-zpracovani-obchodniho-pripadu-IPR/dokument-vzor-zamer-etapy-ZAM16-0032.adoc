@@ -12,7 +12,7 @@ Rozšiřující část záměru.
 | Předpokládaná hodnota bez DPH | 36 750
 | Předpokládaná hodnota s DPH | 44 468
 | Garant | Makovec Lukáš
-| Dodavatel (IČ) | <<dokument-vzor-dodavatel.adoc#,ECOMMA s.r.o.>> 
+| Dodavatel | <<dokument-vzor-dodavatel.adoc#,ECOMMA s.r.o.>> 
 |===
 
 |===
