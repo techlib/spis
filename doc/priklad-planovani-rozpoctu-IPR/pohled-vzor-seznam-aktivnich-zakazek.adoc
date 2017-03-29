@@ -1,5 +1,7 @@
 == Aktivní zakázky
 
+Aktivní zakázky jsou zakázky běžící (ZAK), nebo se schváleným záměrem (ZAM).
+
 [cols="<,<,<,<,<,>,>,>,>,>,>,>", options="header"]
 |===
 | Evidenční číslo
