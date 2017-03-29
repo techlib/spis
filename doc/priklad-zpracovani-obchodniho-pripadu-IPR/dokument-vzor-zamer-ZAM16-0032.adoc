@@ -9,7 +9,6 @@ Ukázka záměru pro objednávku.
 | Název záměru | Podpora personálního SW Avensio
 | Vymezení předmětu | Bližší popis záměru
 | Důvod zadání | odůvodnění kvůli schválení
-| Další poznámka gestora | doprovodné informace
 | Druh finančních prostředků | Provoz
 | Způsob zadání zakázky | Objednávka
 | Předpokládaná hodnota bez DPH | 246 641
@@ -27,8 +26,17 @@ Termín zahájení záměru: | 2015-01-22
 Předpokládaný termín dokončení:  2019-12-31
 | Vytvořeno:	| 2015-01-22 (od Lukáš Makovec)	
 | Změněno:	| 2015-03-20 (od Jiří Čtyroký)
-| Poznámka:	| Doplnění poznámky 
+| Poznámka:	| Doplnění typu čerpání rozpočtu
+| Stav:	| Kolečko
+| Termín schválení záměru: | 2015-12-15
 |===
+
+=== Doplňující údaje (nepovinné)
+| Další poznámka gestora | doprovodné informace
+| Smlouva je na dobu neurčitou | [check]
+| Podmínky fakturace | Akceptační protokol
+| Text storna záměru | Došly peníze
+
 
 === Etapy záměru
 
