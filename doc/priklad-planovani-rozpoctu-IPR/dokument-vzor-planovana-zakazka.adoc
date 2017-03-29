@@ -1,20 +1,11 @@
 == Plánovaná zakázka
 
-|== Plánovaná zakázka
-
-[cols="<,<,<,>,>", options="header"]
 |===
-| Název zakázky
-| Sekce
-| Druh finančních prostředků
-| Plán ROK bez DPH
-| Plán ROK s DPH
-
-| Pořízení drobného SW a HW
-| SPI
-| E
-| 661 157
-| 800 000
+| Název zakázky | Pořízení drobného HW a SW
+| Sekce | SPI
+| Druh finančních prostředků | E 
+| Plán ROK bez DPH | 661 157
+| Plán ROK s DPH | 800 000
 |===
 
 |===
@@ -22,3 +13,5 @@
 | Změněno:					| 
 | Poznámka:					| 
 |===
+
+**Přílohy**
