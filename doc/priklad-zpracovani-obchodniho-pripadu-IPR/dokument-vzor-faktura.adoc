@@ -1,0 +1,31 @@
+== Faktura
+
+=== Základní informace
+|===
+| Evidenční číslo | FA2016-0108
+| Variabilní symbol | 1201403897
+| IČO dodavatele | 63667312
+| Dodavatel | ECOMMA s.r.o.
+| Zdanitelné plnění | 
+| Datum splatnosti | 
+| Zálohová faktura | [check]
+| Částka s DPH | 
+| Částka v cizí měně | 
+| Měna | 
+| Text storna faktury |
+|===
+
+Datum přijetí faktury: 2016-02-05
+
+Zpracoval:
+
+Schválil:
+
+=== Doplňkové informace z dalších částí SpIS a ext. systémů
+|===
+| Datum úhrady | 
+| Číslo účetního dokladu |  
+| Evid. č. zakázky| ZAK16-0032
+|===
+
+**Příloha**
