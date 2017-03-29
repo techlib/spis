@@ -1,0 +1,17 @@
+== Vzor dokumentu aktivní zakázky
+
+Výběr položek o zakázce přebraných pro účely rozpočtu ze seznamu aktivních zakázek.
+
+|===
+| Evidenční číslo | ZAK15-0074
+| Název zakázky | Pořízení licencí ESRI
+| Sekce | SPI
+| Druh finančních prostředků | E
+| Typ rozpočtu | FE
+| Plán. výdaj I Q | 0
+| Plán. výdaj II Q | 0
+| Plán. výdaj III Q | 0
+| Plán. výdaj IV Q | 5 400 000
+| Plán ROK | 5 400 000
+| Celková částka bez DPH | 1 125 000
+| Celková částka s DPH | 15 881 250
