@@ -2,25 +2,38 @@
 
 === Dle sekce a druhu financí
 
-[cols="<,<,>,>", options="header"]
+[cols="<,<,>", options="header"]
 |===
 | Sekce
 | Druh finančních prostředků
 | Plán ROK bez DPH
-| Plán ROK s DPH
+
+| INFR
+| KN
+| 8 700 255
+
+| INFR
+| KU
+| 4 499 745
+
+| RED
+| C
+| 2 500 000
+
+| RED
+| E
+| 1 700 000
 
 | SPI
 | E
 | 50 000 000
-| 60 500 000
 
 | SPI
 | KU
 | 15 000 000
-| 18 150 000
 |===
 
-=== Dle druhu financí a čtvrtletí
+=== Dle druhu financí a čtvrtletí + souhrny
 
 [cols="<,>,>,>,>,>,>", options="header"]
 |===
@@ -32,13 +45,21 @@
 | Plán ROK bez DPH
 | Plán ROK s DPH
 
-| **Provoz**
+| **Provoz - E**
 | 2 500 000
 | 50 000 000
 | 2 500 000
 | 1 000 000
 | 56 000 000 
 | 67 760 000
+
+| **Provoz - C**
+| 6 500
+| 280 000
+| 0
+| 2 200 000
+| 2 486 500 
+| 3 008 665
 
 | **Investice**
 | 0
@@ -65,10 +86,10 @@
 | -968 000
 
 | **Celkem**
-| **2 680 000**
-| **50 500 000**
+| **2 686 500**
+| **50 780 000**
 | **2 505 000**
-| **12 700 000**
-| **68 385 000**
-| **82 745 850**
+| **14 900 000**
+| **70 871 000**
+| **85 754 515**
 |===
