@@ -1,8 +1,57 @@
 == Aktivní zakázky
 
+[cols="<,<,<,<,<,>,>,>,>,>,>,>", options="header"]
 |===
-|Aktivní zakázka | částka 
-| | 
-| | 
-| | 
-|Aktivní zakázky celkem | 
+| Evidenční číslo
+| Název zakázky
+| Sekce
+| Druh finančních prostředků
+| Typ rozpočtu
+| Plán. výdaj I Q
+| Plán. výdaj II Q
+| Plán. výdaj III Q
+| Plán. výdaj IV Q
+| Plán ROK
+| Částka bez DPH
+| Částka s DPH
+
+| ZAM16-0032
+| Podpora personálního SW
+| SPI
+| E
+| 
+| 0
+| 0
+| 0
+| 75 000
+| 75 000
+| 0
+| 0
+
+| ZAK15-0308
+| Nákup mapových podkladů ČÚZK
+| SPI
+| E
+| JF
+| 30 000
+| 0
+| 0
+| 0
+| 30 000
+| 0
+| 0
+
+| ZAK15-0074
+| Pořízení licencí ESRI
+| SPI
+| E
+| FE
+| 0
+| 0
+| 0
+| 5 400 000
+| 5 400 000
+| 13 125 000
+| 15 881 250
+
+|===
