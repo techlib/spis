@@ -1,8 +1,0 @@
-== Planované zakázky
-
-|===
-|Plánovaná zakázka | částka 
-| | 
-| | 
-| | 
-|Plánované zakázky celkem | 
