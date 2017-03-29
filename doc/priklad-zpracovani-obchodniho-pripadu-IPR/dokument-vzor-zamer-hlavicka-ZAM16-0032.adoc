@@ -1,0 +1,33 @@
+== Záměr
+
+Ukázka záměru pro objednávku.
+
+=== Hlavička záměru (vše povinné)
+
+|===
+| Evidenční číslo | ZAM16 0032
+| Název záměru | Podpora personálního SW Avensio
+| Vymezení předmětu | Bližší popis záměru
+| Důvod zadání | odůvodnění kvůli schválení
+| Další poznámka gestora | doprovodné informace
+| Druh finančních prostředků | Provoz
+| Způsob zadání zakázky | Objednávka
+| Předpokládaná hodnota bez DPH | 246 641
+| Předpokládaná hodnota s DPH | 298 436
+| Typ čerpání rozpočtu | CF
+| Garant | Makovec Lukáš
+| Podpis garanta zakázky	| [check]
+| Souhlas odpovědného útvaru	| [check]
+| Schválení nadřízeného útvaru	| 
+| Schválení nadřízeného orgánu	|
+|===
+
+|===
+Termín zahájení záměru: | 2015-01-22
+Předpokládaný termín dokončení:  2019-12-31
+| Vytvořeno:	| 2015-01-22 (od Lukáš Makovec)	
+| Změněno:	| 2015-03-20 (od Jiří Čtyroký)
+| Poznámka:	| Doplnění poznámky 
+|===
+
+**Přílohy:**
