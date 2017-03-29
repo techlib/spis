@@ -1,0 +1,54 @@
+== Tisková sestava výpisu rozpočtu
+
+Plán a realizace čerpání financí z rozpočtu v % - přehled aktuálních naplánovaných a čerpaných financí. Ukázka s filtrem dle jedné sekce (SPI).
+
+[cols="<,<,>,>,>,>,>", options="header"]
+|===
+| Sekce
+| Druh finančních prostředků
+| Plánované 
+| % z rozpočtu
+| Realizace
+| % z rozpočtu
+| Rozpočet
+
+| SPI
+| Provoz
+| 26 890 193
+| 62%
+| 10 057 381
+| 23%
+| 43 340 000
+
+| SPI
+| Investice
+| 2 420 000
+| 
+| 0
+| 
+| 
+
+| SPI
+| Kooperace
+| 
+| %
+| 0
+| %
+| 
+
+| SPI
+| Kooperace
+| 6 811 853
+| 47%
+| 9680
+| 0%
+| 14 600 000
+
+| **SPI**
+| **Celkem za výpis**
+| **36 122 046**
+| **61%**
+| **10 067 061**
+| **17%**
+| **57 940 000**
+|===
