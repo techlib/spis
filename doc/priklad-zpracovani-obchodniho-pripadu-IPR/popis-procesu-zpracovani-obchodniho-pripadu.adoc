@@ -1,0 +1,10 @@
+== Popis zpracování obchodního případu na IPR
+
+1. Pro každou chystanou **Veřejnou zakázku** je jejím garantem (nebo jinou pověřenou osobou) vytvořen dokument **Záměr**, který obsahuje základní údaje o plánované zakázce. **Záměr** obsahuje povinné a nepovinné údaje.
+2. **Záměr** obsahující minimálně všechny povinné údaje, je přeposlán ke schválení vedoucímu příslušné sekce (schvaluje věcnou stránku veřejné zakázky). Dále je schválen pověřenou osobou ze Sekce právní a ekonomické (dále SPE) a ředitelem IPR.
+3. Po schválení povinného základu záměru garant doplní do záměru doplňující informace.
+4. Kompletní dokument **Záměr** znovu schvaluje vedoucí příslušné sekce.
+5. Po schválení kompletního záměru je dokument uzamčen pro další úpravy a předán v rámci worklow do SPE. Zde je plánovaná částka alokována v **Rozpočtu** a z dokumentu *Záměr* je vytvořen dokument *Zakázka*.
+6. SPE zpracuje ve spolupráci s garantem veškeré nutné dokumenty pro vypsání zakázky. Seznam a typ dokumentů se liší dle způsobu vypsání zakázky. Jedná se o **Smlouvu**, **Objadnávku**, **Výzvu** atd.
+7. Po výběru dodavatele a podpisu smlouvy je tato přiložena k **Zakázce** ve SpIS. Ze smlouvy jsou k **Zakázce** převzaty vybrané údaje -  závazné termíny pro plnění jednotlivých etap, podmínky akceptace a fakturace. V rámci jednotlivých etap zakázky jsou sledovány skutečně vynaložené prostředky.
+8. **Faktura**. V okamžiku přijetí jakékoli faktury k dané **Zakázce** je tato připojena k zakázce a je proveden aktualizace čerpání skutečných financí. Taktéž při ukončení jednotlivých etap pověřený pracovník SPE připojuje k zakázce **Předávací protokol** a **Akceptační protokol** až do ukončení plnění veřejné zakázky.
