@@ -1,0 +1,8 @@
+== Popis procesu plánování rozpočtu na IPR
+
+1. Pro každý **Výdaj**, který má být zahrnut do plánovaného rozpočtu, je vypracován samostatný **Dokument**, který poskytuje veškeré potřebné údaje pro registraci **Výdaje**.
+2. Jednotlivé **Výdaje** jsou posléze dohledatelné skrze přednastavené **Pohledy** (_Seznam smluv_ a _Seznam plánovaných zakázek_), které slouží jako podklady pro přípravu návrhu rozpočtu sekce a jejích kanceláří.
+3. Z těchto **Pohledů** je následně vytvořen další nadřazený **Pohled** (případně více různých **Pohledů**, je-li to žádoucí), který je exportován do **Dokumentu** _Návrh dílčího rozpočtu_, který sestavuje vedoucí sekce (nebo k tomu pověřená osoba) žádající o registraci rozpočtu.
+4. V **Případu** _Příprava rozpočtu_ se shromažďují _Návrhy dílčího rozpočtu_ od vedoucích jednotlivých sekcí (nebo k tomu pověřených osob), které si následně převezme ekonom organizace (rozpočtář).
+5. Převzaté _Návrhy dílčího rozpočtu_ ekonom organizace (rozpočtář) zkoriguje a upraví v **Dokumentu** _Rozpočet_.
+6. **Dokument** _Rozpočet_ je předán ke schválení.
