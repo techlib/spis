@@ -1,6 +1,6 @@
 == Návrh dílčího rozpočtu
 
-[cols="<,<,<,>,>,<,<", options="header"]
+[cols="<,<,<,>,>,<", options="header"]
 |===
 | Evidenční číslo
 | Plánovaný výdaj
@@ -8,23 +8,20 @@
 | Částka bez DPH
 | Částka s DPH
 | Sekce
-| Kancelář
 
-| 101
-| Něco IT
-| investice
-| 1 000 000
-| 1 210 000
+| ZAK15-0074
+| <<dokument-vzor-aktivni-zakazka-ZAK15-0074.adoc#,Pořízení licencí ESRI>>
+| E
+| 4 266 000
+| 5 400 000
 | SPI
-| KII
 
-| 102
-| Ortofoto
-| nevím
-| 100 000
-| 121 000
+|
+| <<dokument-vzor-planovana-zakazka.adoc#,Pořízení drobného SW a HW>>
+| E
+| 661 157
+| 800 000
 | SPI
-| KPD
 |===
 
 [cols="<3,>2,>2", options="header"]
@@ -34,6 +31,6 @@
 | Částka s DPH
 
 | Plánované výdaje celkem
-| 1 100 000
-| 1 331 000
+| 4 947 157
+| 6 400 000
 |===
