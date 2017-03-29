@@ -1,0 +1,25 @@
+== Záměr
+Rozšiřující část záměru.
+
+=== Doplnění položek záměru (rozpis etap)
+
+|===
+| Číslo etapy | 2
+| Evidenční číslo záměru | <<dokument-vzor-zamer-hlavicka-ZAM16-0032.adoc#,ZAM16-0032>>
+| Název etapy | Změnové požadavky atd. Avensio 2016
+| Druh finančních prostředků | Provoz
+| Způsob zadání zakázky | Objednávka
+| Předpokládaná hodnota bez DPH | 36 750
+| Předpokládaná hodnota s DPH | 44 468
+| Garant | Makovec Lukáš
+| Dodavatel (IČ) | 63667312 
+|===
+
+|===
+| Předpokládaný termín dokončení etapy: | 2016-12-31
+| Vytvořeno:	| 2015-01-22 (od Lukáš Makovec)	
+| Změněno:	| 2015-03-20 (od Lukáš Makovec)
+| Poznámka:	| Upřesnění ceny
+|===
+
+**Přílohy:**
