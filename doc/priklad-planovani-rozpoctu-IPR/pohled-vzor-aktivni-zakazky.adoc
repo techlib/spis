@@ -12,8 +12,8 @@
 | Plán. výdaj III Q
 | Plán. výdaj IV Q
 | Plán ROK
-| Částka bez DPH
-| Částka s DPH
+| Celková částka bez DPH
+| Celková částka s DPH
 
 | ZAM16-0032
 | Podpora personálního SW
