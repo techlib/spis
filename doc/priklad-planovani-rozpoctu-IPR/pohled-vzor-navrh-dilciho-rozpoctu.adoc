@@ -1,9 +1,39 @@
 == Návrh dílčího rozpočtu
 
+[cols="<,<,<,>,>,<,<", options="header"]
 |===
-|Plánovaná VZ | částka | částka (s DPH) | zdroj financování | položka
-|Evýdej |  | 2500000 | služby | ZAK 15-0009
-|Položka 2 |  | 100000 |  | ZAK 16-0010
-|Položka 3 |  | 140000 |  | ZAK 17-0001
-|Plánované výdaje celkem | | 2740000 | |
+| Evidenční číslo
+| Plánovaný výdaj
+| Druh finančních prostředků
+| Částka bez DPH
+| Částka s DPH
+| Sekce
+| Kancelář
 
+| 101
+| Něco IT
+| investice
+| 1 000 000
+| 1 210 000
+| SPI
+| KII
+
+| 102
+| Ortofoto
+| nevím
+| 100 000
+| 121 000
+| SPI
+| KPD
+|===
+
+[cols="<3,>2,>2", options="header"]
+|===
+| Návrh rozpočtu
+| Částka bez DPH
+| Částka s DPH
+
+| Plánované výdaje celkem
+| 1 100 000
+| 1 331 000
+|===
