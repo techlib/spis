@@ -1,0 +1,12 @@
+== Odůvodnění výběru firem
+
+Položky v tiskopisu odůvodnění výběru dodavatele/dodavatelů.
+
+|===
+| Název firmy | 
+| IČO | 
+| Adresa | 
+| Odůvodnění výběru | 
+| Reference pro IPR Praha | 
+| Reference – ostatní | 
+|===
