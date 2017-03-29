@@ -30,8 +30,72 @@ Předpokládaný termín dokončení:  2019-12-31
 | Poznámka:	| Doplnění poznámky 
 |===
 
+=== Etapy záměru
+
+[cols="<,<,<,<,>,>", options="header"]
+|===
+| Číslo etapy
+| Název etapy
+| Dodavatel
+| Termín dokončení
+| Částka bez DPH
+| Částka s DPH
+
+| 1
+| Podpora Avensio 2016
+| ECOMMA s.r.o.
+| 2016-12-31
+| 24 910
+| 30 141
+
+| 2
+| <<dokument-vzor-zamer-etapy-ZAM16-0032.adoc#,Změnové požadavky atd. Avensio 2016>>
+| ECOMMA s.r.o.
+| 2016-12-31
+| 36 750
+| 44 468
+
+| 3
+| Podpora Avensio 2017
+| ECOMMA s.r.o.
+| 2017-12-31
+| 24 910
+| 30 141
+
+| 4
+| Změnové požadavky atd. Avensio 2017
+| ECOMMA s.r.o.
+| 2017-12-31
+| 36 750
+| 44 468
+
+| 5
+| Podpora Avensio 2018
+| ECOMMA s.r.o.
+| 2018-12-31
+| 24 910
+| 30 141
+
+| 6
+| Změnové požadavky atd. Avensio 2018
+| ECOMMA s.r.o.
+| 2018-12-31
+| 36 750
+| 44 468
+
+| 7
+| Podpora Avensio 2019
+| ECOMMA s.r.o.
+| 2019-12-31
+| 24 910
+| 30 141
+
+| 8
+| Změnové požadavky atd. Avensio 2019
+| ECOMMA s.r.o.
+| 2019-12-31
+| 36 750
+| 44 468
+|===
+
 **Přílohy:**
-Etapa 1
-<<dokument-vzor-zamer-hlavicka-ZAM16-0032.adoc#,Etapa 2>>
-Etapa 3
-Etapa 4
