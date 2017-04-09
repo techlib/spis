@@ -1,0 +1,72 @@
+== Zakázka ZAK15-0342
+
+|===
+| Evidenční číslo zakázky| ZAK15-0342
+| Evidenční číslo záměru | <<dokument-vzor-zamer-ZAM15-0342.adoc#,ZAM15-0342>>
+| Identifikátor veřejné zakázky | 
+| Název zakázky | Výměna akumulátorů v UPS
+| Předmět zakázky | Bližší popis záměru
+| Poznámka | Prosím o objednávku u UPS
+| Druh ZŘ | 
+| Konečný termín zakázky | 2015-12-20
+| Zakázka na dobu neurčitou	| [check]
+| Druh finančních prostředků | Provoz
+| Způsob zadání zakázky | Objednávka
+| Typ čerpání rozpočtu | JF
+| Celková částka bez DPH | 64 540
+| Celková částka s DPH | 78 093
+| Částka v cizí měně | [check]
+| Měna | CZK
+| Plnění zakázky nebo její části je mimo fakturaci | [check]
+| Garant | Makovec Lukáš
+| Sekce | SPI
+| Vyřizuje	| Raffayová
+| Text storna zakázky	| 
+|===
+
+|===
+| Vytvořeno:	| 2015-12-01 (od Lukáš Makovec)	
+| Datum zahájení administrace: | 2015-12-01
+| Datum ukončení zakázky: | 2015-12-31
+| Datum podpisu smlouvy: | 2015-12-10
+| Poslední změna:	| 2015-12-10 (od Raffayová)
+| Poznámka ke změně:	| 
+| Stav:	| odeslána objednávka
+|===
+
+=== Etapy zakázky
+
+[cols="<,<,<,<,>,>,<,<,<,<,<,<,<", options="header"]
+|===
+| Číslo etapy
+| Název etapy
+| Dodavatel
+| Termín fakturace
+| Částka bez DPH
+| Částka s DPH
+| DPH
+| Měna
+| Druh financí
+| Fakturace + pokladna
+| Neuhrazená fakturace
+| Počet faktur
+| Počet pokladních dokladů
+
+| 1
+| <<dokument-vzor-zakazka-etapa-ZAK15-0342.adoc#,Výměna akumulátorů v UPS>>
+| UPS Servis s.r.o.
+| 2015-12-20
+| 64 540
+| 78 093
+| 21
+| CZK
+| E
+| 0
+| 78 093
+| 0
+| 1
+| 0
+
+|===
+
+**Přílohy:**
