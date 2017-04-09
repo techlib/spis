@@ -1,0 +1,60 @@
+== Záměr ZAM15-0342
+
+=== Hlavička záměru (vše povinné)
+
+|===
+| Evidenční číslo | ZAM15-0342
+| Název záměru | Výměna akumulátorů v UPS
+| Vymezení předmětu | Bližší popis záměru
+| Důvod zadání | odůvodnění kvůli schválení
+| Druh finančních prostředků | Provoz
+| Způsob zadání zakázky | Objednávka
+| Předpokládaná hodnota bez DPH | 64 540
+| Předpokládaná hodnota s DPH | 78 093
+| Typ čerpání rozpočtu | JF
+| Garant | Makovec Lukáš
+| Podpis garanta zakázky	| [check]
+| Souhlas odpovědného útvaru	| [check]
+| Schválení nadřízeného útvaru	| 
+| Schválení nadřízeného orgánu	|
+|===
+
+|===
+Termín zahájení záměru: | 2015-12-01
+Předpokládaný termín dokončení:  2015-12-31
+| Vytvořeno:	| 2015-12-01 (od Lukáš Makovec)	
+| Změněno:	| 2015-12-10 (od Raffayová)
+| Poznámka:	| 
+| Stav:	| odeslána objednávka
+| Termín schválení záměru: | 2015-12-09
+|===
+
+=== Doplňující údaje (nepovinné)
+|===
+| Další poznámka gestora | doprovodné informace
+| Smlouva je na dobu neurčitou | [check]
+| Podmínky fakturace | Akceptační protokol
+| Text storna záměru | 
+|===
+
+=== Etapy záměru
+
+[cols="<,<,<,<,>,>", options="header"]
+|===
+| Číslo etapy
+| Název etapy
+| Dodavatel
+| Termín dokončení
+| Částka bez DPH
+| Částka s DPH
+
+| 1
+| Výměna akumulátorů v UPS
+| UPS Servis s.r.o.
+| 2015-12-20
+| 64 540
+| 78 093
+
+|===
+
+**Přílohy:**
