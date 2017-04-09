@@ -1,0 +1,63 @@
+== Akceptační protokol k zakázce
+
+=== Zakázka
+|===
+| Název zakázky: |
+| Číslo smlouvy/zakázky: |
+|===
+
+=== Smluvní strany
+=== Zadavatel
+|===
+| Název, vč. IČ: | Institut plánování a rozvoje hlavního města Prahy, příspěvková organizace,  IČ: 70883858
+| Adresa: | Vyšehradská 57/2077, 128 00 Praha 2 – Nové Město
+| Kontaktní osoba vč. funkce (uvedená ve smlouvě) : |
+|===
+=== Dodavatel
+|===
+| Název, vč. IČ: |UPS Servis s.r.o.,  IČ: 625773328
+| Adresa: | 
+| Kontaktní osoba vč. funkce (uvedená ve smlouvě) : | 
+|===
+
+=== Závěr akceptace
+|===
+|  [CHECK] | Při akceptaci nebyly zjištěny závady.
+|  [CHECK] | Při akceptaci byly zjištěny závady, jejichž seznam a popis vč. termínu odstranění je dále uveden. Tyto závady NEBRÁNÍ akceptaci
+
+|  [CHECK] | Při akceptaci byly zjištěny závady, jejichž seznam a popis vč. termínu odstranění je dále uveden.Tyto závady BRÁNÍ akceptaci
+|===
+
+=== Schvalovací tabulka
+[cols="<,<,<,<", options="header"]
+|===
+|Zadavatel
+| Jméno a příjmení
+| Datum
+| Podpis
+
+|Kontaktní osoba: 
+| Lukáš Makovec
+| 2015-12-20
+| 
+|===
+[cols="<,<,<,<", options="header"]
+|===
+|Dodavatel
+| Jméno a příjmení
+| Datum
+| Podpis
+
+|Kontaktní osoba: 
+| 
+| 
+| 
+|===
+
+|===
+| Vytvořeno:				| 
+| Změněno:					| 
+| Poznámka:					| 
+|===
+
+**Přílohy:**
