@@ -14,7 +14,7 @@
 | Vyřizuje
 | Dokumenty
 
-| ZAM16-0032
+| <<dokument-vzor-zamer-ZAM16-0032.adoc#,ZAM16-0032>>
 | Podpora personálního SW Avensio
 | objednávka
 | 31.12.2019
