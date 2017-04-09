@@ -3,13 +3,13 @@
 [cols="<,<,<,<,<,>,>,<,<,<,<", options="header"]
 |===
 | Evidenční číslo záměru
-| Název
+| Název záměru
 | Způsob zadání
 | Termín dokončení
 | Částka bez DPH
 | Částka s DPH
-| Kancelář
-| Gestor
+| Sekce
+| Garant
 | Datum schválení
 | Vyřizuje
 | Dokumenty
