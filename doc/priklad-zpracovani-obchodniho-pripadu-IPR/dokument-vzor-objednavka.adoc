@@ -1,0 +1,15 @@
+== Objednávka
+
+=== Hlavička
+Kontaktní údaje IPR
+
+Adresa dodavatele
+
+=== Objednávka
+|===
+| Č. objednávky | 
+| Název zakázky | 
+|Text objednávky |
+| Datum | 
+| Podpis |  
+|===
