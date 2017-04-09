@@ -1,0 +1,69 @@
+== Přehledka seznam zakázek
+
+[cols="<,<,>,>,<,>,>,>,>,>,<,<,<,<,<,<,<,<,<", options="header"]
+|===
+| Evidenční číslo zakázky
+| Název zakázky
+| Částka bez DPH
+| Částka s DPH
+| Čerpání rozpočtu
+| Fakturace + pokladna
+| Neuhrazená fakturace
+| Počet faktur
+| Počet pokladních dokladů
+| Počet etap
+| Datum schválení záměru
+| Datum zahájení administrace
+| Podpis smlouvy
+| Účinnost smlouvy
+| Sekce
+| Garant
+| Vyřizuje
+| Datum ukončení
+| Dokumenty
+
+| <<dokument-vzor-zakazka-ZAK15-0342.adoc#,ZAK15-0342>>
+| Výměna akumulátorů v UPS
+| 64 540
+| 78 093
+| JF
+| 78 093
+|
+| 1
+| 1
+| 1
+| 2015-12-01
+| 2015-12-01
+| 2015-12-10
+| 2015-12-10
+| SPI
+| Makovec
+| Raffayová
+| 2015-12-20
+| Dokumenty
+
+| ZAK16_0001
+| Nákup papíru a kanc. potřeb
+| 950 000
+| 1 149 500
+| CF
+| 0
+| 0
+| 0
+| 0
+| 3
+| 2016-01-18
+| 2016-01-21
+| 
+| 2016-12-31
+| SPI
+| Makovec
+| Minksová
+| 
+| Dokumenty
+
+|===
+
+Tisk
+
+Export do XLS
