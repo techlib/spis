@@ -13,3 +13,11 @@ Adresa dodavatele
 | Datum | 
 | Podpis |  
 |===
+
+|===
+| Vytvořeno:					|
+| Změněno:					| 
+| Poznámka:					| 
+|===
+
+**Přílohy:**
