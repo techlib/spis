@@ -1,0 +1,33 @@
+== Zakázka ZAK15-0342 - etapa
+
+|===
+| Číslo etapy | 1
+| Název etapy | Výměna akumulátorů v UPS
+| Termín dokončení etapy | 2015-12-20
+| Předmět etapy | 
+| Kontaktní osoba | 
+| Způsob předání | Akceptační protokol
+| Druh finančních prostředků | Provoz
+| Způsob zadání | Objednávka
+| Plátce DPH | [check]
+| Částka bez DPH | 64 540
+| Částka s DPH | 78 093
+| Text k ceně objednávky| 
+| Částka v cizí měně | [check]
+| Měna | CZK
+| Položka nemá vliv na rozpočet | [check]
+| Plnění zakázky nebo její části je mimo fakturaci | [check]
+| Garant | Makovec Lukáš
+| Sekce | SPI
+| Vyřizuje	| Raffayová
+|===
+
+|===
+| Datum přijetí podepsaného dokumentu: | 2015-12-20
+| Datum podpisu smlouvy: | 2015-12-10
+| Poslední změna:	| 2015-12-20 (od Makovec)
+| Poznámka ke změně:	| 
+| Stav:	| podepsán akceptační protokol
+|===
+
+**Přílohy:**
