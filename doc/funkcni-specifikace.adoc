@@ -151,7 +151,7 @@ Pokud vazbu nebude možné z technických nebo jiných důvodů realizovat v pln
 
 === Otevřená data
 
-Integrační můstek automaticky převádí a vkládá data z vybraných datových zdrojů do systému CKAN. To, o které datové zdroje se jedná a jaké parametry jsou jim předány je upraveno v souboru ve formátu kompatibilním s popisem pohledu.
+Integrační můstek automaticky převádí a vkládá data z vybraných datových zdrojů do systému CKAN. Upřesnění datových zdrojů a jejich parametrů je upraveno v souboru ve formátu kompatibilním s popisem pohledu.
 
 === Registr smluv
 
@@ -189,7 +189,7 @@ Schéma zpracování obchodního případu je v příloze 2, schéma zpracován
 
 === Evidence obchodních případů
 
-Systém bude umožňovat vedení evidence obchodních případů, přes kterou bude možné dohledat veškeré dokumenty související s daným případem. Mezi tyto dokumenty se řadí zejména záměry (formuláře záměrů, přípravy finančních operací, interní sdělení, investiční záměry), dokumentace související s veřejnými zakázkami (zadávací dokumentace, smlouvy, výzvy k podání nabídek, komunikace s uchazeči, zápisy z výběrových řízení) a fakturace (faktury či jiné doklady a podklady k proplacení jako například akceptační protokoly a další).
+Systém bude umožňovat vedení evidence obchodních případů, přes kterou bude možné dohledat veškeré dokumenty související s daným případem. Mezi tyto dokumenty se řadí zejména záměry (formuláře záměrů, přípravy finančních operací, investiční záměry), dokumentace související s veřejnými zakázkami (zadávací dokumentace, smlouvy, výzvy k podání nabídek, komunikace s uchazeči, zápisy z výběrových řízení) a fakturace (faktury či jiné doklady a podklady k proplacení jako například akceptační protokoly a další).
 
 ==== Evidence záměrů
 
@@ -197,7 +197,7 @@ Záměr je inicializační dokument k obchodnímu případu, kde je definováno,
 
 Záměr je po celou dobu schvalovacího procesu dostupný pro editace a připomínkování. V průběhu schvalování záměru musí mít každý člen schvalovací procedury možnost záměr připomínkovat. Zároveň musí být záměr dostupný i v původních verzích v historii záměru.
 
-Každá změna v údaji záměru a akce v rámci jeho schvalování bude uložena v logu a dostupná oprávněným uživatelům. Změny v záměru budou jasně odlišené od původní verze včetně autora změny.
+Každá změna v údaji záměru a akce v rámci jeho schvalování bude uložena v předchozích verzích a revizích a dostupná oprávněným uživatelům. Změny v záměru budou jasně odlišené od původní verze včetně autora změny.
 
 Schvalování záměru musí proběhnout plně elektronicky s prokazatelnou a unikátní akceptací definovanými pracovníky. Schvalování záměru musí probíhat včetně všech souvisejících příloh k záměru. Na vybrané změny budou uživatelé upozorněni notifikací.
 
@@ -213,9 +213,9 @@ Detailní specifikace procesu pro jednotlivé organizace bude provedena v rámc
 
 Evidence VZ je stěžejní agendou obchodního a právního oddělení organizace. Jsou zde evidovány všechny veřejné zakázky, od zakázek malého rozsahu až po nadlimitní zakázky. Evidence VZ je souhrnný přehled všeho, co je k zakázce evidováno, o vynaložené částce, termínech plnění, stavu jednotlivých částí (faktura, smlouva,…) ve všech etapách realizace. Informace o zakázce jsou přebírány ze záměru, ze kterého zakázka vznikla. Zakázka je postupně doplňována o další informace a dokumenty. Součástí každé veřejné zakázky jsou dále faktury (spárované z evidence faktur), objednávka, smlouva, vnitřní sdělení a další potřebné dokumenty a přílohy. Z výše uvedených dokumentů, které jsou přiřazeny buď ze související agendy či nahrány jako soubory, se k veřejné zakázce evidují vybrané informace přímo v IS.
 
-Po schválení záměru se z něj stává veřejná zakázka, kterou obvykle po ekonomické a právní stránce zpracuje obchodní či právní oddělení organizace a společně s garantem zakázky připraví všechny potřebné dokumenty (smlouvu, objednávku či výzvu), vyvěsí výzvu na web organizace a další příslušná místa. V průběhu přípravy veřejné zakázky jsou do IS nahrávány příslušné dokumenty a měněn stav zakázky. Všechny dokumenty musí být odsouhlaseny všemi oprávněnými osobami. Po uběhnutí zákonem stanovených lhůt je vybrán dodavatel a podepsána s ním smlouva. Po podpisu smlouvy jsou do IS oprávněnou osobou doplněny závazné termíny pro plnění jednotlivých etap, podmínky akceptace a fakturace a finanční částky vyplývající ze smlouvy či zákona. Smlouva je nahrána do IS, ze kterého je taktéž možné jí odeslat do E-spisu, nahrát na web zadavatele či veřejný rejstřík smluv. V rámci jednotlivých etap VZ jsou sledovány limity vynaložených prostředků a skutečně vynaložených prostředků. V okamžiku přijetí jakékoli faktury (zaevidované v IS v modulu evidence faktur) k dané zakázce je tato připojena k VZ a do etap jsou evidovány příslušné částky a termíny. Taktéž při ukončení jednotlivých etap pověřený pracovník připojuje k VZ předávací protokoly až do ukončení plnění veřejné zakázky.
+Po schválení záměru se z něj stává veřejná zakázka, kterou obvykle po ekonomické a právní stránce zpracuje obchodní či právní oddělení organizace a společně s garantem zakázky připraví všechny potřebné dokumenty (smlouvu, objednávku či výzvu), vyvěsí výzvu na web organizace a další příslušná místa. V průběhu přípravy veřejné zakázky jsou do IS nahrávány příslušné dokumenty a měněn stav zakázky. Všechny dokumenty musí být odsouhlaseny všemi oprávněnými osobami. Po uběhnutí zákonem stanovených lhůt je vybrán dodavatel a podepsána s ním smlouva. Po podpisu smlouvy jsou do IS oprávněnou osobou doplněny závazné termíny pro plnění jednotlivých etap, podmínky akceptace a fakturace a finanční částky vyplývající ze smlouvy či zákona. Smlouva je nahrána do IS, ze kterého je taktéž možné ji odeslat do E-spisu, nahrát na web zadavatele či veřejný rejstřík smluv. V rámci jednotlivých etap VZ jsou sledovány limity vynaložených prostředků a skutečně vynaložených prostředků. V okamžiku přijetí jakékoli faktury k dané zakázce je tato připojena k VZ a do etap jsou evidovány příslušné částky a termíny. Taktéž při ukončení jednotlivých etap pověřený pracovník připojuje k VZ předávací protokoly až do ukončení plnění veřejné zakázky.
 
-VZ je dostupná pro editace a připomínkování po celou dobu jejího trvání. Veškeré změny k zakázce jsou ukládány do logu změn a dostupné oprávněným uživatelům stejně jako v evidenci záměrů. Na vybrané změny budou vybraní uživatelé upozorňováni notifikací.
+VZ je dostupná pro editace a připomínkování po celou dobu jejího trvání. Veškeré změny k zakázce jsou ukládány v předchozích verzích a revizích a dostupné oprávněným uživatelům stejně jako v evidenci záměrů. Na vybrané změny budou vybraní uživatelé upozorňováni notifikací.
 
 Každá veřejná zakázka vychází ze záměru, z něhož převezme všechny informace o celku i o jednotlivých etapách zakázky, tyto informace mohou být následně upraveny dle hodnot ve smlouvě, pokud dojde ke změně. Ke každé VZ, případně jejím jednotlivým etapám jsou přiřazovány dokumenty (smlouva, faktury, předávací protokoly, interní sdělení atp.). Veřejná zakázka i její etapy budou obsahovat informace o termínech plnění, plánovaných a skutečně vynaložených finančních prostředcích. VZ bude označena volitelným štítkem, který bude sloužit k seskupování tematicky podobných zakázek. Tento štítek bude dostupný při plánování rozpočtu.
 
