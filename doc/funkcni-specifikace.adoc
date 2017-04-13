@@ -173,8 +173,6 @@ Dokumenty, které definují rámec obchodního případu, podléhají schvalovac
 
 Schvalovací proces bude definován pro každou organizaci samostatně dle jejích specifických požadavků. Tato kapitola popisuje obecné požadavky na možnosti nastavení pracovních postupů a obecný popis procesu realizace zakázky.
 
-=== Nastavení pracovních postupů
-
 V rámci implementační analýzy bude pro každou organizaci specifikován pracovní model pro každý typ dokumentu a uživatele. Administrátor systému bude mít oprávnění nastavovat změny v připravených procesech či nastavit nový proces včetně definice dotčených uživatelů, jejich povinností a práv, stejně tak i nastavení dokumentů, jejich stavů a možných akcí.
 
 === Obecný postup
@@ -183,19 +181,15 @@ Obchodní případ vzniká vytvořením záměru, kde obvykle garant či vedouc�
 
 Po podpisu smlouvy začíná realizace samotné zakázky. Zakázka může obsahovat několik etap, na jejichž konci je část zakázky vždy předána dodavatelem ke schválení. V rámci každé etapy probíhá obvykle také fakturace.
 
-Faktura je do systému vložena pracovníkem podatelny, její přiřazení ke konkrétní veřejné zakázce a schválení je však určeno dalším procesem.
+Faktura je do systému vložena pracovníkem podatelny, její přiřazení ke konkrétní veřejné zakázce a schválení je však určeno dalším procesem. Akceptace etap a fakturace se opakuje až do skončení trvání veřejné zakázky.
 
-Akceptace etap a fakturace se opakuje až do skončení trvání veřejné zakázky.
+IS bude po přihlášení prostřednictvím notifikací upozorňovat uživatele na dokumenty, u kterých se očekává jeho schválení či jiná součinnost pro jejich dokončení, případně změny u dokumentů, u kterých si uživatel nastavil sledování.
 
 Schéma zpracování obchodního případu je v příloze 2, schéma zpracování faktury v příloze 4.
 
-=== Schvalovací centrum
+=== Evidence obchodních případů
 
-IS bude obsahovat schvalovací centrum -- seznam položek ke schválení po přihlášení konkrétního uživatele. Položky ke schválení musí korespondovat s kompetencemi daného uživatele. Vybrané položky ve schvalovacím centru bude možné kromě schválení i okomentovat a elektronicky podepsat.
-
-Schvalování dokumentů bude umožňovat dynamické změny procesů na základě zodpovědností a kompetencí v rámci organizační struktury.
-
-=== Evidence záměrů
+==== Evidence záměrů
 
 Modul bude sloužit k vytvoření a evidenci záměrů. Záměr je inicializační dokument k obchodnímu případu, kde je definováno, co a za jakých okolností se navrhuje realizovat (specifikuje se předmět veřejné zakázky). Autor bude tvorbou proveden pomocí jednoduchého formuláře. Záměr prochází schvalovacím procesem, který je daný v rámci každé organizace, zároveň musí systém reflektovat případné změny v jejich vnitřním chodu.
 
@@ -213,70 +207,9 @@ Součástí formuláře bude i věcná nápověda k vyplňování a výběru ho
 
 Detailní specifikace procesu pro jednotlivé organizace bude provedena v rámci implementační analýzy.
 
-==== Návrh evidovaných informací o záměru
-
-* Název
-* Evidenční číslo
-* Vymezení předmětu VZ
-* Důvod zadání
-* Účel zajištění činnosti
-* Způsob zadání VZ
-* Předpokládaná hodnota (bez DPH i s DPH)
-* Druh finančních prostředků
-* Typ čerpání rozpočtu
-* Předpokládaný termín dokončení zakázky
-* Garant
-
-Metadata záměru
-
-* Datum vytvoření
-* Autor vytvoření
-* Datum poslední změny
-* Autor poslední změny
-
-Další
-
-* Poznámka garanta
-* Přílohy (včetně metadat o dokumentech -- datum nahrání, změny a autor)
-* Podmínky fakturace
-* Etapy záměru
-** Název
-** Částka bez DPH
-** Částka s DPH
-** Druh financí
-** Datum zahájení
-** Datum ukončení
-* Text storna záměru
-
-Informace spojené se schvalováním záměru
-
-* Stav schválení záměru (metadata o stavu v rámci workflow -- datum předání ke schválení, aktuální schvalovatel)
-* Zpracovatel/Vyřizuje
-* Datum schválení záměru
-
-==== Seznam záměrů
-
-Součástí modulu bude přehledný seznam všech záměrů v IS, přizpůsobený preferencím a právům konkrétního uživatele. V seznamu bude možné hledat, filtrovat a řadit záměry dle všech atributů či přednastavených rychlých filtrů (vlastní uživatelské nastavení).
-
-==== Funkce a kontroly modulu
-
-* Uložení či tisk rozpracované verze záměru
-* Tisk záměru (tiskárna, PDF)
-* Export a tisk seznamu záměrů (XLS, CSV, PDF)
-* Tiskové sestavy
-* Přidání komentáře či připomínky k položkám záměru i jeho etapám
-* Historie záměru -- odkaz do logu změn
-* Kontrola zadání duplicitního záznamu záměru či dodavatele
-* Kontrola dodržení finančních limitů dle druhu zakázky
-* Notifikace uživatelů při změně v záměru
-* Schválení (odeslání záměru ke schválení dalšímu uživateli v rámci workflow)
-* Uzavření záměru (uzamknutí jako podkladu pro zakázku, včetně příloh) -- záměr je převeden kompletně na zakázku
-
-=== Evidence veřejných zakázek
+==== Evidence veřejných zakázek
 
 Evidence VZ je stěžejní agendou obchodního a právního oddělení organizace. Jsou zde evidovány všechny veřejné zakázky, od zakázek malého rozsahu až po nadlimitní zakázky. Evidence VZ je souhrnný přehled všeho, co je k zakázce evidováno, o vynaložené částce, termínech plnění, stavu jednotlivých částí (faktura, smlouva,…) ve všech etapách realizace. Informace o zakázce jsou přebírány ze záměru, ze kterého zakázka vznikla. Zakázka je postupně doplňována o další informace a dokumenty. Součástí každé veřejné zakázky jsou dále faktury (spárované z evidence faktur), objednávka, smlouva, vnitřní sdělení a další potřebné dokumenty a přílohy. Z výše uvedených dokumentů, které jsou přiřazeny buď ze související agendy či nahrány jako soubory, se k veřejné zakázce evidují vybrané informace přímo v IS.
-
-==== Proces zpracování VZ
 
 Po schválení záměru se z něj stává veřejná zakázka, kterou obvykle po ekonomické a právní stránce zpracuje obchodní či právní oddělení organizace a společně s garantem zakázky připraví všechny potřebné dokumenty (smlouvu, objednávku či výzvu), vyvěsí výzvu na web organizace a další příslušná místa. V průběhu přípravy veřejné zakázky jsou do IS nahrávány příslušné dokumenty a měněn stav zakázky. Všechny dokumenty musí být odsouhlaseny všemi oprávněnými osobami. Po uběhnutí zákonem stanovených lhůt je vybrán dodavatel a podepsána s ním smlouva. Po podpisu smlouvy jsou do IS oprávněnou osobou doplněny závazné termíny pro plnění jednotlivých etap, podmínky akceptace a fakturace a finanční částky vyplývající ze smlouvy či zákona. Smlouva je nahrána do IS, ze kterého je taktéž možné jí odeslat do E-spisu, nahrát na web zadavatele či veřejný rejstřík smluv. V rámci jednotlivých etap VZ jsou sledovány limity vynaložených prostředků a skutečně vynaložených prostředků. V okamžiku přijetí jakékoli faktury (zaevidované v IS v modulu evidence faktur) k dané zakázce je tato připojena k VZ a do etap jsou evidovány příslušné částky a termíny. Taktéž při ukončení jednotlivých etap pověřený pracovník připojuje k VZ předávací protokoly až do ukončení plnění veřejné zakázky.
 
@@ -284,169 +217,19 @@ VZ je dostupná pro editace a připomínkování po celou dobu jejího trvání.
 
 Každá veřejná zakázka vychází ze záměru, z něhož převezme všechny informace o celku i o jednotlivých etapách zakázky, tyto informace mohou být následně upraveny dle hodnot ve smlouvě, pokud dojde ke změně. Ke každé VZ, případně jejím jednotlivým etapám jsou přiřazovány dokumenty (smlouva, faktury, předávací protokoly, interní sdělení atp.). Veřejná zakázka i její etapy budou obsahovat informace o termínech plnění, plánovaných a skutečně vynaložených finančních prostředcích. VZ bude označena volitelným štítkem, který bude sloužit k seskupování tematicky podobných zakázek. Tento štítek bude dostupný při plánování rozpočtu.
 
-==== Návrh informací o zakázce
-
-* Informace přebrané ze záměru
-* Evidenční číslo
-* Datum podpisu smlouvy
-* Účinnost smlouvy
-* Vynaložené finance (s DPH, bez DPH)
-* Termín ukončení zakázky
-* Text storna zakázky
-
-Metadata k zakázce
-
-* Štítek (tematické označení)
-* Datum zahájení administrace
-* Vyřizuje
-* Stav zakázky
-* Datum poslední změny
-* Autor poslední změny
-
-Druhy příloh zakázky
-
-* Schválený podepsaný tištěný záměr
-* Zadání
-* SLA
-* Výzva / Objednávka
-* Smlouva
-* Faktura
-* Předávací protokol
-* Vnitřní sdělení
-
-Ke každé příloze budou evidována metadata: datum importu a uživatel, který dokument nahrál, datum a autor poslední změny. Smlouvu bude možné navíc přes IS odeslat do E-spisu či přímo nahrát na web zadavatele či veřejný rejstřík smluv.
-
-Informace o etapě zakázky navíc oproti záměru
-
-* Skutečná částka s DPH i bez DPH
-* Skutečný termín ukončení
-* Podmínka fakturace
-* Termín fakturace
-* Fakturace
-* Neuhrazená fakturace
-
-Dokumenty přiřazované k etapě
-
-* Faktura
-* Akceptační protokol
-* Předávací protokol
-* Vnitřní sdělení
-
-Ke každé příloze budou evidována metadata: datum importu a uživatel, který dokument nahrál, datum a autor poslední změny.
-
-==== Seznam zakázek
-
-Součástí modulu bude přehledný seznam všech zakázek v IS, přizpůsobený preferencím a právům konkrétního uživatele. V seznamu bude možné hledat, filtrovat a řadit zakázky dle všech atributů či přednastavených rychlých filtrů. Seznam bude možné exportovat do xls, csv nebo tisknout.
-
-==== Funkce a kontroly modulu
-
-* Tisk informací o zakázce
-* Tisk příloh zakázky
-* Export a tisk seznamu zakázek
-* Tiskové sestavy
-* Přidání komentáře či připomínky k VZ i jejím etapám
-* Historie veřejné zakázky -- odkaz do logu změn
-* Kontrola zadání duplicitního záznamu VZ či dodavatele
-* Kontrola dodržení finančních limitů a termínů
-* Notifikace uživatelů na změny ve VZ
-* Notifikace uživatelů na vypršení termínů (fakturace, konec etapy, zakázky)
-
 Detailní specifikace procesu a funkcí pro jednotlivé organizace bude provedena v rámci implementační analýzy.
 
-=== Evidence faktur
+==== Evidence faktur
 
-Evidence faktur bude obsahovat informace o fakturách zadaných do IS oprávněnými pracovníky, obvykle z podatelny. Faktury budou evidovány jako záznam v databázi a každý záznam bude mít připojen naskenovaný dokument. Evidence faktur bude propojena s účetním systémem, se kterým si bude pomocí webové služby předávat informace o faktuře a soubor s dokumentem. Z účetního systému budou přebírány informace o proplacení faktury.
+Evidence faktur bude obsahovat informace o fakturách zadaných do IS oprávněnými pracovníky. Faktury budou evidovány jako dokument v databázi a každý dokument bude mít připojen naskenovaný soubor. Evidence faktur bude propojena s účetním systémem, se kterým si bude pomocí webové služby předávat informace o faktuře a k ní přiložený soubor. Z účetního systému budou přebírány informace o proplacení faktury.
 
-==== Proces přijetí a kontroly faktur
+Faktura je přijata, očíslována a zaevidována do IS oprávněným pracovníkem. Dále je předána ke kontrole (datum splatnosti, částka, dodavatel atd.) nadřízenému uživateli, který jí schválí, spáruje s VZ, zkontroluje splnění podmínek k fakturaci u zakázky a případně předá fakturu ke schválení dalším oprávněným osobám. Při spárování faktura převezme štítek uvedený u VZ pro účely tvorby rozpočtu a přehledu čerpání financí. Po schválení všemi zúčastněnými stranami je faktura poslána k proplacení do účetního systému. Z účetního systému jsou přebírány informace o změně stavu faktury a jejím proplacení. Na tyto změny jsou uživatelé upozorňováni notifikací.
 
-Faktura je přijata, očíslována a zaevidována do IS oprávněným pracovníkem (obvykle podatelna). Dále je předána ke kontrole (datum splatnosti, částka, dodavatel atd.) nadřízenému uživateli, který jí schválí, spáruje s VZ, zkontroluje splnění podmínek k fakturaci u zakázky a případně předá fakturu ke schválení dalším oprávněným osobám. Při spárování faktura převezme štítek uvedený u VZ pro účely tvorby rozpočtu a přehledu čerpání financí. Po schválení všemi zúčastněnými stranami je faktura poslána k proplacení do účetního systému. Z účetního systému jsou přebírány informace o změně stavu faktury a jejím proplacení. Na tyto změny jsou uživatelé upozorňováni notifikací.
-
-==== Návrh informací o faktuře
-
-Základní údaje:
-
-* Číslo faktury
-* IČ dodavatele
-* Dodavatel
-* Variabilní symbol
-* Zdanitelné plnění
-* Datum splatnosti
-* Částka s DPH
-* Částka v cizí měně
-* Měna
-* Příloha: Naskenovaná faktura
-
-Metadatové údaje:
-
-* Datum přijetí
-* Zpracovatel
-* Datum poslední změny
-* Autor poslední změny
-
-Další údaje:
-
-* Číslo veřejné zakázky (spárování v IS)
-* Štítek veřejné zakázky (spárování v IS)
-* Stav v rámci workflow
-
-Externí údaje:
-
-* Datum uhrazení
-* Text storna
-* Číslo účetního dokladu
-
-Podrobná specifikace významu a seznam položek faktury pro jednotlivé organizace bude součástí implementační analýzy.
-
-==== Seznam faktur
-
-Součástí modulu bude přehledný seznam všech faktur v IS, přizpůsobený preferencím a právům konkrétního uživatele. V seznamu bude možné hledat, filtrovat a řadit faktury dle všech atributů či přednastavených rychlých filtrů. Seznam bude možné exportovat do xls, csv nebo tisknout.
-
-==== Funkce a kontroly modulu
-
-* Uložení či tisk faktury
-* Export a tisk seznamu faktur
-
-* Tiskové sestavy
-* Synchronizace s účetním systémem
-* Historie faktury -- odkaz do logu změn
-
-* Kontrola zadání duplicitního záznamu faktury či dodavatele
-* Kontrola dodržení termínů
-* Notifikace na změny dle uživatel
-
-=== Adresář dokumentů
-
-Jedná se o doplňkový modul sloužící k jednoduššímu prohlížení a přístupu k dokumentům. Všechny dokumenty nahrávané do IS budou k dispozici v adresáři, v němž bude možné dokumenty filtrovat a vyhledávat dle vybraných atributů. Kromě aktuální verze dokumentu budou dostupné i jeho starší verze. Dokumenty bude možné z tohoto modulu exportovat či tisknout. Nahrávání nových dokumentů bude ale možné pouze přes modul týkající se daného dokumentu (záměr VZ, faktura).
-
-Informace o dokumentu:
-
-* Typ (smlouva, objednávka, vnitřní sdělení atd.)
-* Datum poslední úpravy
-* ID příslušného záměru
-* ID příslušné zakázky
-
-Funkce adresáře
-
-* Export a tisk dokumentů
-* Export a tisk seznamu dokumentů
-* Verze (odkaz na všechny verze dokumentu)
-
-Podrobný popis významu položek adresáře bude součástí implementační analýzy.
-
-=== Adresář dodavatelů
+==== Adresář dodavatelů
 
 Adresář bude obsahovat seznam dodavatelů a kontaktů uložených v IS, který bude využíván napříč celým IS při vyplňování dodavatele k záměru či zakázce, pro kontroly faktury atd. Adresář bude napojen na veřejný obchodní a živnostenský rejstřík, ze kterého bude IS ověřovat správnost uložených údajů a bude získávat informace o novém dodavateli ukládaném do IS. V IS bude vyplňováno jméno nebo IČ dodavatele a ostatní informace budou importovány z veřejného rejstříku.
 
-Detailní specifikace obsahu a funkcí modulu bude provedena v rámci implementační analýzy.
-
-Informace o dodavateli:
-
-* Název
-* IČ
-* Adresa
-* Kontakty (telefon, email)
-* Bankovní spojení
-* Ověřeno v  rejstříku (příznak ověření správnosti údajů)
+Detailní specifikace obsahu adresáře a jeho funkcí bude provedena v rámci implementační analýzy.
 
 <<<
 
