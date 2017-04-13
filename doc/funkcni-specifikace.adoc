@@ -191,7 +191,7 @@ Schéma zpracování obchodního případu je v příloze 2, schéma zpracován
 
 ==== Evidence záměrů
 
-Modul bude sloužit k vytvoření a evidenci záměrů. Záměr je inicializační dokument k obchodnímu případu, kde je definováno, co a za jakých okolností se navrhuje realizovat (specifikuje se předmět veřejné zakázky). Autor bude tvorbou proveden pomocí jednoduchého formuláře. Záměr prochází schvalovacím procesem, který je daný v rámci každé organizace, zároveň musí systém reflektovat případné změny v jejich vnitřním chodu.
+Záměr je inicializační dokument k obchodnímu případu, kde je definováno, co a za jakých okolností se navrhuje realizovat (specifikuje se předmět veřejné zakázky). Autor bude tvorbou proveden pomocí jednoduchého formuláře. Záměr prochází schvalovacím procesem, který je daný v rámci každé organizace, zároveň musí systém reflektovat případné změny v jejich vnitřním chodu.
 
 Záměr je po celou dobu schvalovacího procesu dostupný pro editace a připomínkování. V průběhu schvalování záměru musí mít každý člen schvalovací procedury možnost záměr připomínkovat. Zároveň musí být záměr dostupný i v původních verzích v historii záměru.
 
@@ -225,7 +225,7 @@ Evidence faktur bude obsahovat informace o fakturách zadaných do IS oprávněn
 
 Faktura je přijata, očíslována a zaevidována do IS oprávněným pracovníkem. Dále je předána ke kontrole (datum splatnosti, částka, dodavatel atd.) nadřízenému uživateli, který jí schválí, spáruje s VZ, zkontroluje splnění podmínek k fakturaci u zakázky a případně předá fakturu ke schválení dalším oprávněným osobám. Při spárování faktura převezme štítek uvedený u VZ pro účely tvorby rozpočtu a přehledu čerpání financí. Po schválení všemi zúčastněnými stranami je faktura poslána k proplacení do účetního systému. Z účetního systému jsou přebírány informace o změně stavu faktury a jejím proplacení. Na tyto změny jsou uživatelé upozorňováni notifikací.
 
-==== Adresář dodavatelů
+=== Adresář dodavatelů
 
 Adresář bude obsahovat seznam dodavatelů a kontaktů uložených v IS, který bude využíván napříč celým IS při vyplňování dodavatele k záměru či zakázce, pro kontroly faktury atd. Adresář bude napojen na veřejný obchodní a živnostenský rejstřík, ze kterého bude IS ověřovat správnost uložených údajů a bude získávat informace o novém dodavateli ukládaném do IS. V IS bude vyplňováno jméno nebo IČ dodavatele a ostatní informace budou importovány z veřejného rejstříku.
 
