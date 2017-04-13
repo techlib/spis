@@ -189,6 +189,8 @@ Schéma zpracování obchodního případu je v příloze 2, schéma zpracován
 
 === Evidence obchodních případů
 
+Systém bude umožňovat vedení evidence obchodních případů, přes kterou bude možné dohledat veškeré dokumenty související s daným případem. Mezi tyto dokumenty se řadí zejména záměry (formuláře záměrů, přípravy finančních operací, interní sdělení, investiční záměry), dokumentace související s veřejnými zakázkami (zadávací dokumentace, smlouvy, výzvy k podání nabídek, komunikace s uchazeči, zápisy z výběrových řízení) a fakturace (faktury či jiné doklady a podklady k proplacení jako například akceptační protokoly a další).
+
 ==== Evidence záměrů
 
 Záměr je inicializační dokument k obchodnímu případu, kde je definováno, co a za jakých okolností se navrhuje realizovat (specifikuje se předmět veřejné zakázky). Autor bude tvorbou proveden pomocí jednoduchého formuláře. Záměr prochází schvalovacím procesem, který je daný v rámci každé organizace, zároveň musí systém reflektovat případné změny v jejich vnitřním chodu.
