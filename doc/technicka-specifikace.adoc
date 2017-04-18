@@ -660,9 +660,9 @@ Odvislá role::
 Odvislá role je podobná běžné roli, ale vypouští obor působnosti. Ten je doplněn při jmenování. Jako příklad můžeme uvést odvislou roli *Vedoucí (oboru)*, která smí *Podepisovat Faktury (tohoto oboru)*.
 
 Jmenování::
-Díky jmenování určité osoby do některé role dojde k aplikaci všech pravidel vyplývajících z dané role na danou osobu a tedy ke vzniku oprávnění osoby nakládat vymezeným způsobem s předmětnými dokumenty.
+Díky jmenování určité osoby do některé role dojde k aplikaci všech pravidel vyplývajících z dané role na danou osobu a tedy ke vzniku oprávnění osoby nakládat vymezeným způsobem s předmětnými dokumenty. Osobu je možné jmenovat do běžné i odvislé role.
 +
-Podobných výsledků můžeme dosáhnout jmenováním do konkrétní role (například *Ondřej Koch* je *Vedoucí ICT*), ale také jmenováním do odvislé role (například *Ondřej Koch* je *Vedoucí (Odboru ICT)*). Druhý způsob se hodí v případech, kdy mají jmenovaní uživatelé k oborům působnosti vždy stejné povinnosti.
+Pokud byla osoba do role jmenována s příznakem *zastupující*, nemá běžně k dispozici práva, která z role plynou. Může se jich však chopit pomocí patřičného prvku uživatelského rozhraní. Systém uvádí do protokolu informaci o tom, zda-li by danou akci mohla osoba provést aniž by se chopila práva zástupce.
 
 === Uživatelské role
 
@@ -869,4 +869,4 @@ Různé přehledy mohou mít různé požadavky na platnost revizí dokumentů, 
 WARNING: REST API, webové rozhraní...
 
 
-// vim:set spelllang=cs:
+// vim:set spelllang=cs,en:
