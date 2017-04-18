@@ -63,6 +63,15 @@ Pokud seznam obsahuje 2 nebo více sloupců, systém umožňuje řádky řadit p
 * Řazení dle času od nejnovějšího po nejstarší.
 * Vzestupné abecední řazení dle hlavního názvu.
 
+Výběr sloupců::
+Pokud seznam obsahuje 2 nebo více sloupců, systém umožňuje uspořádat tyto sloupce v libovolném pořadí. Také umožňuje libovolné sloupce skrýt nebo zobrazit takové sloupce, které se běžně nezobrazují.
+
+Veškerá nastavení zobrazení seznamů jsou trvalá a společná pro daný druh zobrazení. Vždy je možné se u daného zobrazení vrátit k výchozímu nastavení. Změny v nastavení se ukládají odděleně alespoň pro přehledy uvedené níže a aplikují se vždy pouze pro konkrétního uživatele.
+
+* Pracovní přehled
+* Přehledy případů (společné nastavení pro všechna témata a typy případů)
+* Jednotlivé přehledy dokumentů (pro každý typ dokumentu zvlášť)
+
 
 === Konkrétní součásti
 
