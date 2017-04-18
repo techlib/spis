@@ -18,18 +18,18 @@
 
 == Úvod
 
-Správní informační systém, zkráceně _SpIS_ je otevřený nástroj pro vedení elektronických evidencí. Měl by zpřehlednit výkon organizačních úkonů, mezi které patří například příprava a jednotlivé kroky pro realizaci veřejných zakázek včetně dodání podkladů pro fakturaci, plánování rozpočtu a jednotlivých výdajových záměrů nebo nastavení pracovních procesů a schvalovacích mechanismů dle rolí přidělených pracovníkům a dodavatelům dané organizace. Systém bude tedy v praxi evidovat doklady a další dokumenty.
+Správní informační systém, zkráceně _SpIS_ je otevřený nástroj pro vedení elektronických evidencí. Měl by zpřehlednit výkon organizačních úkonů, mezi které patří například příprava a jednotlivé kroky realizace veřejných zakázek včetně zpracování podkladů pro fakturaci, plánování rozpočtu a jednotlivých výdajových záměrů nebo nastavení pracovních procesů a schvalovacích mechanismů dle rolí přidělených pracovníkům a dodavatelům dané organizace. Systém bude tedy v praxi evidovat doklady a další dokumenty.
 
 Výběr z funkcí, které očekáváme v prvních verzích:
 
 Hierarchické pracovní struktury::
-Rozklad předmětu plnění na jednotlivé dodávané výsledky (což jsou pro nás dokumenty) v předepsané hierarchii (dle typu případu). Tento postup se jinde označuje pojmem link:https://cs.wikipedia.org/wiki/Work_breakdown_structure[WBS].
+Rozklad případu na jednotlivé dodávané výsledky (což jsou pro nás dokumenty) v předepsané hierarchii (dle typu případu). Tento postup se jinde označuje pojmem link:https://cs.wikipedia.org/wiki/Work_breakdown_structure[WBS].
 
 Editor dokumentů::
 Nástroj pro vytváření a úpravy dokumentů, představující uživatelské rozhraní uzpůsobené jejich konkrétním typům. Využívá zásuvné moduly, které realizují dílčí komponenty rozhraní. Každý typ dokumentu popisuje, jaké komponenty se mají pro jeho pole využít.
 
 Přehledy::
-Vhodně zvolené přehledy čerpající z případů a dalších evidencí. Pro jejich zobrazení se využívají komponenty realizované jako zásuvné moduly. Tyto komponenty se provazují s konkrétními daty, čímž vznikají pohledy, které se dále seskupují do témat.
+Vhodně nastavené přehledy čerpající z případů a dalších evidencí. Pro jejich zobrazení se využívají komponenty realizované jako zásuvné moduly. Tyto komponenty se provazují s konkrétními daty, čímž vznikají pohledy, které se dále seskupují do témat a sekcí.
 
 Oprávnění::
 Pružný systém oprávnění založený na uživatelských rolích a organizačních jednotkách umožňuje pracovat pouze s těmi dokumenty a na těch případech, které se uživatelů týkají. Uživatelské účty se vždy přebírají z vnější evidence uživatelů.
@@ -40,9 +40,35 @@ SpIS bude napojen na vybrané další informační systémy, ze kterých bude č
 
 == Struktura uživatelského rozhraní
 
-=== Pracovní přehled
+Uživatelské rozhraní je realizováno formou interaktivního webového portálu. Každý dokument, případ, každé téma či sekce, každá část nastavení je webovou stránkou s unikátní adresou.
 
-Samostatná část systému, která je výchozí stránkou přihlášeného uživatele. Hlavním prvkem stránky je seznam případů, do kterých má uživatel přístup, seřazený dle jeho schopnosti přispět a dále dle naléhavosti.
+Jednotlivé stránky mohou být vylepšeny pomocí klientských skriptů za účelem dosažení vyšší míry uživatelské přívětivosti, ale musí svou funkci plnit i se zakázaným skriptováním. Výjimku tvoří pohledy. Ty ke svému ztvárnění vyžadují pokročilé funkce (vykreslování grafů) na straně klienta.
+
+
+=== Obecné principy
+
+==== Seznamy položek
+
+Systém v řadě případů zobrazuje různě dlouhé seznamy položek. Pokud si má uživatel ze seznamu některé položky vybrat, nebo může na některé položce vyvolat akci (například _upravit_, _smazat_), pak pro tyto seznamy platí následující pravidla.
+
+Filtrování::
+Pokud seznam obsahuje 10 nebo více položek, systém jej umožňuje filtrovat. Tím se rozumí přechodně omezit množství zobrazených položek zadáním filtrovacího výrazu.
++
+* Vždy je přípustné filtrování pomocí jednoduchého fulltextového hledání.
+* V případě seznamů nebo tabulek o více sloupcích je přípustné filtrování jednotlivých sloupců zvlášť, pokud je možné kombinovat více kritérií.
+
+Řazení::
+Pokud seznam obsahuje 2 nebo více sloupců, systém umožňuje řádky řadit podle vybraného z nich a ve výchozím zobrazení upřednostňuje (je-li to možné a podstatné):
++
+* Řazení dle času od nejnovějšího po nejstarší.
+* Vzestupné abecední řazení dle hlavního názvu.
+
+
+=== Konkrétní součásti
+
+==== Pracovní přehled
+
+Pracovní přehled je výchozí stránka uživatele po jeho přihlášení, nesměřuje-li do jiné části systému. Hlavním prvkem stránky je seznam případů, do kterých má uživatel přístup, seřazený dle jeho schopnosti přispět a dále dle jejich naléhavosti.
 
 .Řazení případů dle možnosti na nich pracovat
 1. Případy, ve kterých je uživatel aktuálně *žádán o práci* na některém dokumentu.
@@ -52,11 +78,13 @@ Samostatná část systému, která je výchozí stránkou přihlášeného uži
 
 V rámci prvních dvou bodů jsou případy řazeny podle nejčasnějšího termínu dokončení dokumentů, díky kterým je případ na dané pozici. Dokumenty z třetího bodu neexistují a není tedy možné u nich sledovat termíny a zbylé případy může uživatel pouze komentovat.
 
-=== Sekce
+
+==== Sekce
 
 Za účelem snazší orientace uživatelů jsou veškeré objekty v systému roztříděny do témat a tematických sekcí. Toto členění nemá žádné důsledky pro funkci, ani pro řízení přístupu. Také nijak nesouvisí s organizačním členěním.
 
-Sekce slouží k seskupení několika témat. Není běžné, aby se věci opakovaly v různých sekcích, ale není to vyloučeno. Příkladem sekcí mohou být například *Finance*, *Legislativa* a *Vnější ukazatele*. V sekci *Finance* se setkáme s tématy, v sekci *Legislativa* najdeme jen případy pro práci s *Vnitřními předpisy* a konečně v sekci *Vnější ukazatele* nenajdeme sice žádné případy, ale zato se zde setkáme s řadou pohledů na data získaná při provozu instituce, například *Návštěvnost*, nebo *Skladbu uživatelů*.
+Sekce slouží k seskupení několika témat. Není běžné, aby se věci opakovaly v různých sekcích, ale není to vyloučeno. Příkladem sekcí mohou být například *Finance*, *Legislativa* a *Vnější ukazatele*. V sekci *Finance* se setkáme s vícero tématy, v sekci *Legislativa* najdeme jen hlavní téma s případy pro práci s *Vnitřními předpisy* a konečně v sekci *Vnější ukazatele* nenajdeme sice žádné případy, ale zato se zde v hlavním tématu setkáme s řadou pohledů na data získaná při provozu instituce, například *Návštěvnost*, nebo *Skladbu uživatelů*.
+
 
 ==== Témata
 
@@ -64,69 +92,59 @@ Téma seskupuje pohledy a sestavy, které mají za úkol poskytnout informace o 
 
 Pokud to dává smysl, mohou se věci v tématech opakovat. Například určité pohledy mohou být přínosné pro více témat, některé případy mohou souviset s vícero tématy a podobně. Názorným příkladem budiž *Nákup*, který zasahuje jak do *Rozpočtu*, tak do *Smluv*.
 
-===== Pohledy
+
+==== Pohledy
 
 Pohledům je v rámci daného tématu věnován hlavní prostor. Některé pohledy jsou interaktivní, takže je možné s nimi manipulovat a dovídat se tak nové souvislosti. Například pokud pohled zobrazuje mapu, je možné s ní pohybovat, přibližovat ji nebo ji oddalovat. Pokud jsou na mapě interaktivní objekty, je možné je aktivovat a zkoumat jejich detaily.
 
 Některé pohledy mohou umožňovat přímo spustit nový případ, nebo se odkazovat na existující případy a dokumenty. Tyto vazby bývají obvykle realizovány odkazy, které může uživatel otevřít v nové záložce prohlížeče.
 
-===== Sestavy
+
+==== Sestavy
 
 Na stránce každého tématu je vyhrazen prostor, ve kterém se nachází odkazy jednak na systémové a dále také na daným uživatelem vytvořené sestavy pohledů. Protože pohledy podporují zobrazení verze pro tisk, je možné sestavy s automatickým skrytím nepotřebných prvků uživatelského rozhraní tisknout běžným způsobem.
 
 Ze stránky tématu je možné aktivovat editor sestav, který umožňuje na stránku uspořádat výběr z pohledů, ke kterým má uživatel přístup. Těmto pohledům je následně možné interaktivně nastavit potřebné zobrazení. Takto připravenou sestavu je následně možné uložit, nebo případně jen vytisknout.
 
-===== Případy
 
-Pokud téma obsahuje alespoň jeden typ případu, je na jeho stránce k dispozici přehled případů, kterých se aktuální uživatel účastní spolu s prvkem, který umožňuje zahájit nový, je-li k tomu uživatel oprávněn.
+==== Případy
 
-Z přehledu jsou patrné základní údaje o případech a zda-li do nich může uživatel zasáhnout, případně je-li to po něm požadováno. Přehled je interaktivní a umožňuje řazení, třídění i hledání.
+Pokud téma obsahuje alespoň jeden typ případu, je na jeho stránce k dispozici přehled případů, ke kterým má aktuální uživatel přístup. Je-li k tomu uživatel oprávněn, tak se zde také nachází prvek, který umožňuje zahájit nový případ.
 
-===== Dokumenty
+Z přehledu jsou patrné základní údaje o případech a zda-li do nich může uživatel zasáhnout, případně je-li to po něm požadováno.
+
+
+==== Dokumenty
 
 Pokud téma obsahuje prostřednictvím přiřazených typů případů alespoň jeden typ dokumentu, je na jeho stránce k dispozici přehled dokumentů, ke kterým má aktuální uživatel přístup. Pokud je k tomu uživatel oprávněn, může z tohoto přehledu zahájit změnu dokumentu.
 
-Z přehledu jsou patrné základní údaje o dokumentech. Dá se z něj také zjistit, do kterých případů vstupují, má-li k nim aktuální uživatel přístup. Přehled je interaktivní a umožňuje řazení, třídění i hledání.
+Z přehledu jsou patrné základní údaje o dokumentech. Dá se z něj také zjistit, do kterých případů vstupují, má-li k nim aktuální uživatel přístup.
 
-=== Předvolby uživatele
+
+==== Předvolby uživatele
 
 Část systému umožňující uživateli přizpůsobit si systém dle svých potřeb. Uživatel si zde může zvolit alespoň jazyk uživatelského rozhraní a způsob upozorňování na události v systému. Upozornění týkající se dokumentů a případů je možné omezit na jejich konkrétní typy.
 
-.Předvolby upozorňování
-[options="header",cols="<4,^1,^1,^1"]
-|===
-| Událost                                             | Nikdy | Ihned | Souhrnně
-| Je požadována Vaše práce na dokumentu               |       | {y}   | {y}
-| Můžete vytvořit chybějící dokument                  | {y}   |       | {y}
-| Vámi naposledy upravený dokument byl změněn         | {y}   | {y}   | {y}
-| Vámi sledovaný dokument byl změněn                  | {y}   | {y}   | {y}
-| Dokument případu, kterého se účastníte, byl změněn  | {y}   | {y}   | {y}
-| Případ, kterého se účastníte, byl změněn            | {y}   | {y}   | {y}
-| Změnila se Vaše účast na případu                    | {y}   | {y}   | {y}
-| Změnily se Vaše role v systému                      | {y}   | {y}   | {y}
-|===
+Více o upozorněních naleznete v kapitole <<Upozornění na událost>>.
 
-Více o upozorněních je v kapitole <<Upozornění na událost>>.
 
-=== Předvolby systému
+==== Předvolby systému
 
 Část systému umožňující správci nastavit jednak výchozí uživatelské předvolby, ale také případná obecná nastavení.
 
-==== Integrační můstky
 
-WARNING: Toto již nestačí, bude zapotřebí lepší rozhraní pro můstky.
+===== Integrační můstky
 
-Za účelem alespoň částečného řízení komunikace s navázanými cizími systémy je zde možné nastavovat a měnit předvolby ve tvaru `klíč = hodnota`, které mohou můstky pro integraci s cizími systémy následně využít.
+Za účelem řízení komunikace s navázanými cizími systémy je možné zde nastavovat a měnit předvolby integračních můstků. Děje se tak pomocí rozhraní, které poskytují zásuvné moduly daných můstků.
 
-Pokud by existoval můstek pro komunikaci s veřejnými rejstříky, volbou `ares.refresh_after = 48` bychom mu mohli sdělit, že má záznamy převzaté ze systému ARES kontrolovat nejdříve po 48 hodinách.
+Pokud by existoval například můstek pro komunikaci s veřejnými rejstříky, mohli bychom mu pomocí tohoto rozhraní sdělit třeba to, že má záznamy převzaté ze systému ARES kontrolovat nejdříve po 48 hodinách.
 
-Podrobnější konfiguraci budou muset integrační můstky implementovat odděleně.
 
-==== Správa modelu oprávnění
+===== Správa modelu oprávnění
 
-Součástí předvoleb systému je pak správa modelu oprávnění, v rámci které je možné například nastavit párování skupin či rolí z evidence uživatelů s rolemi systému nebo upravit rozsah oprávnění jednotlivých rolí.
+Součástí předvoleb systému je pak také správa modelu oprávnění, v rámci které je možné například nastavit párování skupin či rolí z evidence uživatelů s rolemi systému nebo upravit rozsah oprávnění jednotlivých rolí.
 
-Více o modelu je v kapitole <<Model oprávnění>>.
+Více o modelu naleznete v kapitole <<Model oprávnění>>.
 
 <<<
 
@@ -665,6 +683,20 @@ Způsob manipulace také upravuje, se kterými částmi těla dokumentu a se kte
 V rámci systému dochází k řadě událostí. Mechanismus upozorňování na ně využívá nastavené komunikační metody (email nebo Jabber) k odeslání upozornění dotčenému uživateli. K upozornění uživatele nedochází, pokud událost, na kterou by měl být upozorněn, sám vyvolal.
 
 Kromě okamžitého upozornění si může uživatel nastavit upozornění dávkové, které se odesílá souhrnně jednou denně. Zda-li si přeje být upozorňován okamžitě, souhrnně, nebo vůbec si může uživatel pro každý druh upozornění určit sám.
+
+.Předvolby upozorňování
+[options="header",cols="<4,^1,^1,^1"]
+|===
+| Událost                                             | Nikdy | Ihned | Souhrnně
+| Je požadována Vaše práce na dokumentu               |       | {y}   | {y}
+| Můžete vytvořit chybějící dokument                  | {y}   |       | {y}
+| Vámi naposledy upravený dokument byl změněn         | {y}   | {y}   | {y}
+| Vámi sledovaný dokument byl změněn                  | {y}   | {y}   | {y}
+| Dokument případu, kterého se účastníte, byl změněn  | {y}   | {y}   | {y}
+| Případ, kterého se účastníte, byl změněn            | {y}   | {y}   | {y}
+| Změnila se Vaše účast na případu                    | {y}   | {y}   | {y}
+| Změnily se Vaše role v systému                      | {y}   | {y}   | {y}
+|===
 
 === Události
 
