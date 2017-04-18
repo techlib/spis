@@ -88,6 +88,13 @@ Pracovní přehled je výchozí stránka uživatele po jeho přihlášení, nesm
 V rámci prvních dvou bodů jsou případy řazeny podle nejčasnějšího termínu dokončení dokumentů, díky kterým je případ na dané pozici. Dokumenty z třetího bodu neexistují a není tedy možné u nich sledovat termíny a zbylé případy může uživatel pouze komentovat.
 
 
+==== Přehled událostí
+
+Na zvláštní stránce přehledu událostí jsou každnému uživateli předloženy ty události, na které byl, nebo mohl být upozorněn. Jednotlivé řádky umožňují uživateli přihlásit se k nebo odhlásit se z odběru daných odálostí.
+
+Přehled by měl sloužit pro rychlou orientaci v běžících případech a získání přehledu o situaci.
+
+
 ==== Sekce
 
 Za účelem snazší orientace uživatelů jsou veškeré objekty v systému roztříděny do témat a tematických sekcí. Toto členění nemá žádné důsledky pro funkci, ani pro řízení přístupu. Také nijak nesouvisí s organizačním členěním.
