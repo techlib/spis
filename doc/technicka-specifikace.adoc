@@ -632,6 +632,43 @@ Konflikt je uživateli prezentován v plné šíři. Pokud chce se změnami pokr
 
 Po vypořádání všech konfliktů je uživateli opět umožněno uložit novou revizi dokumentu.
 
+
+=== Tisk
+
+Tisk dokumentů je umožněn obdobně jako u tiskových sestav v tématech prostřednictvím běžných prostředků webového prohlížeče. Zvláštní styly pro tisk odstraní ty prvky uživatelského rozhraní, které do dokumentu nepatří a umožní tak plné využití tiskové plochy.
+
+Součástí popisu dokumentu v rámci politiky může být také zvláštní styl pro tisk, který upraví formu dle potřeb dané organizace. Tiskový styl může být nastaven i plošně -- pro všechny dokumenty.
+
+TIP: V první verzi žádné další nástroje pro vytváření tisknutelných dokumentů nebo export do kancelářských formátů nepožadujeme.
+
+
+=== Podepisování
+
+Pokud to politika daného typu dokumentu vyžaduje, může být k dokončení dokumentu zapotřebí podpisu osob v určitých rolích. Podpisy jsou na sobě vždy nezávislé a vztahují se k dokumentu včetně všech jeho příloh.
+
+Před zahájením podepisování je nutné dokument nejprve provizorně dokončit. Dokument je tak podepisujícímu vždy předložen v celé své, v ten okamžik již neměnitelné, podobě.
+
+Podpisy se k dokumentu připojují odděleně, podobně jako přílohy. Pokud to politika daného typu dokumentu umožňuje, je možné kombinovat podpisy elektronické a vlastnoruční.
+
+
+==== Elektronické
+
+Elektronické podpisy jsou realizovány dle normy link:https://en.wikipedia.org/wiki/XAdES[XAdES]. Dokument je pro účely podpisu převeden do své kanonické XML podoby obsahující také otisky příloh a celkový otisk je následně uživatelem podepsán. Výsledný XML fragment s podpisem je uložen v databázi.
+
+Ověření platnosti podpisu je realizováno dle shodné normy.
+
+TIP: V první verzi podporu práce s elektronickými podpisy nepožadujeme. Systém by však měl být připraven na jejich dodatečnou implementaci.
+
+
+==== Vlastnoruční
+
+Vlastnoruční podpisy jsou realizovány pomocí tvrzení o podpisu, které do systému vloží podepisující nebo jiná pověřená osoba, u které je k dispozici k nahlédnutí podepsaný originál. Ten vznikne vytištěním dokumentu a jeho podpisem.
+
+Pro vyšší míru jistoty spoléhajících se uživatelů může být tvrzení doplněno skenem podepsaného dokumentu, který si mohou uživatelé zobrazit. Tento "důkaz" však platnost dokumentu nijak nezaručuje a spoléháním se na něj se uživatel může vystavovat určitému riziku.
+
+Pokud by byla příloha z listinné podoby autorizovaně konvertována, bylo by možné se na ni spolehnout, ale přesto (dle našeho názoru) neexistuje žádný způsob, jak bezpečně spojit podepsanou listinu s nepodepsaným elektronickým originálem za účelem automatického ověřování platnosti a návaznosti úkonů ze strany systému.
+
+
 <<<
 
 == Model oprávnění
