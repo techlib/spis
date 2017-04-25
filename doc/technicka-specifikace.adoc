@@ -639,8 +639,6 @@ Tisk dokumentů je umožněn obdobně jako u tiskových sestav v tématech prost
 
 Součástí popisu dokumentu v rámci politiky může být také zvláštní styl pro tisk, který upraví formu dle potřeb dané organizace. Tiskový styl může být nastaven i plošně -- pro všechny dokumenty.
 
-TIP: V první verzi žádné další nástroje pro vytváření tisknutelných dokumentů nebo export do kancelářských formátů nepožadujeme.
-
 
 === Podepisování
 
@@ -656,8 +654,6 @@ Podpisy se k dokumentu připojují odděleně, podobně jako přílohy. Pokud to
 Elektronické podpisy jsou realizovány dle normy link:https://en.wikipedia.org/wiki/XAdES[XAdES]. Dokument je pro účely podpisu převeden do své kanonické XML podoby obsahující také otisky příloh a celkový otisk je následně uživatelem podepsán. Výsledný XML fragment s podpisem je uložen v databázi.
 
 Ověření platnosti podpisu je realizováno dle shodné normy.
-
-TIP: V první verzi podporu práce s elektronickými podpisy nepožadujeme. Systém by však měl být připraven na jejich dodatečnou implementaci.
 
 
 ==== Vlastnoruční
@@ -699,7 +695,7 @@ Odvislá role je podobná běžné roli, ale vypouští obor působnosti. Ten je
 Jmenování::
 Díky jmenování určité osoby do některé role dojde k aplikaci všech pravidel vyplývajících z dané role na danou osobu a tedy ke vzniku oprávnění osoby nakládat vymezeným způsobem s předmětnými dokumenty. Osobu je možné jmenovat do běžné i odvislé role.
 +
-Pokud byla osoba do role jmenována s příznakem *zastupující*, nemá běžně k dispozici práva, která z role plynou. Může se jich však chopit pomocí patřičného prvku uživatelského rozhraní. Systém uvádí do protokolu informaci o tom, zda-li by danou akci mohla osoba provést aniž by se chopila práva zástupce.
+Pokud byla osoba do role jmenována s příznakem *zastupující*, nemá běžně k dispozici práva, která z role plynou. Může se jich však chopit pomocí patřičného prvku uživatelského rozhraní. Systém eviduje v protokolu informaci o tom, za jakou roli byla změna provedena.
 
 === Uživatelské role
 
