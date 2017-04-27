@@ -695,7 +695,7 @@ Odvislá role je podobná běžné roli, ale vypouští obor působnosti. Ten je
 Jmenování::
 Díky jmenování určité osoby do některé role dojde k aplikaci všech pravidel vyplývajících z dané role na danou osobu a tedy ke vzniku oprávnění osoby nakládat vymezeným způsobem s předmětnými dokumenty. Osobu je možné jmenovat do běžné i odvislé role.
 +
-Pokud byla osoba do role jmenována s příznakem *zastupující*, nemá běžně k dispozici práva, která z role plynou. Může se jich však chopit pomocí patřičného prvku uživatelského rozhraní. Systém eviduje v protokolu informaci o tom, za jakou roli byla změna provedena.
+Pokud byla osoba do role jmenována s příznakem *zastupující*, nemá běžně k dispozici práva, která z role plynou. Může se jich však chopit pomocí patřičného prvku uživatelského rozhraní. Systém eviduje v protokolu informaci o tom, zda-li by danou akci mohla osoba provést aniž by se chopila práva zástupce.
 
 === Uživatelské role
 
