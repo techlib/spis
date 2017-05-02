@@ -73,6 +73,13 @@ Veškerá nastavení zobrazení seznamů jsou trvalá a společná pro daný dru
 * Jednotlivé přehledy dokumentů (pro každý typ dokumentu zvlášť)
 
 
+==== Tisk
+
+Každá stránka zobrazující uživatelská data (například dokumenty, případy či přehledy) podporuje zobrazení verze pro tisk na bázi stylů pro webový prohlížeč. Ta neobsahuje nepotřebné prvků uživatelského rozhraní a dále přizpůsobuje data tisku.
+
+Systém je možné zkonfigurovat tak, že se použije dodatečný styl, kterým se tisky přizpůsobí grafickému stylu instituce. Dále je možné přiřadit dodatečné styly typům dokumentů a případů.
+
+
 === Konkrétní součásti
 
 ==== Pracovní přehled
@@ -118,7 +125,7 @@ Některé pohledy mohou umožňovat přímo spustit nový případ, nebo se odka
 
 ==== Sestavy
 
-Na stránce každého tématu je vyhrazen prostor, ve kterém se nachází odkazy jednak na systémové a dále také na daným uživatelem vytvořené sestavy pohledů. Protože pohledy podporují zobrazení verze pro tisk, je možné sestavy s automatickým skrytím nepotřebných prvků uživatelského rozhraní tisknout běžným způsobem.
+Na stránce každého tématu je vyhrazen prostor, ve kterém se nachází odkazy jednak na systémové a dále také na daným uživatelem vytvořené sestavy pohledů.
 
 Ze stránky tématu je možné aktivovat editor sestav, který umožňuje na stránku uspořádat výběr z pohledů, ke kterým má uživatel přístup. Těmto pohledům je následně možné interaktivně nastavit potřebné zobrazení. Takto připravenou sestavu je následně možné uložit, nebo případně jen vytisknout.
 
@@ -631,13 +638,6 @@ Konflikt je uživateli prezentován v plné šíři. Pokud chce se změnami pokr
 3. Prosadí svou změnu, kterou případně dále přizpůsobí.
 
 Po vypořádání všech konfliktů je uživateli opět umožněno uložit novou revizi dokumentu.
-
-
-=== Tisk
-
-Tisk dokumentů je umožněn obdobně jako u tiskových sestav v tématech prostřednictvím běžných prostředků webového prohlížeče. Zvláštní styly pro tisk odstraní ty prvky uživatelského rozhraní, které do dokumentu nepatří a umožní tak plné využití tiskové plochy.
-
-Součástí popisu dokumentu v rámci politiky může být také zvláštní styl pro tisk, který upraví formu dle potřeb dané organizace. Tiskový styl může být nastaven i plošně -- pro všechny dokumenty.
 
 
 === Podepisování
