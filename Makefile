@@ -16,7 +16,7 @@ clean:
 %.html: %.adoc
 	asciidoctor -r asciidoctor-diagram -b html5 -o $@ $<
 
-%.pdf: %.adoc
+%.pdf: %.adoc $(wildcard doc/media/*.*)
 	asciidoctor-pdf -r asciidoctor-diagram -o $@ $<
 
 # EOF
