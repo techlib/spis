@@ -75,9 +75,14 @@ Veškerá nastavení zobrazení seznamů jsou trvalá a společná pro daný dru
 
 ==== Tisk
 
-Každá stránka zobrazující uživatelská data (například dokumenty, případy či přehledy) podporuje zobrazení verze pro tisk na bázi stylů pro webový prohlížeč. Ta neobsahuje nepotřebné prvků uživatelského rozhraní a dále přizpůsobuje data tisku.
+Každá stránka zobrazující uživatelská data (například dokumenty, případy či přehledy) podporuje stažení PDF verze pro tisk. Ta vzniká na serveru pomocí zvláštní HTML šablony a CSS stylů. Jak šablonu, tak styly je možné přizpůsobit a tím dosáhnout souladu vzhledu tištěných výstupů se vizuálním stylem organizace.
 
-Systém je možné zkonfigurovat tak, že se použije dodatečný styl, kterým se tisky přizpůsobí grafickému stylu instituce. Dále je možné přiřadit dodatečné styly typům dokumentů a případů.
+Kromě centrálních předloh je možné nastavit oddělené předlohy i pro jednotlivé typy dokumentů a případů. Předlohy pro tisk komponent jsou vždy vlastní danému typu komponenty.
+
+
+==== Export
+
+Uživatel může získat některá data, ke kterým má přístup, i ve strojově čitelné formě. V případě dokumentů je možné si stáhnout jejich data ve formátech JSON, YAML a XML. Data pohledů je možné získat ve formátech JSON, YAML a pokud to umožňuje druh datového zdroje (data představují soubor tabulek), tak i ve formátech CSV (jednotlivé tabulky) nebo XLSX (tabulky jako jednotlivé listy).
 
 
 === Konkrétní součásti
