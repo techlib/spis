@@ -185,7 +185,7 @@ Faktura je do systému vložena pracovníkem podatelny, její přiřazení ke ko
 
 SpIS bude po přihlášení prostřednictvím notifikací upozorňovat uživatele na dokumenty, u kterých se očekává jeho schválení či jiná součinnost pro jejich dokončení, případně změny u dokumentů, u kterých si uživatel nastavil sledování.
 
-Schéma zpracování obchodního případu je v příloze 2, schéma zpracování faktury v příloze 4.
+Schéma zpracování obchodního případu je v příloze 1, schéma zpracování faktury v příloze 2.
 
 === Evidence obchodních případů
 
@@ -259,7 +259,7 @@ Vstupními daty rozpočtu jsou aktuálně běžící zakázky z evidence zakáz
 
 Návrh rozpočtu je předložen ke schválení nadřízenému orgánu, který schválí plnou částku nebo její část, která je zpětně rozdělena v rámci organizace pro jednotlivé organizační celky dle různých kritérií. Finance přidělené od nadřízeného orgánu jsou do systému vloženy správcem rozpočtu a jsou závazné pro všechny uživatele jako limity čerpání pro další plánování a kontrolu čerpání.
 
-Detailní specifikace procesu a funkcí nástrojů pro tvorbu rozpočtu pro jednotlivé organizace bude předmětem implementační analýzy. Schéma procesu tvorby rozpočtu je v příloze 5.
+Detailní specifikace procesu a funkcí nástrojů pro tvorbu rozpočtu pro jednotlivé organizace bude předmětem implementační analýzy. Schéma procesu tvorby rozpočtu je v příloze 3.
 
 === Rozpočet, změny rozpočtu a přehled čerpání
 
@@ -272,21 +272,9 @@ Systém bude poskytovat kontrolu čerpání rozpočtu prostřednictvím přehled
 Detailní specifikace obsahu a funkcí přehledu čerpání rozpočtu bude předmětem implementační analýzy.
 
 == Přílohy
-=== Zjednodušené schéma architektury IS
-
-image:media/image1.png[width=620]
-
-<<<
-
 === Schéma zpracování obchodního případu
 
 image:media/image2.png[width=500]
-
-<<<
-
-=== Schéma procesu přípravy zakázky
-
-image:media/image3.png[width=620]
 
 <<<
 
