@@ -264,6 +264,14 @@ expects:
 ....
 ====
 
+
+=== Číselníky
+
+Zvláštní zmínku zaslouží koncept tak zvaných _číselníků_. V jiných systémech se využívá zvláštních tabulek, které spravuje správce systému, které se využívají jako zdroj voleb pro určité vlastnosti dokumentů.
+
+SpIS počítá s potřebou spravovat životní cyklus položek _číselníku_ a proto tento mechanismus odděleně nezavádí. Pokud určitý dokument obsahuje vlastnost, která nabývá hodnoty z určité množiny, využije se prostý odkaz na jiný dokument patřičného typu.
+
+
 <<<
 
 == Případy
