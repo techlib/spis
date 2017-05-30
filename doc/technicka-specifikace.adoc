@@ -919,7 +919,7 @@ Různé přehledy mohou mít různé požadavky na platnost revizí dokumentů, 
 
 === Uživatelské rozhraní
 
-WARNING: REST API, webové rozhraní...
+Uživatelské rozhraní je postaveno na bázi projektu link:https://www.patternfly.org/[PatternFly] a využívá v maximální míře příkladové vzory součástí uveřejněných na webu tohoto projektu.
 
 
 // vim:set spelllang=cs,en:
