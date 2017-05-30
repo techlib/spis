@@ -484,7 +484,9 @@ Kvantifikátor `{1,}` zde značí přítomnost alespoň jednoho dokumentu danéh
 
 ==== Typové třídy
 
-Typové třídy popisují dílčí strukturu dokumentů tak, aby mohlo dojít k použití více typů dokumentů ve stejné roli. Upravují jak strukturu typů dané třídy, tak i jejich závislosti.
+Typové třídy popisují dílčí strukturu dokumentů tak, aby mohlo dojít k použití více typů dokumentů ve stejné roli. Popisují virtuální strukturu dokumentů a upravují jejich závislosti.
+
+Virtuální strukturou se zde rozumí to, že definují mapování mezi sadou virtuálních vlastností připadajících dané typové třídě a vlastnostmi dokumentu typu, který danou typovou třídu implementuje. Závislé dokumenty se pak mohou odkazovat na tyto virtuální vlastnosti bez ohledu na to, kde se nachází.
 
 Můžeme si například zavést typové třídy `Mající výši plnění (x)` a `Mající termín realizace (x)`, které popisují části schématu dokumentu, ve kterém předepisují přítomnost finanční částky s určitým významem a dále termínu, kdy dojde k nějaké realizaci. S pomocí těchto typových tříd pak můžeme popsat některé závislosti obecněji.
 
