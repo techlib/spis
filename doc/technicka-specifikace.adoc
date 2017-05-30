@@ -20,6 +20,8 @@
 
 Správní informační systém, zkráceně _SpIS_ je otevřený nástroj pro vedení elektronických evidencí. Měl by zpřehlednit výkon organizačních úkonů, mezi které patří například příprava a jednotlivé kroky realizace veřejných zakázek včetně zpracování podkladů pro fakturaci, plánování rozpočtu a jednotlivých výdajových záměrů nebo nastavení pracovních procesů a schvalovacích mechanismů dle rolí přidělených pracovníkům a dodavatelům dané organizace. Systém bude tedy v praxi evidovat doklady a další dokumenty.
 
+NOTE: Bez ohledu na specifikaci níže platí, že SpIS nebo jeho nasazení musí vyhovět stávající legislativě. Například v oblasti ochrany osobních údajů či bezpečnosti.
+
 Výběr z funkcí, které očekáváme v prvních verzích:
 
 Hierarchické pracovní struktury::
