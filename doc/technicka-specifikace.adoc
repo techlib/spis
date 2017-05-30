@@ -73,6 +73,11 @@ Veškerá nastavení zobrazení seznamů jsou trvalá a společná pro daný dru
 * Jednotlivé přehledy dokumentů (pro každý typ dokumentu zvlášť)
 
 
+==== Historie
+
+U dokumentů a případů se uchovávají předcházející verze jejich stavu. Uživatel si může zobrazit anotovaný výpis těchto verzí, ze kterého jsou patrné alespoň míra a povaha změny a dále také její autor. Dále si může libovolnou předešlo verzi zobrazit.
+
+
 ==== Tisk
 
 Každá stránka zobrazující uživatelská data (například dokumenty, případy či přehledy) podporuje stažení PDF verze pro tisk. Ta vzniká na serveru pomocí zvláštní HTML šablony a CSS stylů. Jak šablonu, tak styly je možné přizpůsobit a tím dosáhnout souladu vzhledu tištěných výstupů se vizuálním stylem organizace.
