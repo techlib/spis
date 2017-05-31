@@ -97,6 +97,15 @@ SpIS slouží především nákupčím a právníkům k zajištění vypsání 
 | Správci systému    | 2   | 4
 |===
 
+=== Související legislativa
+
+SpIS musí splňovat zákonné požadavky, které jsou na něj kladeny v rámci zákonů souvisejících s informačními systémy, spisovou službou a ochranou osobních údajů. Mezi tyto zákony patří:
+
+* Zákon č. 365/2000 Sb., o informačních systémech veřejné správy
+* Zákon č. 300/2008 Sb., o elektronických úkonech a autorizované konverzi dokumentů
+* Zákon č. 499/2004 Sb., o archivnictví a spisové službě
+* Nařízení Evropského parlamentu a Rady 2016/679 o ochraně fyzických osob v souvislosti se zpracováním osobních údajů a o volném pohybu těchto údajů (obecné nařízení o ochraně osobních údajů)
+
 <<<
 
 == Integrace s cizími systémy
