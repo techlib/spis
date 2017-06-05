@@ -592,6 +592,11 @@ body:
       default:
         start: !eval "today()"
         end: !eval "today() + timedelta(days=14)"
+
+      ensure:
+        - that: !eval "self.data.start < self.data.end"
+          name: Period must not be zero length
+          name[cs]: Období nesmí být nulové délky
 ....
 ====
 
@@ -599,7 +604,9 @@ Hned v první části příkladu vidíme import funkcí (`today` a `timedelta` z
 
 V popisu samotného těla dokumentu vidíme, že se v tomto případě nejedná o žádnou složitou strukturu, ale pouze o doplnění příloh a závislostí o termín platnosti výpůjčky představovaný sekcí `period`. Její hrubý popis je čerpán z knihovny schémat a úpravy probíhají pomocí komponenty editoru dokumentů `DateRangePicker` se zobrazením svátků.
 
-V závěru sekce pak nalezneme určení výchozích hodnot pro nový dokument, které využívá právě knihovních funkcí importovaných výše k nastavení výpůjčky ode dnes na 14 dní.
+V závěru sekce pak nalezneme určení výchozích hodnot pro nový dokument, které využívá právě knihovních funkcí importovaných výše k nastavení výpůjčky ode dnes na 14 dní a nakonec i seznam kontrol, kterým je daná komponenta podrobena a bez jejichž úspěšného absolvování není možné dokument dokončit.
+
+Kromě kontrol připojených k jednotlivým komponentám je možné nastavit také kontroly, které platí pro dokument jako celek.
 
 === Komponenty
 
