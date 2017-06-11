@@ -18,7 +18,7 @@
 
 == Úvod
 
-Správní informační systém, zkráceně _SpIS_ je otevřený nástroj pro vedení elektronických evidencí. Měl by zpřehlednit výkon organizačních úkonů, mezi které patří například příprava a jednotlivé kroky realizace veřejných zakázek včetně zpracování podkladů pro fakturaci, plánování rozpočtu a jednotlivých výdajových záměrů nebo nastavení pracovních procesů a schvalovacích mechanismů dle rolí přidělených pracovníkům a dodavatelům dané organizace. Systém bude tedy v praxi evidovat doklady a další dokumenty.
+Správní informační systém, zkráceně _SpIS_ je otevřený nástroj pro vedení elektronických evidencí. Měl by zpřehlednit výkon organizačních úkonů, mezi které patří například příprava a jednotlivé kroky realizace veřejných zakázek včetně zpracování podkladů pro fakturaci, plánování rozpočtu a jednotlivých výdajových záměrů nebo nastavení pracovních procesů a schvalovacích mechanismů dle rolí přidělených pracovníkům dané organizace. Systém bude tedy v praxi evidovat doklady a další dokumenty.
 
 NOTE: Bez ohledu na specifikaci níže platí, že SpIS nebo jeho nasazení musí vyhovět stávající legislativě. Například v oblasti ochrany osobních údajů či bezpečnosti.
 
@@ -77,12 +77,12 @@ Veškerá nastavení zobrazení seznamů jsou trvalá a společná pro daný dru
 
 ==== Historie
 
-U dokumentů a případů se uchovávají předcházející verze jejich stavu. Uživatel si může zobrazit anotovaný výpis těchto verzí, ze kterého jsou patrné alespoň míra a povaha změny a dále také její autor. Dále si může libovolnou předešlo verzi zobrazit.
+U dokumentů a případů se uchovávají předcházející verze jejich stavu. Uživatel si může zobrazit anotovaný výpis těchto verzí, ze kterého jsou patrné alespoň míra a povaha změny a dále také její autor. Dále si může libovolnou předešlou verzi zobrazit.
 
 
 ==== Tisk
 
-Každá stránka zobrazující uživatelská data (například dokumenty, případy či přehledy) podporuje stažení PDF verze pro tisk. Ta vzniká na serveru pomocí zvláštní HTML šablony a CSS stylů. Jak šablonu, tak styly je možné přizpůsobit a tím dosáhnout souladu vzhledu tištěných výstupů se vizuálním stylem organizace.
+Každá stránka zobrazující uživatelská data (například dokumenty, případy či přehledy) podporuje stažení PDF verze pro tisk. Ta vzniká na serveru pomocí zvláštní HTML šablony a CSS stylů. Jak šablonu, tak styly je možné přizpůsobit a tím dosáhnout souladu vzhledu tištěných výstupů s vizuálním stylem organizace.
 
 Kromě centrálních předloh je možné nastavit oddělené předlohy i pro jednotlivé typy dokumentů a případů. Předlohy pro tisk komponent jsou vždy vlastní danému typu komponenty.
 
@@ -151,14 +151,14 @@ Z přehledu jsou patrné základní údaje o případech a zda-li do nich může
 
 ==== Dokumenty
 
-Pokud téma obsahuje prostřednictvím přiřazených typů případů alespoň jeden typ dokumentu, je na jeho stránce k dispozici přehled dokumentů, ke kterým má aktuální uživatel přístup. Pokud je k tomu uživatel oprávněn, může z tohoto přehledu zahájit změnu dokumentu.
+Pokud téma obsahuje prostřednictvím přiřazených typů případů alespoň jeden typ dokumentu, je na jeho stránce k dispozici přehled dokumentů, ke kterým má aktuální uživatel přístup. Pokud je k tomu uživatel oprávněn, může z tohoto přehledu zahájit změnu dokumentu či vytvořit nový.
 
 Z přehledu jsou patrné základní údaje o dokumentech. Dá se z něj také zjistit, do kterých případů vstupují, má-li k nim aktuální uživatel přístup.
 
 
 ==== Předvolby uživatele
 
-Část systému umožňující uživateli přizpůsobit si systém dle svých potřeb. Uživatel si zde může zvolit alespoň jazyk uživatelského rozhraní a způsob upozorňování na události v systému. Upozornění týkající se dokumentů a případů je možné omezit na jejich konkrétní typy.
+Část systému umožňující uživateli přizpůsobit si systém dle svých potřeb. Uživatel si zde může zvolit jazyk uživatelského rozhraní a způsob upozorňování na události v systému. Upozornění týkající se dokumentů a případů je možné omezit na jejich konkrétní typy.
 
 Více o upozorněních naleznete v kapitole <<Upozornění na událost>>.
 
@@ -419,7 +419,7 @@ end note
 
 V příkladu je předávací protokol použit nejprve pro dokumentaci zahájení zápůjčky věci a následně bude použit pro dokumentaci jejího navrácení. Pro vyložení závislého dokumentu `zápůjčka` je podstatné tyto dva protokoly od sebe odlišit.
 
-Oproti instancím (dokumentům) mohou typy záviset pouze na dalších typech (nebo typových třídách, které jsou vysvětleny níže). Pro některé situace může být užitečné, aby dokument závisel na určitém počtu zcela libovolných dokumentů, bez ohledu na jejich typ. To ale odbíháme.
+Oproti instancím (dokumentům) mohou typy záviset pouze na dalších typech (nebo typových třídách, které jsou vysvětleny níže). Pro některé situace může být užitečné, aby dokument závisel na určitém počtu zcela libovolných dokumentů, bez ohledu na jejich typ.
 
 .Typy pro předchozí příklad
 ====
@@ -928,7 +928,7 @@ Různé přehledy mohou mít různé požadavky na platnost revizí dokumentů, 
 
 === Uživatelské rozhraní
 
-Uživatelské rozhraní je postaveno na bázi projektu link:https://www.patternfly.org/[PatternFly] a využívá v maximální míře příkladové vzory součástí uveřejněných na webu tohoto projektu.
+Uživatelské rozhraní je postaveno na bázi projektu link:https://www.patternfly.org/[PatternFly] a využívá v maximální míře příkladové vzory uveřejněných na webu tohoto projektu.
 
 
 // vim:set spelllang=cs,en:
