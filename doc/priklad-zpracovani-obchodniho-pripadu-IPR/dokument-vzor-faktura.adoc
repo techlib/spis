@@ -3,9 +3,10 @@
 === Základní informace
 |===
 | Evidenční číslo | FA2016-0108
-| Variabilní symbol | 1201403897
 | IČO dodavatele | 63667312
 | Dodavatel | ECOMMA s.r.o.
+| Variabilní symbol | 1201403897
+| Konstantní symbol | 
 | Zdanitelné plnění | 
 | Datum splatnosti | 
 | Zálohová faktura | [check]
@@ -28,4 +29,5 @@ Schválil:
 | Evid. č. zakázky| ZAK16-0032
 |===
 
-**Příloha**
+**Příloha:**
+faktura-1201403897.pdf
