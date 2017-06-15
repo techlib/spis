@@ -1,0 +1,19 @@
+== Předávací protokol
+
+|===
+| Název zakázky: | Výměna akumulátorů v UPS
+| Přebírající: | Institut plánování a rozvoje hl. m. Prahy
+| Zástoupen: | Jiří Čtyroký
+| Předávající: | UPS
+| Zástoupen: | 
+|===
+
+|===
+| Vytvořeno:				| 
+| Změněno:					| 
+| Poznámka:					| 
+|===
+
+**Přílohy:**
+
+predavacíprotokol.pdf
