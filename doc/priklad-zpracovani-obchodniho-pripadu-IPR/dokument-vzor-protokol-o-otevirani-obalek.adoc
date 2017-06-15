@@ -1,0 +1,16 @@
+== Protokol o otevírání obálek s nabídkami k zakázce
+
+|===
+| Název zakázky: | 
+| ID zakázky: | 
+|===
+
+|===
+| Vytvořeno:				| 
+| Změněno:					| 
+| Poznámka:					| 
+|===
+
+**Přílohy:**
+
+protokoloteviraniobalek.pdf
