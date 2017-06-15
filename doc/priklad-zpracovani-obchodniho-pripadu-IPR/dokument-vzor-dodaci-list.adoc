@@ -1,0 +1,16 @@
+== Dodací list
+
+|===
+| Název zakázky: | Výměna akumulátorů v UPS
+| Dodavatel: | UPS
+|===
+
+|===
+| Vytvořeno:				| 
+| Změněno:					| 
+| Poznámka:					| 
+|===
+
+**Přílohy:**
+
+dodacilist.pdf
