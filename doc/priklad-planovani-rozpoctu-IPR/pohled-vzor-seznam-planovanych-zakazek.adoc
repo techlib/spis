@@ -1,0 +1,18 @@
+**Seznam plánovaných zakázek a výdajů**
+
+[cols="<,<,<,>,>,<", options="header"]
+|===
+| Evidenční číslo
+| Plánovaný výdaj
+| Druh finančních prostředků
+| Částka bez DPH
+| Částka s DPH
+| Sekce
+
+|
+| <<dokument-vzor-planovana-zakazka.adoc#,Pořízení drobného SW a HW>>
+| E
+| 661 157
+| 800 000
+| SPI
+|===
