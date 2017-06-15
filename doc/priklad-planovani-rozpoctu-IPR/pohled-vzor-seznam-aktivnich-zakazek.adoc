@@ -1,6 +1,6 @@
 == Aktivní zakázky
 
-Aktivní zakázky jsou zakázky běžící (ZAK), nebo se schváleným záměrem (ZAM).
+Aktivní zakázky jsou zakázky běžící (ZAK). Případně schválené záměry, které ještě nebyly zprocesovány do Zakázky.
 
 [cols="<,<,<,<,<,>,>,>,>,>,>,>", options="header"]
 |===
