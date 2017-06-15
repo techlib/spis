@@ -1,0 +1,16 @@
+== Prezenční listina
+
+|===
+| Název zakázky: | 
+| ID zakázky: | 
+|===
+
+|===
+| Vytvořeno:				| 
+| Změněno:					| 
+| Poznámka:					| 
+|===
+
+**Přílohy:**
+
+prezencnilistina.pdf
