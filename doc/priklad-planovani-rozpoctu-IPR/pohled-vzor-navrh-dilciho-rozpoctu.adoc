@@ -1,5 +1,6 @@
-== Návrh dílčího rozpočtu
+== Návrh dílčího rozpočtu SPI
 
+**Seznam aktivních zakázek**
 [cols="<,<,<,>,>,<", options="header"]
 |===
 | Evidenční číslo
@@ -15,6 +16,29 @@
 | 4 266 000
 | 5 400 000
 | SPI
+|===
+
+[cols="<3,>2,>2", options="header"]
+|===
+| Návrh rozpočtu
+| Částka bez DPH
+| Částka s DPH
+
+| Zasmluvněné výdaje celkem
+| 4 266 000
+| 5 400 000
+|===
+
+**Seznam plánovaných zakázek a výdajů**
+
+[cols="<,<,<,>,>,<", options="header"]
+|===
+| Evidenční číslo
+| Plánovaný výdaj
+| Druh finančních prostředků
+| Částka bez DPH
+| Částka s DPH
+| Sekce
 
 |
 | <<dokument-vzor-planovana-zakazka.adoc#,Pořízení drobného SW a HW>>
@@ -30,7 +54,19 @@
 | Částka bez DPH
 | Částka s DPH
 
+| Plánované zakázky celkem
+| 661 157
+| 800 000
+|===
+
+**Navrhovaný rozpočet celkem**
+[cols="<3,>2,>2", options="header"]
+|===
+| Návrh rozpočtu
+| Částka bez DPH
+| Částka s DPH
+
 | Plánované výdaje celkem
-| 4 947 157
-| 6 400 000
+| 4 828 157
+| 6 200 000
 |===
