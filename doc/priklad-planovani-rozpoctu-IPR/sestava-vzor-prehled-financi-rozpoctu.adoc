@@ -1,5 +1,7 @@
 == Sestava přehledu čerpání financí dle různých kritérií
 
+Přehledové tabulky jsou dynamické, celkové částky jsou vypočítávány pro vyfiltrované zobrazené položky.
+
 === Dle sekce a druhu financí
 
 [cols="<,<,>", options="header"]
