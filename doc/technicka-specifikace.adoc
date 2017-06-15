@@ -77,7 +77,9 @@ Veškerá nastavení zobrazení seznamů jsou trvalá a společná pro daný dru
 
 ==== Historie
 
-U dokumentů a případů se uchovávají předcházející verze jejich stavu. Uživatel si může zobrazit anotovaný výpis těchto verzí, ze kterého jsou patrné alespoň míra a povaha změny a dále také její autor. Dále si může libovolnou předešlou verzi zobrazit.
+U dokumentů a případů se uchovávají předcházející verze jejich stavu. Uživatel si může zobrazit anotovaný výpis těchto verzí, ze kterého jsou patrné alespoň míra a povaha změny a dále také její autor. Dále si může libovolnou předešlou verzi zobrazit, případně ji porovnat s jinou.
+
+Pro rychlou orientaci je také vždy možné zobrazit porovnání aktuální verze dokumentu s verzí předchozí, případně aktuální revize s předchozí. V případě otevření dokumentu skrze odkaz získaný automatickým upozorněním na změnu je uživateli zobrazen popis změny mezi revizemi.
 
 
 ==== Tisk
@@ -85,6 +87,8 @@ U dokumentů a případů se uchovávají předcházející verze jejich stavu. 
 Každá stránka zobrazující uživatelská data (například dokumenty, případy či přehledy) podporuje stažení PDF verze pro tisk. Ta vzniká na serveru pomocí zvláštní HTML šablony a CSS stylů. Jak šablonu, tak styly je možné přizpůsobit a tím dosáhnout souladu vzhledu tištěných výstupů s vizuálním stylem organizace.
 
 Kromě centrálních předloh je možné nastavit oddělené předlohy i pro jednotlivé typy dokumentů a případů. Předlohy pro tisk komponent jsou vždy vlastní danému typu komponenty.
+
+V případě potřeby je možné pro konkrétní typ dokumentu stanovit další šablony pro tisk. Tyto šablony z dokumentu čerpají po datové stránce, ale formu určují zcela samostatně. Typickým příkladem využití je například příprava posudku k odeslání poštou.
 
 
 ==== Export
@@ -704,7 +708,7 @@ Typ dokumentu::
 Typ je základní a neměnnou vlastností každého dokumentu popisující jeho charakter. Dokument může být například typu *Faktura*.
 
 Obor působnosti::
-Právě za účelem kontroly přístupu musí být každý dokument zařazen do takzvaného oboru působnosti. Obor může, ale nemusí vycházet z organizačního členění. Může se tedy jednat například o obor nazvaný *Odbor ICT*.
+Právě za účelem kontroly přístupu musí být každý dokument zařazen do takzvaného oboru působnosti. Obor může, ale nemusí vycházet z organizačního členění. Může se tedy jednat například o obor nazvaný *Odbor ICT*. Obor působnosti může zahrnovat i podobory.
 
 Předmětný dokument::
 Jedná se o dokument určitého typu, který spadá do určitého oboru působnosti. Předmětnými dokumenty určitého oprávnění (popsaného níže) mohou být například *Faktury Odboru ICT*.
@@ -850,15 +854,7 @@ Jak naznačuje schéma výše, _Aplikace_ samotná je běhovým prostředím pro
 
 ==== PostgreSQL
 
-Úlohu hlavního databázového systému plní otevřené řešení _PostgreSQL_. Protože by tento požadavek mohl být zastánci uzavřených databázových systémů vnímán jako sporný, uvedu důležité vlastnosti, které z něj činí nejlepší nástroj pro tento účel:
-
-* Kvalitně zpracovaná soustava spouští (triggers), která umožňuje reagovat na změny v datech, zajišťovat jejich soudržnost a dále je přenášet a měnit.
-
-* Schopnost plnohodnotně pracovat s volně uspořádanými daty ve formátu JSON, ve kterém jsou ukládány dokumenty. Změny v nich je pak pomocí spouští možné šířit i do dalších tabulek přímo uvnitř databáze.
-
-* Vestavěný nástroj pro upozornění posluchačů na události, ke kterým v databázi dochází. Zejména užitečný společně se spouštěmi, protože umožňuje například okamžitě uvědomit různé synchronizační nástroje nebo dokonce uživatelské rozhraní o změnách, na které je nutné reagovat.
-
-* Lze doplnit o nástroj pro vytváření pohledů na cizí data, tedy data z jiných informačních systémů nebo databází bez nutnosti je přenášet dopředu. Je možné se takto například pomocí protokolu LDAP napojit na evidenci uživatelů v systému Microsoft Active Directory.
+Úlohu hlavního databázového systému plní otevřené řešení _PostgreSQL_. Tím se zajistí dobrá integrace do stávajícíhí prostředí objednatelů, dlouhodobá udržitelnost a nedojde k omezení možnosti řešení dále šířit, protože licenční podmínky _PostgreSQL_ v něm nebrání.
 
 
 ==== Dokumenty
@@ -929,6 +925,8 @@ Různé přehledy mohou mít různé požadavky na platnost revizí dokumentů, 
 === Uživatelské rozhraní
 
 Uživatelské rozhraní je postaveno na bázi projektu link:https://www.patternfly.org/[PatternFly] a využívá v maximální míře příkladové vzory uveřejněných na webu tohoto projektu.
+
+Pro každou část systému bude požadované chování upřesněno v rámci implementační analýzy tak, aby bylo jeho ovládání intuitivní a jednoduché. Z této anylýzy a komunikace s uživateli vyplynou například požadavky na komponenty, ale také na podobu procesních modelů.
 
 
 // vim:set spelllang=cs,en:
