@@ -9,6 +9,15 @@
 |===
 
 |===
+| Zahrnuto do rozpočtu | [check]
+| Garant | Makovec Lukáš
+| Podpis garanta zakázky	| [check]
+| Souhlas odpovědného útvaru	| [check]
+| Schválení nadřízeného útvaru	| 
+| Schválení nadřízeného orgánu	|
+|===
+
+|===
 | Vytvořeno:					| 
 | Změněno:					| 
 | Poznámka:					| 
