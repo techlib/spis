@@ -6,3 +6,8 @@
 4. V **Případu** _Příprava rozpočtu_ se shromažďují _Návrhy dílčího rozpočtu_ od vedoucích jednotlivých sekcí (nebo k tomu pověřených osob), které si následně převezme ekonom organizace (rozpočtář).
 5. Převzaté _Návrhy dílčího rozpočtu_ ekonom organizace (rozpočtář) zkoriguje a upraví v **Dokumentu** _Rozpočet_.
 6. **Dokument** _Rozpočet_ je předán ke schválení nadřízenému orgánu.
+
+== Rozpočet, změny rozpočtu a přehled čerpání
+Rozpočet schválený zřizovatelem je závazný pro plánování a přehled čerpání přidělených financí. Částky schválené zřizovatelem rozdělí ekonom organizace (rozpočtář) zpětně mezi jednotlivé sekce dle účelu využití. Přidělené částky jsou závazné pro všechny uživatele jako limity čerpání, jejich změnu smí provést pouze správce rozpočtu na základě usnesení rady MHMP o změně rozpočtu.
+V IPR je možné v rámci limitů čerpání přerozdělovat finance mezi sekcemi a měnit účel jejich vynaložení. Tyto změny může provádět pouze správce rozpočtu a jsou schvalovány vedoucími sekcí dotčených změnami.
+
