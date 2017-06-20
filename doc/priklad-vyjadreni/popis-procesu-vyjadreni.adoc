@@ -1,0 +1,8 @@
+== Proces vyjádření k území
+
+1. Na IPR Praha přijde žádost o vyjádření ke konkrétnímu území.
+2. Pracovník podatelny eviduje žádost jako příchozí poštu do E-spis a zároveň importuje žádost do SpIS.
+3. Pověřený uživatel SpISu žádost přečte, provede zákres území do mapy a pošle k vyjádření všem pověřeným odborným pracovníkům.
+4. Každý oslovený odborný uživatel vyplní svou část vyjádření, potvrdí či nechá schválit.
+5. Po kompletaci všech částí vyjádření je pověřený uživatel upozorněn a kompletní znění pošle ke schválení vedoucímu.
+6. Po schválení vedoucím je vytvořena tisková sestava a exportována do E-spisu k odeslání.
