@@ -48,7 +48,10 @@ Pro zpracování výše uvedených agend v systému je nezbytné, aby byl prová
 | Ekonomický systém                  | Ginis            | iFIS
 | Elektronický systém spisové služby | E-spis           | iFIS
 | Otevřená data                      | CKAN             | CKAN
+| Elektronické tržiště               | NEN/Tender arena*| NEN/Tendermarket*
 |===
+
+> **V případě elektronického tržiště záleží na rámci, který pro případné využívání Národního elektronického nástroje stanoví vláda ČR. Nebude-li tento rámec stanoven k datu zveřejnění zadávací dokumentace, budou IPR a NTK využívat svá původní elektronická tržiště uvedená v tabulce.**
 
 Systém bude dále napojen na národní Registr smluv, Obchodní rejstřík a Živnostenský rejstřík.
 
@@ -162,7 +165,7 @@ Integrační můstek zajišťující napojení na elektronické tržiště (prav
 
 TIP: Elektronické tržiště NEN disponuje link:https://nen.nipez.cz/Soubor.aspx?id=1499363[API na bázi protokolu SOAP].
 
-Pokud vazbu nebude možné z technických nebo jiných důvodů realizovat v plném rozsahu, zajistí můstek alespoň předání podkladů a převzetí výsledků řízení. Obsluha výběrového řízení bude provedena v systému tržiště pověřeným uživatelem.
+Pokud vazbu nebude možné z technických nebo jiných důvodů realizovat v plném rozsahu, zajistí můstek alespoň předání podkladů a převzetí výsledků řízení. Obsluha výběrového řízení bude provedena v systému tržiště pověřeným uživatelem. V případě, že využívání NEN nebude vyjasněno k datu zveřejnění zadávací dokumentace, budou IPR a NTK využívat své dosavadní profily zadavatele na jiných e-tržištích (link:https://www.tenderarena.cz/rozcestnik.jsf[Tender arena] v případě IPR a link:https://www.tendermarket.cz/home.seam[Tendermarket] v případě NTK).
 
 === Otevřená data
 
