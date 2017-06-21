@@ -48,10 +48,10 @@ Pro zpracování výše uvedených agend v systému je nezbytné, aby byl prová
 | Ekonomický systém                  | Ginis            | iFIS
 | Elektronický systém spisové služby | E-spis           | iFIS
 | Otevřená data                      | CKAN             | CKAN
-| Elektronické tržiště               | NEN/Tender arena*| NEN/Tendermarket*
+| Elektronické tržiště               | NEN/Tender arena | NEN/Tendermarket
 |===
 
-> *_V případě elektronického tržiště záleží na rámci, který pro případné využívání Národního elektronického nástroje stanoví vláda ČR. Nebude-li tento rámec stanoven k datu zveřejnění zadávací dokumentace, budou IPR a NTK využívat svá původní elektronická tržiště uvedená v tabulce._
+WARNING: V případě elektronického tržiště záleží na rámci, který pro případné využívání Národního elektronického nástroje stanoví vláda ČR. Nebude-li tento rámec stanoven k datu zveřejnění zadávací dokumentace, budou IPR a NTK využívat svá původní elektronická tržiště uvedená v tabulce.
 
 Systém bude dále napojen na národní Registr smluv, Obchodní rejstřík a Živnostenský rejstřík.
 
