@@ -51,7 +51,7 @@ Pro zpracování výše uvedených agend v systému je nezbytné, aby byl prová
 | Elektronické tržiště               | NEN/Tender arena*| NEN/Tendermarket*
 |===
 
-> _V případě elektronického tržiště záleží na rámci, který pro případné využívání Národního elektronického nástroje stanoví vláda ČR. Nebude-li tento rámec stanoven k datu zveřejnění zadávací dokumentace, budou IPR a NTK využívat svá původní elektronická tržiště uvedená v tabulce._
+> *_V případě elektronického tržiště záleží na rámci, který pro případné využívání Národního elektronického nástroje stanoví vláda ČR. Nebude-li tento rámec stanoven k datu zveřejnění zadávací dokumentace, budou IPR a NTK využívat svá původní elektronická tržiště uvedená v tabulce._
 
 Systém bude dále napojen na národní Registr smluv, Obchodní rejstřík a Živnostenský rejstřík.
 
@@ -59,7 +59,7 @@ Systém bude dále napojen na národní Registr smluv, Obchodní rejstřík a Ž
 === Slovník pojmů
 
 Dokument::
-V rámci SpISu se dokumentem rozumí základní jednotka záznámu ve struktuře systému. Dokumenty se sdružují do případů, pod které spadají, přičemž prostřednictvím různých funkcí a filtrů je možné s dokumenty pracovat a zobrazovat jejich obsah a vztahy pomocí nadefinovaných přehledů. Dokument může být též exportován do datových formátů a do své verze pro tisk (podrobněji viz Technická specifikace). Dokument (ve smyslu záznamu) může být ve SpISu v některých situacích tvořen pouze metadatovým popisem, přičemž jsou k němu připojeny jako přílohy dokumenty (ve smyslu přiložených souborů), o kterých poskytuje informace.
+V rámci SpISu se dokumentem rozumí základní jednotka záznámu ve struktuře systému. Dokumenty se sdružují do případů, pod které spadají, přičemž prostřednictvím různých funkcí a filtrů je možné s dokumenty pracovat a zobrazovat jejich obsah a vztahy pomocí nadefinovaných pohledů a přehledů. Dokument může být též exportován do datových formátů a do své verze pro tisk (podrobněji viz Technická specifikace). Dokument (ve smyslu záznamu) může být ve SpISu v některých situacích tvořen pouze metadatovým popisem, přičemž jsou k němu připojeny jako přílohy dokumenty (ve smyslu přiložených souborů), o kterých poskytuje informace.
 
 Veřejná zakázka (Zakázka)::
 Zakázka, která je zadána veřejným subjektem a k jejímu zaplacení se použijí veřejné zdroje. Jedná se o nákup zboží, zadání práce, objednání díla nebo služby. Veřejné zakázky se dělí dle druhu předmětu zakázky (služby, dodávky, stavební práce) a dle předpokládané hodnoty vynaložených prostředků (zakázka malého rozsahu, podlimitní zakázka a nadlimitní zakázka).
