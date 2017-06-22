@@ -36,6 +36,9 @@ Vhodně nastavené přehledy čerpající z případů a dalších evidencí. Pr
 Oprávnění::
 Pružný systém oprávnění založený na uživatelských rolích a organizačních jednotkách umožňuje pracovat pouze s těmi dokumenty a na těch případech, které se uživatelů týkají. Uživatelské účty se vždy přebírají z vnější evidence uživatelů.
 
+Export dat a tisk::
+Systém bude obsahovat nástroje pro export dat, tisk dokumentů, pohledů a vybraných přehledů formou jednoduchého tisku a tiskových šablon.
+
 SpIS bude napojen na vybrané další informační systémy, ze kterých bude čerpat podklady a do kterých bude předávat výstupy nebo dílčí dokumenty. Napojení bude realizováno prostřednictvím datové vrstvy, tedy v databázi.
 
 <<<
