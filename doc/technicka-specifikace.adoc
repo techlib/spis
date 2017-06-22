@@ -57,13 +57,13 @@ Jednotlivé stránky mohou být vylepšeny pomocí klientských skriptů za úč
 Systém v řadě případů zobrazuje různě dlouhé seznamy položek. Pokud si má uživatel ze seznamu některé položky vybrat, nebo může na některé položce vyvolat akci (například _upravit_, _smazat_), pak pro tyto seznamy platí následující pravidla.
 
 Filtrování::
-Pokud seznam obsahuje 10 nebo více položek, systém jej umožňuje filtrovat. Tím se rozumí přechodně omezit množství zobrazených položek zadáním filtrovacího výrazu.
+Seznam umožňuje filtrování položek. Tím se rozumí přechodně omezit množství zobrazených položek zadáním filtrovacího výrazu.
 +
 * Vždy je přípustné filtrování pomocí jednoduchého fulltextového hledání.
 * V případě seznamů nebo tabulek o více sloupcích je přípustné filtrování jednotlivých sloupců zvlášť, pokud je možné kombinovat více kritérií.
 
 Řazení::
-Pokud seznam obsahuje 2 nebo více sloupců, systém umožňuje řádky řadit podle vybraného z nich a ve výchozím zobrazení upřednostňuje (je-li to možné a podstatné):
+Pokud seznam obsahuje 1 nebo více sloupců, systém umožňuje řádky řadit podle vybraného z nich a ve výchozím zobrazení upřednostňuje (je-li to možné a podstatné):
 +
 * Řazení dle času od nejnovějšího po nejstarší.
 * Vzestupné abecední řazení dle hlavního názvu.
