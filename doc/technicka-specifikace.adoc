@@ -275,6 +275,23 @@ expects:
 ....
 ====
 
+=== Komponenta mapa
+Komponenta mapa je tvořena mapovým oknem, sloužím k zobrazování podkladových map a tematických vrstev, navigaci v mapě a zákresu nové datové vrstvy. Její funkce se liší dle konkrétního účelu a použití v tématu v rámci SpIS. Například pro účely zákresu zájmového území je mapa k dispozici včetně editace, ale v jiném tématu SpIS slouží již pouze k zobrazení vybraných dat v mapě.
+
+Z důvodu zachování otevřenosti systému je doporučeno komponentu mapy implementovat pomocí nástrojů OpenLayers. 
+
+==== Vlastnosti mapového okna
+Mapové okno bude podporovat zobrazení mapových vrstev formou WMS služby, které bude možné zapnout buď jako mapu základní, nebo tematickou (lze zapnout více vrstev najednou). Systém bude umožňovat napojit libovolná data publikovaná mapovými službami dle standardu OGC. Pro účely IPR Praha budou použity mapy a tematické vrstvy z datového skladu IPR Praha.
+Okno bude dále obsahovat základní navigační prvky pro pohyb v mapě: zoom, home a funkci pro vyhledání adresy a parcely.
+
+==== Vyhledávání
+Vyhledání oblasti bude umožněno navigačními prvky v mapě a funkcí Vyhledat.
+Vyhledání podle adresy bude řešeno fulltextovým vyhledáváním v rejstříku ulic a čísel orientačních či popisných. Hledání parcely bude řešeno vyhledáním k. ú. ze seznamu a zadáním čísla parcely (je možné zadat pouze část před lomítkem). Po vyhledání se mapa přiblíží a vycentruje na nalezenou adresu nebo parcelu.
+Při nálezu více prvků (adresní místa v ulici, parcely se shodným kořenovým číslem) jsou prvky zobrazeny v mapě a v seznamu, po výběru konkrétního prvku se mapa přiblíží a zacentruje na konkrétní místo v mapě.
+
+==== Tvorba nové vektorové vrstvy
+V rámci mapového okna bude možné vytvářet novou vektorovou vrstvu, která bude uložena do vybraného standardního vektorového formátu GIS do úložiště systému.
+Vrstva bude moci výt vytvořena ručně zadáním bodu, linie, obdélníku či obecného polygonu v rámci mapového okna a dále převzetím hranic vybraných (nalezených) územních jednotek (katastrální území, městská část) a hranic parcel.
 
 === Číselníky
 
