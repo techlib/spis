@@ -1,0 +1,30 @@
+== Požadavky  na výstupy
+=== Software a dokumentace
+Software bude dodán pod open source licencí v podobě komentovaných zdrojových kódů všech částí informačního systému s výjimkou využitých licencovaných komponent třetích stran. Zdrojové kódy budou předávány zadavateli spolu s dokumentací (viz dále) při zahájení ostrého provozu, dále jednou ročně a při každé zásadnější aktualizaci systému (požadavek na mimořádné předání zdrojových kódů bude vždy specifikován zadavateli). Dále budou předány instalační soubory pro veškeré části systému včetně aktualizací a bude provedena instalace systému do běhového prostředí zadavatelů a zajištění instalace aktualizací.
+K software bude dodavatel udržovat aktuální systémovou a uživatelskou dokumentaci pro veškeré moduly systému. Dokumentace bude předána poprvé při zahájení ostrého provozu, dále jednou ročně a při každé zásadnější aktualizaci systému (požadavek na mimořádné předání aktualizované dokumentace bude vždy specifikován zadavateli).
+Textové části dokumentace budou k dispozici ve formě PDF dokumentů nebo www aplikace. 
+Způsob zpracování a obsah dokumentace bude upřesněn na základě implementačního návrhu v součinnosti se zadavateli a bude předmětem samostatné části akceptace. 
+
+Obsah předání:
+•	Komentované zdrojové kódy
+•	Instalační soubory
+•	Aktualizační soubory
+•	Dokumentace
+
+=== Implementace do prostředí zadavatelů
+Dodavatel v součinnosti se zadavateli nasadí systém jednotlivě na jejich testovací a produkční prostředí (včetně propojení s okolními systémy) a zajistí testovací provoz. Testovací prostředí bude dále sloužit pro testování implementace změnových požadavků.
+Dále bude součástí řešení migrace dat ze stávajícího software a příprava pro produkční nasazení dle požadavků a možností zadavatelů.
+
+=== Školení
+Dodavatel zajistí realizaci školení uživatelů a administrátorů IS při zahájení pilotního provozu. Uživatelé budou školeni po skupinkách dle využití systému. Školení proběhne na pracovištích zadavatelů na prostředí reálně nasazeného systému. Rozsah školení se předpokládá pro každou organizaci cca 2 dny pro garanty zakázek, 3 dny pro nákupčí a právníky a cca 2 dny pro správce systému.
+
+Cílem školení je skutečná znalost IS, včetně příslušných datových a funkčních vazeb, možností uživatelského nastavení, znalosti tvorby tiskových sestav.
+
+=== Podpora a změnové požadavky
+Dodavatel zajistí uživatelskou podporu systému v rozsahu a způsobem specifikovaným v SLA (viz samostatný dokument). Požadavky podpory řeší každý zadavatel samostatně dle svých konkrétních specifik.
+Provedení upgrade a rozvoje systémové platformy a zajištění odpovídající aktualizace IS se předpokládá provádět na základě dohody mezi zadavateli a dodavatelem. Úpravy technologie budou v těchto případech prováděny prostřednictvím změnových požadavků. 
+Provedení změn a aktualizací systému bude vždy testováno na testovacím prostředí zadavatelů. Po akceptaci budou změny následně implementovány do produkčního prostředí. Technologie systému musí umožňovat návrat k předchozí verzi jednotlivých částí systému v případě selhání funkčnosti aktualizací.
+
+=== Předpokládaná součinnost 
+Vzhledem k požadované analýze potřeb a požadavků na IS a obchodních procesů obou organizací je předpokládána součinnost pracovníků s dodavatelem IS. 
+Pro potřeby analýzy a pozdějšího vývoje IS bude k dispozici za každou organizaci vedoucí projektu za a zároveň garant projektu, který bude odpovědný za komunikaci s dodavatelem, zajištění potřebných informací a podkladů, domlouvání schůzek a zajišťování součinnosti s dalšími pracovníky.
