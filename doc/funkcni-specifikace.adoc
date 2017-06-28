@@ -34,7 +34,7 @@ Partneři a smlouvy::
 Sekce partnerů a smluv se soustředí na téma evidence platných smluv a z nich plynoucích závazků. Dále také obsahuje evidenci smluvních partnerů včetně kontaktních informací.
 
 Vyjádření k území::
-Sekce vyjádření slouží k řízení procesu vyjadřování odborných pracovníků jednotlivých sekcí IPR Praha k území, které je specifikováno v žádosti a lokalizováno ve SpISu na mapě. Sekce vyjádření využívá z celého systému pouze vybrané části - především komunikaci se spisovou službou, komponentu mapa, workflow, schvalování a tisk.
+Sekce vyjádření slouží k řízení procesu vyjadřování odborných pracovníků jednotlivých sekcí IPR Praha k území, které je specifikováno v žádosti a lokalizováno ve SpISu na mapě. Sekce vyjádření využívá z celého systému pouze vybrané části - především komunikaci se spisovou službou, komponentu mapa, nastavení pracovního procesu v rámci organizaci, schvalování a tisk.
 
 === Integrace
 
@@ -85,8 +85,8 @@ Dokument, kterým zadavatel od dodavatele přebírá předmět veřejné zakázk
 Faktura::
 Daňový doklad se všemi zákonnými náležitostmi.
 
-Obchodní případ (Případ)::
-Pro účely tohoto dokumentu termín označující celý proces veřejné zakázky, tedy od vytvoření záměru, přes schvalovací řízení, průběh zakázky, až po fakturu, akceptační a předávací protokoly a řádné ukončení zakázky.
+Případ::
+Pro účely tohoto dokumentu termín označující všechny dokumenty sloučené do jednoho tematického celku. Například se jedná o všechny  dokumenty v rámci procesu veřejné zakázky, tedy od vytvoření záměru, přes schvalovací řízení, průběh zakázky, až po fakturu, akceptační a předávací protokoly a řádné ukončení zakázky. Dalším příkladem případu může být kompletní proces zpracování žádosti o vyjádření k území.
 
 Garant::
 Osoba, která iniciuje vypsání veřejné zakázky, odpovídá za její plnění, je v kontaktu s obchodním a právním oddělením své organizace a spolupracuje s dodavatelem.
@@ -136,7 +136,7 @@ SpIS je provázán s ekonomickým systémem tak, že z něj přebírá a uživa
 
 === Elektronický systém spisové služby
 
-Napojení na elektronický systém spisové služby (ESSS) bude sloužit jednak k získávání dokumentů a příloh pro další práci s nimi (import) a dále pak pro ukládání hotových dokumentů a příloh za účelem jejich trvalého uchování (export). Tuto integraci bude využívat i modul Vyjádření pro import žádosti o vyjádření a následný export hotového vyjádření k odeslání spisovou službou. 
+Napojení na elektronický systém spisové služby (ESSS) bude sloužit jednak k získávání dokumentů a příloh pro další práci s nimi (import) a dále pak pro ukládání hotových dokumentů a příloh za účelem jejich trvalého uchování (export). 
 
 ==== Import
 
@@ -294,7 +294,7 @@ Detailní specifikace obsahu a funkcí přehledu čerpání rozpočtu bude před
 
 == Vyjádření k území
 
-Modul vyjádření k území bude implementován pouze do prostředí IPR Praha. Jedná se o agendu spojenou s procesem získání vyjádření odborníků z jednotlivých sekcí IPR Praha k území specifikovaném v žádosti a zakresleném na mapě. Vstupním podkladem pro vyjádření je dopis se žádostí o vyjádření evidovaný v ESSS IPR Praha. Žádost je importována do SpIS včetně vybraných metadat a zobrazena pověřenému uživateli, který lokalizuje území z žádosti v mapě, přiřadí uživatele, od kterých je vyžadováno vyjádření a pošle jim požadavek na doplnění. Uživatelé doplní svá vyjádření, sami potvrdí, případně nechají schválit svým vedoucím a přiřadí zpět ke konkrétní žádosti. V okamžiku, kdy jsou všechna požadovaná vyjádření hotová a zkompletovaná u žádosti, pověřená osoba zkontroluje obsah, případně pošle ke schválení a exportuje tiskovou sestavu odpovědi na žádost o vyjádření do ESSS k odeslání. Detailní specifikace procesu a požadovaných funkcí bude součástí implementační analýzy.
+Funkce vyjádření k území bude implementován pouze do prostředí IPR Praha. Jedná se o agendu spojenou s procesem získání vyjádření odborníků z jednotlivých sekcí IPR Praha k území specifikovaném v žádosti a zakresleném na mapě. Vstupním podkladem pro vyjádření je dopis se žádostí o vyjádření evidovaný v ESSS IPR Praha. Žádost je importována do SpIS včetně vybraných metadat a zobrazena pověřenému uživateli, který lokalizuje území z žádosti v mapě, přiřadí uživatele, od kterých je vyžadováno vyjádření a pošle jim požadavek na doplnění. Uživatelé doplní svá vyjádření, sami potvrdí, případně nechají schválit svým vedoucím. V okamžiku, kdy jsou všechna požadovaná vyjádření hotová, pověřená osoba zkontroluje obsah, případně pošle ke schválení a exportuje tiskovou sestavu odpovědi na žádost o vyjádření do ESSS k odeslání. Detailní specifikace procesu a požadovaných funkcí bude součástí implementační analýzy.
 
 
 == Přílohy
