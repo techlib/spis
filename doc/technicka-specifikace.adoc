@@ -192,115 +192,44 @@ Více o modelu naleznete v kapitole <<Model oprávnění>>.
 
 == Pohledy, komponenty a zdroje dat
 
-Každý pohled využívá pro zobrazení určitou komponentu. Pokud je komponenta určena pro zobrazení mapových vrstev s vyznačenými body, je možné ji použít pro zobrazení prostorových dat. Pokud se jedná o komponentu pro zobrazení tabulky, je možné pomoci ní zobrazovat data relační a tak dále.
+Každý **pohled** nebo **část dokumentu** využívá pro zobrazení určitou komponentu. Pokud je komponenta určena pro zobrazení mapových vrstev s vyznačenými body, je možné ji použít pro zobrazení prostorových dat. Pokud se jedná o komponentu pro zobrazení tabulky, je možné pomoci ní zobrazovat data relační, pokud je určena k manipulaci s krátkým textovým popiskem, je jejím prostřednictvím možné měnit určenou část dokumentu a tak dále.
 
-To, jaká data pohled představuje, je kromě komponenty dáno zejména souborem datových zdrojů, ze kterých pohled čerpá. Tyto zdroje mohou být při použití interaktivních komponent ovlivněny hodnotami, které uživatel při prohlížení mění.
+To, jaká data pohled představuje, je kromě komponenty dáno zejména souborem datových zdrojů, ze kterých pohled čerpá. Tyto zdroje mohou být při použití interaktivních komponent ovlivněny hodnotami, které uživatel při prohlížení mění. Obdobně je možné, aby komponenty využité k prezentaci nebo manipulaci s částmi dokumentů zprostředkovávaly povědomí o jeho kontextu.
 
-.Popis pohledu
-====
-[source,yaml]
-....
-# Název pohledu včetně české lokalizace
-name: Event Calendar
-name[cs]: Kalendář akcí
+Komponentu tvoří popis jejího rozhraní, včetně popisu zdrojů dat, ze kterých dokáže čerpat a dále kód pro její zobrazení. Komponenta je totiž v pohledu navázána na sadu datových zdrojů, což jsou fakticky procedury uložené v databázi. Popis rozhraní komponenty umožňuje provést automatickou kontrolu shody s rozhraním procedur při jejím využití v politice.
 
-# Výběr komponenty uživatelského rozhraní
-interface:
-  component: CalendarView
 
-  # Úprava konfigurace komponenty
-  options:
-    mode: next-30-days
+=== Příklady typů komponent
 
-# Výběr datových zdrojů pro komponentu
-data:
-  holidays: planning.czech_holidays
-  events: planning.events
-....
-====
+==== Mapy
 
-Komponentu tvoří popis jejího rozhraní, včetně popisu zdrojů dat, ze kterých dokáže čerpat a dále kód pro její zobrazení. Komponenta je totiž v pohledu navázána na sadu datových zdrojů, což jsou fakticky procedury uložené v databázi. Popis rozhraní komponenty umožňuje provést automatickou kontrolu shody s rozhraním procedur.
+Mapové komponenty jsou tvořeny mapovým oknem, sloužím k zobrazování podkladových map a tematických vrstev, navigaci v mapě a zákresu nové datové vrstvy. Jejich funkce se liší dle konkrétního účelu a použití. Některé mapové komponenty mohou sloužit například pro účely zákresu zájmového území, jiné pak pouze k zobrazení vybraných dat v mapě, další pak k práci s body zájmu.
 
-Vzhledem k tomu, že formátem pro komunikaci komponent s datovými zdroji je `JSON`, je možné s výhodou opět vyžít připravované normy link:http://json-schema.org/[JSON Schema].
+Z důvodu zachování otevřenosti systému je doporučeno mapové komponenty implementovat pomocí nástrojů link:https://openlayers.org/[OpenLayers].
 
-.Popis komponenty
-====
-[source,yaml]
-....
-name: Calendar
-name[cs]: Kalendář
+Vlastnosti mapového okna::
 
-# Popis očekávaných datových zdrojů
-sources:
-  holidays:
-    name: Holidays
-    name[cs]: Svátky
+Mapové okno podporuje zobrazení mapových vrstev formou link:https://en.wikipedia.org/wiki/Web_Map_Service[WMS], které je možné zapnout buď jako mapu základní, nebo tematickou (lze zapnout více vrstev najednou). Systém umožňuje napojit libovolná data publikovaná mapovými službami dle standardů link:https://en.wikipedia.org/wiki/Open_Geospatial_Consortium[Open Geospatial Consortium]. Pro účely IPR Praha se využijí mapy a tematické vrstvy z datového skladu IPR Praha.
++
+Okno dále obsahuje základní navigační prvky pro pohyb v mapě, jako například změnu měřítka, návrat do výchozího pohledu a funkci pro vyhledání adresy či parcely.
 
-    # Komponenta bude fungovat i bez tohoto zdroje
-    optional: true
+Vyhledávání::
 
-    # Schéma poskytovaných dat
-    provides: {$ref: "calendar.yaml#/definitions/events"}
+Vyhledání oblasti umožňují navigační prvky v okně.
++
+Vyhledání podle adresy je řešeno fulltextovým vyhledáváním v rejstříku ulic a čísel orientačních či popisných. Hledání parcely je řešeno vyhledáním katastrálního území ze seznamu a zadáním čísla parcely (je možné zadat pouze část před lomítkem). Po vyhledání se mapa přiblíží a vycentruje na nalezenou adresu nebo parcelu.
++
+Při nálezu více prvků (adresní místa v ulici, parcely se shodným kořenovým číslem) jsou prvky zobrazeny v mapě a v seznamu, po výběru konkrétního prvku se mapa přiblíží a vystředí na konkrétní místo v mapě.
 
-    # Schémata očekávaných argumentů
-    expects:
-      period: {$ref: "calendar.yaml#/definitions/period"}
+Tvorba nové vektorové vrstvy::
 
-  events:
-    name: Events
-    name[cs]: Události
+V rámci mapového okna je možné vytvářet novou vektorovou vrstvu, která se stane součástí dokumentu s využitím formátu link:http://geojson.org/[GeoJSON]. Vrstva může být vytvořena zadáním bodu, linie, obdélníku či obecného polygonu v rámci mapového okna a dále převzetím hranic vybraných (nalezených) územních jednotek (katastrální území, městská část) a hranic parcel.
 
-    provides: {$ref: "calendar.yaml#/definitions/events"}
-    expects:
-      period: {$ref: "calendar.yaml#/definitions/period"}
+==== Číselníky
 
-# Popis dalších nastavení
-options:
-  mode: {$ref: "calendar.yaml#/definitions/mode"}
-....
-====
+Dalším typem komponent jsou tak zvané číselníky. V jiných systémech se využívá zvláštních tabulek, které spravuje správce systému, které se využívají jako zdroj voleb pro určité vlastnosti dokumentů.
 
-Pro kontrolu datového zdroje je v příkladu níže popsána uložená procedura `calendar.events`.
-
-.Popis uložené procedury
-====
-[source,yaml]
-....
-name: Calendar Events
-name[cs]: Kalendářní události
-
-# Plně kvalifikovaný název uložené procedury
-procedure: calendar.events
-
-provides: {$ref: "calendar.yaml#/definitions/events"}
-expects:
-  period: {$ref: "calendar.yaml#/definitions/period"}
-....
-====
-
-=== Komponenta mapa
-Komponenta mapa je tvořena mapovým oknem, sloužím k zobrazování podkladových map a tematických vrstev, navigaci v mapě a zákresu nové datové vrstvy. Její funkce se liší dle konkrétního účelu a použití v tématu v rámci SpIS. Například pro účely zákresu zájmového území je mapa k dispozici včetně editace, ale v jiném tématu SpIS slouží již pouze k zobrazení vybraných dat v mapě.
-
-Z důvodu zachování otevřenosti systému je doporučeno komponentu mapy implementovat pomocí nástrojů OpenLayers. 
-
-==== Vlastnosti mapového okna
-Mapové okno bude podporovat zobrazení mapových vrstev formou WMS služby, které bude možné zapnout buď jako mapu základní, nebo tematickou (lze zapnout více vrstev najednou). Systém bude umožňovat napojit libovolná data publikovaná mapovými službami dle standardu OGC. Pro účely IPR Praha budou použity mapy a tematické vrstvy z datového skladu IPR Praha.
-Okno bude dále obsahovat základní navigační prvky pro pohyb v mapě: zoom, home a funkci pro vyhledání adresy a parcely.
-
-==== Vyhledávání
-Vyhledání oblasti bude umožněno navigačními prvky v mapě a funkcí Vyhledat.
-Vyhledání podle adresy bude řešeno fulltextovým vyhledáváním v rejstříku ulic a čísel orientačních či popisných. Hledání parcely bude řešeno vyhledáním k. ú. ze seznamu a zadáním čísla parcely (je možné zadat pouze část před lomítkem). Po vyhledání se mapa přiblíží a vycentruje na nalezenou adresu nebo parcelu.
-Při nálezu více prvků (adresní místa v ulici, parcely se shodným kořenovým číslem) jsou prvky zobrazeny v mapě a v seznamu, po výběru konkrétního prvku se mapa přiblíží a zacentruje na konkrétní místo v mapě.
-
-==== Tvorba nové vektorové vrstvy
-V rámci mapového okna bude možné vytvářet novou vektorovou vrstvu, která bude uložena do vybraného standardního vektorového formátu GIS do úložiště systému.
-Vrstva bude moci výt vytvořena ručně zadáním bodu, linie, obdélníku či obecného polygonu v rámci mapového okna a dále převzetím hranic vybraných (nalezených) územních jednotek (katastrální území, městská část) a hranic parcel.
-
-=== Číselníky
-
-Zvláštní zmínku zaslouží koncept tak zvaných _číselníků_. V jiných systémech se využívá zvláštních tabulek, které spravuje správce systému, které se využívají jako zdroj voleb pro určité vlastnosti dokumentů.
-
-SpIS počítá s potřebou spravovat životní cyklus položek _číselníku_ a proto tento mechanismus odděleně nezavádí. Pokud určitý dokument obsahuje vlastnost, která nabývá hodnoty z určité množiny, využije se prostý odkaz na jiný dokument patřičného typu.
+SpIS počítá s potřebou spravovat životní cyklus položek číselníku a proto tento mechanismus odděleně nezavádí. Pokud určitý dokument obsahuje vlastnost, která nabývá hodnoty z určité množiny, využije se prostý odkaz na jiný dokument patřičného typu.
 
 
 <<<
@@ -553,8 +482,6 @@ Termín typová třída se vyskytuje hojně v kontextu funkcionálního programo
 
 Dokument je ve své podstatě stromovou strukturou kompatibilní s formáty JSON, CBOR a YAML.
 
-Každý typ nebo typová třída dokumentu popisuje část schématu. Skutečné schéma získáme sjednocením typu dokumentu se všemi typovými třídami, které typ dokumentu implementuje. Schéma popisuje vnitřní strukturu dokumentu, tedy především názvy a typy jeho polí.
-
 Jazyk schématu vychází z připravované normy link:http://json-schema.org/[JSON Schema], kterou však rozšiřuje o další prvky. Jedná se například o popis uživatelského rozhraní pro editaci stromu, spustitelný kód v řadě významů a také o schopnost přejímat hodnoty ze závislostí.
 
 .Schéma zápůjčky (hlavička)
@@ -637,32 +564,6 @@ Kromě kontrol připojených k jednotlivým komponentám je možné nastavit tak
 Komponenty úzce souvisí se schématem dokumentu. Právě v něm si programátor vybírá, ze kterých se prostředí pro úpravy daného typu dokumentu bude skládat.
 
 Ve většině případů pracují komponenty se skaláry a jedná se v podstatě o dobře známé prvky uživatelských rozhraní. V jistých případech však komponenty editoru dokumentů vyžadují další informace a začínají ve svém uspořádání připomínat komponenty pohledů.
-
-.Popis komponenty umožňující výběr dne
-====
-[source,yaml]
-....
-name: Simple Date Picker
-name[cs]: Jednoduchý výběr dne
-
-provides: {$ref: "calendar.yaml#/definitions/date"}
-
-sources:
-  holidays:
-    name: Holidays
-    name[cs]: Svátky
-
-    optional: true
-    provides: {$ref: "calendar.yaml#/definitions/events"}
-    expects:
-      period: {$ref: "calendar.yaml#/definitions/period"}
-
-options:
-  mode: {$ref: "calendar.yaml#/definitions/mode"}
-....
-====
-
-Z příkladu výše je patrná hlavní odlišnost popisu komponenty editoru dokumentů od popisu komponenty pohledu. Jedná se o klíč `provides`, který popisuje schéma dílčí části dokumentu, jejíž úpravy komponenta zprostředkovává.
 
 === Verze a revize
 
