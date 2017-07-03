@@ -34,7 +34,7 @@ Partneři a smlouvy::
 Sekce partnerů a smluv se soustředí na téma evidence platných smluv a z nich plynoucích závazků. Dále také obsahuje evidenci smluvních partnerů včetně kontaktních informací.
 
 Vyjádření k území::
-Sekce vyjádření slouží k řízení procesu vyjadřování odborných pracovníků jednotlivých sekcí IPR Praha k území, které je specifikováno v žádosti a lokalizováno ve SpISu na mapě. Sekce vyjádření využívá z celého systému pouze vybrané části - především komunikaci se spisovou službou, komponentu mapa, nastavení pracovního procesu v rámci organizaci, schvalování a tisk.
+Sekce vyjádření slouží k řízení procesu vyjadřování odborných pracovníků jednotlivých sekcí IPR Praha k území, které je specifikováno v žádosti a lokalizováno ve SpISu na mapě. Struktura jediného typu případu v této sekci je zcela triviální, ale vyžaduje v podstatě celou šíři technických vlastností systému (komunikaci se spisovou službou, různé komponenty, včetně těch mapových, nastavení závislostí mezi dokumenty případu, podepisování a tisk).
 
 === Integrace
 
@@ -136,7 +136,7 @@ SpIS je provázán s ekonomickým systémem tak, že z něj přebírá a uživa
 
 === Elektronický systém spisové služby
 
-Napojení na elektronický systém spisové služby (ESSS) bude sloužit jednak k získávání dokumentů a příloh pro další práci s nimi (import) a dále pak pro ukládání hotových dokumentů a příloh za účelem jejich trvalého uchování (export). 
+Napojení na elektronický systém spisové služby (ESSS) bude sloužit jednak k získávání dokumentů a příloh pro další práci s nimi (import) a dále pak pro ukládání hotových dokumentů a příloh za účelem jejich trvalého uchování (export).
 
 ==== Import
 
