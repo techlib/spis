@@ -1,133 +1,139 @@
-== Podmínky SLA
+= Servisní podmínky (SLA)
+:numbered:
+:icons: font
+:lang: cs
+:note-caption: Poznámka
+:warning-caption: Pozor
+:table-caption: Tabulka
+:figure-caption: Obrázek
+:example-caption: Příklad
+:toc-title: Obsah
+:toc: left
+:toclevels: 3
+:sectnumlevels: 6
+:source-highlighter: pygments
 
-=== Servisní podmínky (SLA), podmínky podpory, změnové a rozvojové požadavky
+== Servisní podmínky (SLA), podmínky podpory, změnové a rozvojové požadavky
 
 Služby budou poskytovány od zahájení pilotního provozu do konce smluvního období v pracovní dny v době od 7:30 do 17:00 hod. Navíc po první dva týdny od předání IS v plném provozu bude k dispozici technický pracovník dodavatele na pracovišti IPR v rozsahu pracovní doby IPR (Po, Út, Čt 7:30-16:00, St 7:30-17:00, Pá 7:30-15:00). Zadavatel může vyžádat z pracovních důvodů změnu nebo úpravu časového rozsahu služeb.
 
-==== Servisní podmínky (SLA)
 
-Servisní podmínky (SLA) zahrnují:
+=== Help Desk
 
-===== Help Desk
-
-Pracoviště uživatelské podpory dodavatele, v rámci kterého dodavatel zajišťuje vyřizování požadavků na zprostředkování služeb   Uživatelská podpora po telefonu, Podpora aplikací a drobné změny, Změnové požadavky. 
-Hlášení požadavku bude možné telefonicky, emailem nebo přes webové stránky, které budou sloužit kromě hlášení požadavků i k sledování průběhu řešení všech požadavků a přístupu k aktuálním verzím dokumentů o systému.
+Pracoviště uživatelské podpory dodavatele, v rámci kterého dodavatel zajišťuje vyřizování požadavků na zprostředkování služeb Uživatelská podpora po telefonu, Podpora aplikací a drobné změny, Změnové požadavky. Hlášení požadavku bude možné telefonicky, emailem nebo přes webové stránky, které budou sloužit kromě hlášení požadavků i k sledování průběhu řešení všech požadavků a přístupu k aktuálním verzím dokumentů o systému.
 
 Popis služby:
 
-• 	Hlášení požadavku
+Hlášení požadavku::
 
-Zadavatel bude mít možnost hlásit své požadavky na pracoviště uživatelské podpory dodavatele prostřednictvím elektronické pošty nebo přes webové stránky HelpDesku.
-
+Zadavatel bude mít možnost hlásit své požadavky na pracoviště uživatelské podpory dodavatele prostřednictvím elektronické pošty nebo přes webové stránky Help Desku.
++
 Webové stránky budou přístupné všem uživatelům systému ke sledování nahlášených požadavků, správci výdeje budou mít právo k nahlášení závady a havarijní události.
++
+- Povinnosti služby Help Desk po nahlášení požadavku
+- potvrzení přijetí požadavku zadavateli elektronickou poštou
+- poskytnout informace zadavateli o způsobu a časovém harmonogramu řešení
+- zprostředkování služby Uživatelská podpora po telefonu, pokud o to zadavatel požádal
+- předat požadavek k dalšímu řešení specialistům
+- sledovat průběh řešení a informovat zadavatele o stavu
+- Povinnosti služby Help Desk po vyřešení požadavku
+- informování zadavatele o vyřešení požadavku elektronickou poštou
 
-•	Povinnosti služby Help Desk po nahlášení požadavku
--	potvrzení přijetí požadavku zadavateli elektronickou poštou
--	poskytnout informace zadavateli o způsobu a časovém harmonogramu řešení
--	zprostředkování služby Uživatelská podpora po telefonu, pokud o to zadavatel požádal
--	předat požadavek k dalšímu řešení specialistům
--	sledovat průběh řešení a informovat zadavatele o stavu
+=== Uživatelská podpora po telefonu
 
-•	Povinnosti služby Help Desk po vyřešení požadavku
--	informování zadavatele o vyřešení požadavku elektronickou poštou
+V rámci služby Uživatelská podpora po telefonu dodavatel telefonicky řeší problémy související s provozem dodávaných služeb a aplikací a poskytuje telefonické konzultace.
 
-===== Uživatelská podpora po telefonu
-
-V rámci služby Uživatelská podpora po telefonu dodavatel telefonicky řeší problémy související s provozem dodávaných služeb a aplikací a poskytuje telefonické konzultace. 
-
-===== Podpora systému a drobné změny
+=== Podpora systému a drobné změny
 
 V rámci služby Podpora systému a drobné změny dodavatel řeší problémy zadavatele s dodanými službami a aplikacemi, poskytuje uživatelskou podporu s provozem, užíváním a administrací systému a realizuje požadavky na provedení drobných změn v dodaných službách a aplikacích.
 
 Problémy se rozumí všechny vady, které zadavatel objeví v již dodaných a akceptovaných částech systému. Cílem řešení problémů je uvedení dotčených částí systému do plně funkčního a obsahově správného stavu. Řešení problémů není omezeno maximálním rozsahem provedené práce.
-Drobnými změnami se rozumí úprava funkčnosti aplikací, které lze realizovat v rámci definovaného rozsahu 1 md/měsíc. Odpovědné osoby dodavatele a zadavatele se musí na rozsahu - náročnosti práce (čerpání vymezeného rozsahu 1 md/měsíc) dohodnout. 
+Drobnými změnami se rozumí úprava funkčnosti aplikací, které lze realizovat v rámci definovaného rozsahu 1 md/měsíc. Odpovědné osoby dodavatele a zadavatele se musí na rozsahu -- náročnosti práce (čerpání vymezeného rozsahu 1 md/měsíc) dohodnout.
 
-Popis služby - průběh řešení požadavku
+Popis služby -- průběh řešení požadavku:
 
-•	Hlášení požadavku
+Hlášení požadavku::
 
-Požadavky na odstranění problémů a požadavky na provedení drobných změn zadavatel hlásí na pracoviště uživatelské podpory.
-V případě požadavku na provedení drobné změny zadavatel co nejlépe popíše, o jakou změnu se jedná.
-V případě požadavku na odstranění problému musí zadavatel problém co nejlépe popsat a klasifikovat ho dle následující klasifikace závažnosti a priorit řešení problému.
+Požadavky na odstranění problémů a požadavky na provedení drobných změn zadavatel hlásí na pracoviště uživatelské podpory. V případě požadavku na provedení drobné změny zadavatel co nejlépe popíše, o jakou změnu se jedná. V případě požadavku na odstranění problému musí zadavatel problém co nejlépe popsat a klasifikovat ho dle následující klasifikace závažnosti a priorit řešení problému.
++
+- Vážný problém -- priorita řešení 1: dodané aplikace, nebo služby přestaly pracovat, pracují v omezené míře (základní funkčnost je silně omezena), nebo z jiných důvodů (vadný obsah, forma prezentace) neplní svou funkci a tím znemožňují provoz IS
+- Vada -- priorita řešení 2: dodané aplikace, nebo služby pracují, ale vykazují drobné problémy a systémové vady, které komplikují a omezují jejich plné využití.
+- Požadavek na drobné změny -- priorita řešení 3
 
--	Vážný problém - priorita řešení 1: dodané aplikace, nebo služby přestaly pracovat, pracují v omezené míře (základní funkčnost je silně omezena), nebo z jiných důvodů (vadný obsah, forma prezentace) neplní svou funkci a tím znemožňují provoz IS
-
--	Vada - priorita řešení 2: dodané aplikace, nebo služby pracují, ale vykazují drobné problémy a systémové vady, které komplikují a omezují jejich plné využití.
-
--	Požadavek na drobné změny - priorita řešení 3 
-
-•	Řešení požadavku
+Řešení požadavku::
 
 Požadavky jsou řešeny podle priority přidělené zadavatelem.
 Každé prioritě požadavku odpovídá určitá doba odezvy od nahlášení požadavku v pracovní době IPR, tj. doba, ve které dodavatel musí zahájit řešení požadavku zadavatele. Podle priority se liší i termíny řešení.
-
++
 Pracovní hodinou se rozumí hodina v rámci časového pokrytí služby, pracovním dnem pondělí až pátek s výjimkou státních svátků.
 V případě řešení požadavku na provedení drobné změny musí dodavatel při potvrzení přijetí požadavku uvést předpokládaný rozsah práce (počet čerpaných md v rámci služby) a termín řešení. Případný rozdílný názor na pracnost vyřeší oprávněné osoby.
++
+- Povinnosti po vyřešení požadavku
+- dodavatel má povinnost zdokumentovat provedené změny, zásahy a případné dopady na jiné funkce aplikací a aktualizovat stávající dokumentace a návody k aplikacím.
+- informovat zadavatele o vyřešení požadavku, provedených změnách a aktualizacích dokumentace a návodů.
 
-•	Povinnosti po vyřešení požadavku
-
--	dodavatel má povinnost zdokumentovat provedené změny, zásahy a případné dopady na jiné funkce aplikací a aktualizovat stávající dokumentace a návody k aplikacím.
--	informovat zadavatele o vyřešení požadavku, provedených změnách a aktualizacích dokumentace a návodů.
-
-===== Změnové a rozvojové požadavky
+=== Změnové a rozvojové požadavky
 
 V rámci služby Změnové a rozvojové požadavky poskytuje dodavatel zadavateli pracovní kapacity k realizaci jeho požadavků na provedení změn na dodaném díle, které vzhledem ke svému rozsahu nelze realizovat v rámci služby Podpora systému a drobné změny. Jedná se zejména o úpravy, rozšíření a vývoj nové funkčnosti aplikací a služeb, konzultace k rozvoji a školení. Služba je poskytována na základě zakázkových listů, které zadavatel zašle dodavateli po té, co se společně dohodnou na obsahu, rozsahu, termínu a ceně plnění objednávky.
 Požadavky na službu Změnové a rozvojové požadavky podává zadavatel na pracoviště uživatelské podpory. Dodavatel následně kontaktuje zadavatele a dohodne s ním rozsah, cenu a termín realizace objednávané služby. Zadavatel na základě této dohody vystaví tzv. zakázkový list s uvedením rozsahu a termínu prací, ceny a způsobu akceptace.
 
 Rozsah služby Změnové a rozvojové požadavky je 150 md za dobu plnění zakázky. Roční plnění se předpokládá v poměrné části za dobu trvání služby v jednotlivých letech, roční limit čerpání zadavatel nestanovuje.
 
-=== Etapizace, harmonogram, výstupy jednotlivých etap
+== Etapizace, harmonogram, výstupy jednotlivých etap
+
 Z hlediska časového postupu bude realizace zakázky členěna do více etap. Na závěr každé etapy bude posouzen stav a průběh realizace formou kontrolního dne, kdy nejpozději by měly být předány v rámci etapy realizované výstupy dílčích částí zakázky. Po celou dobu trvání zakázky bude průběžně probíhat správa a rozvoj informačního systému (uživatelská podpora, aktualizace, vývoj nových nástrojů a funkcí).
 
-1.	etapa: implementační analýza a realizační návrh - max. 2 měsíce od podpisu smlouvy
-
-Výstup: Detailní a zadavatelem akceptovaná implementační analýza a realizační návrh informačního systému evidence zakázek zpracované ve formě uceleného dokumentu. 
-
+1. etapa: implementační analýza a realizační návrh -- max. 2 měsíce od podpisu smlouvy
++
+Výstup:: Detailní a zadavatelem akceptovaná implementační analýza a realizační návrh informačního systému evidence zakázek zpracované ve formě uceleného dokumentu.
++
 Dokument bude obsahovat:
++
+- detailní zmapování a popis vnitřních procesů IPR při zpracování veřejné zakázky (workflow)
+- detailní popis všech procesů podporovaných informačním systémem (včetně procesů administrace a monitoringu systému)
+- popis celkové architektury systému
+- detailní popis a dekompozici všech částí aplikačního systému na úroveň jednotlivých realizovaných komponent, modulů a funkcí a popis jejich technického řešení
+- specifikace veškerých aplikačních rozhraní vůči externím systémům (účetní systém, AD)
+- specifikace uživatelského rozhraní včetně jejich vzhledu, funkcionality a ovládání ve vazbě na procesy, které každé rozhraní má podporovat
+- specifikaci technického zajištění správy servisních požadavků
+- specifikaci maximálních přípustných odezev systému pro klíčové procesy a operace
+- specifikaci licencovaného software třetích stran, který je součástí navrhovaného systému
+- specifikace požadavků na systémovou připravenost prostředí zadavatele, zejména konfiguraci systémových prostředků zadavatele pro implementaci všech částí technologie (zejména konfiguraci a systémové prostředky virtuálních serverů, požadavky na zajištění síťové prostupnosti, kapacity DB atd.)
+- požadavky na součinnost zadavatele
+- časový harmonogram implementace ve vazbě na výše uvedené požadavky na součinnost zadavatele, připravenost aplikačních rozhraní externích systémů a připravenost systémového prostředí zadavatele
+- specifikace provedení migrace (prvotního naplnění) datového úložiště technologie
+- specifikace způsobu zálohování a procesů obnovy ze zálohy
+- specifikace řešení autorizace a autentizace včetně řešení správy rolí a oprávnění
+- specifikace obsahu, rozsahu a formy zpracování systémové a uživatelské dokumentace a s tím souvisejícího systému nápovědy
 
-•	detailní zmapování a popis vnitřních procesů IPR při zpracování veřejné zakázky (workflow)
-•	detailní popis všech procesů podporovaných informačním systémem (včetně procesů administrace a monitoringu systému)
-•	popis celkové architektury systému
-•	detailní popis a dekompozici všech částí aplikačního systému na úroveň jednotlivých realizovaných komponent, modulů a funkcí a popis jejich technického řešení
-•	specifikace veškerých aplikačních rozhraní vůči externím systémům (účetní systém, AD)
-•	specifikace uživatelského rozhraní včetně jejich vzhledu, funkcionality a ovládání ve vazbě na procesy, které každé rozhraní má podporovat
-•	specifikaci technického zajištění správy servisních požadavků  
-•	specifikaci maximálních přípustných odezev systému pro klíčové procesy a operace
-•	specifikaci licencovaného software třetích stran, který je součástí navrhovaného systému
-•	specifikace požadavků na systémovou připravenost prostředí zadavatele, zejména konfiguraci systémových prostředků zadavatele pro implementaci všech částí technologie (zejména konfiguraci a systémové prostředky virtuálních serverů, požadavky na zajištění síťové prostupnosti, kapacity DB atd.)
-•	požadavky na součinnost zadavatele
-•	časový harmonogram implementace ve vazbě na výše uvedené požadavky na součinnost zadavatele, připravenost aplikačních rozhraní externích systémů a připravenost systémového prostředí zadavatele
-•	specifikace provedení migrace (prvotního naplnění) datového úložiště technologie
-•	specifikace způsobu zálohování a procesů obnovy ze zálohy
-•	specifikace řešení autorizace a autentizace včetně řešení správy rolí a oprávnění
-•	specifikace obsahu, rozsahu a formy zpracování systémové a uživatelské dokumentace a s tím souvisejícího systému nápovědy
+2. etapa: vývoj technologie -- max. 3 měsíce od akceptace výstupu 1. etapy
++
+Výstup:: Nainstalovaný, daty naplněný a plně funkční systém včetně nastaveného workflow a funkční komunikace s externími systémy akceptovaný zadavatelem předaný do pilotního provozu. Předmětem předání a akceptace jsou následující výstupy:
++
+- zdrojové kódy a instalační soubory (vyjma komerčních SW produktů)
+- instalace a ověření funkčnosti na serverových i koncových zařízeních
+- uživatelská a administrátorská dokumentace v elektronické podobě a dvě tištěné verze
 
-2.	etapa: vývoj technologie - max. 3 měsíce od akceptace výstupu 1. etapy
-
-Výstup: Nainstalovaný, daty naplněný a plně funkční systém včetně nastaveného workflow a funkční komunikace s externími systémy akceptovaný zadavatelem předaný do pilotního provozu. Předmětem předání a akceptace jsou následující výstupy:
-
-•	zdrojové kódy a instalační soubory (vyjma komerčních SW produktů)
-•	instalace a ověření funkčnosti na serverových i koncových zařízeních
-•	uživatelská a administrátorská dokumentace v elektronické podobě a dvě tištěné verze
-
-3.	etapa: pilotní provoz, optimalizace platformy pro provoz systému a zaškolení uživatelů a administrátorů - max. 1 měsíc od akceptace výstupů 2. etapy (od předání do pilotního provozu)
-
-Výstup: Zaškolení uživatelů a administrátorů systému, poimplementační podpora a podpora po dobu pilotního provozu. Optimalizací platformy pro provoz systému se rozumí nastavení systému tak, aby byly dosaženy požadované maximální přípustné odezvy, konfigurace práv, testování workflow, šablon, tiskových sestav, notifikací, napojení na externí systémy.
+3. etapa: pilotní provoz, optimalizace platformy pro provoz systému a zaškolení uživatelů a administrátorů -- max. 1 měsíc od akceptace výstupů 2. etapy (od předání do pilotního provozu)
++
+Výstup:: Zaškolení uživatelů a administrátorů systému, poimplementační podpora a podpora po dobu pilotního provozu. Optimalizací platformy pro provoz systému se rozumí nastavení systému tak, aby byly dosaženy požadované maximální přípustné odezvy, konfigurace práv, testování workflow, šablon, tiskových sestav, notifikací, napojení na externí systémy.
 Předmětem akceptace je plná připravenost na ostrý provoz systému z hlediska technologického i obsluhy systému.
 
-4.	etapa: podpora systému a drobné změny a změnové požadavky - po dobu 4 let od ukončení 3. etapy
+4. etapa: podpora systému a drobné změny a změnové požadavky -- po dobu 4 let od ukončení 3. etapy
++
+Výstup:: Podpora systému a realizace změnových a rozvojových požadavků. Nutná výměna hardware či software. Pravidelná aktualizace uživatelské a administrátorské dokumentace, provoz Helpdesku.
 
-Výstup: Podpora systému a realizace změnových a rozvojových požadavků. Nutná výměna hardware či software. Pravidelná aktualizace uživatelské a administrátorské dokumentace, provoz Helpdesku.
-
-=== Součinnost zadavatele
+== Součinnost zadavatele
 
 Zadavatel předpokládá následující součinnost se dodavatelem, zejména:
 
-•	Poskytnutí součinnosti projektového managera (garanta projektu), který bude odpovědný za komunikaci s dodavatelem, zajištění informací, podkladů, plánování schůzek a kontrolních dnů a zajištění součinnosti s dalšími pracovníky IPR
-•	poskytnutí dat pro prvotní naplnění systému
-•	zpřístupnění datového úložiště pro zajištění datových vstupů
-•	poskytnutí přiměřených diskových kapacit na centrálních datových úložištích
-•	příprava API externích systémů 
-•	poskytnutí testovacího i produkčního serverového prostředí (týká se virtuálních serverů, včetně Windows server, pokud bude jiný placený OS, musí být licence poskytnuta uchazečem)
-•	poskytnutí výše popsaných zálohovacích mechanismů a zálohovacího prostoru
-•	poskytnutí všech potřebných informací a podkladů nutných pro úspěšnou realizaci a implementaci projektu
+- Poskytnutí součinnosti projektového vedoucího (garanta projektu), který bude odpovědný za komunikaci s dodavatelem, zajištění informací, podkladů, plánování schůzek a kontrolních dnů a zajištění součinnosti s dalšími pracovníky IPR
+- poskytnutí dat pro prvotní naplnění systému
+- zpřístupnění datového úložiště pro zajištění datových vstupů
+- poskytnutí přiměřených diskových kapacit na centrálních datových úložištích
+- příprava API externích systémů
+- poskytnutí testovacího i produkčního serverového prostředí (týká se virtuálních serverů, včetně Windows server, pokud bude jiný placený OS, musí být licence poskytnuta uchazečem)
+- poskytnutí výše popsaných zálohovacích mechanismů a zálohovacího prostoru
+- poskytnutí všech potřebných informací a podkladů nutných pro úspěšnou realizaci a implementaci projektu
+
+// vim:set spelllang=cs,en:
