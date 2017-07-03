@@ -232,6 +232,18 @@ Dalším typem komponent jsou tak zvané číselníky. V jiných systémech se v
 SpIS počítá s potřebou spravovat životní cyklus položek číselníku a proto tento mechanismus odděleně nezavádí. Pokud určitý dokument obsahuje vlastnost, která nabývá hodnoty z určité množiny, využije se prostý odkaz na jiný dokument patřičného typu.
 
 
+==== Diagramy
+
+Řada pohledů využije interaktivní grafické komponenty jakými jsou běžné typy grafů, ale i kartogramy, kartodiagramy a časové osy. Pro všechny tyto druhy komponent platí, že je možné přepínat zahrnutí hodnot dle předem nastavených dimenzí.
+
+
+==== Tabulky
+
+V tabulkových zobrazeních je možné omezit zobrazované řádky na takové, které hodnotami v určitých sloupcích vyhovují nastavenému filtru. Je možné použít jak výčet hodnot, tak i vzory včetně těch regulárních. Je možné hledat i fulltextově. Řádky je také možné řadit dle libovolného počtu sloupců.
+
+Pro určené sloupce je v patičce tabulky přítomný součet všech hodnot v daném sloupci a dále také součet hodnot, které jsou aktuálně viditelné.
+
+
 <<<
 
 == Případy
