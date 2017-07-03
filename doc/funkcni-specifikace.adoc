@@ -160,7 +160,7 @@ Export případů, dokumentů a příloh do ESSS probíhá automaticky a průbě
 
 * Po exportu dokumentu, přílohy nebo případu do ESSS se zaznamená spisová značka, pod kterou je možné výsledný soubor v ESSS dohledat. Při exportu nadřazeného objektu je na dceřinné objekty odkazováno právě pomocí spisových značek.
 
-Do ESSS nejsou exportovány režijní poznámky a přílohy k případu samotnému. Ty mají pouze informativní charakter, nejsou závazné a není třeba je dlouhodobě uchovávat.
+Do ESSS nejsou exportovány režijní poznámky. Ty mají pouze informativní charakter, nejsou závazné a není třeba je dlouhodobě uchovávat.
 
 === Elektronické tržiště
 
