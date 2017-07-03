@@ -244,6 +244,13 @@ V tabulkových zobrazeních je možné omezit zobrazované řádky na takové, k
 Pro určené sloupce je v patičce tabulky přítomný součet všech hodnot v daném sloupci a dále také součet hodnot, které jsou aktuálně viditelné.
 
 
+==== Speciální
+
+Za účelem sestavování rozpočtových dokumentů bude třeba komponenty, která umožní výběr a upřesnění položek ze závislostí. Součástí této komponenty bude dost možná i jeden či více diagramů, které poskytnou rychlou orientaci ve výsledné finanční situaci.
+
+Podobných zvláštních případů se může postupem času objevit více.
+
+
 <<<
 
 == Případy
