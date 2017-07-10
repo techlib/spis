@@ -246,7 +246,7 @@ Pro určené sloupce je v patičce tabulky přítomný součet všech hodnot v d
 
 ==== Speciální
 
-Za účelem sestavování rozpočtových dokumentů bude třeba komponenty, která umožní výběr a upřesnění položek ze závislostí. Jedná s e o souhrnnou tabulku, která bude zobrazovat výsledky hospodaření za jednotlivé tematické celky a bude podporovat jednoduché matematické operace (sčítání, odečítání, výpočet procent). Součástí této komponenty může být i jeden či více diagramů, které poskytnou rychlou orientaci ve výsledné finanční situaci.
+Pro přípravu rozpočtových dokumentů existuje několik zvláštních komponent, které umožňují sestavovat rozpočet na základě podkladů (závislostí) a ručních oprav. Součástí těchto specializovaných komponent může být souhrnná tabulka nebo jeden či více diagramů, které poskytnou rychlou orientaci ve výsledné finanční situaci.
 
 V rámci implementační analýzy budou upřesněny požadavky na vývoj speciálních komponent.
 
