@@ -154,7 +154,7 @@ Ze stránky tématu je možné aktivovat editor sestav, který umožňuje na str
 Pokud téma obsahuje alespoň jeden typ případu, je na jeho stránce k dispozici přehled případů, ke kterým má aktuální uživatel přístup. Je-li k tomu uživatel oprávněn, tak se zde také nachází prvek, který umožňuje zahájit nový případ.
 
 Z přehledu jsou patrné základní údaje o případech a zda-li do nich může uživatel zasáhnout, případně je-li to po něm požadováno.
-Typy případů se rozumí zpracování obchodního případu, jako jsou nákupy a veřejné zakázky, žádost o vyjádření k území nebo společná příprava složitých dokumentů.
+Typy případů se rozumí zpracování obchodního případu, jako jsou nákupy a veřejné zakázky, žádost o vyjádření k území nebo společná příprava složitých stanovisek.
 
 ==== Dokumenty
 
