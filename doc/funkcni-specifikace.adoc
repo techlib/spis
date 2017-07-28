@@ -128,7 +128,7 @@ SpIS je přístupný pouze oprávněným pracovníkům, kteří mají platný u�
 
 * IPR uživatele eviduje v systému Microsoft Active Directory. Role je vyjádřena členstvím uživatelů v určitých skupinách. Je tedy potřeba párovat role v systému se skupinami v evidenci.
 
-* NTK uživatele eviduje v systému OpenLDAP s nestandardním schématem. Role přiděluje seznamem institučních rolí u každého uživatele zvlášť. Je tedy potřeba párovat role v systému s institučními rolemi v evidenci.
+* NTK využívá pro přihlášení uživatelů SSO systém Shibboleth. Evidenci uživatelů představuje OpenLDAP s nestandardním schématem, ale k dispozici je i systém Microsoft Active Directory, nebo automatická replikaci účtů přímo do databáze aplikace.
 
 === Ekonomický systém
 
