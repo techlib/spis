@@ -152,15 +152,17 @@ Není žádoucí znovu importovat dokument nebo případ, který již ve SpISu e
 
 ==== Export
 
-Export případů, dokumentů a příloh do ESSS probíhá automaticky a průběžně. Vždy, když je dokument ve SpISu dokončen, dojde k jeho asynchronnímu exportu a to včetně příloh. Obdobně je exportována konečná podoba případu při jeho uzavření. Dokumenty sdružené ve SpISu do případu se v ESSS řadí do jednoho spisu.
+Export případů, dokumentů a příloh do ESSS probíhá automaticky a průběžně. Vždy, když je dokument ve SpISu dokončen, dojde k jeho asynchronnímu exportu a to včetně příloh. Obdobně je exportována konečná podoba případu při jeho uzavření.
 
-* Spis v ESSS je založen při exportu prvního dokumentu, který do něj má být zařazen.
+* Při exportu dokumentu dojde k jeho zařazení do věcné skupiny určené typem dokumentu.
 
-* V případě, že je jeden dokument použit ve více případech, je exportován pro každý případ zvlášť. Pokud ESSS podporuje řazení dokumentu do více spisů, předejde pomocí této funkce integrační můstek vzniku duplicity.
+* Dokumenty sdružené ve SpISu do případu se v ESSS řadí dále do odděleného spisu, který je založen při exportu prvního dokumentu případu. Pokud ESSS podporuje řazení dokumentu do více spisů, předejde pomocí této funkce integrační můstek vzniku duplicity. Pokud ESSS neumožňuje řazení dokumentů do více spisů, nedojde k duplicitnímu exportu příloh a tyto zůstanou pouze u dokumentu zařazeném do věcné skupiny.
 
 * Po exportu dokumentu, přílohy nebo případu do ESSS se zaznamená spisová značka, pod kterou je možné výsledný soubor v ESSS dohledat. Při exportu nadřazeného objektu je na dceřinné objekty odkazováno právě pomocí spisových značek.
 
-Do ESSS nejsou exportovány režijní poznámky. Ty mají pouze informativní charakter, nejsou závazné a není třeba je dlouhodobě uchovávat.
+* Do ESSS nejsou exportovány režijní poznámky. Ty mají pouze informativní charakter, nejsou závazné a není třeba je dlouhodobě uchovávat.
+
+* Pro každý typ dokumentu a případu je možné použít jinou spisovou službu, pokud je jich k dispozici více. Předpokládá se ovšem, že každá z nich vytváří nepřekrývající se spisové značky.
 
 === Elektronické tržiště
 
