@@ -246,7 +246,7 @@ Detailní specifikace procesu a funkcí pro jednotlivé organizace bude proveden
 
 ==== Evidence faktur
 
-Evidence faktur bude obsahovat informace o fakturách zadaných do SpISu oprávněnými pracovníky. Faktury budou evidovány jako dokument v databázi a každý dokument bude mít připojen naskenovaný soubor. Evidence faktur bude propojena s ekonomickým systémem, se kterým si bude pomocí webové služby předávat informace o faktuře a k ní přiložený soubor (či soubory). Z ekonomického systému budou přebírány informace o proplacení faktury.
+Evidence faktur bude obsahovat informace o fakturách zadaných do SpISu oprávněnými pracovníky. Faktury budou evidovány jako dokumenty s naskenovaným souborem jako přílohou. Evidence faktur bude propojena s ekonomickým systémem, se kterým si bude předávat informace o fakturách a jejich přílohách. Z ekonomického systému budou přebírány informace o proplacení faktur.
 
 Faktura je přijata, očíslována a zaevidována do SpISu oprávněným pracovníkem. Dále je předána ke kontrole (datum splatnosti, částka, dodavatel atd.) nadřízenému pracovníkovi, který ji schválí, spáruje s příslušnou veřejnou zakázkou, zkontroluje splnění podmínek k fakturaci u zakázky a případně předá fakturu ke schválení dalším oprávněným osobám. Při spárování faktura převezme potřebné údaje pro účely tvorby rozpočtu a přehledu čerpání financí. Systém také zkontroluje případné duplicity a před dokončením dokumentu přihlédne k implementovaným politikám dané organizace. Po schválení všemi zúčastněnými stranami je faktura poslána k proplacení do ekonomického systému. Z ekonomického systému jsou přebírány informace o změně stavu faktury a jejím proplacení. Na tyto změny jsou uživatelé upozorňováni notifikací.
 
