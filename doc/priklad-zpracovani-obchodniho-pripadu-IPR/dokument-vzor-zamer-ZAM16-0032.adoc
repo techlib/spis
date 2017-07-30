@@ -8,17 +8,20 @@ Ukázka záměru pro objednávku.
 | Evidenční číslo | ZAM16-0032
 | Název záměru | Podpora personálního SW Avensio
 | Vymezení předmětu | Bližší popis záměru
+| Účel zajištění činnosti | Hlavní, provoz
 | Důvod zadání | odůvodnění kvůli schválení
 | Druh finančních prostředků | Provoz
 | Způsob zadání zakázky | Objednávka
 | Předpokládaná hodnota bez DPH | 246 641
 | Předpokládaná hodnota s DPH | 298 436
 | Typ čerpání rozpočtu | CF
-| Garant | Makovec Lukáš
-| Podpis garanta zakázky	| [check]
-| Souhlas odpovědného útvaru	| [check]
-| Schválení nadřízeného útvaru	| 
-| Schválení nadřízeného orgánu	|
+| Věcný gestor | Jan Pravňanský
+| Zpracovatel	| Makovec Lukáš
+| Podpis věcného gesora	| 
+| Podpis odpovědného útvaru (ředitel sekce)	| 
+| Podpis nadřízeného útvaru (ředitel IPR)	| 
+| Podpis správce rozpočtu	|
+| Podpis a schválení nadřízeného orgánu	|
 |===
 
 |===
