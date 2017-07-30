@@ -6,17 +6,20 @@
 | Evidenční číslo | ZAM15-0342
 | Název záměru | Výměna akumulátorů v UPS
 | Vymezení předmětu | Bližší popis záměru
+| Účel zajištění činnosti | Hlavní, provoz
 | Důvod zadání | odůvodnění kvůli schválení
 | Druh finančních prostředků | Provoz
 | Způsob zadání zakázky | Objednávka
 | Předpokládaná hodnota bez DPH | 64 540
 | Předpokládaná hodnota s DPH | 78 093
 | Typ čerpání rozpočtu | JF
-| Garant | Makovec Lukáš
-| Podpis garanta zakázky	| [check]
-| Souhlas odpovědného útvaru	| [check]
-| Schválení nadřízeného útvaru	| 
-| Schválení nadřízeného orgánu	|
+| Věcný gestor | Jan Pravňanský
+| Zpracovatel	| Makovec Lukáš
+| Podpis věcného gesora	| 
+| Podpis odpovědného útvaru (ředitel sekce)	| 
+| Podpis nadřízeného útvaru (ředitel IPR)	| 
+| Podpis správce rozpočtu	|
+| POdpis a schválení nadřízeného orgánu	|
 |===
 
 |===
