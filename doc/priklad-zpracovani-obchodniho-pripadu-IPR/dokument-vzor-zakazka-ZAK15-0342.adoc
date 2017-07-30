@@ -4,6 +4,7 @@
 | Evidenční číslo zakázky| ZAK15-0342
 | Evidenční číslo záměru | <<dokument-vzor-zamer-ZAM15-0342.adoc#,ZAM15-0342>>
 | Identifikátor veřejné zakázky | 
+| Účel zajištění činnosti | Hlavní
 | Název zakázky | Výměna akumulátorů v UPS
 | Předmět zakázky | Bližší popis záměru
 | Poznámka | Prosím o objednávku u UPS
