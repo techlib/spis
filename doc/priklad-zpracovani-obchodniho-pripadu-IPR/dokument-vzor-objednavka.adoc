@@ -8,9 +8,11 @@ Adresa dodavatele
 === Objednávka
 |===
 | Č. objednávky | 
+| Vyřizuje/kancelář/linka | 
 | Název zakázky | 
-|Text objednávky |
-| Datum | 
+| Text objednávky |
+| Datum |
+| Jméno |  
 | Podpis |  
 |===
 
@@ -21,3 +23,4 @@ Adresa dodavatele
 |===
 
 **Přílohy:**
+objednavka.pdf
