@@ -31,3 +31,5 @@
 |===
 
 **Přílohy:**
+akceptacniprotokol.pdf
+faktura.pdf
