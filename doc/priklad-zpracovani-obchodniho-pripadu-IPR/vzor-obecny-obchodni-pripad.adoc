@@ -1,0 +1,82 @@
+== Obchodní případ: obchodní případ je obecné označení pro soubor jednotlivých dokumentů, které mají ve SpIS samostatné pohledy.
+Jedná se o Záměr, Zakázku, Smlouvu a dokumenty evidované v rámci Zakázky.
+
+|===
+| Evidenční číslo zakázky| ZAK17-0001
+| Evidenční číslo záměru | ZAM17-0001
+| Identifikátor veřejné zakázky | 
+| Účel zajištění činnosti | Hlavní/Vedlejší
+| Název | 
+| Předmět | 
+| Poznámka | 
+| Druh ZŘ | 
+| Konečný termín zakázky | 31-12-2020
+| Zakázka na dobu neurčitou	| [check]
+| Druh finančních prostředků | 
+| Způsob zadání zakázky | 
+| Typ čerpání rozpočtu | 
+| Celková částka bez DPH |
+| Celková částka s DPH | 
+| Částka v cizí měně | [check]
+| Měna | CZK
+| Plnění zakázky nebo její části je mimo fakturaci | [check]
+| Garant | 
+| Sekce | 
+| Vyřizuje	| 
+| Text storna zakázky	| 
+|===
+
+|===
+| Vytvořeno:	| 01-01-2017 (Autor)	
+| Datum zahájení administrace: | 01-01-2017
+| Datum ukončení zakázky: | 01-01-2017
+| Datum podpisu smlouvy: | 01-01-2017
+| Poslední změna:	| 01-01-2017 (Autor změny)
+| Poznámka ke změně:	| 
+| Stav:	| 
+|===
+
+=== Etapy zakázky
+
+[cols="<,<,<,<,>,>,<,<,<,<,<,<,<", options="header"]
+|===
+| Číslo etapy
+| Název etapy
+| Dodavatel
+| Termín fakturace
+| Částka bez DPH
+| Částka s DPH
+| DPH
+| Měna
+| Druh financí
+| Fakturace + pokladna
+| Neuhrazená fakturace
+| Počet faktur
+| Počet pokladních dokladů
+| Přílohy
+
+|===
+
+**Přílohy:**
+
+zamer.pdf
+
+predbezneoznameni.pdf
+
+vyzvapodaninabidek.pdf
+
+protokolustanovenikomise.pdf
+
+prezencnilistina.pdf
+
+protokoloteviraniobalek.pdf
+
+protokoljednanikomise.pdf
+
+oznamenivyberudodavatele.pdf
+
+smlouvaodilo.pdf
+
+akceptacniprotokol.pdf
+
+faktura.pdf 
