@@ -1,9 +1,9 @@
 == Vnitřní sdělení
 
 |===
+| Pro: | Ondřej Boháč
+| Odesílatel: | Lukáš Makovec
 | Věc: | Popora personálního SW Avensio
-| Odesilatel: | Lukáš Makovec
-| Příjemce: | Ondřej Boháč
 |===
 
 |===
