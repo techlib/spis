@@ -2,7 +2,6 @@
 
 |===
 | Název zakázky: | 
-| ID zakázky: | 
 |===
 
 |===
@@ -13,4 +12,4 @@
 
 **Přílohy:**
 
-rozhodnutikustanovenikomise.pdf
+rozhodnutioustanovenikomise.pdf
