@@ -1,10 +1,16 @@
 == Popis zpracování obchodního případu na IPR
 
-1. Pro každou chystanou **Veřejnou zakázku** je jejím garantem (nebo jinou pověřenou osobou) vytvořen dokument **Záměr**, který obsahuje základní údaje o plánované zakázce. **Záměr** obsahuje povinné a nepovinné údaje.
-2. **Záměr** obsahující minimálně všechny povinné údaje, je přeposlán ke schválení vedoucímu příslušné sekce (schvaluje věcnou stránku veřejné zakázky). Dále je schválen pověřenou osobou ze Sekce právní a ekonomické (dále SPE) a ředitelem IPR.
-3. Po schválení povinného základu záměru garant doplní do záměru doplňující informace.
+1. Pro každou chystanou **Veřejnou zakázku** je jejím věcným gestorem (nebo jinou pověřenou osobou - zpracovatelem ) vytvořen dokument **Záměr**, který obsahuje základní údaje o plánované zakázce. **Záměr** obsahuje povinné a nepovinné údaje.
+2. **Záměr** obsahující minimálně všechny povinné údaje, je předán ke schválení vedoucímu příslušné sekce (schvaluje věcnou stránku veřejné zakázky). Dále je schválen pověřenou osobou (správcem rozpočtu) Sekce právní a ekonomické (dále SPE) a ředitelem IPR.
+3. Po schválení povinného základu záměru věcný gestor (zpracovatel) doplní do záměru doplňující informace.
 4. Kompletní dokument **Záměr** znovu schvaluje vedoucí příslušné sekce.
-5. Po schválení kompletního záměru je dokument uzamčen pro další úpravy a předán v rámci worklow do SPE. Zde je plánovaná částka alokována v **Rozpočtu** a z dokumentu *Záměr* je vytvořen dokument *Zakázka*.
-6. SPE zpracuje ve spolupráci s garantem veškeré nutné dokumenty pro vypsání zakázky. Seznam a typ dokumentů se liší dle způsobu vypsání zakázky. Jedná se o **Smlouvu**, **Objadnávku**, **Výzvu** atd.
-7. Po výběru dodavatele a podpisu smlouvy je tato přiložena k **Zakázce** ve SpIS. Ze smlouvy jsou k **Zakázce** převzaty vybrané údaje -  závazné termíny pro plnění jednotlivých etap, podmínky akceptace a fakturace. V rámci jednotlivých etap zakázky jsou sledovány skutečně vynaložené prostředky.
-8. **Faktura**. V okamžiku přijetí jakékoli faktury k dané **Zakázce** je tato připojena k zakázce a je proveden aktualizace čerpání skutečných financí. Taktéž při ukončení jednotlivých etap pověřený pracovník SPE připojuje k zakázce **Předávací protokol** a **Akceptační protokol** až do ukončení plnění veřejné zakázky.
+5. Po schválení kompletního záměru je dokument uzamčen pro další úpravy a předán v rámci zpracování do SPE. Zde je plánovaná částka alokována v **Rozpočtu** a ze *Záměru* se stává *Veřejná zakázka*.
+6. SPE zpracuje ve spolupráci s věcným gestorem (zpracovatelem) veškeré nutné dokumenty pro vypsání veřejné zakázky. Seznam a typ dokumentů se liší dle způsobu vypsání veřejné zakázky. Jedná se především o **Výzvu k podání nabídek**, **Návrh smlouvy**, **Objadnávku** atd.
+7. Dle způsobu vypsání veřejné zakázky proběhne výběrové řízení, k němuž jsou připraveny doprovodné dokumenty (**Čestné prohlášení členů komise**, **Protokol o jednání hodnotící komise**, **Oznámení o výběru dodavatele** atd.
+8. Po výběru dodavatele a podpisu **Smlouvy** je tato přiložena k **Zakázce** ve SpIS jako příloha. Ze **Smlouvy** jsou k **Zakázce** převzaty vybrané údaje -  závazné termíny pro plnění jednotlivých etap, podmínky akceptace a fakturace. V rámci jednotlivých etap zakázky jsou sledovány skutečně vynaložené prostředky.
+9. Při přijetí **Faktury** k **Zakázce** je tato připojena jako příloha k **Zakázce**. Po přijetí **Faktury** jsou doplněny i další dokumenty, opravňující k proplacení **Faktury** (**Dodací list**, **Předávací protokol** či **Akceptační protokol**).
+10. **Faktura** je předána k proplací na základě schváleného dokumentu **Likvidační list k faktuře**. Tento dokument je přidáván do SpIS společně s **Fakturou**
+
+Pravidla pro zadávání a zprocesování Veřejné zakázky jsou popsány v interní Směrnici č.4/2016 IPR Praha.
+
+Současný proces zpracování Veřejné zakázky a další související procesy v rámci IPR jsou zpracovány v Business analýze, která byla vypracována externím analytikem a je přílohou zadávací dokumentace ke SpIS.
