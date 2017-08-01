@@ -6,10 +6,10 @@
 | Identifikátor veřejné zakázky | 
 | Účel zajištění činnosti | Hlavní
 | Název zakázky | Výměna akumulátorů v UPS
-| Předmět zakázky | Bližší popis záměru
+| Předmět zakázky | Bližší popis akázky
 | Poznámka | Prosím o objednávku u UPS
 | Druh ZŘ | 
-| Konečný termín zakázky | 2015-12-20
+| Konečný termín zakázky | 20-12-2015
 | Zakázka na dobu neurčitou	| [check]
 | Druh finančních prostředků | Provoz
 | Způsob zadání zakázky | Objednávka
@@ -26,11 +26,11 @@
 |===
 
 |===
-| Vytvořeno:	| 2015-12-01 (od Lukáš Makovec)	
-| Datum zahájení administrace: | 2015-12-01
-| Datum ukončení zakázky: | 2015-12-31
-| Datum podpisu smlouvy: | 2015-12-10
-| Poslední změna:	| 2015-12-10 (od Raffayová)
+| Vytvořeno:	| 01-12-2015 (Lukáš Makovec)	
+| Datum zahájení administrace: | 01-12-2015
+| Datum ukončení zakázky: | 31-12-2015
+| Datum podpisu smlouvy: | 10-12-2015
+| Poslední změna:	| 10-12-2015 (Raffayová)
 | Poznámka ke změně:	| 
 | Stav:	| odeslána objednávka
 |===
@@ -71,3 +71,7 @@
 |===
 
 **Přílohy:**
+objednavka.pdf
+smlouva.pdf
+dodacilist.pdf
+faktura.pdf
