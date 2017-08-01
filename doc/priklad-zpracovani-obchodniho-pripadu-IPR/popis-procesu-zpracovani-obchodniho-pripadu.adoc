@@ -9,8 +9,7 @@
 7. Dle způsobu vypsání veřejné zakázky proběhne výběrové řízení, k němuž jsou připraveny doprovodné dokumenty (**Čestné prohlášení členů komise**, **Protokol o jednání hodnotící komise**, **Oznámení o výběru dodavatele** atd. Případně další dokumenty požadující doplňující údaje od uchazečů, jejich vyloučení atp.
 8. Po výběru dodavatele a podpisu **Smlouvy** je tato přiložena k **Zakázce** ve SpIS jako příloha. Ze **Smlouvy** jsou k **Zakázce** převzaty vybrané údaje -  závazné termíny pro plnění jednotlivých etap, podmínky akceptace a fakturace. V rámci jednotlivých etap zakázky jsou sledovány skutečně vynaložené prostředky.
 9. Při přijetí **Faktury** k **Zakázce** je tato připojena jako příloha k **Zakázce**. Po přijetí **Faktury** jsou doplněny i další dokumenty, opravňující k proplacení **Faktury** (**Dodací list**, **Předávací protokol** či **Akceptační protokol**).
-10. **Faktura** je předána k proplací na základě schváleného dokumentu **Likvidační list k faktuře**. Tento dokument je přidáván do SpIS společně s **Fakturou**
 
-Pravidla pro zadávání a zprocesování Veřejné zakázky jsou popsány v interní Směrnici č.4/2016 IPR Praha, oběh účetních dokumentů (faktur) řeší Směrnice č.6/2015.
+Pravidla pro zadávání a zprocesování Veřejné zakázky jsou popsány v interní Směrnici č.4/2016 IPR Praha.
 
 Současný proces zpracování Veřejné zakázky a další související procesy v rámci IPR jsou zpracovány v Business analýze, která byla vypracována externím analytikem a je přílohou zadávací dokumentace ke SpIS.
