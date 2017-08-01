@@ -1,0 +1,16 @@
+== Zpráva o hodnocení nabídek
+
+|===
+| Název zakázky: | 
+| ID zakázky: | 
+|===
+
+|===
+| Vytvořeno:				| 
+| Změněno:					| 
+| Poznámka:					| 
+|===
+
+**Přílohy:**
+
+zpravahodnoceninabidek.pdf
