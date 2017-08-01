@@ -1,8 +1,9 @@
 == Proces vyjádření k území
 
-1. Na IPR Praha přijde žádost o vyjádření ke konkrétnímu území.
-2. Pracovník podatelny eviduje žádost jako příchozí poštu do E-spis a zároveň importuje žádost do SpIS.
-3. Pověřený uživatel SpISu žádost přečte, provede zákres území do mapy a pošle k vyjádření všem pověřeným odborným pracovníkům.
-4. Každý oslovený odborný uživatel vyplní svou část vyjádření, potvrdí či nechá schválit.
-5. Po kompletaci všech částí vyjádření je pověřený uživatel upozorněn a kompletní znění pošle ke schválení vedoucímu.
-6. Po schválení vedoucím je vytvořena tisková sestava a exportována do E-spisu k odeslání.
+1. Na podatelnu IPR Praha přijde dokument týkající se agendy kanceláře KPÚ. Pracovník podatelny eviduje dokument jako příchozí poštu do E-spis a zároveň importuje do SpIS.
+3. Pověřený uživatel SpISu dle druhu importovaného dokumentu provede přiřazení typu dokumentu (**Vyjádření ke stavebním záměrům**, Vyjádření k záměru EIA**, **Koncepční vyjádření k záměru na veřejné prostranství**, **Námitky** atd.), zákres území do mapy a dle charakteru dokumentu (pouze na vědomí, žádost o vyjádření) pošle k vyjádření všem pověřeným odborným pracovníkům, nebo na vědomí všem dotčeným.
+4. V případě žádosti o vyjádření Každý oslovený odborný uživatel vyplní svou část vyjádření, potvrdí či nechá schválit.
+5. Po kompletaci všech částí vyjádření je pověřený uživatel upozorněn a kompletní znění pošle ke schválení a podpisu oprávěnému nadřízenému.
+6. Po schválení nadřízeným je vytvořena tisková sestava opatřená podpisy odpovědných uživetlů a exportována do E-spisu k odeslání žadateli.
+
+V současné době není na IPR Praha žádné koncepční řešení pro zpracování žádostí o vyjádření. Obsah a vzhled jednotlivých typů vyjádření bude součástí implementační analýzy.
