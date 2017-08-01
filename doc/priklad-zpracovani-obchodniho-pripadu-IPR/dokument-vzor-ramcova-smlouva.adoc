@@ -1,0 +1,16 @@
+== Rámcová smlouva s dodavatelem
+
+|===
+| Název zakázky: | 
+| ID zakázky: | 
+|===
+
+|===
+| Vytvořeno:				| 
+| Změněno:					| 
+| Poznámka:					| 
+|===
+
+**Přílohy:**
+
+ramcovasmlouva.pdf
