@@ -1,0 +1,16 @@
+== Smlouva o dílo s dodavatelem
+
+|===
+| Název zakázky: | 
+| ID zakázky: | 
+|===
+
+|===
+| Vytvořeno:				| 
+| Změněno:					| 
+| Poznámka:					| 
+|===
+
+**Přílohy:**
+
+smlouvaodilo.pdf
