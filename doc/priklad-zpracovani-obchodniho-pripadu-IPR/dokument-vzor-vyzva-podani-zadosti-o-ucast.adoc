@@ -1,4 +1,4 @@
-== Výzva k podání nabídek k VZ
+== Výzva k podání žádosti o účast na VZ
 
 |===
 | Název zakázky: | 
@@ -14,4 +14,6 @@
 
 **Přílohy:**
 
-vyzvapodaninabidek.pdf
+vyzvapodanizadostiucast.pdf
+
+**Profil zadavatele**
