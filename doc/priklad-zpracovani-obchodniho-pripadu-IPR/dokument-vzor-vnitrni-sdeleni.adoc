@@ -1,0 +1,21 @@
+== Vnitřní sdělení
+
+|===
+| Věc: | Popora personálního SW Avensio
+| Odesilatel: | Lukáš Makovec
+| Příjemce: | Ondřej Boháč
+|===
+
+|===
+| Vytvořeno:        | 15-01-2017 (lukáš Makovec)
+| Změněno:					| 15-01-2017 (lukáš Makovec)
+| Poznámka:					| 
+|===
+
+**Přílohy:**
+
+vnitrnisdeleni.pdf
+
+zamer.pdf
+
+zadavacidokumentace.pdf
