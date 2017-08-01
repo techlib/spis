@@ -1,0 +1,33 @@
+== Vyjádření ke stavebním záměrům
+
+=== Hlavička
+|===
+| Typ vyjádření: |
+| Název dokumentace: |
+| Žadatel: |
+| Investor záměru: |
+| Autor dokumentace: |
+| Datum dokumentace: |
+===
+
+**Úvodní text vyjádření:**
+
+**Stanovisko:**
+|===
+|  [CHECK] | s předloženým záměrem souhlasíme
+|  [CHECK] | s předloženým záměrem souhlasíme za předpokladu splnění následujících požadavků:
+|  [CHECK] | s předloženým záměrem nesouhlasíme z níže uvedených důvodů:
+|===
+
+**Doplňující texty, stanoviska dotčených kanceláří atd.:**
+
+|===
+| Vytvořeno:				| 
+| Změněno:					| 
+| Poznámka:					| 
+| Deadline:					| 
+|===
+
+**Přílohy:**
+zadostovyjadreni.pdf
+dokumentace.pdf
