@@ -22,13 +22,13 @@ Jeho technickými charakteristikami se zabývá <<technicka-specifikace.adoc#,Te
 
 === Agendy
 
-Systém v prvních verzích umožňuje zpracování agend IPR a NTK souvisejících s přípravou a čerpáním rozpočtu. IPR Praha navíc bude v první fázi implementovat agendu spojenou s vyřízením žádostí o vyjádření k území. Systém však musí být navržen s ohledem na budoucí rozvoj, při kterém dojde k rozšíření následujícího seznamu zajišťovaných agend.
+Systém v prvních verzích umožňuje zpracování agend IPR a NTK týkajících se přípravy a čerpání rozpočtu. IPR Praha navíc bude v první fázi implementovat agendu spojenou s vyřízením žádostí o vyjádření k území. Systém však musí být navržen s ohledem na budoucí rozvoj, při kterém dojde k rozšíření následujícího seznamu zajišťovaných agend.
 
 Řízení výdajů::
 Sekce řízení výdajů sdružuje řadu témat, která se dotýkají výdajových procesů různých typů. Jedná se například o tvorbu a evidenci záměrů, veřejných zakázek, předávacích protokolů, faktur a dalších souvisejících dokumentů.
 
 Rozpočtování::
-Sekce rozpočtu sdružuje témata související s přípravou, úpravami a sledováním čerpání prostředků z rozpočtu. Umožňuje jeho sestavování s přihlédnutím k plánovaným nákupům a platným smlouvám.
+Sekce rozpočtu sdružuje témata týkající se přípravy, úprav a sledování čerpání prostředků z rozpočtu. Umožňuje jeho sestavování s přihlédnutím k plánovaným nákupům a platným smlouvám.
 
 Partneři a smlouvy::
 Sekce partnerů a smluv se soustředí na téma evidence platných smluv a z nich plynoucích závazků. Dále také obsahuje evidenci smluvních partnerů včetně kontaktních informací.
@@ -154,15 +154,15 @@ Není žádoucí znovu importovat dokument nebo případ, který již ve SpISu e
 
 Export případů, dokumentů a příloh do ESSS probíhá automaticky a průběžně. Vždy, když je dokument ve SpISu dokončen, dojde k jeho asynchronnímu exportu a to včetně příloh. Obdobně je exportována konečná podoba případu při jeho uzavření.
 
-* Při exportu dokumentu dojde k jeho zařazení do věcné skupiny určené typem dokumentu.
+* Exportovaný dokument je zařazen do věcné skupiny určené typem dokumentu.
 
-* Dokumenty sdružené ve SpISu do případu se v ESSS řadí dále do odděleného spisu, který je založen při exportu prvního dokumentu případu. Pokud ESSS podporuje řazení dokumentu do více spisů, předejde pomocí této funkce integrační můstek vzniku duplicity. Pokud ESSS neumožňuje řazení dokumentů do více spisů, nedojde k duplicitnímu exportu příloh a tyto zůstanou pouze u dokumentu zařazeném do věcné skupiny.
+* Dokumenty sdružené ve SpISu do případu se v ESSS řadí dále do odděleného spisu, který je založen při exportu prvního dokumentu případu. Pokud ESSS podporuje řazení dokumentu do více spisů, předejde pomocí této funkce integrační můstek vzniku duplicity. Pokud ESSS neumožňuje řazení dokumentů do více spisů, nedojde k duplicitnímu exportu příloh, které zůstanou pouze u dokumentu zařazeného do věcné skupiny.
 
 * Po exportu dokumentu, přílohy nebo případu do ESSS se zaznamená spisová značka, pod kterou je možné výsledný soubor v ESSS dohledat. Při exportu nadřazeného objektu je na dceřinné objekty odkazováno právě pomocí spisových značek.
 
 * Do ESSS nejsou exportovány režijní poznámky. Ty mají pouze informativní charakter, nejsou závazné a není třeba je dlouhodobě uchovávat.
 
-* Pro každý typ dokumentu a případu je možné použít jinou spisovou službu, pokud je jich k dispozici více. Předpokládá se ovšem, že každá z nich vytváří nepřekrývající se spisové značky.
+* Pro každý typ dokumentu a případu je možné použít jinou spisovou službu, pokud je jich k dispozici více. Předpokládá se ovšem, že každá z nich vytváří navzájem se nepřekrývající spisové značky.
 
 === Elektronické tržiště
 
@@ -184,7 +184,7 @@ Integrační můstek využívá výpravnu ESSS pro odesílání dokumentů do Re
 
 SpIS využívá vlastní adresář smluvních partnerů. Informace o nich pravidelně ověřuje ve veřejně dostupných rejstřících, ve kterých také umožňuje vyhledat nové subjekty a uložit je do místního adresáře. Hledání je možné provést zadáním názvu nebo IČ.
 
-Četnost automatické kontroly platnosti údajů může nastavit správce systému. V případě potřeby je také možné provést kontrolu platnosti údajů u vybraného subjektu na požádání ihned. Automaticky se kontrolují ty subjekty, kterých se týkají některé otevřené případy.
+Četnost automatické kontroly platnosti údajů může nastavit správce systému. Pokud je třeba, je také možné provést kontrolu platnosti údajů u vybraného subjektu na požádání ihned. Automaticky se kontrolují ty subjekty, kterých se týkají některé otevřené případy.
 
 V případě nalezení změn jsou kontaktní údaje subjektu v systému aktualizovány.
 
@@ -200,7 +200,7 @@ V rámci implementační analýzy bude pro každou organizaci specifikován pra
 
 === Obecný postup
 
-Obchodní případ vzniká vytvořením záměru, kde obvykle garant či vedoucí pracovník definuje, co a za jakých okolností navrhuje realizovat (specifikuje předmět veřejné zakázky) a odhadne finanční a časový rozsah zakázky. Záměr prochází schvalovacím procesem, po jehož schválení se z návrhu na realizaci stává veřejná zakázka. Dle rozsahu je obvykle specifikován časový harmonogram, finanční náročnost, způsob vypsání zakázky a výběru dodavatele. Připraví se všechny doprovodné dokumenty, které rovněž podléhají procesu schválení vedením. Zakázka je vypsána, proběhne výběr dodavatele, schválení výběru a podpis smlouvy.
+Obchodní případ vzniká vytvořením záměru, kde obvykle garant či vedoucí pracovník definuje, co a za jakých okolností navrhuje realizovat (specifikuje předmět veřejné zakázky) a odhadne finanční a časový rozsah zakázky. Záměr prochází schvalovacím procesem, po jehož dokončení se z návrhu na realizaci stává veřejná zakázka. Dle rozsahu je obvykle specifikován časový harmonogram, finanční náročnost, způsob vypsání zakázky a výběru dodavatele. Připraví se všechny doprovodné dokumenty, které rovněž podléhají procesu schválení vedením. Zakázka je vypsána, proběhne výběr dodavatele, schválení výběru a podpis smlouvy.
 
 Po podpisu smlouvy začíná realizace samotné zakázky. Zakázka může obsahovat několik etap, na jejichž konci je část zakázky vždy předána dodavatelem ke schválení. V rámci každé etapy probíhá obvykle také fakturace.
 
@@ -212,17 +212,17 @@ Schéma zpracování obchodního případu je v příloze 1, schéma zpracován
 
 === Evidence obchodních případů
 
-Systém bude umožňovat vedení evidence obchodních případů, přes kterou bude možné dohledat veškeré dokumenty související s daným případem. Mezi tyto dokumenty se řadí zejména záměry (formuláře záměrů, přípravy finančních operací, investiční záměry), dokumentace související s veřejnými zakázkami (zadávací dokumentace, smlouvy, výzvy k podání nabídek, komunikace s uchazeči, zápisy z výběrových řízení) a fakturace (faktury či jiné doklady a podklady k proplacení jako například akceptační protokoly a další).
+Systém bude umožňovat vedení evidence obchodních případů, přes kterou bude možné dohledat veškeré dokumenty k danému případu. Mezi tyto dokumenty se řadí zejména záměry (formuláře záměrů, přípravy finančních operací, investiční záměry), dokumentace související s veřejnými zakázkami (zadávací dokumentace, smlouvy, výzvy k podání nabídek, komunikace s uchazeči, zápisy z výběrových řízení) a fakturace (faktury či jiné doklady a podklady k proplacení jako například akceptační protokoly a další).
 
 ==== Evidence záměrů
 
-Záměr je inicializační dokument k obchodnímu případu, kde je definováno, co a za jakých okolností se navrhuje realizovat (specifikuje se předmět veřejné zakázky). Autor bude tvorbou proveden pomocí jednoduchého formuláře. Záměr prochází schvalovacím procesem, který je daný v rámci každé organizace, zároveň musí systém reflektovat případné změny v jejich vnitřním chodu.
+Záměr je inicializační dokument k obchodnímu případu, kde je definováno, co a za jakých okolností se navrhuje realizovat (specifikuje se předmět veřejné zakázky). Autor bude tvorbou proveden pomocí jednoduchého formuláře. Záměr prochází schvalovacím procesem, který je daný v rámci každé organizace, zároveň systém musí být schopen reflektovat případné změny v jejich vnitřním chodu.
 
 Záměr je po celou dobu schvalovacího procesu dostupný pro editace a připomínkování. V průběhu schvalování záměru musí mít každý člen schvalovací procedury možnost záměr připomínkovat. Zároveň musí být záměr dostupný i v původních verzích v historii záměru.
 
 Každá změna v údaji záměru a akce v rámci jeho schvalování bude uložena v předchozích verzích a revizích a dostupná oprávněným uživatelům. Změny v záměru budou jasně odlišené od původní verze včetně autora změny.
 
-Schvalování záměru musí proběhnout plně elektronicky s prokazatelnou a unikátní akceptací definovanými pracovníky. Schvalování záměru musí probíhat včetně všech souvisejících příloh k záměru. Na vybrané změny budou uživatelé upozorněni notifikací.
+Schvalování záměru musí proběhnout plně elektronicky s prokazatelnou a unikátní akceptací definovanými pracovníky. Schvalování záměru musí probíhat včetně všech příloh týkajících se záměru. Na vybrané změny budou uživatelé upozorněni notifikací.
 
 Po konečném schválení záměru je na jeho základě vytvořena veřejná zakázka, pro kterou je záměr základem. Záměr tedy vždy iniciuje objednávku, nebo výzvu k podání nabídek.
 
@@ -234,13 +234,13 @@ Detailní specifikace procesu pro jednotlivé organizace bude provedena v rámc
 
 ==== Evidence veřejných zakázek
 
-Evidence veřejných zakázek je stěžejní agendou obchodního a právního oddělení organizace. Jsou zde evidovány všechny veřejné zakázky, od zakázek malého rozsahu až po nadlimitní zakázky. Evidence veřejných zakázek je souhrnný přehled všeho, co je k zakázce evidováno, o vynaložené částce, termínech plnění, stavu jednotlivých částí (faktura, smlouva,…) ve všech etapách realizace. Informace o zakázce jsou přebírány ze záměru, ze kterého zakázka vznikla. Zakázka je postupně doplňována o další informace a dokumenty. Součástí každé veřejné zakázky jsou dále faktury (spárované z evidence faktur), objednávka, smlouva, vnitřní sdělení a další potřebné dokumenty a přílohy. Z výše uvedených dokumentů, které jsou přiřazeny buď ze související agendy či nahrány jako soubory, se k veřejné zakázce evidují vybrané informace přímo v SpISu.
+Evidence veřejných zakázek je stěžejní agendou obchodního a právního oddělení organizace. Jsou zde evidovány všechny veřejné zakázky, od zakázek malého rozsahu až po nadlimitní zakázky. Evidence veřejných zakázek je souhrnný přehled všeho, co je k zakázce evidováno, o vynaložené částce, termínech plnění, stavu jednotlivých částí (faktura, smlouva,…) ve všech etapách realizace. Informace o zakázce jsou přebírány ze záměru, ze kterého zakázka vznikla. Zakázka je postupně doplňována o další informace a dokumenty. Součástí každé veřejné zakázky jsou dále faktury (spárované z evidence faktur), objednávka, smlouva, vnitřní sdělení a další potřebné dokumenty a přílohy. Z výše uvedených dokumentů, které jsou přiřazeny buď z příslušné agendy či nahrány jako soubory, se k veřejné zakázce evidují vybrané informace přímo ve SpISu.
 
-Po schválení záměru se z něj stává veřejná zakázka, kterou obvykle po ekonomické a právní stránce zpracuje obchodní či právní oddělení organizace a společně s garantem zakázky připraví všechny potřebné dokumenty (smlouvu, objednávku či výzvu), vyvěsí výzvu na web organizace a další příslušná místa. V průběhu přípravy veřejné zakázky jsou do SpISu nahrávány příslušné dokumenty a měněn stav zakázky. Všechny dokumenty musí být odsouhlaseny všemi oprávněnými osobami. Po uběhnutí zákonem stanovených lhůt je vybrán dodavatel a podepsána s ním smlouva. Po podpisu smlouvy jsou do SpISu oprávněnou osobou doplněny závazné termíny pro plnění jednotlivých etap, podmínky akceptace a fakturace a finanční částky vyplývající ze smlouvy či zákona. Smlouva je nahrána do SpISu, ze kterého je taktéž možné ji odeslat do ESSS, nahrát na web zadavatele či veřejný registr smluv. V rámci jednotlivých etap veřejné zakázky jsou sledovány limity vynaložených prostředků a skutečně vynaložených prostředků. V okamžiku přijetí jakékoli faktury k dané zakázce je tato připojena k zakázce a do etap jsou evidovány příslušné částky a termíny. Taktéž při ukončení jednotlivých etap pověřený pracovník připojuje k zakázce předávací protokoly až do ukončení plnění veřejné zakázky.
+Po schválení záměru se z něj stává veřejná zakázka, kterou obvykle po ekonomické a právní stránce zpracuje obchodní či právní oddělení organizace a společně s garantem zakázky připraví všechny potřebné dokumenty (smlouvu, objednávku či výzvu), vyvěsí výzvu na web organizace a další příslušná místa. V průběhu přípravy veřejné zakázky jsou do SpISu nahrávány příslušné dokumenty a měněn stav zakázky. Všechny dokumenty musí být odsouhlaseny všemi oprávněnými osobami. Po uběhnutí zákonem stanovených lhůt je vybrán dodavatel a podepsána s ním smlouva. Po podpisu smlouvy jsou do SpISu oprávněnou osobou doplněny závazné termíny pro plnění jednotlivých etap, podmínky akceptace a fakturace a finanční částky vyplývající ze smlouvy či zákona. Smlouva je nahrána do SpISu, ze kterého je taktéž možné ji odeslat do ESSS, nahrát na web zadavatele či na veřejný registr smluv. V rámci jednotlivých etap veřejné zakázky jsou sledovány limity vynaložených prostředků a skutečně vynaložené prostředky. V okamžiku přijetí jakékoli faktury k dané zakázce je tato připojena k zakázce a do etap jsou evidovány příslušné částky a termíny. Taktéž při ukončení jednotlivých etap pověřený pracovník připojuje k zakázce předávací protokoly až do ukončení plnění veřejné zakázky.
 
-Dokumenty související s veřejnou zakázkou jsou dostupné pro editace a připomínkování po celou dobu jejího trvání. Veškeré změny k zakázce jsou ukládány v předchozích verzích a revizích dokumentů a jsou dostupné oprávněným uživatelům stejně jako v evidenci záměrů. Na vybrané změny budou vybraní uživatelé upozorňováni notifikací.
+Dokumenty vztahující se k veřejné zakázce jsou dostupné pro editace a připomínkování po celou dobu jejího trvání. Veškeré změny k zakázce jsou ukládány v předchozích verzích a revizích dokumentů a jsou dostupné oprávněným uživatelům stejně jako v evidenci záměrů. Na vybrané změny budou vybraní uživatelé upozorňováni notifikací.
 
-Každá veřejná zakázka vychází ze záměru, z něhož převezme všechny informace o celku i o jednotlivých etapách zakázky, tyto informace mohou být následně upraveny dle hodnot ve smlouvě, pokud dojde ke změně. Ke každé zakázce případně jejím jednotlivým etapám jsou přiřazovány dokumenty (smlouva, faktury, předávací protokoly, interní sdělení atp.). Veřejná zakázka i její etapy budou obsahovat informace o termínech plnění, plánovaných a skutečně vynaložených finančních prostředcích.
+Každá veřejná zakázka vychází ze záměru, z něhož převezme všechny informace o celku i o jednotlivých etapách zakázky, tyto informace mohou být následně upraveny dle hodnot ve smlouvě, pokud dojde ke změně. Ke každé zakázce a případně k jejím jednotlivým etapám jsou přiřazovány dokumenty (smlouva, faktury, předávací protokoly, interní sdělení atp.). Veřejná zakázka i její etapy budou obsahovat informace o termínech plnění, plánovaných a skutečně vynaložených finančních prostředcích.
 
 Detailní specifikace procesu a funkcí pro jednotlivé organizace bude provedena v rámci implementační analýzy.
 
@@ -288,7 +288,7 @@ Detailní specifikace procesu a funkcí nástrojů pro tvorbu rozpočtu pro jedn
 
 Rozpočet schválený nadřízeným orgánem je závazný pro plánování a přehled čerpání přidělených financí. Částky schválené nadřízeným orgánem rozdělí správce rozpočtu zpětně mezi jednotlivé útvary organizační struktury dle účelu využití. Přidělené částky jsou závazné pro všechny uživatele jako limity čerpání, jejich změnu smí provést pouze správce rozpočtu na základě rozhodnutí nadřízeného orgánu.
 
-V jednotlivých organizacích je možné v rámci limitů čerpání přerozdělovat finance mezi útvary organizační struktury a měnit účel jejich vynaložení. Tyto změny může provádět pouze správce rozpočtu a jsou schvalovány vedoucími pracovníky, jichž se změny týkají.
+V jednotlivých organizacích je možné v rámci limitů čerpání přerozdělovat finance mezi útvary organizační struktury a měnit účel jejich vynaložení. Tyto změny mohou být provedeny pouze v rámci částky schválené rozhodnutím nadřízeného orgánu a může je provádět pouze správce rozpočtu a jsou schvalovány vedoucími pracovníky, jichž se změny týkají.
 
 Systém bude poskytovat kontrolu čerpání rozpočtu prostřednictvím přehledu sum čerpaných financí a jejich limitů dle jednotlivých schválených rozpočtových položek. Výpočty budou dynamické a budou odpovídat zadaným filtrům.
 
@@ -296,7 +296,7 @@ Detailní specifikace obsahu a funkcí přehledu čerpání rozpočtu bude před
 
 == Vyjádření k území
 
-Funkce vyjádření k území bude implementován pouze do prostředí IPR Praha. Jedná se o agendu spojenou s procesem získání vyjádření odborníků z jednotlivých sekcí IPR Praha k území specifikovaném v žádosti a zakresleném na mapě. Vstupním podkladem pro vyjádření je dopis se žádostí o vyjádření evidovaný v ESSS IPR Praha. Žádost je importována do SpIS včetně vybraných metadat a zobrazena pověřenému uživateli, který lokalizuje území z žádosti v mapě, přiřadí uživatele, od kterých je vyžadováno vyjádření a pošle jim požadavek na doplnění. Uživatelé doplní svá vyjádření, sami potvrdí, případně nechají schválit svým vedoucím. V okamžiku, kdy jsou všechna požadovaná vyjádření hotová, pověřená osoba zkontroluje obsah, případně pošle ke schválení a exportuje tiskovou sestavu odpovědi na žádost o vyjádření do ESSS k odeslání. Detailní specifikace procesu a požadovaných funkcí bude součástí implementační analýzy.
+Funkce vyjádření k území bude implementována pouze do prostředí IPR Praha. Jedná se o agendu spojenou s procesem získání vyjádření odborníků z jednotlivých sekcí IPR Praha k území specifikovanému v žádosti a zakreslenému na mapě. Vstupním podkladem pro vyjádření je dopis se žádostí o vyjádření evidovaný v ESSS IPR Praha. Žádost je importována do SpIS včetně vybraných metadat a zobrazena pověřenému uživateli, který lokalizuje území z žádosti v mapě, přiřadí uživatele, od kterých je vyžadováno vyjádření a pošle jim požadavek na doplnění. Uživatelé doplní svá vyjádření, sami potvrdí, případně předají ke schválení svým vedoucím. V okamžiku, kdy jsou všechna požadovaná vyjádření hotová, pověřená osoba zkontroluje obsah, případně pošle ke schválení a exportuje tiskovou sestavu odpovědi na žádost o vyjádření do ESSS k odeslání. Detailní specifikace procesu a požadovaných funkcí bude součástí implementační analýzy.
 
 
 == Přílohy
