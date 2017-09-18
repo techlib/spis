@@ -80,7 +80,7 @@ Veškerá nastavení zobrazení seznamů jsou trvalá a společná pro daný dru
 
 ==== Historie
 
-U dokumentů a případů se uchovávají předcházející verze jejich stavu. Uživatel si může zobrazit anotovaný výpis těchto verzí, ze kterého jsou patrné alespoň míra a povaha změny a dále také její autor. Dále si může libovolnou předešlou verzi zobrazit, případně ji porovnat s jinou.
+U dokumentů a případů se uchovávají předcházející verze jejich stavu. Uživatel si může zobrazit výpis jejich stručných shrnutí, ze kterých jsou patrné alespoň autor, míra a povaha změny. Dále si může libovolnou předešlou verzi zobrazit, případně ji porovnat s jinou.
 
 Pro rychlou orientaci je také vždy možné zobrazit porovnání aktuální verze dokumentu s verzí předchozí, případně aktuální revize s předchozí. V případě otevření dokumentu skrze odkaz získaný automatickým upozorněním na změnu je uživateli zobrazen popis změny mezi revizemi.
 
@@ -96,7 +96,7 @@ V případě potřeby je možné pro konkrétní typ dokumentu stanovit další 
 
 ==== Export
 
-Uživatel může získat některá data, ke kterým má přístup, i ve strojově čitelné formě. V případě dokumentů je možné si stáhnout jejich data ve formátech JSON, YAML a XML. Data pohledů je možné získat ve formátech JSON, YAML a pokud to umožňuje druh datového zdroje (data představují soubor tabulek), tak i ve formátech CSV (jednotlivé tabulky) nebo XLSX (tabulky jako jednotlivé listy).
+Uživatel může získat některá data, ke kterým má přístup, i ve strojově čitelné formě. Data dokumentů je možné stáhnout ve formátech JSON, YAML a XML. Data pohledů je možné získat ve formátech JSON, YAML a pokud to umožňuje druh datového zdroje (data představují soubor tabulek), tak i ve formátech CSV (jednotlivé tabulky) nebo XLSX (tabulky jako jednotlivé listy).
 
 
 === Konkrétní součásti
@@ -111,12 +111,12 @@ Pracovní přehled je výchozí stránka uživatele po jeho přihlášení, nesm
 3. Případy, ve kterých je uživatel oprávněn *vytvořit* některý dokument.
 4. Ostatní případy, do kterých má uživatel přístup.
 
-V rámci prvních dvou bodů jsou případy řazeny podle nejčasnějšího termínu dokončení dokumentů, díky kterým je případ na dané pozici. Dokumenty z třetího bodu neexistují a není tedy možné u nich sledovat termíny a zbylé případy může uživatel pouze komentovat.
+V prvních dvou bodech jsou případy řazeny podle nejčasnějšího termínu dokončení dokumentů, díky kterým je případ na dané pozici. Dokumenty z třetího bodu neexistují a není tedy možné u nich sledovat termíny a zbylé případy může uživatel pouze komentovat.
 
 
 ==== Přehled událostí
 
-Na zvláštní stránce přehledu událostí jsou každnému uživateli předloženy ty události, na které byl, nebo mohl být upozorněn. Jednotlivé řádky umožňují uživateli přihlásit se k nebo odhlásit se z odběru daných odálostí.
+Na zvláštní stránce přehledu událostí jsou každému uživateli předloženy ty události, na které byl, nebo mohl být upozorněn. Jednotlivé řádky umožňují uživateli přihlásit se k nebo odhlásit se z odběru daných událostí.
 
 Přehled by měl sloužit pro rychlou orientaci v běžících případech a získání přehledu o situaci.
 
@@ -130,7 +130,7 @@ Sekce slouží k seskupení několika témat. Není běžné, aby se věci opako
 
 ==== Témata
 
-Téma seskupuje pohledy a sestavy, které mají za úkol poskytnout informace o stavu věcí, se správou případů a dokumentů, které umožňují tento stav ovlivňovat. Vhodná témata mohou být například *Rozpočet* nebo *Smlouvy*.
+Téma seskupuje pohledy a sestavy, které mají za úkol poskytnout informace o stavu určité oblasti (*Rozpočet*, *Smlouvy*) a dále zprostředkovává správu případů a dokumentů, které umožňují tento stav ovlivňovat (*Změna rozpočtu*, *Zanesení nové smlouvy*).
 
 Pokud to dává smysl, mohou se věci v tématech opakovat. Například určité pohledy mohou být přínosné pro více témat, některé případy mohou souviset s vícero tématy a podobně. Názorným příkladem budiž *Nákup*, který zasahuje jak do *Rozpočtu*, tak do *Smluv*.
 
@@ -144,7 +144,7 @@ Některé pohledy mohou umožňovat přímo spustit nový případ, nebo se odka
 
 ==== Sestavy
 
-Na stránce každého tématu je vyhrazen prostor, ve kterém se nachází odkazy jednak na systémové a dále také na daným uživatelem vytvořené sestavy pohledů.
+Na stránce každého tématu je vyhrazen prostor, ve kterém se nacházejí odkazy jednak na systémové a dále také na daným uživatelem vytvořené sestavy pohledů.
 
 Ze stránky tématu je možné aktivovat editor sestav, který umožňuje na stránku uspořádat výběr z pohledů, ke kterým má uživatel přístup. Těmto pohledům je následně možné interaktivně nastavit potřebné zobrazení. Takto připravenou sestavu je následně možné uložit, nebo případně jen vytisknout.
 
@@ -153,7 +153,7 @@ Ze stránky tématu je možné aktivovat editor sestav, který umožňuje na str
 
 Pokud téma obsahuje alespoň jeden typ případu, je na jeho stránce k dispozici přehled případů, ke kterým má aktuální uživatel přístup. Je-li k tomu uživatel oprávněn, tak se zde také nachází prvek, který umožňuje zahájit nový případ.
 
-Z přehledu jsou patrné základní údaje o případech a zda-li do nich může uživatel zasáhnout, případně je-li to po něm požadováno.
+Z přehledu jsou patrné základní údaje o případech a zdali do nich může uživatel zasáhnout, případně je-li to po něm požadováno.
 Typy případů se rozumí zpracování obchodního případu, jako jsou nákupy a veřejné zakázky, žádost o vyjádření k území nebo společná příprava složitých stanovisek.
 
 ==== Dokumenty
@@ -194,7 +194,7 @@ Více o modelu naleznete v kapitole <<Model oprávnění>>.
 
 Každý **pohled** nebo **část dokumentu** využívá pro zobrazení určitou komponentu. Pokud je komponenta určena pro zobrazení mapových vrstev s vyznačenými body, je možné ji použít pro zobrazení prostorových dat. Pokud se jedná o komponentu pro zobrazení tabulky, je možné pomoci ní zobrazovat data relační, pokud je určena k manipulaci s krátkým textovým popiskem, je jejím prostřednictvím možné měnit určenou část dokumentu a tak dále.
 
-To, jaká data pohled představuje, je kromě komponenty dáno zejména souborem datových zdrojů, ze kterých pohled čerpá. Tyto zdroje mohou být při použití interaktivních komponent ovlivněny hodnotami, které uživatel při prohlížení mění. Obdobně je možné, aby komponenty využité k prezentaci nebo manipulaci s částmi dokumentů zprostředkovávaly povědomí o jeho kontextu.
+To, jaká data pohled představuje, je kromě komponenty dáno zejména souborem datových zdrojů, ze kterých pohled čerpá. Tyto zdroje mohou být při použití interaktivních komponent ovlivněny hodnotami, které uživatel při prohlížení mění. Obdobně je možné, aby komponenty využité k prezentaci nebo manipulaci s částmi dokumentu zprostředkovávaly povědomí o jeho kontextu.
 
 Komponentu tvoří popis jejího rozhraní, včetně popisu zdrojů dat, ze kterých dokáže čerpat a dále kód pro její zobrazení. Komponenta je totiž v pohledu navázána na sadu datových zdrojů, což jsou fakticky procedury uložené v databázi. Popis rozhraní komponenty umožňuje provést automatickou kontrolu shody s rozhraním procedur při jejím využití v politice.
 
@@ -325,7 +325,7 @@ V příkladu došlo k tomu, že byla v důsledku aktualizace dokumentu `protokol
 
 Každý případ je opatřen popisem své hierarchické struktury. Protože si jsou některé případy ve své struktuře velmi podobné, definujeme pojmenované typy případů. Tyto typy reprezentují strukturu, které se dokumenty v případu přizpůsobují.
 
-V případě potřeby je možné typ aktivního případu změnit a dokumenty přeuspořádat do nových rolí. Stejně tak je možné do struktury vložit již existující dokumenty, pokud tak nedojde k porušení jejich vazeb na závislosti.
+V případě potřeby je možné typ aktivního případu změnit a dokumenty přeuspořádat do nových rolí. Stejně tak je možné do struktury vložit již existující dokumenty.
 
 === Účast na případech
 
@@ -339,7 +339,7 @@ Dalším důvodem k individuálnímu pozvání může být například zajiště
 
 Pokud je k tomu uživatel oprávněn, smí v rámci případu požádat o práci na některém dokumentu. Žádat je možné buď jednoho uživatele nebo roli, která byla do případu přizvána. Úkolování nemá přímou vazbu na termín požadovaného dokončení dokumentu, který je stanoven odděleně a na základě jiného oprávnění.
 
-Oprávnění úkolovat jiné vyplývá z oprávnění dané roli uživatele vzhledem ke konkrétnímu typu dokumentu. Dále jím však disponují i uživatelé oprávnění manipulovat libovolným způsobem se závislými dokumenty. Tito uživatelé jsou oprávnění také vytvářet nové, požadované dokumenty právě za účelem možnosti vznést požadavek na jejich vyhotovení.
+Oprávnění úkolovat jiné vyplývá z oprávnění daného roli uživatele vzhledem ke konkrétnímu typu dokumentu. Dále jím však disponují i uživatelé oprávnění manipulovat libovolným způsobem se závislými dokumenty. Tito uživatelé jsou oprávnění také vytvářet nové, požadované dokumenty právě za účelem možnosti vznést požadavek na jejich vyhotovení.
 
 Ve zkratce platí, že potřebuje-li uživatel něco od ostatních, je mu umožněno si o to říci.
 
@@ -389,7 +389,7 @@ end note
 ....
 ====
 
-V příkladu je předávací protokol použit nejprve pro dokumentaci zahájení zápůjčky věci a následně bude použit pro dokumentaci jejího navrácení. Pro vyložení závislého dokumentu `zápůjčka` je podstatné tyto dva protokoly od sebe odlišit.
+V příkladu je předávací protokol použit nejprve pro dokumentaci zahájení zápůjčky věci a následně bude použit pro dokumentaci jejího navrácení. Pro správné vyložení závislého dokumentu `zápůjčka` je podstatné tyto dva protokoly od sebe odlišit.
 
 Oproti instancím (dokumentům) mohou typy záviset pouze na dalších typech (nebo typových třídách, které jsou vysvětleny níže). Pro některé situace může být užitečné, aby dokument závisel na určitém počtu zcela libovolných dokumentů, bez ohledu na jejich typ.
 
@@ -668,7 +668,7 @@ Odvislá role je podobná běžné roli, ale vypouští obor působnosti. Ten je
 Jmenování::
 Díky jmenování určité osoby do některé role dojde k aplikaci všech pravidel vyplývajících z dané role na danou osobu a tedy ke vzniku oprávnění osoby nakládat vymezeným způsobem s předmětnými dokumenty. Osobu je možné jmenovat do běžné i odvislé role.
 +
-Pokud byla osoba do role jmenována s příznakem *zastupující*, nemá běžně k dispozici práva, která z role plynou. Může se jich však chopit pomocí patřičného prvku uživatelského rozhraní. Systém eviduje v protokolu informaci o tom, zda-li by danou akci mohla osoba provést aniž by se chopila práva zástupce.
+Pokud byla osoba do role jmenována s příznakem *zastupující*, nemá běžně k dispozici práva, která z role plynou. Může se jich však chopit pomocí patřičného prvku uživatelského rozhraní. Systém eviduje v protokolu informaci o tom, zdali osoba akci provedla na základě vlastních oprávnění, nebo na základě oprávnění zástupce.
 
 === Uživatelské role
 
@@ -676,7 +676,7 @@ Role představují oprávnění uživatelů, kteří jsou součástí určitých
 
 TIP: Pro jmenování uživatelů do rolí může sloužit například jejich příslušnost do určitých skupin, která se zjistí z vnější evidence uživatelů.
 
-Úlohou rolí je pojmenovat skupiny oprávnění, které mají určití uživatelé, a tím umožnit jejich kontrolu a změny. Běžné role se uplatní zejména při netypických situacích, jako jsou případy mimo běžný rámec organizační struktury. Odvislé role se naopak uplatní při formulování oprávnění pro pravidelné organizační struktury.
+Úlohou rolí je pojmenovat skupiny oprávnění, která mají určití uživatelé, a tím umožnit jejich kontrolu a změny. Běžné role se uplatní zejména při netypických situacích, jako jsou případy mimo běžný rámec organizační struktury. Odvislé role se naopak uplatní při formulování oprávnění pro pravidelné organizační struktury.
 
 Správce může k jednotlivým rolím připojit poučení pro jejich nabyvatele. Tito pak po jmenování do daných rolí musí toto poučení vzít na vědomí, jinak jim není umožněno se systémem dále pracovat. Stejně tak musí nabyvatelé vzít poučení na vědomí při jeho dodatečné změně.
 
@@ -788,18 +788,18 @@ actor :Uživatel:
 
 Uživatelé budou se SpISem komunikovat pomocí webového rozhraní spuštěném v běžném webovém prohlížeči. Pro účely elektronického podepisování bude na jejich zařízeních nasazena další aplikace, ve schématu označená jako _Pečetidlo_.
 
-Jak naznačuje schéma výše, _Aplikace_ samotná je běhovým prostředím pro určité _Politiky_. Ty vytváří programátoři a popisují jimi nejen strukturu dokumentů, které se ve SpISu vyskytují, ale také jejich vzájemné vazby v případech, použité prvky uživatelského rozhraní a další rysy systému dané organizace.
+Jak naznačuje schéma výše, _Aplikace_ samotná je běhovým prostředím pro určité _Politiky_. Ty vytvářejí programátoři a popisují jimi nejen strukturu dokumentů, které se ve SpISu vyskytují, ale také jejich vzájemné vazby v případech, použité prvky uživatelského rozhraní a další rysy systému dané organizace.
 
 === Datová vrstva
 
 ==== PostgreSQL
 
-Úlohu hlavního databázového systému plní otevřené řešení _PostgreSQL_. Tím se zajistí dobrá integrace do stávajícíhí prostředí objednatelů, dlouhodobá udržitelnost a nedojde k omezení možnosti řešení dále šířit, protože licenční podmínky _PostgreSQL_ v něm nebrání.
+Úlohu hlavního databázového systému plní otevřené řešení _PostgreSQL_. Tím se zajistí dobrá integrace do stávajícího prostředí objednatelů, dlouhodobá udržitelnost a nedojde k omezení možnosti řešení dále šířit, protože licenční podmínky _PostgreSQL_ v něm nebrání.
 
 
 ==== Dokumenty
 
-Ústřední skupinou objektů v databázi jsou dokumenty. Tyto dokumenty, vyjádřené hodnotou typu `jsonb` (binární JSON) jsou doplněny o řadu metadat v rozsahu vyplývajícím z ostatních požadavků. Dokumenty všech typů budou uloženy v jediné tabulce a bude u nich při ukládání docházet alespoň k základní kontrole dle schématu odpovídajícímu jejich typu.
+Ústřední skupinou objektů v databázi jsou dokumenty. Tyto dokumenty, vyjádřené hodnotou typu `jsonb` (binární JSON) jsou doplněny o řadu metadat v rozsahu vyplývajícím z ostatních požadavků. Dokumenty všech typů budou uloženy v jediné tabulce a při jejich ukládání bude docházet k alespoň základní kontrole dle schématu odpovídající jejich typu.
 
 Obsah dokumentů by nemělo být vůbec možné měnit, pouze vytvářet nové revize a upravovat jejich stav směrem k dokončení a podepsání.
 
@@ -857,16 +857,16 @@ db1 -> api2: FDW
 
 ===== Data z dokumentů
 
-Žádná existující databáze zatím neobsahuje funkci automatického, okamžitého odvozování tabulek a reakci na změny takto odvozených řádků. Pro naplnění relačních datových struktur z dokumentů se tak využívají spouště, které data z dokumentů přenáší do tabulek ihned po vytvoření nové revize nebo změně stavu dokumentu.
+Žádná existující databáze zatím neobsahuje funkci automatického, okamžitého odvozování tabulek a reakci na změny takto odvozených řádků. Pro naplnění relačních datových struktur z dokumentů se tak využívají spouště, které data z dokumentů přenášejí do tabulek ihned po vytvoření nové revize nebo změně stavu dokumentu.
 
 Různé přehledy mohou mít různé požadavky na platnost revizí dokumentů, ze kterých čerpají. Mohou vyžadovat revizi nejnovější, poslední podepsanou, obě zároveň nebo jejich spojení. Vhodná soustava pohledů usnadní jejich vytváření.
 
 
 === Uživatelské rozhraní
 
-Uživatelské rozhraní je postaveno na bázi projektu link:https://www.patternfly.org/[PatternFly] a využívá v maximální míře příkladové vzory uveřejněných na webu tohoto projektu.
+Uživatelské rozhraní je postaveno na bázi některého existujícího projektu, který poskytuje typizované komponenty uživatelského rozhraní a dokumentaci pro jejich doporučené užití.
 
-Pro každou část systému bude požadované chování upřesněno v rámci implementační analýzy tak, aby bylo jeho ovládání intuitivní a jednoduché. Z této anylýzy a komunikace s uživateli vyplynou například požadavky na komponenty, ale také na podobu procesních modelů.
+Pro každou část systému bude požadované chování upřesněno v rámci implementační analýzy tak, aby bylo jeho ovládání intuitivní a jednoduché. Z této analýzy a komunikace s uživateli vyplynou například požadavky na komponenty, ale také na podobu procesních modelů.
 
 
 // vim:set spelllang=cs,en:
