@@ -47,7 +47,7 @@ SpIS bude napojen na vybrané další informační systémy, ze kterých bude č
 
 Uživatelské rozhraní je realizováno formou interaktivního webového portálu. Každý dokument, případ, každé téma či sekce, každá část nastavení je webovou stránkou s unikátní adresou.
 
-Jednotlivé stránky mohou být vylepšeny pomocí klientských skriptů za účelem dosažení vyšší míry uživatelské přívětivosti, ale musí svou funkci plnit i se zakázaným skriptováním. Výjimku tvoří pohledy. Ty ke svému ztvárnění vyžadují pokročilé funkce (vykreslování grafů) na straně klienta.
+Aplikace může být realizována s pomocí klientského skriptování v libovolné míře od v základu statických stránek s drobnými vylepšeními pro dosažení vyšší míry uživatelského komfortu až po tzv. Single-Page Application, kdy je celé uživatelské rozhraní sestavováno dynamicky přímo v prohlížení a server poskytuje pouze specializované aplikační rozhraní.
 
 
 === Obecné principy
