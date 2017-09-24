@@ -1,0 +1,35 @@
+== Koncepční vyjádření k záměru na veřejném prostranství
+
+=== Hlavička
+|===
+| Typ vyjádření: | k záměru/k dopravní studii/k DÚR/k DÚR/DSP
+| Název dokumentace: |
+| Investor: |
+| Autor dokumentace: |
+| Datum dokumentace: |
+|===
+
+**Úvodní text vyjádření:**
+
+**Další text vyjádření:**
+
+**Stanovisko:**
+|===
+|  [CHECK] | s předloženým záměrem souhlasíme
+|  [CHECK] | s předloženým záměrem souhlasíme za předpokladu splnění následujících požadavků:
+|  [CHECK] | s předloženým záměrem nesouhlasíme z níže uvedených důvodů:
+|===
+
+**Doplňující texty, stanoviska dotčených kanceláří atd.:**
+
+**Přílohy:**
+zadostovyjadreni.pdf, dokumentace.pdf
+
+**Rozdělovník:**
+
+|===
+| Vytvořeno:				| 
+| Změněno:					| 
+| Poznámka:					| 
+| Deadline:					| 
+|===
