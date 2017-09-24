@@ -1,0 +1,36 @@
+== Vyjádření k prodeji / převodu pozemku
+Na základě vyplněných informací je sestaven dopis pro MHMP.
+
+=== Hlavička
+|===
+| Adresát: | 
+| Č. jednací adresáta: |
+| Č. jednací IPR: |
+| Název záměru: |
+| Žadatel: |
+| Datum přijetí žádosti: |
+|===
+
+**Úvodní text vyjádření:**
+
+**Další text vyjádření:**
+
+**Stanovisko:**
+|===
+|  [CHECK] | s prodejem/převodem pozemku souhlasíme
+|  [CHECK] | s prodejem/převodem pozemku souhlasíme s výhradami
+|  [CHECK] | s prodejem/převodem pozemku nesouhlasíme z níže uvedených důvodů:
+|===
+
+**Doplňující texty, stanoviska atd.:**
+
+**Přílohy:**
+
+**Rozdělovník:**
+
+|===
+| Vytvořeno:				| 
+| Změněno:					| 
+| Poznámka:					| 
+| Deadline:					| 
+|===
