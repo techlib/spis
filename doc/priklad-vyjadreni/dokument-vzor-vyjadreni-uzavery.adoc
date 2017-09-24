@@ -1,0 +1,39 @@
+== Vyjádření k výjimce ze stavební uzávěry
+Na základě vyplněných informací je sestaven dopis pro MHMP.
+
+=== Hlavička
+|===
+| Adresát: | 
+| Č. jednací adresáta: |
+| Č. jednací IPR: |
+| Název akce: |
+| Žadatel: |
+| Autor dokumentace: |
+| Datum dokumentace: |
+| Dotčené pozemky: |
+| Datum přijetí žádosti: |
+|===
+
+**Úvodní text vyjádření:**
+
+**Další text vyjádření:**
+
+**Stanovisko:**
+|===
+|  [CHECK] | s udělením výjimky ze stavební uzávěry souhlasíme
+|  [CHECK] | s udělením výjimky ze stavební uzávěry souhlasíme za splnění následujících požadavků:
+|  [CHECK] | s udělením výjimky ze stavební uzávěry nesouhlasíme z níže uvedených důvodů:
+|===
+
+**Doplňující texty, stanoviska atd.:**
+
+**Přílohy:**
+
+**Rozdělovník:**
+
+|===
+| Vytvořeno:				| 
+| Změněno:					| 
+| Poznámka:					| 
+| Deadline:					| 
+|===
