@@ -2,15 +2,17 @@
 
 === Hlavička
 |===
-| Typ vyjádření: |
+| Typ vyjádření: | k záměru/ke studii stavby/k DÚR/ k DÚR/DSP
 | Název dokumentace: |
-| Žadatel: |
-| Investor záměru: |
+| Investor: |
 | Autor dokumentace: |
 | Datum dokumentace: |
-===
+| Dotčené pozemky: |
+|===
 
 **Úvodní text vyjádření:**
+
+**Další text vyjádření:**
 
 **Stanovisko:**
 |===
@@ -21,13 +23,14 @@
 
 **Doplňující texty, stanoviska dotčených kanceláří atd.:**
 
+**Přílohy:**
+zadostovyjadreni.pdf, dokumentace.pdf
+
+**Rozdělovník:**
+
 |===
 | Vytvořeno:				| 
 | Změněno:					| 
 | Poznámka:					| 
 | Deadline:					| 
 |===
-
-**Přílohy:**
-zadostovyjadreni.pdf
-dokumentace.pdf
