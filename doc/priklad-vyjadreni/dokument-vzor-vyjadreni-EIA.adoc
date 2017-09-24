@@ -1,0 +1,35 @@
+== Vyjádření k EIA
+Na základě vyplněných informací je sestaven dopis pro radní MHMP.
+
+=== Hlavička
+|===
+| Adresát: | 
+| Č. jednací adresáta: |
+| Č. jednací IPR: |
+| Název záměru: |
+|===
+
+**Úvodní text vyjádření:**
+
+**Další text vyjádření:**
+
+**Stanovisko:**
+|===
+|  [CHECK] | s předloženým záměrem souhlasíme
+|  [CHECK] | s předloženým záměrem souhlasíme s výhradami
+|  [CHECK] | s předloženým záměrem nesouhlasíme z níže uvedených důvodů:
+|===
+
+**Doplňující texty, stanoviska dotčených kanceláří atd.:**
+
+**Přílohy:**
+zadostovyjadreni.pdf, dokumentace.pdf
+
+**Rozdělovník:**
+
+|===
+| Vytvořeno:				| 
+| Změněno:					| 
+| Poznámka:					| 
+| Deadline:					| 
+|===
