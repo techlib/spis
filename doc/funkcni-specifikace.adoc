@@ -22,7 +22,7 @@ Jeho technickými charakteristikami se zabývá <<technicka-specifikace.adoc#,Te
 
 === Agendy
 
-Systém v prvních verzích umožňuje zpracování agend IPR a NTK týkajících se přípravy a čerpání rozpočtu. IPR Praha navíc bude v první fázi implementovat agendu spojenou s vyřízením žádostí o vyjádření k území. Systém však musí být navržen s ohledem na budoucí rozvoj, při kterém dojde k rozšíření následujícího seznamu zajišťovaných agend.
+Systém bude zpracovávat agendy IPR a NTK týkajících se přípravy a čerpání rozpočtu. IPR Praha navíc bude implementovat agendu spojenou s vyřízením žádostí o vyjádření k území. Systém by měl být navržen tak, aby bylo možné ho v budoucnu rozšířit o další agendy.
 
 Řízení výdajů::
 Sekce řízení výdajů sdružuje řadu témat, která se dotýkají výdajových procesů různých typů. Jedná se například o tvorbu a evidenci záměrů, veřejných zakázek, předávacích protokolů, faktur a dalších souvisejících dokumentů.
@@ -38,23 +38,26 @@ Sekce vyjádření slouží k řízení procesu vyjadřování odborných pracov
 
 === Integrace
 
-Pro zpracování výše uvedených agend v systému je nezbytné, aby byl provázán s cizími systémy a mohl tak pracovat s jejich daty. Tyto systémy nejsou v IPR a NTK shodné.
+Pro plnohodnotné zpracování výše uvedených agend v systému je nezbytné, aby byl provázán s cizími systémy a mohl tak pracovat s jejich daty. Tyto systémy nejsou v IPR a NTK shodné.
 
 .Cizí systémy, se kterými je potřeba se integrovat
 [options="header",cols="<4,^2,^2"]
 |===
 | Úloha cizího systému               | IPR              | NTK
 | Evidence uživatelů                 | Active Directory | OpenLDAP
-| Ekonomický systém                  | Ginis            | iFIS
 | Elektronický systém spisové služby | E-spis           | iFIS
 | Otevřená data                      | CKAN             | CKAN
+| Ekonomický systém                  | Ginis            | iFIS
 | Elektronické tržiště               | NEN/Tender arena | NEN/Tendermarket
 |===
 
-WARNING: V případě elektronického tržiště záleží na rámci, který pro případné využívání Národního elektronického nástroje stanoví vláda ČR. Nebude-li tento rámec stanoven k datu zveřejnění zadávací dokumentace, budou IPR a NTK využívat svá původní elektronická tržiště uvedená v tabulce.
+WARNING: V případě Ekonomického systému na IPR Praha probíhá paralelní veřejná zakázka na nový ekonomický systém. Za podmínky, že nebude nové řešení známo do data zvěřejnění zadávací dokumentace, vyhrazuje si zadavatel na základě §100 Zákona o zadávání veřejných zakázek č. 134/2016 Sb. právo na změnu ekonomického systému k integraci v průběhu realizace zakázky. Změna bude oznámena před začátkem jakýchkoli prací souvisejících s technickým řešením integrace na stávající systém.
+
+WARNING: V případě elektronického tržiště záleží na rámci, který pro případné využívání Národního elektronického nástroje stanoví vláda ČR. Za podmínky, že nebude tento rámec stanoven k datu zveřejnění zadávací dokumentace, zadavatelé si vyhrazují právo na základě §100 Zákona o zadávání veřejných zakázek č. 134/2016 Sb. na určení konkrétního řešení elektronického tržiště k integraci a specifikaci způsobu integrace až v průběhu realizace zakázky.
+
+Z důvodu nejasností ohledně technického řešení ekonomického systému na elektronického tržiště v době zadání VZ budou tyto integrace řešeny v rámci rozvojových požadavků na systém v průběhu jeho realizace a nebudou součástí základní dodávky systému. Systém ale musí být navržen tak, aby bylo možné zmíněné agendy integrovat dodatečně.
 
 Systém bude dále napojen na národní Registr smluv, Obchodní rejstřík a Živnostenský rejstřík.
-
 
 === Slovník pojmů
 
@@ -102,7 +105,7 @@ SpIS slouží především nákupčím a právníkům k zajištění vypsání 
 [options="header",cols="<4,^1,^1"]
 |===
 | Uživatelská role   | IPR | NTK
-| Nákupčí a právníci | 15  | 8
+| Nákupčí a právníci | 10  | 8
 | Členové vedení     | 10  | 10
 | Garanti zakázek    | 20  | 20
 | Vyjádření k území  | 10  | 0
@@ -118,6 +121,8 @@ SpIS musí splňovat zákonné požadavky, které jsou na něj kladeny v rámci 
 * Zákon č. 499/2004 Sb., o archivnictví a spisové službě
 * Nařízení Evropského parlamentu a Rady 2016/679 o ochraně fyzických osob v souvislosti se zpracováním osobních údajů a o volném pohybu těchto údajů (obecné nařízení o ochraně osobních údajů)
 
+Výše uvedená legislativa klade požadavky na technické řešení systému jako takového. Zajištění legislativního souladu spojeného s procesy řešenými v rámci systému a jeho hlídání (např. Zákon o veřejných zakázkách) není součástí dodávky systému.
+
 <<<
 
 == Integrace s cizími systémy
@@ -126,7 +131,7 @@ SpIS musí splňovat zákonné požadavky, které jsou na něj kladeny v rámci 
 
 SpIS je přístupný pouze oprávněným pracovníkům, kteří mají platný uživatelský účet v evidenci dané organizace. Oprávnění v rámci systému jsou uživatelům přidělena na základě údajů z této evidence a dále pak správcem přímo v systému.
 
-* IPR uživatele eviduje v systému Microsoft Active Directory. Role je vyjádřena členstvím uživatelů v určitých skupinách. Je tedy potřeba párovat role v systému se skupinami v evidenci.
+* IPR uživatele eviduje v systému Microsoft Active Directory s veřejně dostupnou dokumentací. Role je vyjádřena členstvím uživatelů v určitých skupinách. Je tedy potřeba párovat role v systému se skupinami v evidenci.
 
 * NTK využívá pro přihlášení uživatelů SSO systém Shibboleth. Evidenci uživatelů představuje OpenLDAP s nestandardním schématem, ale k dispozici je i systém Microsoft Active Directory, nebo automatická replikaci účtů přímo do databáze aplikace.
 
@@ -137,6 +142,11 @@ SpIS je provázán s ekonomickým systémem tak, že z něj přebírá a uživa
 === Elektronický systém spisové služby
 
 Napojení na elektronický systém spisové služby (ESSS) bude sloužit jednak k získávání dokumentů a příloh pro další práci s nimi (import) a dále pak pro ukládání hotových dokumentů a příloh za účelem jejich trvalého uchování (export).
+
+* IPR jako elektornický systém spisové služby využívá ICZ E-spis s veřejně dostupnou dokumentací.
+
+* NTK jako elektornický systém spisové služby využívá iFIS ....
+
 
 ==== Import
 
