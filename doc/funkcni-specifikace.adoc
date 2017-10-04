@@ -306,7 +306,11 @@ Detailní specifikace obsahu a funkcí přehledu čerpání rozpočtu bude před
 
 == Vyjádření k území
 
-Funkce vyjádření k území bude implementována pouze do prostředí IPR Praha. Jedná se o agendu spojenou s procesem získání vyjádření odborníků z jednotlivých sekcí IPR Praha k území specifikovanému v žádosti a zakreslenému na mapě. Vstupním podkladem pro vyjádření je dopis se žádostí o vyjádření evidovaný v ESSS IPR Praha. Žádost je importována do SpIS včetně vybraných metadat a zobrazena pověřenému uživateli, který lokalizuje území z žádosti v mapě, přiřadí uživatele, od kterých je vyžadováno vyjádření a pošle jim požadavek na doplnění. Uživatelé doplní svá vyjádření, sami potvrdí, případně předají ke schválení svým vedoucím. V okamžiku, kdy jsou všechna požadovaná vyjádření hotová, pověřená osoba zkontroluje obsah, případně pošle ke schválení a exportuje tiskovou sestavu odpovědi na žádost o vyjádření do ESSS k odeslání. Detailní specifikace procesu a požadovaných funkcí bude součástí implementační analýzy.
+Funkce vyjádření k území bude implementována pouze do prostředí IPR Praha. Jedná se o agendu spojenou s procesem získání vyjádření odborníků z jednotlivých sekcí IPR Praha k území specifikovanému v žádosti a zakreslenému na mapě. Vstupním podkladem pro vyjádření je dopis se žádostí o vyjádření evidovaný v ESSS IPR Praha. Žádost je importována do SpIS včetně vybraných metadat a zobrazena pověřenému uživateli, který lokalizuje území z žádosti v mapě, přiřadí uživatele, od kterých je vyžadováno vyjádření a pošle jim požadavek na doplnění. Uživatelé doplní svá vyjádření, sami potvrdí, případně předají ke schválení svým vedoucím. V okamžiku, kdy jsou všechna požadovaná vyjádření hotová, pověřená osoba zkontroluje obsah, případně pošle ke schválení a exportuje tiskovou sestavu odpovědi na žádost o vyjádření do ESSS k odeslání.
+
+K zákresu dotčeného území do mapy bude sloužit mapové okno vyvinuté dodavatelem. Data s lokalizací budu ukládána do připravené vrstvy z geodatabáze IPR Praha poskytnuté jako WFS, aby bylo zajištěna integrita se stávajícími daty. WFS služba bude obsahovat předpřipravené atributy, které se v procesu zákresu lokalizace naplní hodnotami dvěmě způsoby: převzetím již vyplněných informací o vyjádření a ručním vyplněním ve vyskakovacím okně nad mapou. Hodnoty atributů, které se budou vyplňovat ručně nad mapou, nebudou ukládány do SpIS, ale pouze do WFS služby a tím do geodatabáze IPR Praha. 
+
+Detailní specifikace procesu a požadovaných funkcí bude součástí implementační analýzy.
 
 
 == Přílohy
