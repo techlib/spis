@@ -209,9 +209,9 @@ Z důvodu zachování otevřenosti systému je doporučeno mapové komponenty im
 
 Vlastnosti mapového okna::
 
-Mapové okno podporuje zobrazení mapových vrstev formou link:https://en.wikipedia.org/wiki/Web_Map_Service[WMS], které je možné zapnout buď jako mapu základní, nebo tematickou (lze zapnout více vrstev najednou). Systém umožňuje napojit libovolná data publikovaná mapovými službami dle standardů link:https://en.wikipedia.org/wiki/Open_Geospatial_Consortium[Open Geospatial Consortium]. Pro účely IPR Praha se využijí mapy a tematické vrstvy z datového skladu IPR Praha.
+Mapové okno podporuje zobrazení mapových vrstev formou link:https://en.wikipedia.org/wiki/Web_Map_Service[WMS], které je možné zapnout buď jako mapu základní, nebo tematickou (lze zapnout více vrstev najednou). Systém umožňuje napojit libovolná data publikovaná mapovými službami dle standardů link:https://en.wikipedia.org/wiki/Open_Geospatial_Consortium[Open Geospatial Consortium]. Pro účely IPR Praha se využijí mapy a tematické vrstvy publikované službou link:https://en.wikipedia.org/wiki/Web_Feature_Service[WFS] z datového skladu IPR Praha.
 +
-Okno dále obsahuje základní navigační prvky pro pohyb v mapě, jako například změnu měřítka, návrat do výchozího pohledu a funkci pro vyhledání adresy či parcely.
+Okno dále obsahuje základní navigační prvky pro pohyb v mapě, jako například změnu měřítka, návrat do výchozího pohledu, funkci pro vyhledání adresy či parcely a zobrazení informací o prvku.
 
 Vyhledávání::
 
@@ -223,7 +223,11 @@ Při nálezu více prvků (adresní místa v ulici, parcely se shodným kořenov
 
 Tvorba nové vektorové vrstvy::
 
-V rámci mapového okna je možné vytvářet novou vektorovou vrstvu, která se stane součástí dokumentu s využitím formátu link:http://geojson.org/[GeoJSON]. Vrstva může být vytvořena zadáním bodu, linie, obdélníku či obecného polygonu v rámci mapového okna a dále převzetím hranic vybraných (nalezených) územních jednotek (katastrální území, městská část) a hranic parcel.
+V rámci mapového okna je možné vytvářet novou vektorovou vrstvu včetně atributových informací, která se stane součástí dokumentu s využitím formátu link:http://geojson.org/[GeoJSON]. Vrstva může být vytvořena zadáním bodu, linie, obdélníku či obecného polygonu v rámci mapového okna a dále převzetím hranic vybraných (nalezených) územních jednotek (katastrální území, městská část) a hranic parcel.
+
+Editace vektorové vrstvy
+
+Mapová technologie bude podporovat také editaci stávající geometrie, včetně editace atributových informací o prvku. Editace bude podporována pro nově vytvořené vrstvy, i pro vrstvy poskytované webovými službami, které editaci podporuí (WFS).
 
 ==== Číselníky
 
