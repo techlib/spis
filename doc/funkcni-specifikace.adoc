@@ -143,7 +143,7 @@ SpIS je provázán s ekonomickým systémem tak, že z něj přebírá a uživa
 
 Napojení na elektronický systém spisové služby (ESSS) bude sloužit jednak k získávání dokumentů a příloh pro další práci s nimi (import) a dále pak pro ukládání hotových dokumentů a příloh za účelem jejich trvalého uchování (export).
 
-* IPR jako elektornický systém spisové služby využívá ICZ E-spis s veřejně dostupnou dokumentací.
+* IPR jako elektornický systém spisové služby využívá ICZ E-spis. Dokumentace popisující integrační rozhraní je k dispozici u zadavatele.
 
 * NTK jako elektornický systém spisové služby využívá iFIS ....
 
