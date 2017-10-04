@@ -6,4 +6,8 @@
 5. Po kompletaci všech částí vyjádření je pověřený uživatel upozorněn a kompletní znění pošle ke schválení a podpisu oprávěnému nadřízenému.
 6. Po schválení nadřízeným je vytvořena tisková sestava opatřená podpisy odpovědných uživetlů a exportována do E-spisu k odeslání žadateli.
 
-V současné době není na IPR Praha žádné koncepční řešení pro zpracování žádostí o vyjádření. Obsah a vzhled jednotlivých typů vyjádření bude součástí implementační analýzy.
+V současné době není na IPR Praha žádné koncepční řešení pro proces zpracování žádostí o vyjádření a odpovědí na ně, proto bude tato agenda součástí implementační analýzy.
+
+== Speciální požadavky na SpIS při zákresu lokalizace
+
+IPR Praha disponuje centrální databází záměrů v území, do které bude přebírat i informace z vyjádření ze SpIS následujícím způsobem. SpIS bude s databází propojen na úrovni předávání informací vybraných údajů z Vyjádření a doplněním dalších informací přímo o záměru stavby. V mapovém okně SpIS bude k zákresu lokalizace Vyjádření záměru využita předpřipravená vektorová feature vrstva z geodatabáze IPR Praha. Tato vrstva obsahuje připravenou atributovou tabulku, do které se po zákresu lokalizace do mapy budou ukládat hodnoty dvěma způsoby: přebráním již vyplněných vybraných informací z Vyjádření a následným ručním vyplněním doplňujících atributů před uložením mapové vrstvy. Všechny informace se po uložení zakresleného prvku do mapy tímto postupem uloží přímo do geodatabáze IPR Praha. Ve SpISu zůstanou nadále jen informace související s Vyjádřením. Atributy související se záměrem budou nadále dostupné v infowindow při kliknutí na prvek v mapě.
