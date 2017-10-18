@@ -327,9 +327,9 @@ V příkladu došlo k tomu, že byla v důsledku aktualizace dokumentu `protokol
 
 === Typy případů
 
-Každý případ je opatřen popisem své hierarchické struktury. Protože si jsou některé případy ve své struktuře velmi podobné, definujeme pojmenované typy případů. Tyto typy reprezentují strukturu, které se dokumenty v případu přizpůsobují.
+Každý případ je opatřen popisem své hierarchické struktury. Protože si jsou některé případy ve své struktuře velmi podobné, definujeme pojmenované typy případů. Tyto typy reprezentují strukturu, které se dokumenty v případu přizpůsobují. Dokumenty mohou být využity ve více případech pouze tehdy, když to vyhovuje omezením plynoucím z typů dotčených případů.
 
-V případě potřeby je možné typ aktivního případu změnit a dokumenty přeuspořádat do nových rolí. Stejně tak je možné do struktury vložit již existující dokumenty.
+Vzhledem k tomu, že typ případu upřesňuje vzájemné závislosti dokumentů, není možné automaticky typ případu změnit. Namísto toto budou uživatelé v takovém případě nuceni vytvořit případ nový a případně stávající dokumenty přesunout.
 
 === Účast na případech
 
