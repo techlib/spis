@@ -22,7 +22,7 @@ Jeho technickými charakteristikami se zabývá <<technicka-specifikace.adoc#,Te
 
 === Agendy
 
-Systém bude zpracovávat agendy IPR a NTK týkajících se přípravy a čerpání rozpočtu. IPR Praha navíc bude implementovat agendu spojenou s vyřízením žádostí o vyjádření k území. Systém by měl být navržen tak, aby bylo možné ho v budoucnu rozšířit o další agendy.
+Systém bude zpracovávat agendy IPR a NTK týkající se přípravy a čerpání rozpočtu. IPR Praha navíc bude implementovat agendu spojenou s vyřízením žádostí o vyjádření k území. Systém by měl být navržen tak, aby bylo možné ho v budoucnu rozšířit o další agendy.
 
 Řízení výdajů::
 Sekce řízení výdajů sdružuje řadu témat, která se dotýkají výdajových procesů různých typů. Jedná se například o tvorbu a evidenci záměrů, veřejných zakázek, předávacích protokolů, faktur a dalších souvisejících dokumentů.
@@ -55,7 +55,7 @@ WARNING: V případě Ekonomického systému na IPR Praha probíhá paralelní v
 
 WARNING: V případě elektronického tržiště záleží na rámci, který pro případné využívání Národního elektronického nástroje stanoví vláda ČR. Za podmínky, že nebude tento rámec stanoven k datu zveřejnění zadávací dokumentace, zadavatelé si vyhrazují právo na základě §100 Zákona o zadávání veřejných zakázek č. 134/2016 Sb. na určení konkrétního řešení elektronického tržiště k integraci a specifikaci způsobu integrace až v průběhu realizace zakázky.
 
-Z důvodu nejasností ohledně technického řešení ekonomického systému na elektronického tržiště v době zadání VZ budou tyto integrace řešeny v rámci rozvojových požadavků na systém v průběhu jeho realizace a nebudou součástí základní dodávky systému. Systém ale musí být navržen tak, aby bylo možné zmíněné agendy integrovat dodatečně.
+Z důvodu nejasností ohledně technického řešení ekonomického systému a elektronického tržiště v době zadání veřejné zakázky budou tyto integrace řešeny v rámci rozvojových požadavků na systém v průběhu jeho realizace a nebudou součástí základní dodávky systému. Systém ale musí být navržen tak, aby bylo možné zmíněné agendy integrovat dodatečně.
 
 Systém bude dále napojen na národní Registr smluv, Obchodní rejstřík a Živnostenský rejstřík.
 
@@ -143,9 +143,9 @@ SpIS je provázán s ekonomickým systémem tak, že z něj přebírá a uživa
 
 Napojení na elektronický systém spisové služby (ESSS) bude sloužit jednak k získávání dokumentů a příloh pro další práci s nimi (import) a dále pak pro ukládání hotových dokumentů a příloh za účelem jejich trvalého uchování (export).
 
-* IPR jako elektornický systém spisové služby využívá ICZ E-spis. Dokumentace popisující integrační rozhraní je k dispozici u zadavatele.
+* IPR jako elektronický systém spisové služby využívá ICZ E-spis. Dokumentace popisující integrační rozhraní je k dispozici u zadavatele.
 
-* NTK jako elektornický systém spisové služby využívá iFIS ....
+* NTK jako elektronický systém spisové služby využívá iFIS ....
 
 
 ==== Import
@@ -306,7 +306,7 @@ Detailní specifikace obsahu a funkcí přehledu čerpání rozpočtu bude před
 
 == Vyjádření k území
 
-Funkce vyjádření k území bude implementována pouze do prostředí IPR Praha. Jedná se o agendu spojenou s procesem získání vyjádření odborníků z jednotlivých sekcí IPR Praha k území specifikovanému v žádosti a zakreslenému na mapě. Vstupním podkladem pro vyjádření je dopis se žádostí o vyjádření evidovaný v ESSS IPR Praha. Žádost je importována do SpIS včetně vybraných metadat a zobrazena pověřenému uživateli, který lokalizuje území z žádosti v mapě, přiřadí uživatele, od kterých je vyžadováno vyjádření a pošle jim požadavek na doplnění. Uživatelé doplní svá vyjádření, sami potvrdí, případně předají ke schválení svým vedoucím. V okamžiku, kdy jsou všechna požadovaná vyjádření hotová, pověřená osoba zkontroluje obsah, případně pošle ke schválení a exportuje tiskovou sestavu odpovědi na žádost o vyjádření do ESSS k odeslání.
+Funkce vyjádření k území bude implementována pouze do prostředí IPR Praha. Jedná se o agendu spojenou s procesem získání vyjádření odborníků z jednotlivých sekcí IPR Praha k území specifikovanému v žádosti a zakreslenému na mapě. Vstupním podkladem pro vyjádření je dopis se žádostí o vyjádření evidovaný v ESSS IPR Praha. Žádost je importována do SpIS včetně vybraných metadat a zobrazena pověřenému uživateli, který lokalizuje území z žádosti v mapě, přiřadí uživatele, od kterých je vyžadováno vyjádření, a pošle jim požadavek na doplnění. Uživatelé doplní svá vyjádření, sami potvrdí, případně předají ke schválení svým vedoucím. V okamžiku, kdy jsou všechna požadovaná vyjádření hotová, pověřená osoba zkontroluje obsah, případně pošle ke schválení a exportuje tiskovou sestavu odpovědi na žádost o vyjádření do ESSS k odeslání.
 
 K zákresu dotčeného území do mapy bude sloužit mapové okno vyvinuté dodavatelem. Data s lokalizací budu ukládána do připravené vrstvy z geodatabáze IPR Praha poskytnuté jako WFS, aby bylo zajištěna integrita se stávajícími daty. WFS služba bude obsahovat předpřipravené atributy, které se v procesu zákresu lokalizace naplní hodnotami dvěmě způsoby: převzetím již vyplněných informací o vyjádření a ručním vyplněním ve vyskakovacím okně nad mapou. Hodnoty atributů, které se budou vyplňovat ručně nad mapou, nebudou ukládány do SpIS, ale pouze do WFS služby a tím do geodatabáze IPR Praha. 
 
