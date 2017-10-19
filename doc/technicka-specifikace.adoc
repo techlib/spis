@@ -329,7 +329,7 @@ V příkladu došlo k tomu, že byla v důsledku aktualizace dokumentu `protokol
 
 Každý případ je opatřen popisem své hierarchické struktury. Protože si jsou některé případy ve své struktuře velmi podobné, definujeme pojmenované typy případů. Tyto typy reprezentují strukturu, které se dokumenty v případu přizpůsobují. Dokumenty mohou být využity ve více případech pouze tehdy, když to vyhovuje omezením plynoucím z typů dotčených případů.
 
-Vzhledem k tomu, že typ případu upřesňuje vzájemné závislosti dokumentů, není možné automaticky typ případu změnit. Namísto toto budou uživatelé v takovém případě nuceni vytvořit případ nový a případně stávající dokumenty přesunout.
+Vzhledem k tomu, že typ případu upřesňuje vzájemné závislosti dokumentů, není možné automaticky typ případu změnit. Namísto toho budou uživatelé muset vytvořit případ nový a případně stávající dokumenty přesunout.
 
 === Účast na případech
 
@@ -708,7 +708,7 @@ Způsob manipulace také upravuje, se kterými částmi těla dokumentu a se kte
 
 V rámci systému dochází k řadě událostí. Mechanismus upozorňování na ně využívá nastavené komunikační metody (email nebo Jabber) k odeslání upozornění dotčenému uživateli. K upozornění uživatele nedochází, pokud událost, na kterou by měl být upozorněn, sám vyvolal.
 
-Kromě okamžitého upozornění si může uživatel nastavit upozornění dávkové, které se odesílá souhrnně jednou denně. Zda-li si přeje být upozorňován okamžitě, souhrnně, nebo vůbec si může uživatel pro každý druh upozornění určit sám.
+Kromě okamžitého upozornění si může uživatel nastavit upozornění dávkové, které se odesílá souhrnně jednou denně. Uživatel si pro každý druh upozornění může určit, zdali si přeje být upozorňován okamžitě, souhrnně nebo vůbec.
 
 .Předvolby upozorňování
 [options="header",cols="<4,^1,^1,^1"]
@@ -738,17 +738,17 @@ Někdo změnil dokument, který naposledy upravoval upozorňovaný uživatel. Ta
 Uživatelem sledovaný dokument byl změněn::
 Obdobně jako v případě předchozí události, jen je sledující uživatel upozorňován na všechny změny dokumentu.
 
-Dokument případu, které se uživatel účastní, byl změněn::
+Dokument případu, kterého se uživatel účastní, byl změněn::
 Velmi široká volba pro upozorňování, díky které bude uživatel upozorněn při libovolné změně libovolného dokumentu ve všech případech, kterých se účastní.
 
 Případ, kterého se uživatel účastní, byl změněn::
 Touto událostí se myslí takové změny případu, které se netýkají konkrétních dokumentů ani účasti uživatelů nebo rolí na případu. Jedná se tedy především o změny metadat případu. Součástí upozornění je odkaz na případ.
 
 Změnila se účast uživatele na případu::
-Někdo uživatele pozval do nového případu. Součástí upozornění je kromě odkazu na případ i jméno uživatele, který jej pozval a role, ve kterých v případu figuruje.
+Někdo uživatele pozval do nového případu. Součástí upozornění je kromě odkazu na případ i jméno uživatele, který jej pozval, a role, ve kterých v případu figuruje.
 
 Změnily se role uživatele v systému::
-Správce systému udělil nebo odebral uživateli role. Součástí upozornění jsou i informace o tom, jaká role mu byly přiděleny a jaké odebrány, případně ve kterých oblastech působnosti.
+Správce systému udělil nebo odebral uživateli role. Součástí upozornění jsou i informace o tom, jaké role mu byly přiděleny a jaké odebrány, případně ve kterých oblastech působnosti.
 
 <<<
 
