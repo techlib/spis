@@ -121,6 +121,11 @@ Na zvláštní stránce přehledu událostí jsou každému uživateli předlož
 Přehled by měl sloužit pro rychlou orientaci v běžících případech a získání přehledu o situaci.
 
 
+==== Oblíbené položky
+
+Na zvláštní stránce oblíbených položek bude zobrazen seznam případů a sestav, které si daný uživatel dříve oblíbil. Oblibovací tlačítko je zobrazeno na stránce případu i sestavy. Skrze odkazy na této stránce se může uživatel snadno přesunou na daný případ či přehled bez nutnosti jej hledat.
+
+
 ==== Sekce
 
 Za účelem snazší orientace uživatelů jsou veškeré objekty v systému roztříděny do témat a tematických sekcí. Toto členění nemá žádné důsledky pro funkci, ani pro řízení přístupu. Také nijak nesouvisí s organizačním členěním.
@@ -352,6 +357,13 @@ Ve zkratce platí, že potřebuje-li uživatel něco od ostatních, je mu umožn
 Pokud je k tomu uživatel oprávněn, smí v rámci případu nastavit nebo změnit lhůtu pro dokončení určitého dokumentu. Tato lhůta je všem viditelná a zohledňuje se například při řazení případů na stránce pracovního přehledu.
 
 Každý typ dokumentu má možnost upravit výchozí lhůtou pro dokončení. Pokud tak neučiní, při vytvoření dokumentu daného typu není žádná lhůta nastavena. Pokud dokument neexistuje alespoň jako požadovaný, není možné mu nastavit lhůtu žádnou.
+
+=== Související dokumenty
+
+Kromě dokumentů vlastních danému případu je možné k případu připojit i související dokumenty. Tyto dokumenty, vznikající v rámci jiných případů, jsou odkazovány pouze pro urychlení navigace.
+
+To, které dokumenty s daným případem souvisí, určí uživatelé.
+
 
 <<<
 
