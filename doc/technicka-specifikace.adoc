@@ -227,7 +227,7 @@ V rámci mapového okna je možné vytvářet novou vektorovou vrstvu včetně a
 
 Editace vektorové vrstvy
 
-Mapová technologie bude podporovat také editaci stávající geometrie, včetně editace atributových informací o prvku. Editace bude podporována pro nově vytvořené vrstvy, i pro vrstvy poskytované webovými službami, které editaci podporuí (WFS).
+Mapová technologie bude podporovat také editaci stávající geometrie, včetně editace atributových informací o prvku. Editace bude podporována pro nově vytvořené vrstvy, i pro vrstvy poskytované webovými službami, které editaci podporují (WFS).
 
 ==== Číselníky
 
