@@ -19,10 +19,10 @@ clean:
 	rm -rf doc/.asciidoctor
 
 %.html: %.adoc
-	asciidoctor -b html5 -r asciidoctor-diagram -o $@ $< -a imagesdir="${PWD}/doc" -a imagesoutdir="${PWD}/doc"
+	asciidoctor -b html5 -r asciidoctor-diagram -o $@ $< -a imagesdir="." -a imagesoutdir="."
 
 %.pdf: %.adoc $(wildcard doc/media/*.*)
-	asciidoctor-pdf -r asciidoctor-diagram -o $@ $< -a imagesdir="${PWD}/doc" -a imagesoutdir="${PWD}/doc"
+	asciidoctor-pdf -r asciidoctor-diagram -o $@ $< -a imagesdir="." -a imagesoutdir="."
 
 %.png: %.dot
 	dot $< -Tpng -o $@
