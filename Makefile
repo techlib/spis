@@ -18,16 +18,16 @@ clean:
 	rm -f doc/*.html doc/*.png doc/*.cache doc/*.pdf ${pngs}
 	rm -rf doc/.asciidoctor
 
-%.html: %.adoc
+%.html: %.adoc Makefile
 	asciidoctor -b html5 -r asciidoctor-diagram -o $@ $< -a imagesdir="." -a imagesoutdir="."
 
-%.pdf: %.adoc $(wildcard doc/media/*.*)
+%.pdf: %.adoc $(wildcard doc/media/*.*) Makefile
 	asciidoctor-pdf -r asciidoctor-diagram -o $@ $< -a imagesdir="." -a imagesoutdir="."
 
-%.png: %.dot
+%.png: %.dot Makefile
 	dot $< -Tpng -o $@
 
-%.png: %.dia
+%.png: %.dia Makefile
 	dia -e $@ $<
 	mogrify -bordercolor white -border 32x32 $@
 
