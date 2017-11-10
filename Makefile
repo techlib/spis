@@ -3,13 +3,14 @@
 adocs = $(wildcard doc/*.adoc)
 htmls = $(adocs:.adoc=.html)
 dots  = $(shell find doc -name '*.dot')
-pngs  = $(dots:.dot=.png)
+dias  = $(shell find doc -name '*.dia')
+pngs  = $(dots:.dot=.png) $(dias:.dia=.png)
 pdfs  = $(adocs:.adoc=.pdf)
 
 all: doc
 doc: html pdf png
 
-html: ${htmls}
+html: png ${htmls}
 pdf: ${pdfs}
 png: ${pngs}
 
@@ -18,12 +19,16 @@ clean:
 	rm -rf doc/.asciidoctor
 
 %.html: %.adoc
-	asciidoctor -b html5 -r asciidoctor-diagram -o $@ $< -a imagesdir=. -a imagesoutdir=.
+	asciidoctor -b html5 -r asciidoctor-diagram -o $@ $< -a imagesdir="${PWD}/doc" -a imagesoutdir="${PWD}/doc"
 
 %.pdf: %.adoc $(wildcard doc/media/*.*)
-	asciidoctor-pdf -r asciidoctor-diagram -o $@ $< -a imagesdir=. -a imagesoutdir=.
+	asciidoctor-pdf -r asciidoctor-diagram -o $@ $< -a imagesdir="${PWD}/doc" -a imagesoutdir="${PWD}/doc"
 
 %.png: %.dot
 	dot $< -Tpng -o $@
+
+%.png: %.dia
+	dia -e $@ $<
+	mogrify -bordercolor white -border 32x32 $@
 
 # EOF

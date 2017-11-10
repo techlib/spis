@@ -1,0 +1,46 @@
+= Správní informační systém: Uživatelské rozhraní
+:numbered:
+:icons: font
+:lang: cs
+:note-caption: Poznámka
+:warning-caption: Pozor
+:table-caption: Tabulka
+:figure-caption: Obrázek
+:example-caption: Příklad
+:toc-title: Obsah
+:toc: left
+:toclevels: 2
+:sectnumlevels: 6
+:source-highlighter: pygments
+
+
+== Kostra UI
+image::wireframe/kostra-ui.png[]
+
+<<<
+
+== Přehledová tabulka
+image::wireframe/prehledova-tabulka.png[]
+
+<<<
+
+== Úvodní stránka - pracovní přehled
+image::wireframe/uvodni-stranka-pracovni-prehled.png[]
+
+<<<
+
+== Úvodní stránka - události
+image::wireframe/uvodni-stranka-udalosti.png[]
+
+<<<
+
+== Úvodní stránka - oblíbené
+image::wireframe/uvodni-stranka-oblibene.png[]
+
+<<<
+
+== Případ - tabulkové zobrazení
+image::wireframe/pripad-tabulkove-zobrazeni.png[]
+
+
+// vim:set spelllang=cs:
