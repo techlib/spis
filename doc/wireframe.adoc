@@ -42,5 +42,10 @@ image::wireframe/uvodni-stranka-oblibene.png[]
 == Případ - tabulkové zobrazení
 image::wireframe/pripad-tabulkove-zobrazeni.png[]
 
+<<<
+
+== Účastníci případu
+image::wireframe/ucastnici-pripadu.png[]
+
 
 // vim:set spelllang=cs:
