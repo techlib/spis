@@ -722,6 +722,8 @@ V rámci systému dochází k řadě událostí. Mechanismus upozorňování na 
 
 Kromě okamžitého upozornění si může uživatel nastavit upozornění dávkové, které se odesílá souhrnně jednou denně. Uživatel si pro každý druh upozornění může určit, zdali si přeje být upozorňován okamžitě, souhrnně nebo vůbec.
 
+Některé druhy upozornění se váží na konkrétní případy a uživatel se k jejich odběru musí přihlásit na stránce odpovídajícího případu.
+
 .Předvolby upozorňování
 [options="header",cols="<4,^1,^1,^1"]
 |===
@@ -730,9 +732,11 @@ Kromě okamžitého upozornění si může uživatel nastavit upozornění dávk
 | Můžete vytvořit chybějící dokument                  | {y}   |       | {y}
 | Vámi naposledy upravený dokument byl změněn         | {y}   | {y}   | {y}
 | Vámi sledovaný dokument byl změněn                  | {y}   | {y}   | {y}
+| Dokument případu **X** byl změněn                   | {y}   | {y}   | {y}
 | Dokument případu, kterého se účastníte, byl změněn  | {y}   | {y}   | {y}
 | Případ, kterého se účastníte, byl změněn            | {y}   | {y}   | {y}
 | Změnila se Vaše účast na případu                    | {y}   | {y}   | {y}
+| Změnila se účast na případu **X**                   | {y}   | {y}   | {y}
 | Změnily se Vaše role v systému                      | {y}   | {y}   | {y}
 |===
 
@@ -750,6 +754,9 @@ Někdo změnil dokument, který naposledy upravoval upozorňovaný uživatel. Ta
 Uživatelem sledovaný dokument byl změněn::
 Obdobně jako v případě předchozí události, jen je sledující uživatel upozorňován na všechny změny dokumentu.
 
+Dokument případu X byl změněn::
+Někdo změnil některý z dokumentů v daném případu.
+
 Dokument případu, kterého se uživatel účastní, byl změněn::
 Velmi široká volba pro upozorňování, díky které bude uživatel upozorněn při libovolné změně libovolného dokumentu ve všech případech, kterých se účastní.
 
@@ -758,6 +765,9 @@ Touto událostí se myslí takové změny případu, které se netýkají konkr�
 
 Změnila se účast uživatele na případu::
 Někdo uživatele pozval do nového případu. Součástí upozornění je kromě odkazu na případ i jméno uživatele, který jej pozval, a role, ve kterých v případu figuruje.
+
+Změnila se účast na případu X::
+Někdo pozval uživatele do daného případu.
 
 Změnily se role uživatele v systému::
 Správce systému udělil nebo odebral uživateli role. Součástí upozornění jsou i informace o tom, jaké role mu byly přiděleny a jaké odebrány, případně ve kterých oblastech působnosti.
