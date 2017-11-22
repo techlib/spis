@@ -364,6 +364,14 @@ Kromě dokumentů vlastních danému případu je možné k případu připojit 
 
 To, které dokumenty s daným případem souvisí, určí uživatelé.
 
+=== Shrnutí případu
+
+Pro každý typ případu může být definováno určité datové shrnutí dokumentů, které jsou jeho součástí. Toto shrnutí je pak prezentováno uživatelům při zobrazení stránky případu. Tato data je možné využít i v přehledu případů daného typu.
+
+Je-li tedy například pro *Obchodní případ* definována v rámci shrnutí celková cena, je možné ve výpisu případů tohoto typu zobrazovat kromě názvů i tyto ceny.
+
+Protože je obdobná funkcionalita přítomná i u dokumentů samotných, shrnutí případu může čerpat nejen z dat samotných obsažených dokumentů, ale i z jejich shrnutí. Tím je možné částečně nahlédnout za hranice konkrétního případu.
+
 
 <<<
 
@@ -628,6 +636,9 @@ Konflikt je uživateli prezentován v plné šíři. Pokud chce se změnami pokr
 
 Po vypořádání všech konfliktů je uživateli opět umožněno uložit novou revizi dokumentu.
 
+=== Shrnutí dokumentu a jeho vazeb
+
+Pro každý typ dokumentu může být definováno určité datové shrnutí jeho obsahu a obsahu jeho závislostí (a to i zpětných). Toto shrnutí je pak prezentováno uživatelům při zobrazení dokumentu. Tato data je možné využít i v přehledu dokumentů daného typu.
 
 === Podepisování
 
