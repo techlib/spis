@@ -230,7 +230,7 @@ Tvorba nové vektorové vrstvy::
 
 V rámci mapového okna je možné vytvářet novou vektorovou vrstvu včetně atributových informací, která se stane součástí dokumentu s využitím formátu link:http://geojson.org/[GeoJSON]. Vrstva může být vytvořena zadáním bodu, linie, obdélníku či obecného polygonu v rámci mapového okna a dále převzetím hranic vybraných (nalezených) územních jednotek (katastrální území, městská část) a hranic parcel.
 
-Editace vektorové vrstvy
+Úprava vektorové vrstvy::
 
 Mapová technologie bude podporovat také editaci stávající geometrie, včetně editace atributových informací o prvku. Editace bude podporována pro nově vytvořené vrstvy, i pro vrstvy poskytované webovými službami, které editaci podporují (WFS).
 
