@@ -729,11 +729,11 @@ Způsob manipulace také upravuje, se kterými částmi těla dokumentu a se kte
 
 == Upozornění na událost
 
-V rámci systému dochází k řadě událostí. Mechanismus upozorňování na ně využívá nastavené komunikační metody (email nebo Jabber) k odeslání upozornění dotčenému uživateli. K upozornění uživatele nedochází, pokud událost, na kterou by měl být upozorněn, sám vyvolal.
+V rámci systému dochází k řadě událostí. Mechanismus upozorňování na ně využívá nastavené komunikační metody (email, Jabber, Matrix) k odeslání upozornění dotčenému uživateli. K upozornění uživatele nedochází, pokud událost, na kterou by měl být upozorněn, sám vyvolal.
 
 Kromě okamžitého upozornění si může uživatel nastavit upozornění dávkové, které se odesílá souhrnně jednou denně. Uživatel si pro každý druh upozornění může určit, zdali si přeje být upozorňován okamžitě, souhrnně nebo vůbec.
 
-Některé druhy upozornění se váží na konkrétní případy a uživatel se k jejich odběru musí přihlásit na stránce odpovídajícího případu.
+Některé druhy upozornění se váží na konkrétní případy a uživatel se k jejich odběru musí přihlásit na stránce odpovídajícího případu. Jiný druh je pak vázaný na sadu hraničních hodnot, které jsou definovány politikami.
 
 .Předvolby upozorňování
 [options="header",cols="<4,^1,^1,^1"]
@@ -749,6 +749,7 @@ Některé druhy upozornění se váží na konkrétní případy a uživatel se 
 | Změnila se Vaše účast na případu                    | {y}   | {y}   | {y}
 | Změnila se účast na případu **X**                   | {y}   | {y}   | {y}
 | Změnily se Vaše role v systému                      | {y}   | {y}   | {y}
+| Byla překročena sledovaná hraniční hodnota **Y**    | {y}   | {y}   | {y}
 |===
 
 === Události
@@ -782,6 +783,9 @@ Někdo pozval uživatele do daného případu.
 
 Změnily se role uživatele v systému::
 Správce systému udělil nebo odebral uživateli role. Součástí upozornění jsou i informace o tom, jaké role mu byly přiděleny a jaké odebrány, případně ve kterých oblastech působnosti.
+
+Byla překročena sledovaná hraniční hodnota Y::
+Byla překročena některá ze stanovených hraničních hodnot, k jejichž sledování se uživatel přihlásil. Hodnoty, které je možné sledovat, stanovuje programátor politik systému.
 
 <<<
 
