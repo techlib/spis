@@ -145,7 +145,7 @@ Napojení na elektronický systém spisové služby (ESSS) bude sloužit jednak 
 
 * IPR jako elektronický systém spisové služby využívá ICZ E-spis. Dokumentace popisující integrační rozhraní je k dispozici u zadavatele.
 
-* NTK jako elektronický systém spisové služby využívá iFIS ....
+* NTK jako elektronický systém spisové služby využívá iFIS. Dokumentace popisující integrační rozhraní je k dispozici link:http://stella.bbm.cz/wiki1115/index.php/Kategorie:Datov%C3%A1_rozhran%C3%AD_iFIS[na webu dodavatele iFIS].
 
 
 ==== Import
