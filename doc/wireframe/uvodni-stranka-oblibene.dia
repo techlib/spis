@@ -28,7 +28,7 @@
           <dia:boolean val="true"/>
         </dia:attribute>
         <dia:attribute name="scaling">
-          <dia:real val="1"/>
+          <dia:real val="2"/>
         </dia:attribute>
         <dia:attribute name="fitto">
           <dia:boolean val="false"/>
@@ -355,7 +355,7 @@
         <dia:point val="9,7"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="9,5.2725;16.195,7.53"/>
+        <dia:rectangle val="9,5.325;16.1425,7.425"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -494,7 +494,7 @@
         <dia:point val="-10,12"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-10,11.1363;4.03125,12.265"/>
+        <dia:rectangle val="-10,11.1625;4.005,12.2125"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -553,7 +553,7 @@
         <dia:point val="11,9.8125"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="11,8.94875;24.0087,11.2064"/>
+        <dia:rectangle val="11,8.975;23.9825,11.1539"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -613,7 +613,7 @@ odboru 5#</dia:string>
         <dia:point val="11,13"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="11,12.1363;23.3438,13.265"/>
+        <dia:rectangle val="11,12.1625;23.3175,13.2125"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">

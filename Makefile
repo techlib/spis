@@ -21,7 +21,7 @@ clean:
 %.html: %.adoc Makefile
 	asciidoctor -b html5 -r asciidoctor-diagram -o $@ $< -a imagesdir="." -a imagesoutdir="."
 
-%.pdf: %.adoc $(wildcard doc/media/*.*) Makefile
+%.pdf: %.adoc $(wildcard doc/media/*.*) ${pngs} Makefile
 	asciidoctor-pdf -r asciidoctor-diagram -o $@ $< -a imagesdir="." -a imagesoutdir="."
 
 %.png: %.dot Makefile

@@ -28,7 +28,7 @@
           <dia:boolean val="true"/>
         </dia:attribute>
         <dia:attribute name="scaling">
-          <dia:real val="1"/>
+          <dia:real val="2"/>
         </dia:attribute>
         <dia:attribute name="fitto">
           <dia:boolean val="false"/>
@@ -1072,7 +1072,7 @@ zde#</dia:string>
         <dia:point val="30.1337,20.5"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="30.0671,20.4334;34.4764,22.5981"/>
+        <dia:rectangle val="30.0671,20.4334;34.4763,22.5981"/>
       </dia:attribute>
       <dia:attribute name="conn_endpoints">
         <dia:point val="30.1337,20.5"/>

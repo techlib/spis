@@ -53,4 +53,10 @@ image::wireframe/ucastnici-pripadu.png[]
 image::wireframe/dokument-navrh-rozpoctu.png[]
 
 
+<<<
+
+== Dokument - finanční operace
+image::wireframe/dokument-financni-operace.png[]
+
+
 // vim:set spelllang=cs:

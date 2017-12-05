@@ -28,7 +28,7 @@
           <dia:boolean val="true"/>
         </dia:attribute>
         <dia:attribute name="scaling">
-          <dia:real val="1"/>
+          <dia:real val="2"/>
         </dia:attribute>
         <dia:attribute name="fitto">
           <dia:boolean val="false"/>
@@ -229,7 +229,7 @@ vzducholodě#</dia:string>
         <dia:point val="-11,13"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-11,12.1363;-4.85875,13.265"/>
+        <dia:rectangle val="-11,12.1625;-4.885,13.2125"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -262,7 +262,7 @@ vzducholodě#</dia:string>
         <dia:point val="-11,15"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-11,14.1363;-7.61125,15.265"/>
+        <dia:rectangle val="-11,14.1625;-7.6375,15.2125"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -295,7 +295,7 @@ vzducholodě#</dia:string>
         <dia:point val="-11,17"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-11,16.1363;-6.24375,17.265"/>
+        <dia:rectangle val="-11,16.1625;-6.27,17.2125"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -859,7 +859,7 @@ vzducholodě#</dia:string>
         <dia:point val="-11,19"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-11,18.1363;-2.69875,19.265"/>
+        <dia:rectangle val="-11,18.1625;-2.725,19.2125"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -892,7 +892,7 @@ vzducholodě#</dia:string>
         <dia:point val="-11,21"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-11,20.1363;-3.31375,21.265"/>
+        <dia:rectangle val="-11,20.1625;-3.34,21.2125"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -1136,7 +1136,7 @@ vzducholodě#</dia:string>
         <dia:point val="6,21"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="1.4,20.1363;6.02625,21.265"/>
+        <dia:rectangle val="1.4,20.1625;6,21.2125"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -1281,7 +1281,7 @@ vzducholodě#</dia:string>
         <dia:point val="14,21"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="8.825,20.1363;14.0262,21.265"/>
+        <dia:rectangle val="8.825,20.1625;14,21.2125"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -1426,7 +1426,7 @@ vzducholodě#</dia:string>
         <dia:point val="16,15"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="15.9738,14.1363;22.54,15.265"/>
+        <dia:rectangle val="16,14.1625;22.54,15.2125"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -1459,7 +1459,7 @@ vzducholodě#</dia:string>
         <dia:point val="16,21"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="15.9738,20.1363;22.54,21.265"/>
+        <dia:rectangle val="16,20.1625;22.54,21.2125"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -1492,7 +1492,7 @@ vzducholodě#</dia:string>
         <dia:point val="16,17"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="16,16.1363;21.8463,17.265"/>
+        <dia:rectangle val="16,16.1625;21.82,17.2125"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -1525,7 +1525,7 @@ vzducholodě#</dia:string>
         <dia:point val="16,19"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="15.9738,18.1363;21.82,19.265"/>
+        <dia:rectangle val="16,18.1625;21.82,19.2125"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -1604,7 +1604,7 @@ vzducholodě#</dia:string>
         <dia:point val="25,10.3125"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="25,9.44875;27.0413,10.5775"/>
+        <dia:rectangle val="25,9.475;27.015,10.525"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -1637,7 +1637,7 @@ vzducholodě#</dia:string>
         <dia:point val="25,13"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="25,12.1362;30.4962,13.265"/>
+        <dia:rectangle val="25,12.1625;30.47,13.2125"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -1670,7 +1670,7 @@ vzducholodě#</dia:string>
         <dia:point val="25,15"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="25,14.1363;30.4962,15.265"/>
+        <dia:rectangle val="25,14.1625;30.47,15.2125"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -1736,7 +1736,7 @@ vzducholodě#</dia:string>
         <dia:point val="25,17"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="25,16.1363;31.3788,17.265"/>
+        <dia:rectangle val="25,16.1625;31.3525,17.2125"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -1769,7 +1769,7 @@ vzducholodě#</dia:string>
         <dia:point val="25,19"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="25,18.1363;31.3788,19.265"/>
+        <dia:rectangle val="25,18.1625;31.3525,19.2125"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -1894,7 +1894,7 @@ vzducholodě#</dia:string>
           <dia:point val="11.9809,8.35"/>
         </dia:attribute>
         <dia:attribute name="obj_bb">
-          <dia:rectangle val="11.8863,8.26119;13.7088,9.59901"/>
+          <dia:rectangle val="11.8863,8.26118;13.7088,9.59901"/>
         </dia:attribute>
         <dia:attribute name="meta">
           <dia:composite type="dict"/>
@@ -2072,7 +2072,7 @@ vzducholodě#</dia:string>
           <dia:point val="31.6833,21.55"/>
         </dia:attribute>
         <dia:attribute name="obj_bb">
-          <dia:rectangle val="31.5888,21.4612;33.4113,22.799"/>
+          <dia:rectangle val="31.5887,21.4612;33.4112,22.799"/>
         </dia:attribute>
         <dia:attribute name="meta">
           <dia:composite type="dict"/>
@@ -2344,7 +2344,7 @@ vzducholodě#</dia:string>
         <dia:point val="-11,36"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-11,35.1363;-3.53625,36.265"/>
+        <dia:rectangle val="-11,35.1625;-3.5625,36.2125"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -2987,7 +2987,7 @@ vzducholodě#</dia:string>
         <dia:point val="6,36"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="0.825,35.1363;6.02625,36.265"/>
+        <dia:rectangle val="0.825,35.1625;6,36.2125"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -3290,7 +3290,7 @@ vzducholodě#</dia:string>
         <dia:point val="25,36"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="25,35.1363;31.3788,36.265"/>
+        <dia:rectangle val="25,35.1625;31.3525,36.2125"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -3323,7 +3323,7 @@ vzducholodě#</dia:string>
         <dia:point val="14,36"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="8.25,35.1363;14.0262,36.265"/>
+        <dia:rectangle val="8.25,35.1625;14,36.2125"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
