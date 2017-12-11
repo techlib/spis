@@ -203,6 +203,8 @@ To, jaká data pohled představuje, je kromě komponenty dáno zejména souborem
 
 Komponentu tvoří popis jejího rozhraní, včetně popisu zdrojů dat, ze kterých dokáže čerpat a dále kód pro její zobrazení. Komponenta je totiž v pohledu navázána na sadu datových zdrojů, což jsou fakticky procedury uložené v databázi. Popis rozhraní komponenty umožňuje provést automatickou kontrolu shody s rozhraním procedur při jejím využití v politice.
 
+Každá komponenta by měla podporovat zobrazení kontextové nápovědy intuitivním způsobem a to alespoň na úrovni komponenty jako celku. U těch složitějších však lze předpokládat nápovědu u jednotlivých prvků. Nutností je také podpora lokalizace nápovědy.
+
 
 === Příklady typů komponent
 
