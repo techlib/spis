@@ -890,10 +890,11 @@ package "SpIS" {
 package "Cizí systém" {
   component "Aplikace" as app2
   () API as api2
-  app2 - api2
+  api2 -u- app2
 }
 
-db1 -> api2: FDW
+db1 -u-> api2: FDW
+
 @enduml
 ....
 
